@@ -1,0 +1,11 @@
+{{- $data := (GetKv "job" 20) -}}
+{{- range $job := $data -}}
+<li style="width:260px; margin-right: 10px; margin-top: 10px;">
+	<div class="fz_index_jobname" style="width:260px; font-size: 16px;">{{$job.val}}
+	</div>
+	<div class="fz_index_jobinfo"><span class="fz_index_jobinfo_xz">{{RandLib "xz"}}</span>
+		<span class="fz_index_jobinfo_line">|</span>{{RandLib "jy"}}
+		<span class="fz_index_jobinfo_line">|</span>{{RandLib "xl"}}
+	</div>
+</li>
+{{- end -}}

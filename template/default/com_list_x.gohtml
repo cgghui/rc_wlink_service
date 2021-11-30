@@ -1,0 +1,5 @@
+{{- range $company := (GetKv "company" 15) -}}
+    <li style="height: inherit;">
+        <div class="index_mq_box_name nowrap" style="text-align: left">{{$company.val}}</div>
+    </li>
+{{- end -}}

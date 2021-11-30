@@ -1,0 +1,4 @@
+{{- $data := (GetKv "domain_all" 1) -}}
+{{- $area := index $data 0 -}}
+{{- $areaArr := Split $area.val " " -}}
+{{- index $areaArr 2 -}}
