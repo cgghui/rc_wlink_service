@@ -1,0 +1,11 @@
+allowurl.txt
+wlwmanifest.xml
+listPopFrame.do
+.tar
+.gz
+.sql
+.zip
+.rar
+.tgz
+wp-includes
+xmlrpc.php
