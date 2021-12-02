@@ -1,9 +1,9 @@
 {{- $host := .Request.Header.Get "Param-TopHost" -}}
 {{- $domain := .Request.Header.Get "Param-Host" -}}
-{{- $title := call .StoreGet "tit" false -}}
+{{- $title := .StoreGet "tit" false -}}
 {{- if eq $title "" -}}
     {{- $title = RandLib "company" -}}
-    {{- call .StoreSet "tit" $title false -}}
+    {{- .StoreSet "tit" $title false -}}
 {{- end -}}
 <!DOCTYPE html>
 <html lang="zh-cn">
