@@ -169,7 +169,7 @@
                                                                 <h3 style="margin-top:0;padding-top:0;"><a href="{{$url}}" target="_blank" style="text-decoration:underline;">{{$tit}}</a></h3>
                                                                 &nbsp;<span class="price2">米胖价：￥ <b style="font-size:16px;" class="price">{{RandNumber 2 3}}</b> 元/人</span>
                                                             </div>
-                                                            <div class="tsse-text">{{RandInsertWord (RandLib "content") $tit}}....</div>
+                                                            <div class="tsse-text">{{RandInsertWord (RandLib "content") $tit | Text2HTML}}....</div>
                                                             <div class="shop-name-city">旅行社：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{RandLib "company"}}</a> &nbsp;&nbsp;&nbsp;&nbsp;出发地：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{index (Split (RandKv "domain_city").val " ") 2}}</a></div>
                                                         </td>
                                                     </tr>
