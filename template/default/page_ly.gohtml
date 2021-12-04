@@ -170,9 +170,7 @@
                                                                 &nbsp;<span class="price2">预定价：￥ <b style="font-size:16px;" class="price">{{RandNumber 2 3}}</b> 元/人</span>
                                                             </div>
                                                             <div class="tsse-text">
-                                                                {{- $content := Join "" (RandLib "content") (RandLib "content") (RandLib "content") -}}
-                                                                {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
-                                                                {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
+                                                                {{- $content := Join "" (RandLib "content") (RandLib "content") (RandLib "content") (RandLib "content") (RandLib "content") -}}
                                                                 {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
                                                                 {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
                                                                 {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
