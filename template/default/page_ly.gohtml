@@ -268,7 +268,7 @@
                                                                                                         {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
                                                                                                         {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
                                                                                                         {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
-                                                                                                        {{$content}}
+                                                                                                        {{$content|Text2HTML}}
                                                                                                         <a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" title="{{$tit}}">阅读全文»</a>
                                                                                                     </td>
                                                                                                 </tr>
