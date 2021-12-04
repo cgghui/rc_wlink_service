@@ -265,9 +265,9 @@
                                                                                                     </td>
                                                                                                     <td class="entry-text">
                                                                                                         {{- $content := Join "" (RandLib "content") (RandLib "content") (RandLib "content") -}}
-                                                                                                        {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
-                                                                                                        {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
-                                                                                                        {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
+                                                                                                        {{- $content = RandInsertWord $content (RandWord "<b>旅游</b>" "风景区" $to_city) -}}
+                                                                                                        {{- $content = RandInsertWord $content (RandWord "<b>旅游</b>" "风景区" $to_city) -}}
+                                                                                                        {{- $content = RandInsertWord $content (RandWord "<b>旅游</b>" "风景区" $to_city) -}}
                                                                                                         {{$content|Text2HTML}}
                                                                                                         <a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" title="{{$tit}}">阅读全文»</a>
                                                                                                     </td>
