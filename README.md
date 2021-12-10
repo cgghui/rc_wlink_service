@@ -33,7 +33,7 @@
 > <span style="font-family: serif;">RandKv(name string) map[string]string</span><br/>
 > <i style="color:gray; font-size: 80%"><b>从kv库中随机1个kv</b> `name`是kv库下的文件名 不含后缀</i>
 
-> <span style="font-family: serif;">RandCustomKv(names string) []map[string]string</span><br/>
+> <span style="font-family: serif;">RandCustomKv(names string) map[string]string</span><br/>
 > <i style="color:gray; font-size: 80%"><b>从多个kv库中随机1个kv</b> `name`是kv库下的文件名 不含后缀 多个kv库可用英式逗号隔开。</i>
 
 > <span style="font-family: serif;">GetCustomKv(names string, n int) []map[string]string</span><br/>
