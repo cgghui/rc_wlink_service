@@ -38,3 +38,50 @@
 
 > <span style="font-family: serif;">GetCustomKv(names string, n int) []map[string]string</span><br/>
 > <i style="color:gray; font-size: 80%"><b>从多个kv库中随机多个kv</b> `name`是kv库下的文件名 不含后缀 多个kv库可用英式逗号隔开。`n` 要获取的数目</i>
+
+> <span style="font-family: serif;">RandChar(l, max int) string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>随机字符串</b> `l`最小长度 `max`最大长度 `i` 和 `max` 相同时 则长度取 `i` 包含 小写字母和数字（无大写字母和特殊符号）</i>
+
+> <span style="font-family: serif;">RandNumber(l, max int) string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>随机数字串</b> `l`最小长度 `max`最大长度 `i` 和 `max` 相同时 则长度取 `i`</i>
+
+> <i style="color:gray; font-size: 80%"><b>从多个kv库中随机多个kv</b> `name`是kv库下的文件名 不含后缀 多个kv库可用英式逗号隔开。`n` 要获取的数目</i>
+
+> <span style="font-family: serif;">RandWord(word ...string) string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>随机返回一个词</b> 从`word`中随机返回一个词 如：`{{RandWord "a" "b" "c" "d" "e" "f"}}`</i>
+
+> <span style="font-family: serif;">RandInsertWord(str, word string) string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>插入关键词</b> 在`str`中的随机位置 插入1次`word`关键词 如需多次，可多次调用该方法</i>
+
+> <span style="font-family: serif;">ParseTag(tpl string) string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>解析标题</b> `tpl`将被解析后返回</i>
+
+> <span style="font-family: serif;">PinYin(s string) string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>汉字转拼音</b> `s`转成全拼后返回</i>
+
+> <span style="font-family: serif;">PinYinFirst(s string) string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>汉字转拼音</b> 返回`s`的首拼音字母</i>
+
+> <span style="font-family: serif;">SearchKV(name, word string) map[string][]string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>搜索kv库</b> 在`name`库中搜索包含`word`的kv列表</i>
+
+> <span style="font-family: serif;">FindKV(name, k string) string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>根据k找到v</b> 在`name`库中根据`k`找到val</i>
+
+> <span style="font-family: serif;">Text2HTML(s string) string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>不转义HTML</b> `s`中的html将不被转义 示例：`{{(RandWord "a" "b" "c" "d" "e" "f") | Text2HTML}}`</i>
+
+> <span style="font-family: serif;">Text2HTMLAttr(s string) string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>不转义HTML属性</b></i>
+
+> <span style="font-family: serif;">Text2JS(s string) string</span><br/>
+> <i style="color:gray; font-size: 80%"></i>
+
+> <span style="font-family: serif;">Text2JSStr(s string) string</span><br/>
+> <i style="color:gray; font-size: 80%"></i>
+
+> <span style="font-family: serif;">Text2CSS(s string) string</span><br/>
+> <i style="color:gray; font-size: 80%"></i>
+
+> <span style="font-family: serif;">Text2URL(s string) string</span><br/>
+> <i style="color:gray; font-size: 80%"></i>
