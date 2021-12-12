@@ -45,6 +45,9 @@
 > <span style="font-family: serif;">RandNumber(l, max int) string</span><br/>
 > <i style="color:gray; font-size: 80%"><b>随机数字串</b> `l`最小长度 `max`最大长度 `i` 和 `max` 相同时 则长度取 `i`</i>
 
+> <span style="font-family: serif;">RandCustomChar(l, max int, s string) string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>随机指定的字符</b> `l`最小长度 `max`最大长度 `i` 和 `max` 相同时 则长度取 `i` 从`s`中随机</i>
+
 > <i style="color:gray; font-size: 80%"><b>从多个kv库中随机多个kv</b> `name`是kv库下的文件名 不含后缀 多个kv库可用英式逗号隔开。`n` 要获取的数目</i>
 
 > <span style="font-family: serif;">RandWord(word ...string) string</span><br/>

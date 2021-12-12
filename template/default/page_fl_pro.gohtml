@@ -1,0 +1,1021 @@
+{{- $host := .Request.Header.Get "Param-TopHost" -}}
+{{- $domain := .Request.Header.Get "Param-Host" -}}
+{{- $title := .StoreGet "tit" false -}}
+{{- if eq $title "" -}}
+    {{- $title = RandLib "company" -}}
+    {{- .StoreSet "tit" $title false -}}
+{{- end -}}
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{$title}}</title>
+    <meta name="keywords" content="{{$title}}">
+    <meta name="description" content="{{$title}}">
+    <link rel="stylesheet" href="http://{{$domain}}/static/css/reset.css">
+    <link rel="stylesheet" href="http://{{$domain}}/static/css/index.css">
+    <link rel="stylesheet" href="http://{{$domain}}/static/css/sub.css">
+</head>
+<body class="orange">
+<div class="bgw">
+    <div class="box w_h">
+        <a href="http://{{$host}}/"><img src="http://{{$host}}/static/picture/logo.png" alt={{$title}} title="{{$title}}" class="png" style="width: 166px;"></a>
+    </div>
+    <div class="w_body"></div>
+</div>
+
+<div id="main" class="box">
+    <div class="changecitydiv">
+        <div class="clear15"></div>
+        <div class="clear"></div>
+        <div id="blist">
+            热门分站：
+            <a href="http://beijing.{{$host}}/" target="_blank">北京</a>
+            <a href="http://chongqing.{{$host}}/" target="_blank">重庆</a>
+            <a href="http://guangzhou.{{$host}}/" target="_blank">广州</a>
+            <a href="http://qingdao.{{$host}}/" target="_blank">青岛</a>
+            <a href="http://shanghai.{{$host}}/" target="_blank">上海</a>
+            <a href="http://shenzhen.{{$host}}/" target="_blank">深圳</a>
+            <a href="http://tianjin.{{$host}}/" target="_blank">天津</a>
+            <a href="http://xiamen.{{$host}}/" target="_blank">厦门</a>
+            <a href="http://jiangsu.{{$host}}/" target="_blank">江苏</a>
+            <a href="http://hangzhou.{{$host}}/" target="_blank">杭州</a>
+            <a href="http://wuhan.{{$host}}/" target="_blank">武汉</a>
+            <a href="http://kunming.{{$host}}/" target="_blank">昆明</a>
+        </div>
+        <div class="clearfix"></div>
+        <dl id="clist" class="pinyin">
+            <div class="lister">
+                <dd>
+                    <span>A</span>
+                    <a href="http://anning.{{$host}}/" target="_blank">安宁</a>
+                    <a href="http://anhui.{{$host}}/" target="_blank">安徽</a>
+                    <a href="http://alaer.{{$host}}/" target="_blank">阿拉尔</a>
+                    <a href="http://anqing.{{$host}}/" target="_blank">安庆</a>
+                    <a href="http://als.{{$host}}/" target="_blank">阿拉善盟</a>
+                    <a href="http://ankang.{{$host}}/" target="_blank">安康</a>
+                    <a href="http://anqiu.{{$host}}/" target="_blank">安丘</a>
+                    <a href="http://akesu.{{$host}}/" target="_blank">阿克苏</a>
+                    <a href="http://anda.{{$host}}/" target="_blank">安达</a>
+                    <a href="http://anlu.{{$host}}/" target="_blank">安陆</a>
+                    <a href="http://anguo.{{$host}}/" target="_blank">安国</a>
+                    <a href="http://anshan.{{$host}}/" target="_blank">鞍山</a>
+                    <a href="http://anyang.{{$host}}/" target="_blank">安阳</a>
+                    <a href="http://aershan.{{$host}}/" target="_blank">阿尔山</a>
+                    <a href="http://alsk.{{$host}}/" target="_blank">阿拉山口</a>
+                    <a href="http://abz.{{$host}}/" target="_blank">阿坝</a>
+                    <a href="http://atushi.{{$host}}/" target="_blank">阿图什</a>
+                    <a href="http://anshun.{{$host}}/" target="_blank">安顺</a>
+                    <a href="http://aletai.{{$host}}/" target="_blank">阿勒泰</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>B</span>
+                    <a href="http://bygl.{{$host}}/" target="_blank">巴音郭楞</a>
+                    <a href="http://bazhou.{{$host}}/" target="_blank">霸州</a>
+                    <a href="http://beian.{{$host}}/" target="_blank">北安</a>
+                    <a href="http://byne.{{$host}}/" target="_blank">巴彦淖尔</a>
+                    <a href="http://beijing.{{$host}}/" target="_blank">北京</a>
+                    <a href="http://baisha.{{$host}}/" target="_blank">白沙</a>
+                    <a href="http://baoting.{{$host}}/" target="_blank">保亭</a>
+                    <a href="http://baoding.{{$host}}/" target="_blank">保定</a>
+                    <a href="http://bijie.{{$host}}/" target="_blank">毕节</a>
+                    <a href="http://baoshan.{{$host}}/" target="_blank">保山</a>
+                    <a href="http://benxi.{{$host}}/" target="_blank">本溪</a>
+                    <a href="http://bengbu.{{$host}}/" target="_blank">蚌埠</a>
+                    <a href="http://beizhen.{{$host}}/" target="_blank">北镇</a>
+                    <a href="http://bozhou.{{$host}}/" target="_blank">亳州</a>
+                    <a href="http://baiyin.{{$host}}/" target="_blank">白银</a>
+                    <a href="http://baicheng.{{$host}}/" target="_blank">白城</a>
+                    <a href="http://bingzhou.{{$host}}/" target="_blank">滨州</a>
+                    <a href="http://bazhong.{{$host}}/" target="_blank">巴中</a>
+                    <a href="http://boertala.{{$host}}/" target="_blank">博尔塔拉</a>
+                    <a href="http://bole.{{$host}}/" target="_blank">博乐</a>
+                    <a href="http://beiliu.{{$host}}/" target="_blank">北流</a>
+                    <a href="http://botou.{{$host}}/" target="_blank">泊头</a>
+                    <a href="http://binzhou.{{$host}}/" target="_blank">彬州</a>
+                    <a href="http://beipiao.{{$host}}/" target="_blank">北票</a>
+                    <a href="http://baotou.{{$host}}/" target="_blank">包头</a>
+                    <a href="http://baishan.{{$host}}/" target="_blank">白山</a>
+                    <a href="http://baise.{{$host}}/" target="_blank">百色</a>
+                    <a href="http://beihai.{{$host}}/" target="_blank">北海</a>
+                    <a href="http://baoji.{{$host}}/" target="_blank">宝鸡</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>C</span>
+                    <a href="http://changji.{{$host}}/" target="_blank">昌吉</a>
+                    <a href="http://changsha.{{$host}}/" target="_blank">长沙</a>
+                    <a href="http://chengmai.{{$host}}/" target="_blank">澄迈</a>
+                    <a href="http://changjiang.{{$host}}/" target="_blank">昌江</a>
+                    <a href="http://cixi.{{$host}}/" target="_blank">慈溪</a>
+                    <a href="http://conghua.{{$host}}/" target="_blank">从化</a>
+                    <a href="http://changshu.{{$host}}/" target="_blank">常熟</a>
+                    <a href="http://chongzuo.{{$host}}/" target="_blank">崇左</a>
+                    <a href="http://chuxiong.{{$host}}/" target="_blank">楚雄</a>
+                    <a href="http://cangzhou.{{$host}}/" target="_blank">沧州</a>
+                    <a href="http://changyi.{{$host}}/" target="_blank">昌邑</a>
+                    <a href="http://chaoyang.{{$host}}/" target="_blank">朝阳</a>
+                    <a href="http://chuzhou.{{$host}}/" target="_blank">滁州</a>
+                    <a href="http://changde.{{$host}}/" target="_blank">常德</a>
+                    <a href="http://changzhi.{{$host}}/" target="_blank">长治</a>
+                    <a href="http://chifeng.{{$host}}/" target="_blank">赤峰</a>
+                    <a href="http://chongqing.{{$host}}/" target="_blank">重庆</a>
+                    <a href="http://cahngzhou.{{$host}}/" target="_blank">常州</a>
+                    <a href="http://changning.{{$host}}/" target="_blank">常宁</a>
+                    <a href="http://chengdu.{{$host}}/" target="_blank">成都</a>
+                    <a href="http://chenzhou.{{$host}}/" target="_blank">郴州</a>
+                    <a href="http://changle.{{$host}}/" target="_blank">长乐</a>
+                    <a href="http://chibi.{{$host}}/" target="_blank">赤壁</a>
+                    <a href="http://chaozhou.{{$host}}/" target="_blank">潮州</a>
+                    <a href="http://cenxi.{{$host}}/" target="_blank">岑溪</a>
+                    <a href="http://chishui.{{$host}}/" target="_blank">赤水</a>
+                    <a href="http://chizhou.{{$host}}/" target="_blank">池州</a>
+                    <a href="http://changchun.{{$host}}/" target="_blank">长春</a>
+                    <a href="http://changge.{{$host}}/" target="_blank">长葛</a>
+                    <a href="http://chaohu.{{$host}}/" target="_blank">巢湖</a>
+                    <a href="http://chongzhou.{{$host}}/" target="_blank">崇州</a>
+                    <a href="http://chengde.{{$host}}/" target="_blank">承德</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>D</span>
+                    <a href="http://dongfang.{{$host}}/" target="_blank">东方</a>
+                    <a href="http://dongchengqu.{{$host}}/" target="_blank">东城</a>
+                    <a href="http://dehui.{{$host}}/" target="_blank">德惠</a>
+                    <a href="http://dailian.{{$host}}/" target="_blank">大连</a>
+                    <a href="http://dingan.{{$host}}/" target="_blank">定安</a>
+                    <a href="http://danjiangkou.{{$host}}/" target="_blank">丹江口</a>
+                    <a href="http://dongyang.{{$host}}/" target="_blank">东阳</a>
+                    <a href="http://dongxing.{{$host}}/" target="_blank">东兴</a>
+                    <a href="http://dingxi.{{$host}}/" target="_blank">定西</a>
+                    <a href="http://dongguan.{{$host}}/" target="_blank">东莞</a>
+                    <a href="http://dongying.{{$host}}/" target="_blank">东营</a>
+                    <a href="http://dengfeng.{{$host}}/" target="_blank">登封</a>
+                    <a href="http://diaobingshan.{{$host}}/" target="_blank">调兵山</a>
+                    <a href="http://dehong.{{$host}}/" target="_blank">德宏</a>
+                    <a href="http://danzhou.{{$host}}/" target="_blank">儋州</a>
+                    <a href="http://dingzhou.{{$host}}/" target="_blank">定州</a>
+                    <a href="http://deyang.{{$host}}/" target="_blank">德阳</a>
+                    <a href="http://dafeng.{{$host}}/" target="_blank">大丰</a>
+                    <a href="http://dengta.{{$host}}/" target="_blank">灯塔</a>
+                    <a href="http://diqing.{{$host}}/" target="_blank">迪庆</a>
+                    <a href="http://danyang.{{$host}}/" target="_blank">丹阳</a>
+                    <a href="http://dali.{{$host}}/" target="_blank">大理</a>
+                    <a href="http://datong.{{$host}}/" target="_blank">大同</a>
+                    <a href="http://dandong.{{$host}}/" target="_blank">丹东</a>
+                    <a href="http://dongning.{{$host}}/" target="_blank">东宁</a>
+                    <a href="http://dunhuang.{{$host}}/" target="_blank">敦煌</a>
+                    <a href="http://daye.{{$host}}/" target="_blank">大冶</a>
+                    <a href="http://dashiqiao.{{$host}}/" target="_blank">大石桥</a>
+                    <a href="http://dunhua.{{$host}}/" target="_blank">敦化</a>
+                    <a href="http://daqing.{{$host}}/" target="_blank">大庆</a>
+                    <a href="http://dezhou.{{$host}}/" target="_blank">德州</a>
+                    <a href="http://duyun.{{$host}}/" target="_blank">都匀</a>
+                    <a href="http://daan.{{$host}}/" target="_blank">大安</a>
+                    <a href="http://dazhou.{{$host}}/" target="_blank">达州</a>
+                    <a href="http://dongtai.{{$host}}/" target="_blank">东台</a>
+                    <a href="http://dexing.{{$host}}/" target="_blank">德兴</a>
+                    <a href="http://delingha.{{$host}}/" target="_blank">德令哈</a>
+                    <a href="http://dujiangyan.{{$host}}/" target="_blank">都江堰</a>
+                    <a href="http://dangyang.{{$host}}/" target="_blank">当阳</a>
+                    <a href="http://dengzhou.{{$host}}/" target="_blank">邓州</a>
+                    <a href="http://donggang.{{$host}}/" target="_blank">东港</a>
+                    <a href="http://daqinganling.{{$host}}/" target="_blank">大兴安岭</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>E</span>
+                    <a href="http://eerguna.{{$host}}/" target="_blank">额尔古纳</a>
+                    <a href="http://ezhou.{{$host}}/" target="_blank">鄂州</a>
+                    <a href="http://enshi.{{$host}}/" target="_blank">恩施</a>
+                    <a href="http://elgt.{{$host}}/" target="_blank">二连浩特</a>
+                    <a href="http://emeishan.{{$host}}/" target="_blank">峨眉山</a>
+                    <a href="http://enping.{{$host}}/" target="_blank">恩平</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>F</span>
+                    <a href="http://fuan.{{$host}}/" target="_blank">福安</a>
+                    <a href="http://fuding.{{$host}}/" target="_blank">福鼎</a>
+                    <a href="http://fcheng.{{$host}}/" target="_blank">丰城</a>
+                    <a href="http://foshan.{{$host}}/" target="_blank">佛山</a>
+                    <a href="http://feicheng.{{$host}}/" target="_blank">肥城</a>
+                    <a href="http://fuzhou.{{$host}}/" target="_blank">抚州</a>
+                    <a href="http://fangchenggang.{{$host}}/" target="_blank">防城港</a>
+                    <a href="http://fujian.{{$host}}/" target="_blank">福建</a>
+                    <a href="http://fuyu.{{$host}}/" target="_blank">扶余</a>
+                    <a href="http://fenyang.{{$host}}/" target="_blank">汾阳</a>
+                    <a href="http://fyang.{{$host}}/" target="_blank">富阳</a>
+                    <a href="http://fuzhou.{{$host}}/" target="_blank">福州</a>
+                    <a href="http://fengzhen.{{$host}}/" target="_blank">丰镇</a>
+                    <a href="http://fuquan.{{$host}}/" target="_blank">福泉</a>
+                    <a href="http://fuyang.{{$host}}/" target="_blank">阜阳</a>
+                    <a href="http://fuxin.{{$host}}/" target="_blank">阜新</a>
+                    <a href="http://fushun.{{$host}}/" target="_blank">抚顺</a>
+                    <a href="http://fujin.{{$host}}/" target="_blank">富锦</a>
+                    <a href="http://fuyuan.{{$host}}/" target="_blank">抚远</a>
+                    <a href="http://fenghua.{{$host}}/" target="_blank">奉化</a>
+                    <a href="http://fuqing.{{$host}}/" target="_blank">福清</a>
+                    <a href="http://fengcheng.{{$host}}/" target="_blank">凤城</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>G</span>
+                    <a href="http://genhe.{{$host}}/" target="_blank">根河</a>
+                    <a href="http://guangshui.{{$host}}/" target="_blank">广水</a>
+                    <a href="http://ganzi.{{$host}}/" target="_blank">甘孜</a>
+                    <a href="http://gejiu.{{$host}}/" target="_blank">个旧</a>
+                    <a href="http://gaoan.{{$host}}/" target="_blank">高安</a>
+                    <a href="http://guoluo.{{$host}}/" target="_blank">果洛</a>
+                    <a href="http://gqc.{{$host}}/" target="_blank">共青城</a>
+                    <a href="http://guangzhou.{{$host}}/" target="_blank">广州</a>
+                    <a href="http://gaoping.{{$host}}/" target="_blank">高平</a>
+                    <a href="http://gaoyou.{{$host}}/" target="_blank">高邮</a>
+                    <a href="http://gaocheng.{{$host}}/" target="_blank">藁城</a>
+                    <a href="http://guizhou.{{$host}}/" target="_blank">贵州</a>
+                    <a href="http://guiping.{{$host}}/" target="_blank">桂平</a>
+                    <a href="http://gongyi.{{$host}}/" target="_blank">巩义</a>
+                    <a href="http://guangyuan.{{$host}}/" target="_blank">广元</a>
+                    <a href="http://gaomi.{{$host}}/" target="_blank">高密</a>
+                    <a href="http://guangan.{{$host}}/" target="_blank">广安</a>
+                    <a href="http://gaoyao.{{$host}}/" target="_blank">高要</a>
+                    <a href="http://gbd.{{$host}}/" target="_blank">高碑店</a>
+                    <a href="http://guyuan.{{$host}}/" target="_blank">固原</a>
+                    <a href="http://gujiao.{{$host}}/" target="_blank">古交</a>
+                    <a href="http://gaozhou.{{$host}}/" target="_blank">高州</a>
+                    <a href="http://gannan.{{$host}}/" target="_blank">甘南</a>
+                    <a href="http://guiyang.{{$host}}/" target="_blank">贵阳</a>
+                    <a href="http://guangdong.{{$host}}/" target="_blank">广东</a>
+                    <a href="http://gaizhou.{{$host}}/" target="_blank">盖州</a>
+                    <a href="http://guangxi.{{$host}}/" target="_blank">广西</a>
+                    <a href="http://guanghan.{{$host}}/" target="_blank">广汉</a>
+                    <a href="http://gongzhuling.{{$host}}/" target="_blank">公主岭</a>
+                    <a href="http://gansu.{{$host}}/" target="_blank">甘肃</a>
+                    <a href="http://geermu.{{$host}}/" target="_blank">格尔木</a>
+                    <a href="http://guixi.{{$host}}/" target="_blank">贵溪</a>
+                    <a href="http://guigang.{{$host}}/" target="_blank">贵港</a>
+                    <a href="http://ganzhou.{{$host}}/" target="_blank">赣州</a>
+                    <a href="http://gl.{{$host}}/" target="_blank">桂林</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>H</span>
+                    <a href="http://hegang.{{$host}}/" target="_blank">鹤岗</a>
+                    <a href="http://heyuan.{{$host}}/" target="_blank">河源</a>
+                    <a href="http://huzhou.{{$host}}/" target="_blank">湖州</a>
+                    <a href="http://hami.{{$host}}/" target="_blank">哈密</a>
+                    <a href="http://huangshan.{{$host}}/" target="_blank">黄山</a>
+                    <a href="http://hongkong.{{$host}}/" target="_blank">香港</a>
+                    <a href="http://honghe.{{$host}}/" target="_blank">红河</a>
+                    <a href="http://hancheng.{{$host}}/" target="_blank">韩城</a>
+                    <a href="http://huayin.{{$host}}/" target="_blank">华阴</a>
+                    <a href="http://houma.{{$host}}/" target="_blank">侯马</a>
+                    <a href="http://huozhou.{{$host}}/" target="_blank">霍州</a>
+                    <a href="http://hengshui.{{$host}}/" target="_blank">衡水</a>
+                    <a href="http://hezhou.{{$host}}/" target="_blank">贺州</a>
+                    <a href="http://huaian.{{$host}}/" target="_blank">淮安</a>
+                    <a href="http://hlgl.{{$host}}/" target="_blank">霍林郭勒</a>
+                    <a href="http://hshan.{{$host}}/" target="_blank">合山</a>
+                    <a href="http://hangyang.{{$host}}/" target="_blank">衡阳</a>
+                    <a href="http://haikou.{{$host}}/" target="_blank">海口</a>
+                    <a href="http://huating.{{$host}}/" target="_blank">华亭</a>
+                    <a href="http://hejin.{{$host}}/" target="_blank">河津</a>
+                    <a href="http://hhht.{{$host}}/" target="_blank">呼和浩特</a>
+                    <a href="http://huaihua.{{$host}}/" target="_blank">怀化</a>
+                    <a href="http://handan.{{$host}}/" target="_blank">邯郸</a>
+                    <a href="http://huangshi.{{$host}}/" target="_blank">黄石</a>
+                    <a href="http://leilongjiang.{{$host}}/" target="_blank">黑龙江</a>
+                    <a href="http://hailun.{{$host}}/" target="_blank">海伦</a>
+                    <a href="http://hangzhou.{{$host}}/" target="_blank">杭州</a>
+                    <a href="http://huaibei.{{$host}}/" target="_blank">淮北</a>
+                    <a href="http://hanchuan.{{$host}}/" target="_blank">汉川</a>
+                    <a href="http://huadian.{{$host}}/" target="_blank">桦甸</a>
+                    <a href="http://hechi.{{$host}}/" target="_blank">河池</a>
+                    <a href="http://hefei.{{$host}}/" target="_blank">合肥</a>
+                    <a href="http://hinggan.{{$host}}/" target="_blank">兴安盟</a>
+                    <a href="http://haibei.{{$host}}/" target="_blank">海北</a>
+                    <a href="http://huairen.{{$host}}/" target="_blank">怀仁</a>
+                    <a href="http://hanzhong.{{$host}}/" target="_blank">汉中</a>
+                    <a href="http://henan.{{$host}}/" target="_blank">河南</a>
+                    <a href="http://hetian.{{$host}}/" target="_blank">和田</a>
+                    <a href="http://huazhou.{{$host}}/" target="_blank">化州</a>
+                    <a href="http://hezuo.{{$host}}/" target="_blank">合作</a>
+                    <a href="http://huixian.{{$host}}/" target="_blank">辉县</a>
+                    <a href="http://hubei.{{$host}}/" target="_blank">湖北</a>
+                    <a href="http://huanghua.{{$host}}/" target="_blank">黄骅</a>
+                    <a href="http://hejian.{{$host}}/" target="_blank">河间</a>
+                    <a href="http://hailin.{{$host}}/" target="_blank">海林</a>
+                    <a href="http://hlbe.{{$host}}/" target="_blank">呼伦贝尔</a>
+                    <a href="http://haimen.{{$host}}/" target="_blank">海门</a>
+                    <a href="http://haian.{{$host}}/" target="_blank">海安</a>
+                    <a href="http://hle.{{$host}}/" target="_blank">海拉尔</a>
+                    <a href="http://huainan.{{$host}}/" target="_blank">淮南</a>
+                    <a href="http://hunan.{{$host}}/" target="_blank">湖南</a>
+                    <a href="http://hongjiang.{{$host}}/" target="_blank">洪江</a>
+                    <a href="http://hainan.{{$host}}/" target="_blank">海南</a>
+                    <a href="http://hegs.{{$host}}/" target="_blank">霍尔果斯</a>
+                    <a href="http://haidong.{{$host}}/" target="_blank">海东</a>
+                    <a href="http://heihe.{{$host}}/" target="_blank">黑河</a>
+                    <a href="http://huaying.{{$host}}/" target="_blank">华蓥</a>
+                    <a href="http://hunchun.{{$host}}/" target="_blank">珲春</a>
+                    <a href="http://helong.{{$host}}/" target="_blank">和龙</a>
+                    <a href="http://haicheng.{{$host}}/" target="_blank">海城</a>
+                    <a href="http://huludao.{{$host}}/" target="_blank">葫芦岛</a>
+                    <a href="http://hebei.{{$host}}/" target="_blank">河北</a>
+                    <a href="http://heb.{{$host}}/" target="_blank">哈尔滨</a>
+                    <a href="http://huizhou.{{$host}}/" target="_blank">惠州</a>
+                    <a href="http://honghu.{{$host}}/" target="_blank">洪湖</a>
+                    <a href="http://haixi.{{$host}}/" target="_blank">海西</a>
+                    <a href="http://hebi.{{$host}}/" target="_blank">鹤壁</a>
+                    <a href="http://heshan.{{$host}}/" target="_blank">鹤山</a>
+                    <a href="http://huanggang.{{$host}}/" target="_blank">黄冈</a>
+                    <a href="http://huangnan.{{$host}}/" target="_blank">黄南</a>
+                    <a href="http://hulin.{{$host}}/" target="_blank">虎林</a>
+                    <a href="http://haining.{{$host}}/" target="_blank">海宁</a>
+                    <a href="http://heze.{{$host}}/" target="_blank">菏泽</a>
+                    <a href="http://haiyang.{{$host}}/" target="_blank">海阳</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>I</span>
+                    <a href="http://yili.{{$host}}/" target="_blank">伊犁</a>
+                    <a href="http://neimenggu.{{$host}}/" target="_blank">内蒙古</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>J</span>
+                    <a href="http://jiangsu.{{$host}}/" target="_blank">江苏</a>
+                    <a href="http://jingjiang.{{$host}}/" target="_blank">靖江</a>
+                    <a href="http://jingdezhen.{{$host}}/" target="_blank">景德镇</a>
+                    <a href="http://jinzhou.{{$host}}/" target="_blank">锦州</a>
+                    <a href="http://jingchang.{{$host}}/" target="_blank">金昌</a>
+                    <a href="http://jieyang.{{$host}}/" target="_blank">揭阳</a>
+                    <a href="http://jingshan.{{$host}}/" target="_blank">京山</a>
+                    <a href="http://jiangyin.{{$host}}/" target="_blank">江阴</a>
+                    <a href="http://jizhou.{{$host}}/" target="_blank">冀州</a>
+                    <a href="http://jieshou.{{$host}}/" target="_blank">界首</a>
+                    <a href="http://jimo.{{$host}}/" target="_blank">即墨</a>
+                    <a href="http://jilin.{{$host}}/" target="_blank">吉林</a>
+                    <a href="http://jiangyou.{{$host}}/" target="_blank">江油</a>
+                    <a href="http://jianou.{{$host}}/" target="_blank">建瓯</a>
+                    <a href="http://jiangxi.{{$host}}/" target="_blank">江西</a>
+                    <a href="http://jinghong.{{$host}}/" target="_blank">景洪</a>
+                    <a href="http://jian.{{$host}}/" target="_blank">吉安</a>
+                    <a href="http://jiuquan.{{$host}}/" target="_blank">酒泉</a>
+                    <a href="http://jiaozhou.{{$host}}/" target="_blank">胶州</a>
+                    <a href="http://jining.{{$host}}/" target="_blank">济宁</a>
+                    <a href="http://jinjiang.{{$host}}/" target="_blank">晋江</a>
+                    <a href="http://jiaohe.{{$host}}/" target="_blank">蛟河</a>
+                    <a href="http://jiangmen.{{$host}}/" target="_blank">江门</a>
+                    <a href="http://jiangshan.{{$host}}/" target="_blank">江山</a>
+                    <a href="http://jzhou.{{$host}}/" target="_blank">晋州</a>
+                    <a href="http://jingzhou.{{$host}}/" target="_blank">荆州</a>
+                    <a href="http://jiamusi.{{$host}}/" target="_blank">佳木斯</a>
+                    <a href="http://jinzhong.{{$host}}/" target="_blank">晋中</a>
+                    <a href="http://jixi.{{$host}}/" target="_blank">鸡西</a>
+                    <a href="http://jintan.{{$host}}/" target="_blank">金坛</a>
+                    <a href="http://jurong.{{$host}}/" target="_blank">句容</a>
+                    <a href="http://jiangxing.{{$host}}/" target="_blank">嘉兴</a>
+                    <a href="http://jian.{{$host}}/" target="_blank">集安</a>
+                    <a href="http://jiayuguan.{{$host}}/" target="_blank">嘉峪关</a>
+                    <a href="http://jiaozuo.{{$host}}/" target="_blank">焦作</a>
+                    <a href="http://jinggangshan.{{$host}}/" target="_blank">井冈山</a>
+                    <a href="http://jinan.{{$host}}/" target="_blank">济南</a>
+                    <a href="http://jiyuan.{{$host}}/" target="_blank">济源</a>
+                    <a href="http://jinshi.{{$host}}/" target="_blank">津市</a>
+                    <a href="http://jingmen.{{$host}}/" target="_blank">荆门</a>
+                    <a href="http://jiande.{{$host}}/" target="_blank">建德</a>
+                    <a href="http://jinhua.{{$host}}/" target="_blank">金华</a>
+                    <a href="http://jishou.{{$host}}/" target="_blank">吉首</a>
+                    <a href="http://jiujiang.{{$host}}/" target="_blank">九江</a>
+                    <a href="http://jiutai.{{$host}}/" target="_blank">九台</a>
+                    <a href="http://jincheng.{{$host}}/" target="_blank">晋城</a>
+                    <a href="http://jyang.{{$host}}/" target="_blank">简阳</a>
+                    <a href="http://jiexiu.{{$host}}/" target="_blank">介休</a>
+                    <a href="http://jianyang.{{$host}}/" target="_blank">建阳</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>K</span>
+                    <a href="http://kuerle.{{$host}}/" target="_blank">库尔勒</a>
+                    <a href="http://kangding.{{$host}}/" target="_blank">康定</a>
+                    <a href="http://kyuan.{{$host}}/" target="_blank">开远</a>
+                    <a href="http://kashi.{{$host}}/" target="_blank">喀什</a>
+                    <a href="http://kunshan.{{$host}}/" target="_blank">昆山</a>
+                    <a href="http://kaiyuan.{{$host}}/" target="_blank">开原</a>
+                    <a href="http://kaifeng.{{$host}}/" target="_blank">开封</a>
+                    <a href="http://kaili.{{$host}}/" target="_blank">凯里</a>
+                    <a href="http://kaiping.{{$host}}/" target="_blank">开平</a>
+                    <a href="http://kuitun.{{$host}}/" target="_blank">奎屯</a>
+                    <a href="http://kunming.{{$host}}/" target="_blank">昆明</a>
+                    <a href="http://kezilesu.{{$host}}/" target="_blank">克孜勒苏</a>
+                    <a href="http://klmy.{{$host}}/" target="_blank">克拉玛依</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>L</span>
+                    <a href="http://liupanshui.{{$host}}/" target="_blank">六盘水</a>
+                    <a href="http://linjiang.{{$host}}/" target="_blank">临江</a>
+                    <a href="http://lijiiang.{{$host}}/" target="_blank">丽江</a>
+                    <a href="http://lengshuijiang.{{$host}}/" target="_blank">冷水江</a>
+                    <a href="http://lianyuan.{{$host}}/" target="_blank">涟源</a>
+                    <a href="http://leling.{{$host}}/" target="_blank">乐陵</a>
+                    <a href="http://lianzhou.{{$host}}/" target="_blank">连州</a>
+                    <a href="http://lanxi.{{$host}}/" target="_blank">兰溪</a>
+                    <a href="http://lingao.{{$host}}/" target="_blank">临高</a>
+                    <a href="http://ledong.{{$host}}/" target="_blank">乐东</a>
+                    <a href="http://lushan.{{$host}}/" target="_blank">庐山</a>
+                    <a href="http://lingshui.{{$host}}/" target="_blank">陵水</a>
+                    <a href="http://luzhou.{{$host}}/" target="_blank">泸州</a>
+                    <a href="http://lvliang.{{$host}}/" target="_blank">吕梁</a>
+                    <a href="http://liaocheng.{{$host}}/" target="_blank">聊城</a>
+                    <a href="http://lianjiang.{{$host}}/" target="_blank">廉江</a>
+                    <a href="http://leizhou.{{$host}}/" target="_blank">雷州</a>
+                    <a href="http://linxia.{{$host}}/" target="_blank">临夏</a>
+                    <a href="http://lushui.{{$host}}/" target="_blank">泸水</a>
+                    <a href="http://liaoyang.{{$host}}/" target="_blank">辽阳</a>
+                    <a href="http://luquan.{{$host}}/" target="_blank">鹿泉</a>
+                    <a href="http://lanzhou.{{$host}}/" target="_blank">兰州</a>
+                    <a href="http://linhai.{{$host}}/" target="_blank">临海</a>
+                    <a href="http://laohekou.{{$host}}/" target="_blank">老河口</a>
+                    <a href="http://liaoning.{{$host}}/" target="_blank">辽宁</a>
+                    <a href="http://longyan.{{$host}}/" target="_blank">龙岩</a>
+                    <a href="http://leping.{{$host}}/" target="_blank">乐平</a>
+                    <a href="http://linxiang.{{$host}}/" target="_blank">临湘</a>
+                    <a href="http://lishui.{{$host}}/" target="_blank">丽水</a>
+                    <a href="http://linghai.{{$host}}/" target="_blank">凌海</a>
+                    <a href="http://linyi.{{$host}}/" target="_blank">临沂</a>
+                    <a href="http://liuyang.{{$host}}/" target="_blank">浏阳</a>
+                    <a href="http://longchang.{{$host}}/" target="_blank">隆昌</a>
+                    <a href="http://laixi.{{$host}}/" target="_blank">莱西</a>
+                    <a href="http://lucheng.{{$host}}/" target="_blank">潞城</a>
+                    <a href="http://liangshan.{{$host}}/" target="_blank">凉山</a>
+                    <a href="http://leshan.{{$host}}/" target="_blank">乐山</a>
+                    <a href="http://laiwu.{{$host}}/" target="_blank">莱芜</a>
+                    <a href="http://linqing.{{$host}}/" target="_blank">临清</a>
+                    <a href="http://linan.{{$host}}/" target="_blank">临安</a>
+                    <a href="http://longnan.{{$host}}/" target="_blank">陇南</a>
+                    <a href="http://leiyang.{{$host}}/" target="_blank">耒阳</a>
+                    <a href="http://lingbao.{{$host}}/" target="_blank">灵宝</a>
+                    <a href="http://langzhong.{{$host}}/" target="_blank">阆中</a>
+                    <a href="http://liuzhou.{{$host}}/" target="_blank">柳州</a>
+                    <a href="http://longquan.{{$host}}/" target="_blank">龙泉</a>
+                    <a href="http://lingwu.{{$host}}/" target="_blank">灵武</a>
+                    <a href="http://lingyuan.{{$host}}/" target="_blank">凌源</a>
+                    <a href="http://langfang.{{$host}}/" target="_blank">廊坊</a>
+                    <a href="http://luoyang.{{$host}}/" target="_blank">洛阳</a>
+                    <a href="http://lianyungang.{{$host}}/" target="_blank">连云港</a>
+                    <a href="http://lasa.{{$host}}/" target="_blank">拉萨</a>
+                    <a href="http://loudi.{{$host}}/" target="_blank">娄底</a>
+                    <a href="http://longjing.{{$host}}/" target="_blank">龙井</a>
+                    <a href="http://luoding.{{$host}}/" target="_blank">罗定</a>
+                    <a href="http://linfen.{{$host}}/" target="_blank">临汾</a>
+                    <a href="http://liling.{{$host}}/" target="_blank">醴陵</a>
+                    <a href="http://lincang.{{$host}}/" target="_blank">临沧</a>
+                    <a href="http://linzhou.{{$host}}/" target="_blank">林州</a>
+                    <a href="http://longhai.{{$host}}/" target="_blank">龙海</a>
+                    <a href="http://lechang.{{$host}}/" target="_blank">乐昌</a>
+                    <a href="http://luohe.{{$host}}/" target="_blank">漯河</a>
+                    <a href="http://liyang.{{$host}}/" target="_blank">溧阳</a>
+                    <a href="http://laibin.{{$host}}/" target="_blank">来宾</a>
+                    <a href="http://lufeng.{{$host}}/" target="_blank">陆丰</a>
+                    <a href="http://liaoyuan.{{$host}}/" target="_blank">辽源</a>
+                    <a href="http://longkou.{{$host}}/" target="_blank">龙口</a>
+                    <a href="http://laiyang.{{$host}}/" target="_blank">莱阳</a>
+                    <a href="http://laizhou.{{$host}}/" target="_blank">莱州</a>
+                    <a href="http://liuan.{{$host}}/" target="_blank">六安</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>M</span>
+                    <a href="http://mengzhou.{{$host}}/" target="_blank">孟州</a>
+                    <a href="http://maanshan.{{$host}}/" target="_blank">马鞍山</a>
+                    <a href="http://mengzi.{{$host}}/" target="_blank">蒙自</a>
+                    <a href="http://mile.{{$host}}/" target="_blank">弥勒</a>
+                    <a href="http://macau.{{$host}}/" target="_blank">澳门</a>
+                    <a href="http://meizhou.{{$host}}/" target="_blank">梅州</a>
+                    <a href="http://macheng.{{$host}}/" target="_blank">麻城</a>
+                    <a href="http://maoming.{{$host}}/" target="_blank">茂名</a>
+                    <a href="http://mudanjaing.{{$host}}/" target="_blank">牡丹江</a>
+                    <a href="http://miluo.{{$host}}/" target="_blank">汨罗</a>
+                    <a href="http://mangshi.{{$host}}/" target="_blank">芒市</a>
+                    <a href="http://meihekou.{{$host}}/" target="_blank">梅河口</a>
+                    <a href="http://meishan.{{$host}}/" target="_blank">眉山</a>
+                    <a href="http://muling.{{$host}}/" target="_blank">穆棱</a>
+                    <a href="http://maerkang.{{$host}}/" target="_blank">马尔康</a>
+                    <a href="http://mingguang.{{$host}}/" target="_blank">明光</a>
+                    <a href="http://mianzhu.{{$host}}/" target="_blank">绵竹</a>
+                    <a href="http://mangya.{{$host}}/" target="_blank">茫崖</a>
+                    <a href="http://mianyang.{{$host}}/" target="_blank">绵阳</a>
+                    <a href="http://mishan.{{$host}}/" target="_blank">密山</a>
+                    <a href="http://manzhouli.{{$host}}/" target="_blank">满洲里</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>N</span>
+                    <a href="http://ningxia.{{$host}}/" target="_blank">宁夏</a>
+                    <a href="http://nangong.{{$host}}/" target="_blank">南宫</a>
+                    <a href="http://neijiang.{{$host}}/" target="_blank">内江</a>
+                    <a href="http://ali.{{$host}}/" target="_blank">阿里</a>
+                    <a href="http://nujiang.{{$host}}/" target="_blank">怒江</a>
+                    <a href="http://nn.{{$host}}/" target="_blank">南宁</a>
+                    <a href="http://nanchong.{{$host}}/" target="_blank">南充</a>
+                    <a href="http://nantong.{{$host}}/" target="_blank">南通</a>
+                    <a href="http://nanjing.{{$host}}/" target="_blank">南京</a>
+                    <a href="http://ningxiang.{{$host}}/" target="_blank">宁乡</a>
+                    <a href="http://nanan.{{$host}}/" target="_blank">南安</a>
+                    <a href="http://ningguo.{{$host}}/" target="_blank">宁国</a>
+                    <a href="http://nehe.{{$host}}/" target="_blank">讷河</a>
+                    <a href="http://nanyang.{{$host}}/" target="_blank">南阳</a>
+                    <a href="http://nangchang.{{$host}}/" target="_blank">南昌</a>
+                    <a href="http://ningan.{{$host}}/" target="_blank">宁安</a>
+                    <a href="http://ningde.{{$host}}/" target="_blank">宁德</a>
+                    <a href="http://naqu.{{$host}}/" target="_blank">那曲</a>
+                    <a href="http://ningbo.{{$host}}/" target="_blank">宁波</a>
+                    <a href="http://nanxiong.{{$host}}/" target="_blank">南雄</a>
+                    <a href="http://nanping.{{$host}}/" target="_blank">南平</a>
+                    <a href="http://linzhi.{{$host}}/" target="_blank">林芝</a>
+                    <a href="http://nankang.{{$host}}/" target="_blank">南康</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>O</span>
+                    <a href="http://eeds.{{$host}}/" target="_blank">鄂尔多斯</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>P</span>
+                    <a href="http://pingliang.{{$host}}/" target="_blank">平凉</a>
+                    <a href="http://puyang.{{$host}}/" target="_blank">濮阳</a>
+                    <a href="http://pingdingshan.{{$host}}/" target="_blank">平顶山</a>
+                    <a href="http://pulandian.{{$host}}/" target="_blank">普兰店</a>
+                    <a href="http://pingquan.{{$host}}/" target="_blank">平泉</a>
+                    <a href="http://panzhou.{{$host}}/" target="_blank">盘州</a>
+                    <a href="http://putian.{{$host}}/" target="_blank">莆田</a>
+                    <a href="http://puning.{{$host}}/" target="_blank">普宁</a>
+                    <a href="http://pingdu.{{$host}}/" target="_blank">平度</a>
+                    <a href="http://pingxiang.{{$host}}/" target="_blank">萍乡</a>
+                    <a href="http://puer.{{$host}}/" target="_blank">普洱</a>
+                    <a href="http://panshi.{{$host}}/" target="_blank">磐石</a>
+                    <a href="http://pizhou.{{$host}}/" target="_blank">邳州</a>
+                    <a href="http://pingxiang.{{$host}}/" target="_blank">凭祥</a>
+                    <a href="http://panjin.{{$host}}/" target="_blank">盘锦</a>
+                    <a href="http://panzhihua.{{$host}}/" target="_blank">攀枝花</a>
+                    <a href="http://pengzhou.{{$host}}/" target="_blank">彭州</a>
+                    <a href="http://pinghu.{{$host}}/" target="_blank">平湖</a>
+                    <a href="http://penglai.{{$host}}/" target="_blank">蓬莱</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>Q</span>
+                    <a href="http://qinyang.{{$host}}/" target="_blank">沁阳</a>
+                    <a href="http://qionghai.{{$host}}/" target="_blank">琼海</a>
+                    <a href="http://qingdao.{{$host}}/" target="_blank">青岛</a>
+                    <a href="http://quanzhou.{{$host}}/" target="_blank">泉州</a>
+                    <a href="http://qiongzhong.{{$host}}/" target="_blank">琼中</a>
+                    <a href="http://quzhou.{{$host}}/" target="_blank">衢州</a>
+                    <a href="http://qqhr.{{$host}}/" target="_blank">齐齐哈尔</a>
+                    <a href="http://qxn.{{$host}}/" target="_blank">黔西南</a>
+                    <a href="http://qingzhou.{{$host}}/" target="_blank">青州</a>
+                    <a href="http://qindongnan.{{$host}}/" target="_blank">黔东南</a>
+                    <a href="http://tacheng.{{$host}}/" target="_blank">塔城</a>
+                    <a href="http://qujing.{{$host}}/" target="_blank">曲靖</a>
+                    <a href="http://qtx.{{$host}}/" target="_blank">青铜峡</a>
+                    <a href="http://changdu.{{$host}}/" target="_blank">昌都</a>
+                    <a href="http://qinzhou.{{$host}}/" target="_blank">钦州</a>
+                    <a href="http://qianshan.{{$host}}/" target="_blank">潜山</a>
+                    <a href="http://qidong.{{$host}}/" target="_blank">启东</a>
+                    <a href="http://qufu.{{$host}}/" target="_blank">曲阜</a>
+                    <a href="http://qingyang.{{$host}}/" target="_blank">庆阳</a>
+                    <a href="http://qingyuan.{{$host}}/" target="_blank">清远</a>
+                    <a href="http://qiannan.{{$host}}/" target="_blank">黔南</a>
+                    <a href="http://qianjiang.{{$host}}/" target="_blank">潜江</a>
+                    <a href="http://qionglai.{{$host}}/" target="_blank">邛崃</a>
+                    <a href="http://qianan.{{$host}}/" target="_blank">迁安</a>
+                    <a href="http://qinghai.{{$host}}/" target="_blank">青海</a>
+                    <a href="http://qitaihe.{{$host}}/" target="_blank">七台河</a>
+                    <a href="http://qingzhen.{{$host}}/" target="_blank">清镇</a>
+                    <a href="http://qinhuangdao.{{$host}}/" target="_blank">秦皇岛</a>
+                    <a href="http://qixia.{{$host}}/" target="_blank">栖霞</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>R</span>
+                    <a href="http://ruichang.{{$host}}/" target="_blank">瑞昌</a>
+                    <a href="http://rikaze.{{$host}}/" target="_blank">日喀则</a>
+                    <a href="http://ruijin.{{$host}}/" target="_blank">瑞金</a>
+                    <a href="http://ruili.{{$host}}/" target="_blank">瑞丽</a>
+                    <a href="http://ruzhou.{{$host}}/" target="_blank">汝州</a>
+                    <a href="http://rongcheng.{{$host}}/" target="_blank">荣成</a>
+                    <a href="http://rushan.{{$host}}/" target="_blank">乳山</a>
+                    <a href="http://ruian.{{$host}}/" target="_blank">瑞安</a>
+                    <a href="http://rizhao.{{$host}}/" target="_blank">日照</a>
+                    <a href="http://renqiu.{{$host}}/" target="_blank">任丘</a>
+                    <a href="http://rugao.{{$host}}/" target="_blank">如皋</a>
+                    <a href="http://renhuai.{{$host}}/" target="_blank">仁怀</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>S</span>
+                    <a href="http://shangqiu.{{$host}}/" target="_blank">商丘</a>
+                    <a href="http://sanhe.{{$host}}/" target="_blank">三河</a>
+                    <a href="http://sansha.{{$host}}/" target="_blank">三沙</a>
+                    <a href="http://suqian.{{$host}}/" target="_blank">宿迁</a>
+                    <a href="http://shahe.{{$host}}/" target="_blank">沙河</a>
+                    <a href="http://shinan.{{$host}}/" target="_blank">市南</a>
+                    <a href="http://shibei.{{$host}}/" target="_blank">市北</a>
+                    <a href="http://songyuan.{{$host}}/" target="_blank">松原</a>
+                    <a href="http://suihua.{{$host}}/" target="_blank">绥化</a>
+                    <a href="http://shangzhi.{{$host}}/" target="_blank">尚志</a>
+                    <a href="http://shaoshan.{{$host}}/" target="_blank">韶山</a>
+                    <a href="http://sichuan.{{$host}}/" target="_blank">四川</a>
+                    <a href="http://suzhou.{{$host}}/" target="_blank">宿州</a>
+                    <a href="http://shijiazhuang.{{$host}}/" target="_blank">石家庄</a>
+                    <a href="http://shuozhou.{{$host}}/" target="_blank">朔州</a>
+                    <a href="http://shihezi.{{$host}}/" target="_blank">石河子</a>
+                    <a href="http://shaowu.{{$host}}/" target="_blank">邵武</a>
+                    <a href="http://sanmenxia.{{$host}}/" target="_blank">三门峡</a>
+                    <a href="http://shenmu.{{$host}}/" target="_blank">神木</a>
+                    <a href="http://shandong.{{$host}}/" target="_blank">山东</a>
+                    <a href="http://shannan.{{$host}}/" target="_blank">山南</a>
+                    <a href="http://shanghai.{{$host}}/" target="_blank">上海</a>
+                    <a href="http://shouguang.{{$host}}/" target="_blank">寿光</a>
+                    <a href="http://shuangyashan.{{$host}}/" target="_blank">双鸭山</a>
+                    <a href="http://shaoxing.{{$host}}/" target="_blank">绍兴</a>
+                    <a href="http://shangyu.{{$host}}/" target="_blank">上虞</a>
+                    <a href="http://shenzhou.{{$host}}/" target="_blank">深州</a>
+                    <a href="http://shishi.{{$host}}/" target="_blank">石狮</a>
+                    <a href="http://shulan.{{$host}}/" target="_blank">舒兰</a>
+                    <a href="http://shizhong.{{$host}}/" target="_blank">市中</a>
+                    <a href="http://shaoguan.{{$host}}/" target="_blank">韶关</a>
+                    <a href="http://shashi.{{$host}}/" target="_blank">沙市</a>
+                    <a href="http://siping.{{$host}}/" target="_blank">四平</a>
+                    <a href="http://shangrao.{{$host}}/" target="_blank">上饶</a>
+                    <a href="http://sw.{{$host}}/" target="_blank">汕尾</a>
+                    <a href="http://shaoyang.{{$host}}/" target="_blank">邵阳</a>
+                    <a href="http://sanya.{{$host}}/" target="_blank">三亚</a>
+                    <a href="http://suifenhe.{{$host}}/" target="_blank">绥芬河</a>
+                    <a href="http://shenyang.{{$host}}/" target="_blank">沈阳</a>
+                    <a href="http://suizhou.{{$host}}/" target="_blank">随州</a>
+                    <a href="http://shantou.{{$host}}/" target="_blank">汕头</a>
+                    <a href="http://suining.{{$host}}/" target="_blank">遂宁</a>
+                    <a href="http://shangluo.{{$host}}/" target="_blank">商洛</a>
+                    <a href="http://shengzhou.{{$host}}/" target="_blank">嵊州</a>
+                    <a href="http://sanming.{{$host}}/" target="_blank">三明</a>
+                    <a href="http://sihui.{{$host}}/" target="_blank">四会</a>
+                    <a href="http://szshan.{{$host}}/" target="_blank">石嘴山</a>
+                    <a href="http://shiyan.{{$host}}/" target="_blank">十堰</a>
+                    <a href="http://shaanxi.{{$host}}/" target="_blank">陕西</a>
+                    <a href="http://shishou.{{$host}}/" target="_blank">石首</a>
+                    <a href="http://shifang.{{$host}}/" target="_blank">什邡</a>
+                    <a href="http://shennongjia.{{$host}}/" target="_blank">神农架</a>
+                    <a href="http:///shuangliao.{{$host}}/" target="_blank">双辽</a>
+                    <a href="http://songzi.{{$host}}/" target="_blank">松滋</a>
+                    <a href="http://shanxi.{{$host}}/" target="_blank">山西</a>
+                    <a href="http://shuangcheng.{{$host}}/" target="_blank">双城</a>
+                    <a href="http://shenzhen.{{$host}}/" target="_blank">深圳</a>
+                    <a href="http://suzhou.{{$host}}/" target="_blank">苏州</a>
+                    <a href="http://shuifu.{{$host}}/" target="_blank">水富</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>T</span>
+                    <a href="http://tieling.{{$host}}/" target="_blank">铁岭</a>
+                    <a href="http://taixing.{{$host}}/" target="_blank">泰兴</a>
+                    <a href="http://tunchang.{{$host}}/" target="_blank">屯昌</a>
+                    <a href="http://tianjin.{{$host}}/" target="_blank">天津</a>
+                    <a href="http://tengzhou.{{$host}}/" target="_blank">滕州</a>
+                    <a href="http://tumushuke.{{$host}}/" target="_blank">图木舒克</a>
+                    <a href="http://taiyuan.{{$host}}/" target="_blank">太原</a>
+                    <a href="http://taicang.{{$host}}/" target="_blank">太仓</a>
+                    <a href="http://tonghua.{{$host}}/" target="_blank">通化</a>
+                    <a href="http://xizang.{{$host}}/" target="_blank">西藏</a>
+                    <a href="http://tieli.{{$host}}/" target="_blank">铁力</a>
+                    <a href="http://tongcheng.{{$host}}/" target="_blank">桐城</a>
+                    <a href="http://tengchong.{{$host}}/" target="_blank">腾冲</a>
+                    <a href="http://tongchuan.{{$host}}/" target="_blank">铜川</a>
+                    <a href="http://tongren.{{$host}}/" target="_blank">铜仁</a>
+                    <a href="http://tangshan.{{$host}}/" target="_blank">唐山</a>
+                    <a href="http://tulupan.{{$host}}/" target="_blank">吐鲁番</a>
+                    <a href="http://tz.{{$host}}/" target="_blank">泰州</a>
+                    <a href="http://tianchang.{{$host}}/" target="_blank">天长</a>
+                    <a href="http://tumen.{{$host}}/" target="_blank">图们</a>
+                    <a href="http://taishan.{{$host}}/" target="_blank">台山</a>
+                    <a href="http://tianmen.{{$host}}/" target="_blank">天门</a>
+                    <a href="http://taonan.{{$host}}/" target="_blank">洮南</a>
+                    <a href="http://tianshui.{{$host}}/" target="_blank">天水</a>
+                    <a href="http://taishan.{{$host}}/" target="_blank">泰安</a>
+                    <a href="http://tongling.{{$host}}/" target="_blank">铜陵</a>
+                    <a href="http://tongjiang.{{$host}}/" target="_blank">同江</a>
+                    <a href="http://tongliao.{{$host}}/" target="_blank">通辽</a>
+                    <a href="http://tongxiang.{{$host}}/" target="_blank">桐乡</a>
+                    <a href="http://taizhou.{{$host}}/" target="_blank">台州</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>U</span>
+                    <a href="http://wlcb.{{$host}}/" target="_blank">乌兰察布</a>
+                    <a href="http://wlmq.{{$host}}/" target="_blank">乌鲁木齐</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>W</span>
+                    <a href="http://wh.{{$host}}/" target="_blank">武汉</a>
+                    <a href="http://wuzhishan.{{$host}}/" target="_blank">五指山</a>
+                    <a href="http://weifang.{{$host}}/" target="_blank">潍坊</a>
+                    <a href="http://wenchang.{{$host}}/" target="_blank">文昌</a>
+                    <a href="http://wanning.{{$host}}/" target="_blank">万宁</a>
+                    <a href="http://wdlc.{{$host}}/" target="_blank">五大连池</a>
+                    <a href="http://wuhai.{{$host}}/" target="_blank">乌海</a>
+                    <a href="http://wanyuan.{{$host}}/" target="_blank">万源</a>
+                    <a href="http://wuchang.{{$host}}/" target="_blank">五常</a>
+                    <a href="http://wuzhong.{{$host}}/" target="_blank">吴忠</a>
+                    <a href="http://wuchuan.{{$host}}/" target="_blank">吴川</a>
+                    <a href="http://wuwei.{{$host}}/" target="_blank">武威</a>
+                    <a href="http://weihai.{{$host}}/" target="_blank">威海</a>
+                    <a href="http://wendeng.{{$host}}/" target="_blank">文登</a>
+                    <a href="http://wenzhou.{{$host}}/" target="_blank">温州</a>
+                    <a href="http://wujiaqu.{{$host}}/" target="_blank">五家渠</a>
+                    <a href="http://wuyishan.{{$host}}/" target="_blank">武夷山</a>
+                    <a href="http://wuxue.{{$host}}/" target="_blank">武穴</a>
+                    <a href="http://wenling.{{$host}}/" target="_blank">温岭</a>
+                    <a href="http://wuzhou.{{$host}}/" target="_blank">梧州</a>
+                    <a href="http://wafangdian.{{$host}}/" target="_blank">瓦房店</a>
+                    <a href="http://wugang.{{$host}}/" target="_blank">舞钢</a>
+                    <a href="http://wenshan.{{$host}}/" target="_blank">文山</a>
+                    <a href="http://wusu.{{$host}}/" target="_blank">乌苏</a>
+                    <a href="http://wlht.{{$host}}/" target="_blank">乌兰浩特</a>
+                    <a href="http://weihui.{{$host}}/" target="_blank">卫辉</a>
+                    <a href="http://wuan.{{$host}}/" target="_blank">武安</a>
+                    <a href="http://weinan.{{$host}}/" target="_blank">渭南</a>
+                    <a href="http://wuxi.{{$host}}/" target="_blank">无锡</a>
+                    <a href="http://wuhu.{{$host}}/" target="_blank">芜湖</a>
+                    <a href="http://wugang.{{$host}}/" target="_blank">武冈</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>X</span>
+                    <a href="http://xinghua.{{$host}}/" target="_blank">兴化</a>
+                    <a href="http://xinmin.{{$host}}/" target="_blank">新民</a>
+                    <a href="http://xinjiang.{{$host}}/" target="_blank">新疆</a>
+                    <a href="http://xingan.{{$host}}/" target="_blank">兴安</a>
+                    <a href="http://xichengqu.{{$host}}/" target="_blank">西城</a>
+                    <a href="http://xingcheng.{{$host}}/" target="_blank">兴城</a>
+                    <a href="http://xiangcheng.{{$host}}/" target="_blank">项城</a>
+                    <a href="http://xiaogan.{{$host}}/" target="_blank">孝感</a>
+                    <a href="http://xintai.{{$host}}/" target="_blank">新泰</a>
+                    <a href="http://xuancheng.{{$host}}/" target="_blank">宣城</a>
+                    <a href="http://xuzhou.{{$host}}/" target="_blank">徐州</a>
+                    <a href="http://xiangxiang.{{$host}}/" target="_blank">湘乡</a>
+                    <a href="http://xian.{{$host}}/" target="_blank">西安</a>
+                    <a href="http://xinyu.{{$host}}/" target="_blank">新余</a>
+                    <a href="http://xingning.{{$host}}/" target="_blank">兴宁</a>
+                    <a href="http://xingyi.{{$host}}/" target="_blank">兴义</a>
+                    <a href="http://xingren.{{$host}}/" target="_blank">兴仁</a>
+                    <a href="http://xishaungbanna.{{$host}}/" target="_blank">西双版纳</a>
+                    <a href="http://xingyang.{{$host}}/" target="_blank">荥阳</a>
+                    <a href="http://xinmi.{{$host}}/" target="_blank">新密</a>
+                    <a href="http://xinzheng.{{$host}}/" target="_blank">新郑</a>
+                    <a href="http://xinxiang.{{$host}}/" target="_blank">新乡</a>
+                    <a href="http://xianning.{{$host}}/" target="_blank">咸宁</a>
+                    <a href="http://xining.{{$host}}/" target="_blank">西宁</a>
+                    <a href="http://xianyang.{{$host}}/" target="_blank">咸阳</a>
+                    <a href="http://xinzhou.{{$host}}/" target="_blank">忻州</a>
+                    <a href="http://xinyang.{{$host}}/" target="_blank">信阳</a>
+                    <a href="http://xishi.{{$host}}/" target="_blank">西市</a>
+                    <a href="http://xuchang.{{$host}}/" target="_blank">许昌</a>
+                    <a href="http://xinshi.{{$host}}/" target="_blank">新市</a>
+                    <a href="http://xichang.{{$host}}/" target="_blank">西昌</a>
+                    <a href="http://xiaoyi.{{$host}}/" target="_blank">孝义</a>
+                    <a href="http://xinyi.{{$host}}/" target="_blank">新沂</a>
+                    <a href="http://xinji.{{$host}}/" target="_blank">辛集</a>
+                    <a href="http://xinle.{{$host}}/" target="_blank">新乐</a>
+                    <a href="http://xinyi.{{$host}}/" target="_blank">信宜</a>
+                    <a href="http://xianggelila.{{$host}}/" target="_blank">香格里拉</a>
+                    <a href="http://xingping.{{$host}}/" target="_blank">兴平</a>
+                    <a href="http://xlgl.{{$host}}/" target="_blank">锡林郭勒盟</a>
+                    <a href="http://xlht.{{$host}}/" target="_blank">锡林浩特</a>
+                    <a href="http://xintai.{{$host}}/" target="_blank">邢台</a>
+                    <a href="http://xiantao.{{$host}}/" target="_blank">仙桃</a>
+                    <a href="http://xiangxi.{{$host}}/" target="_blank">湘西</a>
+                    <a href="http://xuanwei.{{$host}}/" target="_blank">宣威</a>
+                    <a href="http://xiangtan.{{$host}}/" target="_blank">湘潭</a>
+                    <a href="http://xiamen.{{$host}}/" target="_blank">厦门</a>
+                    <a href="http://xiangyang.{{$host}}/" target="_blank">襄阳</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>Y</span>
+                    <a href="http://yuncheng.{{$host}}/" target="_blank">运城</a>
+                    <a href="http://yueyang.{{$host}}/" target="_blank">岳阳</a>
+                    <a href="http://quanzhou.{{$host}}/" target="_blank">阳泉</a>
+                    <a href="http://yibin.{{$host}}/" target="_blank">宜宾</a>
+                    <a href="http://yanshi.{{$host}}/" target="_blank">偃师</a>
+                    <a href="http://yongan.{{$host}}/" target="_blank">永安</a>
+                    <a href="http://yangsuo.{{$host}}/" target="_blank">阳朔</a>
+                    <a href="http://yshu.{{$host}}/" target="_blank">榆树</a>
+                    <a href="http://yingde.{{$host}}/" target="_blank">英德</a>
+                    <a href="http://yucheng.{{$host}}/" target="_blank">禹城</a>
+                    <a href="http://yixing.{{$host}}/" target="_blank">宜兴</a>
+                    <a href="http://yiwu.{{$host}}/" target="_blank">义乌</a>
+                    <a href="http://yongkang.{{$host}}/" target="_blank">永康</a>
+                    <a href="http://yanan.{{$host}}/" target="_blank">延安</a>
+                    <a href="http://yuyao.{{$host}}/" target="_blank">余姚</a>
+                    <a href="http://yichun.{{$host}}/" target="_blank">伊春</a>
+                    <a href="http://yiyang.{{$host}}/" target="_blank">益阳</a>
+                    <a href="http://yaan.{{$host}}/" target="_blank">雅安</a>
+                    <a href="http://yizheng.{{$host}}/" target="_blank">仪征</a>
+                    <a href="http://yicheng.{{$host}}/" target="_blank">宜城</a>
+                    <a href="http://yunnan.{{$host}}/" target="_blank">云南</a>
+                    <a href="http://yongji.{{$host}}/" target="_blank">永济</a>
+                    <a href="http://yulin.{{$host}}/" target="_blank">玉林</a>
+                    <a href="http://yongcheng.{{$host}}/" target="_blank">永城</a>
+                    <a href="http://yangjiang.{{$host}}/" target="_blank">阳江</a>
+                    <a href="http://yinchuan.{{$host}}/" target="_blank">银川</a>
+                    <a href="http://yingkou.{{$host}}/" target="_blank">营口</a>
+                    <a href="http://yunfu.{{$host}}/" target="_blank">云浮</a>
+                    <a href="http://yingcheng.{{$host}}/" target="_blank">应城</a>
+                    <a href="http://yushu.{{$host}}/" target="_blank">玉树</a>
+                    <a href="http://yanzhou.{{$host}}/" target="_blank">兖州</a>
+                    <a href="http://yizhou.{{$host}}/" target="_blank">宜州</a>
+                    <a href="http://yancheng.{{$host}}/" target="_blank">盐城</a>
+                    <a href="http://yuanjiang.{{$host}}/" target="_blank">沅江</a>
+                    <a href="http://yueqing.{{$host}}/" target="_blank">乐清</a>
+                    <a href="http://yima.{{$host}}/" target="_blank">义马</a>
+                    <a href="http://yichang.{{$host}}/" target="_blank">宜昌</a>
+                    <a href="http://yingtan.{{$host}}/" target="_blank">鹰潭</a>
+                    <a href="http://yangzhong.{{$host}}/" target="_blank">扬中</a>
+                    <a href="http://yantai.{{$host}}/" target="_blank">烟台</a>
+                    <a href="http://yining.{{$host}}/" target="_blank">伊宁</a>
+                    <a href="http://yuanping.{{$host}}/" target="_blank">原平</a>
+                    <a href="http://yumen.{{$host}}/" target="_blank">玉门</a>
+                    <a href="http://yangchun.{{$host}}/" target="_blank">阳春</a>
+                    <a href="http://yanbian.{{$host}}/" target="_blank">延边</a>
+                    <a href="http://yanji.{{$host}}/" target="_blank">延吉</a>
+                    <a href="http://yichun.{{$host}}/" target="_blank">宜春</a>
+                    <a href="http://yuzhou.{{$host}}/" target="_blank">禹州</a>
+                    <a href="http://yuxi.{{$host}}/" target="_blank">玉溪</a>
+                    <a href="http://yidu.{{$host}}/" target="_blank">宜都</a>
+                    <a href="http://yangzhou.{{$host}}/" target="_blank">扬州</a>
+                    <a href="http://ylin.{{$host}}/" target="_blank">榆林</a>
+                    <a href="http://yongzhou.{{$host}}/" target="_blank">永州</a>
+                    <a href="http://yakeshi.{{$host}}/" target="_blank">牙克石</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>Z</span>
+                    <a href="http://ziyang.{{$host}}/" target="_blank">资阳</a>
+                    <a href="http://zhejiang.{{$host}}/" target="_blank">浙江</a>
+                    <a href="http://zhongxiang.{{$host}}/" target="_blank">钟祥</a>
+                    <a href="http://zhangshu.{{$host}}/" target="_blank">樟树</a>
+                    <a href="http://xnzxqd.{{$host}}/" target="_blank">中沙</a>
+                    <a href="http://zhumadian.{{$host}}/" target="_blank">驻马店</a>
+                    <a href="http://zengcheng.{{$host}}/" target="_blank">增城</a>
+                    <a href="http://zhangjiagang.{{$host}}/" target="_blank">张家港</a>
+                    <a href="http://zaoyang.{{$host}}/" target="_blank">枣阳</a>
+                    <a href="http://zhenjiang.{{$host}}/" target="_blank">镇江</a>
+                    <a href="http://zhuhai.{{$host}}/" target="_blank">珠海</a>
+                    <a href="http://zigong.{{$host}}/" target="_blank">自贡</a>
+                    <a href="http://zhucheng.{{$host}}/" target="_blank">诸城</a>
+                    <a href="http://zhuanghe.{{$host}}/" target="_blank">庄河</a>
+                    <a href="http://zunyi.{{$host}}/" target="_blank">遵义</a>
+                    <a href="http://zhaoqing.{{$host}}/" target="_blank">肇庆</a>
+                    <a href="http://zhaodong.{{$host}}/" target="_blank">肇东</a>
+                    <a href="http://zhuzhou.{{$host}}/" target="_blank">株洲</a>
+                    <a href="http://zhuozhou.{{$host}}/" target="_blank">涿州</a>
+                    <a href="http://zb.{{$host}}/" target="_blank">淄博</a>
+                    <a href="http://zhangzhou.{{$host}}/" target="_blank">漳州</a>
+                    <a href="http://zhangjiakou.{{$host}}/" target="_blank">张家口</a>
+                    <a href="http://zhongshan.{{$host}}/" target="_blank">中山</a>
+                    <a href="http://zhoushan.{{$host}}/" target="_blank">舟山</a>
+                    <a href="http://zhangye.{{$host}}/" target="_blank">张掖</a>
+                    <a href="http://zhangping.{{$host}}/" target="_blank">漳平</a>
+                    <a href="http://zhaotong.{{$host}}/" target="_blank">昭通</a>
+                    <a href="http://zhuji.{{$host}}/" target="_blank">诸暨</a>
+                    <a href="http://zhangqiu.{{$host}}/" target="_blank">章丘</a>
+                    <a href="http://zoucheng.{{$host}}/" target="_blank">邹城</a>
+                    <a href="http://zhoukou.{{$host}}/" target="_blank">周口</a>
+                    <a href="http://zhangjiajie.{{$host}}/" target="_blank">张家界</a>
+                    <a href="http://zzhuang.{{$host}}/" target="_blank">枣庄</a>
+                    <a href="http://zhanjiang.{{$host}}/" target="_blank">湛江</a>
+                    <a href="http://zouping.{{$host}}/" target="_blank">邹平</a>
+                    <a href="http://zhijiang.{{$host}}/" target="_blank">枝江</a>
+                    <a href="http://zixing.{{$host}}/" target="_blank">资兴</a>
+                    <a href="http://zunhua.{{$host}}/" target="_blank">遵化</a>
+                    <a href="http://zhenzhou.{{$host}}/" target="_blank">郑州</a>
+                    <a href="http://zhongwei.{{$host}}/" target="_blank">中卫</a>
+                    <a href="http://zhaoyuan.{{$host}}/" target="_blank">招远</a>
+                    <a href="http://zhalantun.{{$host}}/" target="_blank">扎兰屯</a>
+                </dd>
+            </div>
+            <div class="clearfix"></div>
+        </dl>
+    </div>
+</div>
+
+{{- $charL := "abcdefghijklmnopqrstuvwxyz" -}}
+<div class="box">
+    <div id="zuixin" class="style_border_top_1">
+        <div class="title">
+            {{$title}}最新发布信息
+        </div>
+        <div class="list clearfix">
+            <ul class="clearfix">
+                {{- range $xm := (GetLib "xm" 40) -}}
+                    {{$url := Join "" "http://" (RandLib "diqu") "." $host}}
+                    <li> <span></span> [<a href="{{$url}}/" class="black" target="_blank">{{$xm}}</a>] <a href="{{$url}}/{{RandCustomChar 4 5 $charL}}/{{RandNumber 6 6}}.html" class="link" target="_blank">{{RandLib "hyzx"}}</a> </li>
+                {{ end -}}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div id="zuixin" class="style_border_top_1">
+        <div class="title">
+            分页浏览
+        </div>
+        <div class="list clearfix">
+            <ul class="clearfix">
+                {{- range $k, $area := (GetLib "diqu" 300) -}}
+                    <a href="http://{{$area}}.{{$host}}/" class="link" target="_blank">{{Add $k 1}}</a>
+                {{ end -}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div id="zuixin" class="style_border_top_1">
+        <div class="title">
+            友情链接
+        </div>
+        <div class="list clearfix">
+            <ul class="clearfix">
+                {{- range $area := (GetLib "diqu" 100) -}}
+                    <a href="http://{{$area}}.{{$host}}/" class="link" target="_blank">{{RandLib "company"}}</a>
+                {{ end -}}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="xb-foot-copy">
+        <p tyle="text-align:left;font-size:12px;"> 版权与免责声明：1.本网凡注明《{{$title}}》:本网原创”的所有作品。转载请必须同时注明本网名称及链接。 </p>
+        <p style="display:none">
+
+        </p>
+    </div>
+</div>
+</body>
+</html>
