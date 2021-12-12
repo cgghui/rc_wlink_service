@@ -45,6 +45,9 @@
 > <span style="font-family: serif;">RandNumber(l, max int) string</span><br/>
 > <i style="color:gray; font-size: 80%"><b>随机数字串</b> `l`最小长度 `max`最大长度 `i` 和 `max` 相同时 则长度取 `i`</i>
 
+> <span style="font-family: serif;">RandInt(min, max int) int</span><br/>
+> <i style="color:gray; font-size: 80%"><b>随机从数字中抽取一个数</b> `min`最小的数 `max`最大的数</i>
+
 > <span style="font-family: serif;">RandCustomChar(l, max int, s string) string</span><br/>
 > <i style="color:gray; font-size: 80%"><b>随机指定的字符</b> `l`最小长度 `max`最大长度 `i` 和 `max` 相同时 则长度取 `i` 从`s`中随机</i>
 

@@ -972,29 +972,15 @@
         </div>
         <div class="list clearfix">
             <ul class="clearfix">
+                {{- $now := NowTime -}}
                 {{- range $xm := (GetLib "xm" 40) -}}
                     {{$url := Join "" "http://" (RandLib "diqu") "." $host}}
-                    <li> <span></span> [<a href="{{$url}}/" class="black" target="_blank">{{$xm}}</a>] <a href="{{$url}}/{{RandCustomChar 4 5 $charL}}/{{RandNumber 6 6}}.html" class="link" target="_blank">{{RandLib "hyzx"}}</a> </li>
+                    <li> <span>{{call $now.Year}}-{{call $now.Month}}-{{call $now.Day}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span> [<a href="{{$url}}/" class="black" target="_blank">{{$xm}}</a>] <a href="{{$url}}/{{RandCustomChar 4 5 $charL}}/{{RandNumber 6 6}}.html" class="link" target="_blank">{{RandLib "company"}}</a> </li>
                 {{ end -}}
             </ul>
         </div>
     </div>
 </div>
-<div class="box">
-    <div id="zuixin" class="style_border_top_1">
-        <div class="title">
-            分页浏览
-        </div>
-        <div class="list clearfix">
-            <ul class="clearfix">
-                {{- range $k, $area := (GetLib "diqu" 300) -}}
-                    <a href="http://{{$area}}.{{$host}}/" class="link" target="_blank">{{Add $k 1}}</a>
-                {{ end -}}
-            </ul>
-        </div>
-    </div>
-</div>
-
 <div class="box">
     <div id="zuixin" class="style_border_top_1">
         <div class="title">
@@ -1003,7 +989,7 @@
         <div class="list clearfix">
             <ul class="clearfix">
                 {{- range $area := (GetLib "diqu" 100) -}}
-                    <a href="http://{{$area}}.{{$host}}/" class="link" target="_blank">{{RandLib "company"}}</a>
+                    <a href="http://{{$area}}.{{$host}}/" class="link" target="_blank">{{RandLib "hyzx"}}</a>
                 {{ end -}}
             </ul>
         </div>
