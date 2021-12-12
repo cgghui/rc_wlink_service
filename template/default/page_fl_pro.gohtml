@@ -972,10 +972,10 @@
         </div>
         <div class="list clearfix">
             <ul class="clearfix">
-                {{- $now := NowTime -}}
+                {{- $now := TimeNow -}}
                 {{- range $xm := (GetLib "xm" 40) -}}
                     {{$url := Join "" "http://" (RandLib "diqu") "." $host}}
-                    <li> <span>{{call $now.Year}}-{{call $now.Month}}-{{call $now.Day}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span> [<a href="{{$url}}/" class="black" target="_blank">{{$xm}}</a>] <a href="{{$url}}/{{RandCustomChar 4 5 $charL}}/{{RandNumber 6 6}}.html" class="link" target="_blank">{{RandLib "company"}}</a> </li>
+                    <li> <span>{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span> [<a href="{{$url}}/" class="black" target="_blank">{{$xm}}</a>] <a href="{{$url}}/{{RandCustomChar 4 5 $charL}}/{{RandNumber 6 6}}.html" class="link" target="_blank">{{RandLib "company"}}</a> </li>
                 {{ end -}}
             </ul>
         </div>
