@@ -31,7 +31,7 @@
         <div class="clear15"></div>
         <div class="clear"></div>
         <div id="blist">
-            热门分站：
+            热门栏目：
             <a href="http://{{$host}}/shenghuo/" target="_blank">生活便民</a>
             <a href="http://{{$host}}/ershou/" target="_blank">二手市场</a>
             <a href="http://{{$host}}/cheliang/" target="_blank">车辆买卖</a>
@@ -40,6 +40,8 @@
             <a href="http://{{$host}}/yuancailiao/" target="_blank">原材料市场</a>
             <a href="http://{{$host}}/zhuangxiu/" target="_blank">装修/装饰</a>
             <a href="http://{{$host}}/yunshu/" target="_blank">运输物流</a>
+            <a href="http://{{$host}}/luyou/" target="_blank">旅游</a>
+            <a href="http://{{$host}}/gongye/" target="_blank">工业制造</a>
         </div>
         <div class="clearfix"></div>
         <dl id="clist" class="pinyin">
@@ -993,13 +995,13 @@
 </div>
 <div class="footer">
     <div class="xb-foot-copy">
-        <p tyle="text-align:left;font-size:12px;"> 版权与免责声明：1.本网凡注明《{{$title}}》:本网原创”的所有作品。转载请必须同时注明本网名称及链接。 </p>
         <p>
             {{- $text := Join "" (RandLib "content") (RandLib "content") (RandLib "content") -}}
-            {{- RandInsertWord $text $title -}}
+            <strong>{{$title}}</strong>介绍{{- RandInsertWord $text $title -}}
             {{- RandInsertWord $text $title -}}
         </p>
         <p class="p"><a target="_blank" href="http://www.{{$host}}/">{{$title}}</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/">关于本站</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/">合作伙伴</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/" rel="nofollow">广告服务</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/" rel="nofollow">使用条款</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/" rel="nofollow">投稿指南</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/">诚聘精英</a> | <a target="_blank" href="http://jinmingqu.tacostijuanabc.com/">联系我们</a> | <a target="_blank" href="http://xuanwuqu.tacostijuanabc.com/">法律声明</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/" rel="nofollow">网站地图</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/">往日回顾</a></p>
+        <p tyle="text-align:left;font-size:12px;"> 版权与免责声明：1.本网凡注明《{{$title}}》:本网原创”的所有作品。转载请必须同时注明本网名称及链接。 </p>
     </div>
 </div>
 </body>
