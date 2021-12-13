@@ -48,10 +48,14 @@
 > <span style="font-family: serif;">RandInt(min, max int) int</span><br/>
 > <i style="color:gray; font-size: 80%"><b>随机从数字中抽取一个数</b> `min`最小的数 `max`最大的数</i>
 
+> <span style="font-family: serif;">TimeNow() time.Time</span><br/>
+> <i style="color:gray; font-size: 80%"><b>当前时间</b></i>
+
+> <span style="font-family: serif;">TimeFormat(format string, t ...time.Time) string</span><br/>
+> <i style="color:gray; font-size: 80%"><b>格式化时间 如果不传入`t`则取用当前时间</b></i>
+
 > <span style="font-family: serif;">RandCustomChar(l, max int, s string) string</span><br/>
 > <i style="color:gray; font-size: 80%"><b>随机指定的字符</b> `l`最小长度 `max`最大长度 `i` 和 `max` 相同时 则长度取 `i` 从`s`中随机</i>
-
-> <i style="color:gray; font-size: 80%"><b>从多个kv库中随机多个kv</b> `name`是kv库下的文件名 不含后缀 多个kv库可用英式逗号隔开。`n` 要获取的数目</i>
 
 > <span style="font-family: serif;">RandWord(word ...string) string</span><br/>
 > <i style="color:gray; font-size: 80%"><b>随机返回一个词</b> 从`word`中随机返回一个词 如：`{{RandWord "a" "b" "c" "d" "e" "f"}}`</i>
