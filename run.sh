@@ -12,3 +12,5 @@ if [ $ID ]; then
 fi
 
 nohup "./rc_wlink_service_v2" &
+
+echo "Done."
