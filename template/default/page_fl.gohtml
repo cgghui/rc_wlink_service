@@ -68,7 +68,7 @@
                 <dd>
                     <span>{{Add $i 1}}</span>
                     {{- range $name := (Split $line "/") -}}
-                    <a href="http://{{RandLib "fl_diqu"}}.{{$.host}}/" target="_blank">{{$name}}</a>
+                    <a href="http://{{RandLib "fl_diqu"}}.{{$host}}/" target="_blank">{{$name}}</a>
                     {{- end -}}
                 </dd>
             </div>
