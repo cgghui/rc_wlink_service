@@ -1,5 +1,8 @@
+{{- $host := .Request.Header.Get "Param-TopHost" -}}
 {{- range $company := (GetKv "company" 15) -}}
     <li style="height: inherit;">
-        <div class="index_mq_box_name nowrap" style="text-align: left">{{$company.val}}</div>
+        <div class="index_mq_box_name nowrap" style="text-align: left">
+            <a href="http://www.{{$host}}/{{RandNumber 6 6}}.html" target="_blank" title="{{$company.val}}">{{$company.val}}</a>
+        </div>
     </li>
 {{- end -}}
