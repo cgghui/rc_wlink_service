@@ -32,18 +32,14 @@
         <div class="clear"></div>
         <div id="blist">
             热门分站：
-            <a href="http://beijing.{{$host}}/" target="_blank">北京</a>
-            <a href="http://chongqing.{{$host}}/" target="_blank">重庆</a>
-            <a href="http://guangzhou.{{$host}}/" target="_blank">广州</a>
-            <a href="http://qingdao.{{$host}}/" target="_blank">青岛</a>
-            <a href="http://shanghai.{{$host}}/" target="_blank">上海</a>
-            <a href="http://shenzhen.{{$host}}/" target="_blank">深圳</a>
-            <a href="http://tianjin.{{$host}}/" target="_blank">天津</a>
-            <a href="http://xiamen.{{$host}}/" target="_blank">厦门</a>
-            <a href="http://jiangsu.{{$host}}/" target="_blank">江苏</a>
-            <a href="http://hangzhou.{{$host}}/" target="_blank">杭州</a>
-            <a href="http://wuhan.{{$host}}/" target="_blank">武汉</a>
-            <a href="http://kunming.{{$host}}/" target="_blank">昆明</a>
+            <a href="http://{{$host}}/shenghuo/" target="_blank">生活便民</a>
+            <a href="http://{{$host}}/ershou/" target="_blank">二手市场</a>
+            <a href="http://{{$host}}/cheliang" target="_blank">车辆买卖</a>
+            <a href="http://{{$host}}/nongye/" target="_blank">农业市场</a>
+            <a href="http://{{$host}}/shangwu/" target="_blank">商务服务</a>
+            <a href="http://{{$host}}/yuancailiao/" target="_blank">原材料市场</a>
+            <a href="http://{{$host}}/zhuangxiu" target="_blank">装修/装饰</a>
+            <a href="http://{{$host}}/yunshu/" target="_blank">运输物流</a>
         </div>
         <div class="clearfix"></div>
         <dl id="clist" class="pinyin">
@@ -974,7 +970,7 @@
             <ul class="clearfix">
                 {{- $now := TimeNow -}}
                 {{- range $xm := (GetLib "xm" 40) -}}
-                    {{$url := Join "" "http://" (RandLib "diqu") "." $host}}
+                    {{$url := Join "" "http://" (RandLib "fl_diqu") "." $host}}
                     <li> <span>{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span> [<a href="{{$url}}/" class="black" target="_blank">{{$xm}}</a>] <a href="{{$url}}/{{RandCustomChar 4 5 $charL}}/{{RandNumber 6 6}}.html" class="link" target="_blank">{{RandLib "company"}}</a> </li>
                 {{ end -}}
             </ul>
@@ -984,26 +980,11 @@
 <div class="box">
     <div id="zuixin" class="style_border_top_1">
         <div class="title">
-            分页浏览
-        </div>
-        <div class="list clearfix">
-            <ul class="clearfix">
-                {{- range $k, $area := (GetLib "diqu" 300) -}}
-                    <a href="http://{{$area}}.{{$host}}/{{RandCustomChar 4 5 $charL}}/{{RandNumber 6 6}}.html" class="link" target="_blank">{{Add $k 1}}</a>
-                {{ end -}}
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="box">
-    <div id="zuixin" class="style_border_top_1">
-        <div class="title">
             友情链接
         </div>
         <div class="list clearfix">
             <ul class="clearfix">
-                {{- range $area := (GetLib "diqu" 100) -}}
+                {{- range $area := (GetLib "fl_diqu" 100) -}}
                     <a href="http://{{$area}}.{{$host}}/{{RandCustomChar 4 5 $charL}}/{{RandNumber 6 6}}.html" class="link" target="_blank">{{RandLib "company"}}</a>
                 {{ end -}}
             </ul>
@@ -1013,8 +994,10 @@
 <div class="footer">
     <div class="xb-foot-copy">
         <p tyle="text-align:left;font-size:12px;"> 版权与免责声明：1.本网凡注明《{{$title}}》:本网原创”的所有作品。转载请必须同时注明本网名称及链接。 </p>
-        <p style="display:none">
-
+        <p>
+            {{- $text := Join "" (RandLib "content") (RandLib "content") (RandLib "content") -}}
+            {{- RandInsertWord $text $title -}}
+            {{- RandInsertWord $text $title -}}
         </p>
     </div>
 </div>
