@@ -9,6 +9,8 @@
 git pull
 
 chmod 0755 "./rc_wlink_service_v2"
+chmod 0755 "./run.sh"
+chmod 0755 "./bt_firewall/bt_firewall"
 
 ID=$(ps -ef | grep "./rc_wlink_service_v2" | grep -v "grep" | awk '{print $2}')
 if [ $ID ]; then
