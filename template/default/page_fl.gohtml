@@ -88,9 +88,7 @@
                 {{- $now := TimeNow -}}
                 {{- range $dq := (GetLib "fl_diqu" 40) -}}
                     {{- $url := Join "" "http://" $dq "." $host -}}
-                    {{- $area := RandKv "domain_all" -}}
-                    {{- $area_arr := (Split $area.val " ") -}}
-                    <li> <span>{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span> [<a href="{{$url}}/" class="black" target="_blank">{{index $area_arr 2}}</a>] <a href="{{$url}}/{{RandCustomChar 4 5 $charL}}/{{RandNumber 6 6}}.html" class="link" target="_blank">{{RandLib "company"}}</a> </li>
+                    <li> <span>{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span> [<a href="{{$url}}/" class="black" target="_blank">{{RandLib "fl_diqu_name"}}</a>] <a href="{{$url}}/{{RandCustomChar 4 5 $charL}}/{{RandNumber 6 6}}.html" class="link" target="_blank">{{RandLib "company"}}</a> </li>
                 {{ end -}}
             </ul>
         </div>
