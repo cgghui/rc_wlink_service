@@ -969,7 +969,7 @@
         <div class="list clearfix">
             <ul class="clearfix">
                 {{- $now := TimeNow -}}
-                {{- range $xm := (GetLib "xm" 40) -}}
+                {{- range $xm := (GetLib "fl_type" 40) -}}
                     {{$url := Join "" "http://" (RandLib "fl_diqu") "." $host}}
                     <li> <span>{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span> [<a href="{{$url}}/" class="black" target="_blank">{{$xm}}</a>] <a href="{{$url}}/{{RandCustomChar 4 5 $charL}}/{{RandNumber 6 6}}.html" class="link" target="_blank">{{RandLib "company"}}</a> </li>
                 {{ end -}}
@@ -984,7 +984,7 @@
         </div>
         <div class="list clearfix">
             <ul class="clearfix">
-                {{- range $area := (GetLib "fl_diqu" 100) -}}
+                {{- range $area := (GetLib "fl_diqu" 50) -}}
                     <a href="http://{{$area}}.{{$host}}/{{RandCustomChar 4 5 $charL}}/{{RandNumber 6 6}}.html" class="link" target="_blank">{{RandLib "company"}}</a>
                 {{ end -}}
             </ul>
@@ -999,6 +999,7 @@
             {{- RandInsertWord $text $title -}}
             {{- RandInsertWord $text $title -}}
         </p>
+        <p class="p"><a target="_blank" href="http://www.{{$host}}/">{{$title}}</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/">关于本站</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/">合作伙伴</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/" rel="nofollow">广告服务</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/" rel="nofollow">使用条款</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/" rel="nofollow">投稿指南</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/">诚聘精英</a> | <a target="_blank" href="http://jinmingqu.tacostijuanabc.com/">联系我们</a> | <a target="_blank" href="http://xuanwuqu.tacostijuanabc.com/">法律声明</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/" rel="nofollow">网站地图</a> | <a target="_blank" href="http://{{RandLib "fl_diqu"}}.{{$host}}/">往日回顾</a></p>
     </div>
 </div>
 </body>
