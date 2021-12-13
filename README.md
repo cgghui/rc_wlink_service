@@ -95,3 +95,14 @@
 
 > <span style="font-family: serif;"><b>Text2URL(s string) string</b></span><br/>
 > <i style="color:gray; font-size: 80%"></i>
+
+### -
+
+> <span style="font-family: serif;"><b>{{.HostRoot}} string</b></span><br/>
+> <i style="color:gray; font-size: 80%">当前访问的顶级域名</i>
+
+> <span style="font-family: serif;"><b>{{.HostCurrent}} string</b></span><br/>
+> <i style="color:gray; font-size: 80%">当前访问的域名</i>
+
+> <span style="font-family: serif;"><b>{{.Param "k string"}} string</b></span><br/>
+> <i style="color:gray; font-size: 80%">从当前请求的header中获取以 “Param-” 开头的标头值， `{{.Param "TopHost"}}`</i>
