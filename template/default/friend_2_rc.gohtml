@@ -1,0 +1,4 @@
+{{- $host := .Request.Header.Get "Param-TopHost" -}}
+{{- range $i, $area := (GetCustomKv "rc_area" 300) -}}
+	<li><strong><a href="http://job{{$area.key}}.{{$host}}" target="_blank">{{$area.val}}</a></strong>{{if ne $i 299}}|{{end}}</li>
+{{- end -}}
