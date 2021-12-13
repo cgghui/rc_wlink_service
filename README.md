@@ -7,7 +7,7 @@
 > <i style="color:gray; font-size: 80%">随机返回一个bool值</i>
 
 > <span style="font-family: serif;"><b>Add(n ...int) int</b></span><br/>
-> <i style="color:gray; font-size: 80%"><span style="color:blue">累加</span> 对`n`进行累加 返回累加结果</i>
+> <i style="color:gray; font-size: 80%"><font color="#0000dd">累加</font> 对`n`进行累加 返回累加结果</i>
 
 > <span style="font-family: serif;"><b>Split(str string, sep string) []string</b></span><br/>
 > <i style="color:gray; font-size: 80%"><span style="color:blue">切割字符串</span> 使用`sep`分割`str`</i>
