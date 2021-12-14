@@ -1,5 +1,0 @@
-/www/wwwroot/xiaoxf/temp/cache/html
-/www/wwwroot/xiaoxf/temp/mulu_config.php
-/www/wwwroot/xiaoxf/temp/data/mulu.txt
-/www/wwwroot/xiaoxf/temp/data/mulu/ds_mulu.txt
-/www/wwwroot/xiaoxf/temp/cache/tags/tkd/ds

@@ -1,4 +1,0 @@
-{{- range $item := (GetKv "domain_city" 10) -}}
-    {{- $city_arr := Split $item.val " " -}}
-    <li class="spe"><a href="http://{{Replace (index $city_arr 1) "x.com" $.HostRoot 1}}/" class="">{{index $city_arr 2}}</a></li>
-{{- end -}}

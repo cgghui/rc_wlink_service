@@ -1,6 +1,0 @@
-{{- $host := .Request.Header.Get "Param-TopHost" -}}
-{{- range $three := (GetKv "domain_province" 12) -}}
-    {{$threeArr := Split $three.val " "}}
-    {{$domain := index $threeArr 1}}
-    <li><a href="http://{{Replace $domain "x.com" $host 1}}"> {{index $threeArr 0}} </a><i class="yun_new_headernav_list_line"></i></li>
-{{- end -}}

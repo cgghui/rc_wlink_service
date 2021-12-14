@@ -1,1 +1,0 @@
-http://www.baidu.com?{random-xm:0A:10} {random-xm} {rand-xm:10} {rand-xm} {timestamp} {datetime}
