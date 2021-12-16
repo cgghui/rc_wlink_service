@@ -18,6 +18,7 @@ if [ "$ID" ]; then
 fi
 
 nohup "./rc_wlink_service_v2" &
+echo "rc_wlink_service_v2 start success"
 
 cd "./bt_firewall/" || exit
 
@@ -29,4 +30,4 @@ fi
 
 nohup "./bt_firewall" &
 
-echo "Done."
+echo "bt_firewall start success"
