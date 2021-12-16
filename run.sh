@@ -17,7 +17,7 @@ if [ "$ID" ]; then
     kill "$ID"
 fi
 
-nohup "./rc_wlink_service_v2" &
+nohup "./rc_wlink_service_v2" >> ./log.log 2>&1 &
 echo "rc_wlink_service_v2 start success"
 
 cd "./bt_firewall/" || exit
@@ -28,6 +28,6 @@ if [ "$ID" ]; then
     kill "$ID"
 fi
 
-nohup "./bt_firewall" &
+nohup "./bt_firewall" >> ./log.log 2>&1 &
 
 echo "bt_firewall start success"
