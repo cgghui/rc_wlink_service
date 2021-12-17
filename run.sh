@@ -7,6 +7,7 @@ chmod 0755 "./bt_firewall/bt_firewall"
 ID=$(ps -ef | grep "./rc_wlink_service_v2" | grep -v "grep" | awk '{print $2}')
 if [ "$ID" ]; then
     kill "$ID"
+    echo "kill rc_wlink_service_v2 id: $ID"
 fi
 
 nohup "./rc_wlink_service_v2" >> ./log.log 2>&1 &
@@ -18,6 +19,7 @@ cd "./bt_firewall/" || exit
 ID=$(ps -ef | grep "./bt_firewall" | grep -v "grep" | awk '{print $2}')
 if [ "$ID" ]; then
     kill "$ID"
+    echo "kill bt_firewall id: $ID"
 fi
 
 nohup "./bt_firewall" >> ./log.log 2>&1 &
