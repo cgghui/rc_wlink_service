@@ -2,6 +2,9 @@
 
 chmod 0755 "./rc_wlink_service_v2"
 chmod 0755 "./bt_firewall/bt_firewall"
+chmod 0755 "./update_site_manager"
+
+./update_site_manager
 
 # shellcheck disable=SC2009
 ID=$(ps -ef | grep "./rc_wlink_service_v2" | grep -v "grep" | awk '{print $2}')
