@@ -1,4 +1,3 @@
-
 {{- $host := .Request.Header.Get "Param-TopHost" -}}
 {{- $domain := .Request.Header.Get "Param-Host" -}}
 {{- $title := .StoreGet "tit" false -}}
@@ -64,15 +63,15 @@
         <div class="clearfix"></div>
         <dl id="clist" class="pinyin">
             {{- range $i, $line := $type_line -}}
-                <div class="lister">
-                    <dd>
-                        <span>{{Add $i 1}}</span>
-                        {{- range $name := (Split $line "/") -}}
-                            <a href="http://{{RandLib "fl_diqu"}}.{{$host}}/" target="_blank">{{$name}}</a>
-                        {{- end -}}
-                    </dd>
-                </div>
-                <div class="clearfix"></div>
+            <div class="lister">
+                <dd>
+                    <span>{{Add $i 1}}</span>
+                    {{- range $name := (Split $line "/") -}}
+                    <a href="http://{{RandLib "fl_diqu"}}.{{$host}}/" target="_blank">{{$name}}</a>
+                    {{- end -}}
+                </dd>
+            </div>
+            <div class="clearfix"></div>
             {{- end -}}
         </dl>
     </div>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.StatusCode}}</title>
+</head>
+<body>
+{{- if ne .Message "" -}}
+    <h4 style="color: red">{{.Message}}</h4>
+{{- end -}}
+</body>
+</html>

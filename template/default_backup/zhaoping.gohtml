@@ -1,0 +1,28 @@
+{{- $host := .Request.Header.Get "Param-TopHost" -}}
+<div class="com_show_leftcont">
+    <div class="comshow_job" id="company_job_list">
+        {{- $data := (GetKv "job" 50) -}}
+        {{- range $job := $data -}}
+            <div class="firm_post">
+                <div class="com_details_com_otherjob_l">
+                    <div class="com_details_com_otherjob_name">
+                        <a href="http://job{{$job.key}}.{{$host}}" target="_blank">{{$job.val}}</a>
+                    </div>
+                    <div class="com_details_com_otherjob_info">
+                        {{RandLib "jy"}}<span class="com_details_line">|</span>{{RandLib "xl"}}
+                    </div>
+                </div>
+                <div class="com_details_com_otherjob_c">
+
+                    <div class="com_details_com_otherjob_xz"></div>
+
+                    <div class="com_details_com_otherjob_city"></div>
+                </div>
+                <div class="com_details_com_otherjob_r">
+                    <div class="com_details_com_otherjob_time"></div>
+                    <a href="#" class="com_details_com_otherjob_sq">申请</a>
+                </div>
+            </div>
+        {{- end -}}
+    </div>
+</div>

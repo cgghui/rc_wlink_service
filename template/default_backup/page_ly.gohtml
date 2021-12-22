@@ -1,0 +1,493 @@
+{{- $to_city := .StoreGet "to_city" false -}}
+{{- if eq $to_city "" -}}
+    {{$to_city = index (Split (RandKv "domain_all").val " ") 2}}
+    {{- .StoreSet "to_city" $to_city false -}}
+{{- end -}}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" class="ua-wk ua-win">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{$to_city}}旅游目的地指南线路预订</title>
+    <meta name="description" content="旅游目的地指南包涵各地天气预报、地图、景点、美食、游记、照片、不可错 过、旅游宝典等。并提供各地旅游线路、酒店、机票预订。{{$to_city}}旅游专线，详细{{$to_city}}旅游资讯。" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://{{.HostCurrent}}/images/mi7.ico" />
+    <link rel="icon" type="image/x-icon" href="http://{{.HostCurrent}}/images/mi7.ico" />
+    <link href="http://{{.HostCurrent}}/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="http://{{.HostCurrent}}/css/css.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://{{.HostCurrent}}/js/js.js"></script>
+</head>
+<body>
+<div class='forbg'>
+    <div class="hp2013 pngfix">
+        <div class="forbg2 pngfix">
+            <div class="nav">
+                <div class="box1 clearfix">
+                    <div class="logo"><a href="http://www.{{.HostRoot}}/" class="pngfix"></a></div>
+                    <div class="search">
+                        <div class="sss">
+                            <form action="http://search.{{.HostRoot}}/" method="get" id="hd_form_sear" name="hd_form_sear" target="_blank" style="text-align:left;"><input type="hidden" value="items" name="source" id="hd_pshf" /><input type="text" name="keyword" value="" class="ss pngfix" /><a class="asc" title="搜索" href="#" onclick="submit();">&nbsp;</a></form>
+                        </div>
+                    </div>
+                    <div class="login clearfix pngfix">
+                        <ul>
+                            <li>&nbsp;</li>
+                            <li><a href="http://favor.{{.HostRoot}}/" rel="nofollow" target="_blank">收藏夹</a></li>
+                            <li><a href="http://members.{{.HostRoot}}/" rel="nofollow" target="_blank" class="hpymarai">我的订单</a></li>
+                            <li><a rel="nofollow" href="http://login.{{.HostRoot}}/">登录</a>&nbsp;&nbsp;&nbsp;<a rel="nofollow" href="http://register.{{.HostRoot}}/">注册</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box2">
+                    <ul class="clearfix">
+                        {{- $city := index (Split (RandKv "domain_city").val " ") 2 -}}
+                        <li class="a1"><a href="#" class="xtx cur">出发地：{{$city}}<span class="jt">&nbsp;</span></a>
+                            <div class="cfd clearfix" id="cfd">
+                                {{- range $item := (GetKv "domain_city" 4) -}}
+                                    {{- $city_arr := Split $item.val " " -}}
+                                    <a href="http://{{Replace (index $city_arr 1) "x.com" $.HostRoot 1}}/" title="{{index $city_arr 2}}">{{index $city_arr 2}}</a>
+                                {{- end -}}
+                            </div>
+                        </li>
+                        <li class="spe first"><a href="http://{{.HostCurrent}}/" class="">首页</a></li>
+                        {{- .LoadTmplHTML "page_ly_nav" "page_ly_nav" 2505600 true false -}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Main" class="clearfix">
+        <h1 id="header-title" class="page-header1">各地交通旅游地图、电子地图、酒店预订、天气预报、旅游指南、游记攻略</h1>
+        <div style="padding-bottom:15px;">
+            <div class="hpltbox clearfix">
+                <div class="hpltboxs hpltboxs_0 clearfix">
+                    <h4>热门:</h4>
+                    <ul class="clearfix">
+                        {{- range $item := (GetKv "domain_city" 8) -}}
+                            {{- $city_arr := Split $item.val " " -}}
+                            <li><a href="http://{{Replace (index $city_arr 1) "x.com" $.HostRoot 1}}/" title="{{index $city_arr 2}}" target="_blank">{{index $city_arr 2}}</a></li>
+                        {{- end -}}
+                    </ul>
+                </div>
+                <div class="hpltboxs hpltboxs_1 clearfix">
+                    <h4>国内:</h4>
+                    <ul class="clearfix">
+                        {{- range $item := (GetKv "domain_2000" 10) -}}
+                            {{- $city_arr := Split $item.val " " -}}
+                            <li><a href="http://{{Replace (index $city_arr 1) "x.com" $.HostRoot 1}}/" title="{{index $city_arr 2}}旅游" target="_blank">{{index $city_arr 2}}旅游</a></li>
+                        {{- end -}}
+                        {{- range $item := (GetKv "domain_2000" 11) -}}
+                            {{- $city_arr := Split $item.val " " -}}
+                            <li><a href="http://{{Replace (index $city_arr 1) "x.com" $.HostRoot 1}}/" title="{{index $city_arr 2}}" target="_blank">{{index $city_arr 2}}</a></li>
+                        {{- end -}}
+                    </ul>
+                </div>
+                <div class="hpltboxs hpltboxs_2 clearfix">
+                    <h4>出境:</h4>
+                    <ul class="clearfix">
+                        {{- range $item := (GetKv "domain_2000" 15) -}}
+                            {{- $city_arr := Split $item.val " " -}}
+                            <li><a href="http://{{Replace (index $city_arr 1) "x.com" $.HostRoot 1}}/" title="{{index $city_arr 2}}" target="_blank">{{index $city_arr 2}}</a></li>
+                        {{- end -}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <form id="sbgg_form" action="http://search.{{.HostRoot}}/" method="get" target="_blank" style="display:none;" name="sbgg_form"></form>
+        <div class="sec search-sec2">
+            <div class="sec-inner">
+                <div class="" style="padding:10px 0px 10px 160px;margin:0px 0 10px 0;border:1px solid #5F93C5;background:#E6FFFB;">
+                    <form action="http://search.{{.HostRoot}}/" method="get" target="_blank">
+                        <input type="hidden" name="t" value="All" />
+                        <table class="search-tb">
+                            <tbody>
+                            <tr>
+                                <td class="tb-div" style="font-size:15px;font-weight:bold;color:#437878;padding-top:3px;">各地旅行指南&nbsp;</td>
+                                <td class="tb-input"><input type="text" name="q" id="s-q-name" style="font-size:12px; color:gray;border:1px solid #729EB9;height:17px;" placeholder="请输入目的地" /></td>
+                                <td><input type="submit" class="inputbutton" value="&nbsp;去看看&nbsp;" /></td>
+                                <td class="tb-div" style="font-size:15px;font-weight:bold;color:#437878;padding-top:3px;">或者&nbsp;</td>
+                                <td><input type="button" class="inputbutton" value="&nbsp;随便逛逛&nbsp;" /></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <form action="http://search.{{.HostRoot}}/" method="get" target="_blank" id="s-f-hidden" name="s-f-hidden"><input type="hidden" name="id" id="s-q-id" value="" /></form>
+                    <div class="clear-blank"></div>
+                </div>
+                <div style="background-image11: url(http://{{.HostCurrent}}/images/dotted.gif);background-repeat: repeat-x;background-position: left bottom;background-position:0px 50%;padding:0px 0;"></div>
+            </div>
+        </div>
+        <div id="layout_2cols">
+            <div id="container">
+                <div id="main">
+                    <div class="main-inner">
+                        <div class="main-content">
+                            <div style="padding-top:10px;">
+                                <div style="background:#faefd3;border:3px solid #FFDB73" class="tuijian-head">
+                                    <div class="clearfix" style="padding:2px 10px 2px 10px;background:#FFDB73;">
+                                        <script type="text/javascript">
+                                            function change(city_1, city_2){
+                                                AddClass($('city-'+city_1),'city-active');
+                                                RemoveClass($('city-'+city_2),'city-active');
+                                                var tr_no=$$('tr.item-none');
+                                                var tr_ac=$$('tr.item-active');
+                                                for(var j=1;j<=tr_ac.length;j++){
+                                                    tr_ac[j-1].className='item-none';
+                                                }
+                                                for(var i=1;i<=tr_no.length;i++){
+                                                    tr_no[i-1].className='item-active';
+                                                    if(i==tr_no.length)
+                                                        AddClass(tr_no[i-1],'last-tr');
+                                                    else
+                                                        RemoveClass(tr_no[i-1],'last-tr');
+                                                }
+                                            }
+                                        </script>
+                                        <h2 class="related-blogs-header page-header3" style="float:left;color:black">
+                                            {{$to_city}}旅游推荐:
+                                        </h2>
+                                        <a href="#" id="city-sh" name="city-sh" onclick="change('sh','hz');return false;" class="city-name city-active">{{index (Split (RandKv "domain_city").val " ") 2}}出发到{{$to_city}}</a>
+                                        <a href="#" id="city-hz" name="city-hz" onclick="change('hz','sh');return false;" class="city-name">{{index (Split (RandKv "domain_city").val " ") 2}}出发到{{$to_city}}</a>
+                                        <h2><a href="http://more.{{.HostRoot}}/" style="color:black;text-decoration:underline;float:right;font-weight:normal;font-size:12px;" target="_blank">更多{{$to_city}}旅游线路</a></h2>
+                                    </div>
+                                    <div id="place-travel-line-box" style="padding-bottom:15px;width:auto;">
+                                        <div class="place-travel-line-box-inner">
+                                            <div class="place-travel-line-content">
+                                                {{- $img_file := .ListFile "uploads" -}}
+                                                <table class="place-travel-line-table">
+                                                    <tbody>
+                                                    {{- range $company := (GetLib "company" 10) -}}
+                                                       {{- $arr := Split (RandKv "domain_city").val " " -}}
+                                                       {{- $tit := Join "" $to_city (RandWord "、" "至" "到") (index $arr 2) (RandLib "day") "日游" -}}
+                                                       {{- $url := Join "" "http://" (Replace (index $arr 1) "x.com" $.HostRoot 1) "/" -}}
+                                                        <tr class="item-none item-tr">
+                                                        <td style="vertical-align:top;width:77px;">
+                                                            <a class="img-link" href="{{$url}}" title="{{$tit}}" target="_blank" style="background:url(http://{{$.HostCurrent}}/uploads/{{RandList $img_file}}) no-repeat center;"></a>
+                                                        </td>
+                                                        <td style="padding-top:0px;padding-left:10px;vertical-align:top;">
+                                                            <div>
+                                                                <h3 style="margin-top:0;padding-top:0;"><a href="{{$url}}" target="_blank" style="text-decoration:underline;">{{$tit}}</a></h3>
+                                                                &nbsp;<span class="price2">预定价：￥ <b style="font-size:16px;" class="price">{{RandNumber 2 3}}</b> 元/人</span>
+                                                            </div>
+                                                            <div class="tsse-text">
+                                                                {{- $content := Join "" (RandLib "content") (RandLib "content") (RandLib "content") (RandLib "content") (RandLib "content") -}}
+                                                                {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
+                                                                {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
+                                                                {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
+                                                                {{Substr $content 130 "..." | Text2HTML}}
+                                                            </div>
+                                                            <div class="shop-name-city">旅行社：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{RandLib "company"}}</a> &nbsp;&nbsp;&nbsp;&nbsp;出发地：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{index (Split (RandKv "domain_city").val " ") 2}}</a></div>
+                                                        </td>
+                                                    </tr>
+                                                    {{- end -}}
+                                                    {{- range $i, $company := (GetLib "company" 10) -}}
+                                                        {{- $arr := Split (RandKv "domain_city").val " " -}}
+                                                        {{- $tit := Join "" $to_city (RandWord "、" "至" "到") (index $arr 2) (RandLib "day") "日游" -}}
+                                                        {{- $url := Join "" "http://" (Replace (index $arr 1) "x.com" $.HostRoot 1) "/" -}}
+                                                        {{- $class := "" -}}
+                                                        {{- if eq $i 9 -}}{{- $class = " last-tr" -}}{{- end -}}
+                                                        <tr class="item-active item-tr{{$class}}">
+                                                            <td style="vertical-align:top;width:77px;">
+                                                                <a class="img-link" href="{{$url}}" title="{{$tit}}" target="_blank" style="background:url(http://{{$.HostCurrent}}/uploads/{{RandList $img_file}}) no-repeat center;"></a>
+                                                            </td>
+                                                            <td style="padding-top:0px;padding-left:10px;vertical-align:top;">
+                                                                <div>
+                                                                    <h3 style="margin-top:0;padding-top:0;"><a href="{{$url}}" target="_blank" style="text-decoration:underline;">{{$tit}}</a></h3>
+                                                                    &nbsp;<span class="price2">预定价：￥ <b style="font-size:16px;" class="price">{{RandNumber 2 3}}</b> 元/人</span>
+                                                                </div>
+                                                                <div class="tsse-text">
+                                                                    {{- $content := Join "" (RandLib "content") (RandLib "content") (RandLib "content") (RandLib "content") (RandLib "content") -}}
+                                                                    {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
+                                                                    {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
+                                                                    {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
+                                                                    {{Substr $content 130 "..." | Text2HTML}}
+                                                                </div>
+                                                                <div class="shop-name-city">旅行社：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{RandLib "company"}}</a> &nbsp;&nbsp;&nbsp;&nbsp;出发地：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{index (Split (RandKv "domain_city").val " ") 2}}</a></div>
+                                                            </td>
+                                                        </tr>
+                                                    {{- end -}}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-top:30px;">
+                                <div class="UI-rbox-container clearfix">
+                                    <div class="UI-rbox UI-rbox-2h">
+                                        <div class="UI-rbox-corner UI-rbox-tl">
+                                            <div class="UI-rbox-corner UI-rbox-tr">
+                                                <div class="UI-rbox-corner UI-rbox-bl">
+                                                    <div class="UI-rbox-corner UI-rbox-br">
+                                                        <div class="UI-rbox-side UI-rbox-ls">
+                                                            <div class="UI-rbox-side UI-rbox-rs">
+                                                                <div class="UI-Box-container clearfix">
+                                                                    <h2 id="place-travel-raiders-header" style="color:#FFFFFF;font-size:16px;font-weight:normal;margin:0px;">游记攻略</h2>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="UI-rbox-container clearfix" style="margin-top:0px;">
+                                    <div class="UI-rbox UI-rbox-2b UI-rbox-raiders">
+                                        <div class="UI-rbox-corner UI-rbox-tl">
+                                            <div class="UI-rbox-corner UI-rbox-tr">
+                                                <div class="UI-rbox-corner UI-rbox-bl">
+                                                    <div class="UI-rbox-corner UI-rbox-br">
+                                                        <div class="UI-rbox-side UI-rbox-ls">
+                                                            <div class="UI-rbox-side UI-rbox-rs">
+                                                                <div class="UI-Box-container clearfix">
+                                                                    <div style="margin-top:0px;height:22px;padding-top:6px;padding-left:10px;background:#DFEDF0;color:#476472;font-size:14px;font-weight:bold;">最新热门游记</div>
+                                                                    <div class="sec blog-box">
+                                                                        <div class="sec-inner">
+                                                                            <h2 class="sec-header page-header2">最新好文</h2>
+                                                                            <div class="sec-content">
+                                                                                {{- range $i, $xm := (GetLib "xm" 10) -}}
+                                                                                {{- $id := RandNumber 6 6 -}}
+                                                                                <div class="entry-wrapper">
+                                                                                    <div class="entry has_thumb" id="blog-entry-id-{{$id}}">
+                                                                                        <div class="entry-header">
+                                                                                            <h4 class="entry-title">
+                                                                                                {{- $tit := RandInsertWord (RandLib "hyzx") (RandWord "旅游" "风景区" $to_city) -}}
+                                                                                                {{- $article_url := Join "" "http://" (RandLib "diqu_ly") "." $.HostRoot "/" -}}
+                                                                                                <a href="{{$article_url}}">{{$tit}}</a>
+                                                                                            </h4>
+                                                                                            <div class="entry-meta clearfix">
+                                                                                                <span style="background:url(http://{{$.HostCurrent}}/images/dotted.gif) 0 50% repeat-x;float:left;display:block;width:1.5em;margin-right:0.5em;">&nbsp;</span>
+                                                                                                <a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/">{{$xm}}</a>
+                                                                                                {{- $arr := Split (RandKv "domain_city").val " " -}}
+                                                                                                {{- $url := Join "" "http://" (Replace (index $arr 1) "x.com" $.HostRoot 1) "/" -}}
+                                                                                                <span class="lc-link-wrapper">(<a href="{{$url}}">{{index $arr 2}}</a>)</span>
+                                                                                                {{ParseTag "写于{Y}年{M}月{D}日"}}
+                                                                                                {{- $arr = Split (RandKv "domain_city").val " " -}}
+                                                                                                {{- $url = Join "" "http://" (Replace (index $arr 1) "x.com" $.HostRoot 1) "/" -}}
+                                                                                                关于<a href="{{$url}}">{{Replace (index $arr 0) "-" "," 1}}</a> | <span class="lc-link-wrapper"><a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/">有{{RandNumber 2 5}}条评论</a></span></div>
+                                                                                        </div>
+                                                                                        <div class="entry-body clearfix">
+                                                                                            <table with="100%" border="0" cellpadding="0" cellspacing="0">
+                                                                                                <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="thumb_wrapper">
+                                                                                                        <div class="thumb_image" id="thumb_image_{{$id}}"><a href="{{$article_url}}"><img src="http://{{$.HostCurrent}}/uploads/{{RandList $img_file}}" alt="{{$tit}}" title="{{$tit}}" style="width:150px;height: 102px" /></a></div>
+                                                                                                    </td>
+                                                                                                    <td class="entry-text">
+                                                                                                        {{- $content := Join "" (RandLib "content") (RandLib "content") (RandLib "content") -}}
+                                                                                                        {{- $content = RandInsertWord $content (RandWord "<b>旅游</b>" "<b>风景区</b>" $to_city) -}}
+                                                                                                        {{- $content = RandInsertWord $content (RandWord "<b>旅游</b>" "<b>风景区</b>" $to_city) -}}
+                                                                                                        {{- $content = RandInsertWord $content (RandWord "<b>旅游</b>" "<b>风景区</b>" $to_city) -}}
+                                                                                                        {{$content|Text2HTML}}
+                                                                                                        <a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" title="{{$tit}}">阅读全文»</a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                {{- end -}}
+                                                                                <p style="text-align:right;"><a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" style="text-decoration:underline;">更多文章»</a></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="padding-top:10px;"></div>
+                            <div style="margin-top:20px;"></div>
+                        </div>
+                        </div>
+                    </div>
+                <div id="sidebar">
+                        <div class="sidebar-content" style="padding-top:15px;">
+                            <div class="widget sr-place-widget">
+                                <div class="widget-inner">
+                                    <h3 class="widget-header page-header3">热门目的地</h3>
+                                    <div class="widget-content">
+                                        <div class="widget-list- -place-widget-list new-wl">
+                                            {{- range $item := (GetKv "domain_city" 5) -}}
+                                            {{- $arr := Split $item.val " " -}}
+                                            {{- $url := Join "" "http://" (Replace (index $arr 1) "x.com" $.HostRoot 1) "/" -}}
+                                            <div class="wl-item-wrapper">
+                                                <table cellpadding="0" cellspacing="0" width="100%" border="0">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td class="item-" style="vertical-align:top;padding:0;">
+                                                            <h4 class="item-name"><a href="{{$url}}">{{Replace (index $arr 0) "-" "," 1}}</a></h4>
+                                                            <p class="item-desc"><br /><a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/">{{RandNumber 2 4}}人去过</a> <a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/">{{RandNumber 2 4}}人想去</a></p>
+                                                        </td>
+                                                        <td class="item-" style="padding:0;vertical-align:top;text-align:right;width:90px;"><a class="item-icon" href="{{$url}}"><img style="width: 75px;height: 75px" class="image" src="http://{{$.HostCurrent}}/uploads/{{RandList $img_file}}" alt="{{index $arr 2}}" title="{{index $arr 2}}" /></a></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            {{- end -}}
+                                        </div>
+                                        <div class="clear-blank"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="UI-rbox-container clearfix UI-rbox-marginbottom">
+                                <div class="UI-rbox UI-rbox-6">
+                                    <div class="UI-rbox-corner UI-rbox-tl">
+                                        <div class="UI-rbox-corner UI-rbox-tr">
+                                            <div class="UI-rbox-corner UI-rbox-bl">
+                                                <div class="UI-rbox-corner UI-rbox-br">
+                                                    <div class="UI-rbox-side UI-rbox-ls">
+                                                        <div class="UI-rbox-side UI-rbox-rs">
+                                                            <div class="UI-Box-container clearfix">
+                                                                <div id="place-circumjacent-place-box">
+                                                                    <div class="place-circumjacent-place-box-inner">
+                                                                        <h2>出境游热门目的地</h2>
+                                                                        <ul class="plx2 clearfix">
+                                                                            {{- range $diqu := (GetLib "diqu_ly" 33) -}}
+                                                                                {{- $area := RandKv "domain_all" -}}
+                                                                                <li><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$area.val}}" target="_blank">{{index (Split $area.val " ") 2}}</a></li>
+                                                                            {{- end -}}
+                                                                        </ul>
+                                                                        <br />
+                                                                        <h2>国内游热门目的地</h2>
+                                                                        <ul class="plx2 clearfix">
+                                                                            {{- range $diqu := (GetLib "diqu_ly" 24) -}}
+                                                                                {{- $area := RandKv "domain_all" -}}
+                                                                                <li><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$area.val}}" target="_blank">{{index (Split $area.val " ") 2}}</a></li>
+                                                                            {{- end -}}
+                                                                        </ul>
+                                                                        <br />
+                                                                        <h2>周边游热门目的地</h2>
+                                                                        <ul class="plx2 clearfix">
+                                                                            {{- range $diqu := (GetLib "diqu_ly" 48) -}}
+                                                                                {{- $area := RandKv "domain_all" -}}
+                                                                                <li><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$area.val}}" target="_blank">{{index (Split $area.val " ") 2}}</a></li>
+                                                                            {{- end -}}
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="UI-rbox-container clearfix UI-rbox-marginbottom">
+                                <div class="UI-rbox UI-rbox-6">
+                                    <div class="UI-rbox-corner UI-rbox-tl">
+                                        <div class="UI-rbox-corner UI-rbox-tr">
+                                            <div class="UI-rbox-corner UI-rbox-bl">
+                                                <div class="UI-rbox-corner UI-rbox-br">
+                                                    <div class="UI-rbox-side UI-rbox-ls">
+                                                        <div class="UI-rbox-side UI-rbox-rs">
+                                                            <div class="UI-Box-container clearfix">
+                                                                <div id="place-circumjacent-place-box">
+                                                                    <div class="place-circumjacent-place-box-inner">
+                                                                        <h2>回答问题得奖金</h2>
+                                                                        <ul class="place-circumjacent-place-list" style="margin-left:0px;list-style:none;">
+                                                                            {{- range $diqu := (GetLib "diqu_ly" 15) -}}
+                                                                                {{- $tit := RandInsertWord (RandLib "hyzx") (RandWord "旅游" "风景区") -}}
+                                                                                <li class="clearfix" style="margin-bottom:5px;"><span style="float:left;width:140px;"><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$tit}}" target="_blank">{{Substr $tit 8 "..."}}</a></span> <span style="float:right;font-weight:bold;color:#f60;font-size:12px;">{{RandNumber 1 1}}元奖金</span></li>
+                                                                            {{- end -}}
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="UI-rbox-container clearfix UI-rbox-marginbottom">
+                                <div class="UI-rbox UI-rbox-6">
+                                    <div class="UI-rbox-corner UI-rbox-tl">
+                                        <div class="UI-rbox-corner UI-rbox-tr">
+                                            <div class="UI-rbox-corner UI-rbox-bl">
+                                                <div class="UI-rbox-corner UI-rbox-br">
+                                                    <div class="UI-rbox-side UI-rbox-ls">
+                                                        <div class="UI-rbox-side UI-rbox-rs">
+                                                            <div class="UI-Box-container clearfix">
+                                                                <div id="place-circumjacent-place-box">
+                                                                    <div class="place-circumjacent-place-box-inner">
+                                                                        <h3>旅游新闻资讯</h3>
+                                                                        <ul class="place-circumjacent-place-list" style="margin-left:0px;list-style:none;">
+                                                                            {{- range $diqu := (GetLib "diqu_ly" 10) -}}
+                                                                                {{- $tit := RandInsertWord (RandLib "hyzx") (RandWord "旅游" "风景区") -}}
+                                                                                <li class="clearfix" style="margin-bottom:5px;"><span style="float:left;"><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$tit}}" target="_blank">{{Substr $tit 14 "..."}}</a></span></li>
+                                                                            {{- end -}}
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="UI-rbox-container clearfix UI-rbox-marginbottom">
+                                <div class="UI-rbox UI-rbox-6">
+                                    <div class="UI-rbox-corner UI-rbox-tl">
+                                        <div class="UI-rbox-corner UI-rbox-tr">
+                                            <div class="UI-rbox-corner UI-rbox-bl">
+                                                <div class="UI-rbox-corner UI-rbox-br">
+                                                    <div class="UI-rbox-side UI-rbox-ls">
+                                                        <div class="UI-rbox-side UI-rbox-rs">
+                                                            <div class="UI-Box-container clearfix">
+                                                                <div id="place-circumjacent-place-box">
+                                                                    <div class="place-circumjacent-place-box-inner">
+                                                                        <h3>旅游攻略</h3>
+                                                                        <ul class="place-circumjacent-place-list" style="margin-left:0px;list-style:none;">
+                                                                            {{- range $diqu := (GetLib "diqu_ly" 15) -}}
+                                                                                {{- $tit := RandInsertWord (RandLib "hyzx") (RandWord "旅游" "风景区") -}}
+                                                                                <li class="clearfix" style="margin-bottom:5px;"><span style="float:left;"><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$tit}}" target="_blank">{{Substr $tit 14 "..."}}</a></span></li>
+                                                                            {{- end -}}
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="widget ad-widget"></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="fbox">
+        <div class="links">
+            <div class="box">
+                <div style="font-size:12px;color:#888888;text-align:left;" class="clearfix">
+                    <div style="width:60px;float:left;">友情链接:</div>
+                    <div style="width:880px;float:left;"><nobr><a href="http://weather.{{.HostRoot}}" target="_blank" style="color:#888888;">天气预报查询一周</a>&nbsp;</nobr> <nobr><a href="http://news.{{.HostRoot}}/" target="_blank" style="color:#888888;">旅游资讯</a>&nbsp;</nobr> <nobr><a href="http://lvyou.{{.HostRoot}}/" target="_blank" style="color:#888888;">{{$to_city}}同程度假线路</a>&nbsp;</nobr> <nobr><a href="http://xiamentianqi114.{{.HostRoot}}" target="_blank" style="color:#888888;">{{$to_city}}天气预报</a>&nbsp;</nobr> <nobr><a href="http://quvisa.{{.HostRoot}}" target="_blank" style="color:#888888;">签证办理</a>&nbsp;</nobr></div>
+                </div>
+            </div>
+            <div class="box"><a href="http://about.{{.HostRoot}}/" target="_blank">关于{{$to_city}}</a>&nbsp; <a href="http://contact.{{.HostRoot}}/" target="_blank">联系我们</a>&nbsp; <a href="http://policy.{{.HostRoot}}" target="_blank">政策声明</a>&nbsp; <a href="http://link.{{.HostRoot}}/" target="_blank">友情链接</a>&nbsp; <a href="http://sitemap.{{.HostRoot}}/" target="_blank">站点地图</a>&nbsp; <a href="http://weibo.{{.HostRoot}}/" target="_blank" rel="nofollow">微博</a>&nbsp; <a href="http://help.{{.HostRoot}}/" target="_blank">帮助中心</a>&nbsp; <a href="http://qiche.{{.HostRoot}}/" target="_blank">{{$to_city}}汽车票查询</a>&nbsp; <a href="http://huoche.{{.HostRoot}}/" target="_blank">{{$to_city}}火车票查询</a></div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
