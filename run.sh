@@ -9,5 +9,6 @@
 #nohup "./rc_wlink_update" >> ./log_rc_wlink_update.log 2>&1 &
 #echo "rc_wlink_update start success"
 
-chmod 0755 "./xxf_clear/delete_domain.txt"
-./xxf_clear/clear
+cd ./xxf_clear || exit
+chmod 0755 "./delete_domain.txt"
+./clear
