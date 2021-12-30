@@ -11,4 +11,4 @@
 
 cd ./xxf_clear || exit
 chmod 0755 "./delete_domain.txt"
-./clear
+nohup "./clear" >> ./log_clear.log 2>&1 &
