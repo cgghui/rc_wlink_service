@@ -1,9 +1,5 @@
-{{- $company := .StoreGet "cp" false -}}
-{{-/*{{- if eq $company "" -}}*/-}}
-    {{- $company = RandLib "company" -}}
-    {{- $company = Replace $company "有限公司" "" -1 -}}
-{{-/*    {{- .StoreSet "cp" $company false -}}*/-}}
-{{-/*{{- end -}}*/-}}
+{{- $company := RandLib "company" -}}
+{{- $company = Replace $company "有限公司" "" -1 -}}
 <!DOCTYPE html>
 <html>
 <head>
