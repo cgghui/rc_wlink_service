@@ -176,7 +176,7 @@
                                                                 {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
                                                                 {{Substr $content 130 "..." | Text2HTML}}
                                                             </div>
-                                                            <div class="shop-name-city">旅行社：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{RandLib "company"}}</a> &nbsp;&nbsp;&nbsp;&nbsp;出发地：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{index (Split (RandKv "domain_city").val " ") 2}}</a></div>
+                                                            <div class="shop-name-city">旅行社：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{RandLib "company"}}</a> &nbsp;&nbsp;&nbsp;&nbsp;出发地：{{index (Split (RandKv "domain_city").val " ") 2}}</div>
                                                         </td>
                                                     </tr>
                                                     {{- end -}}
@@ -202,7 +202,7 @@
                                                                     {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
                                                                     {{Substr $content 130 "..." | Text2HTML}}
                                                                 </div>
-                                                                <div class="shop-name-city">旅行社：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{RandLib "company"}}</a> &nbsp;&nbsp;&nbsp;&nbsp;出发地：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{index (Split (RandKv "domain_city").val " ") 2}}</a></div>
+                                                                <div class="shop-name-city">旅行社：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{RandLib "company"}}</a> &nbsp;&nbsp;&nbsp;&nbsp;出发地：{{index (Split (RandKv "domain_city").val " ") 2}}</div>
                                                             </td>
                                                         </tr>
                                                     {{- end -}}
@@ -259,14 +259,12 @@
                                                                                             </h4>
                                                                                             <div class="entry-meta clearfix">
                                                                                                 <span style="background:url(http://{{$.HostCurrent}}/images/dotted.gif) 0 50% repeat-x;float:left;display:block;width:1.5em;margin-right:0.5em;">&nbsp;</span>
-                                                                                                <a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/">{{$xm}}</a>
+                                                                                                <span>{{$xm}}</span>
                                                                                                 {{- $arr := Split (RandKv "domain_city").val " " -}}
                                                                                                 {{- $url := Join "" "http://" (Replace (index $arr 1) "x.com" $.HostRoot 1) "/" -}}
                                                                                                 <span class="lc-link-wrapper">(<a href="{{$url}}">{{index $arr 2}}</a>)</span>
                                                                                                 {{ParseTag "写于{Y}年{M}月{D}日"}}
-                                                                                                {{- $arr = Split (RandKv "domain_city").val " " -}}
-                                                                                                {{- $url = Join "" "http://" (Replace (index $arr 1) "x.com" $.HostRoot 1) "/" -}}
-                                                                                                关于<a href="{{$url}}">{{Replace (index $arr 0) "-" "," 1}}</a> | <span class="lc-link-wrapper"><a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/">有{{RandNumber 2 5}}条评论</a></span></div>
+                                                                                                关于{{Replace (index $arr 0) "-" "," 1}} | <span class="lc-link-wrapper">有{{RandNumber 2 5}}条评论</span></div>
                                                                                         </div>
                                                                                         <div class="entry-body clearfix">
                                                                                             <table with="100%" border="0" cellpadding="0" cellspacing="0">
@@ -281,7 +279,7 @@
                                                                                                         {{- $content = RandInsertWord $content (RandWord "<b>旅游</b>" "<b>风景区</b>" $to_city) -}}
                                                                                                         {{- $content = RandInsertWord $content (RandWord "<b>旅游</b>" "<b>风景区</b>" $to_city) -}}
                                                                                                         {{$content|Text2HTML}}
-                                                                                                        <a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" title="{{$tit}}">阅读全文»</a>
+                                                                                                        <span>阅读全文»</span>
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 </tbody>
@@ -426,7 +424,7 @@
                                                                         <ul class="place-circumjacent-place-list" style="margin-left:0px;list-style:none;">
                                                                             {{- range $diqu := (GetLib "diqu_ly" 10) -}}
                                                                                 {{- $tit := RandInsertWord (RandLib "hyzx") (RandWord "旅游" "风景区") -}}
-                                                                                <li class="clearfix" style="margin-bottom:5px;"><span style="float:left;"><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$tit}}" target="_blank">{{Substr $tit 14 "..."}}</a></span></li>
+                                                                                <li class="clearfix" style="margin-bottom:5px;"><span style="float:left;">{{Substr $tit 14 "..."}}</span></li>
                                                                             {{- end -}}
                                                                         </ul>
                                                                     </div>
@@ -481,10 +479,10 @@
             <div class="box">
                 <div style="font-size:12px;color:#888888;text-align:left;" class="clearfix">
                     <div style="width:60px;float:left;">友情链接:</div>
-                    <div style="width:880px;float:left;"><nobr><a href="http://weather.{{.HostRoot}}" target="_blank" style="color:#888888;">天气预报查询一周</a>&nbsp;</nobr> <nobr><a href="http://news.{{.HostRoot}}/" target="_blank" style="color:#888888;">旅游资讯</a>&nbsp;</nobr> <nobr><a href="http://lvyou.{{.HostRoot}}/" target="_blank" style="color:#888888;">{{$to_city}}同程度假线路</a>&nbsp;</nobr> <nobr><a href="http://xiamentianqi114.{{.HostRoot}}" target="_blank" style="color:#888888;">{{$to_city}}天气预报</a>&nbsp;</nobr> <nobr><a href="http://quvisa.{{.HostRoot}}" target="_blank" style="color:#888888;">签证办理</a>&nbsp;</nobr></div>
+                    <div style="width:880px;float:left;"><nobr>天气预报查询一周&nbsp;</nobr> <nobr>旅游资讯&nbsp;</nobr> <nobr>{{$to_city}}同程度假线路&nbsp;</nobr> <nobr>{{$to_city}}天气预报&nbsp;</nobr> <nobr>签证办理&nbsp;</nobr></div>
                 </div>
             </div>
-            <div class="box"><a href="http://about.{{.HostRoot}}/" target="_blank">关于{{$to_city}}</a>&nbsp; <a href="http://contact.{{.HostRoot}}/" target="_blank">联系我们</a>&nbsp; <a href="http://policy.{{.HostRoot}}" target="_blank">政策声明</a>&nbsp; <a href="http://link.{{.HostRoot}}/" target="_blank">友情链接</a>&nbsp; <a href="http://sitemap.{{.HostRoot}}/" target="_blank">站点地图</a>&nbsp; <a href="http://weibo.{{.HostRoot}}/" target="_blank" rel="nofollow">微博</a>&nbsp; <a href="http://help.{{.HostRoot}}/" target="_blank">帮助中心</a>&nbsp; <a href="http://qiche.{{.HostRoot}}/" target="_blank">{{$to_city}}汽车票查询</a>&nbsp; <a href="http://huoche.{{.HostRoot}}/" target="_blank">{{$to_city}}火车票查询</a></div>
+            <div class="box">关于{{$to_city}}&nbsp; 联系我们&nbsp; 政策声明&nbsp; 友情链接&nbsp; 站点地图&nbsp; 微博&nbsp; 帮助中心&nbsp; {{$to_city}}汽车票查询&nbsp; {{$to_city}}火车票查询</div>
         </div>
     </div>
     </div>
