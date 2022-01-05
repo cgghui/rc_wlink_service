@@ -2,7 +2,7 @@
 {{- if eq $title "" -}}
 {{- $area := RandKv "domain_all" -}}
 {{- $title = index (Split $area.val " ") 2 -}}
-{{- $title = Join "" $title (RandLib "lhby_po") "公司"-}}
+{{- $title = Join "" $title (RandLib "lhby_po") "公司" -}}
 {{- .StoreSet "tit_po" $title false -}}
 {{- end -}}
 <!DOCTYPE html>
