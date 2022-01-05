@@ -324,7 +324,7 @@
                                                                     <div class="place-circumjacent-place-box-inner">
                                                                         <h2>出境游热门目的地</h2>
                                                                         <ul class="plx2 clearfix">
-                                                                            {{- range $diqu := (GetLib "diqu_ly" 33) -}}
+                                                                            {{- range $diqu := (GetLib "diqu_ly" 15) -}}
                                                                                 {{- $area := RandKv "domain_all" -}}
                                                                                 <li><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$area.val}}" target="_blank">{{index (Split $area.val " ") 2}}</a></li>
                                                                             {{- end -}}
@@ -332,7 +332,7 @@
                                                                         <br />
                                                                         <h2>国内游热门目的地</h2>
                                                                         <ul class="plx2 clearfix">
-                                                                            {{- range $diqu := (GetLib "diqu_ly" 24) -}}
+                                                                            {{- range $diqu := (GetLib "diqu_ly" 15) -}}
                                                                                 {{- $area := RandKv "domain_all" -}}
                                                                                 <li><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$area.val}}" target="_blank">{{index (Split $area.val " ") 2}}</a></li>
                                                                             {{- end -}}
@@ -340,7 +340,7 @@
                                                                         <br />
                                                                         <h2>周边游热门目的地</h2>
                                                                         <ul class="plx2 clearfix">
-                                                                            {{- range $diqu := (GetLib "diqu_ly" 48) -}}
+                                                                            {{- range $diqu := (GetLib "diqu_ly" 15) -}}
                                                                                 {{- $area := RandKv "domain_all" -}}
                                                                                 <li><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$area.val}}" target="_blank">{{index (Split $area.val " ") 2}}</a></li>
                                                                             {{- end -}}
