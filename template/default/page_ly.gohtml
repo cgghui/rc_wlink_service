@@ -318,16 +318,15 @@
                                         <div class="widget-list- -place-widget-list new-wl">
                                             {{- range $item := (GetKv "domain_city" 5) -}}
                                             {{- $arr := Split $item.val " " -}}
-                                            {{- $url := Join "" "http://" (Replace (index $arr 1) "x.com" $.HostRoot 1) "/" -}}
                                             <div class="wl-item-wrapper">
                                                 <table cellpadding="0" cellspacing="0" width="100%" border="0">
                                                     <tbody>
                                                     <tr>
                                                         <td class="item-" style="vertical-align:top;padding:0;">
-                                                            <h4 class="item-name"><a href="{{$url}}">{{Replace (index $arr 0) "-" "," 1}}</a></h4>
-                                                            <p class="item-desc"><br /><a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/">{{RandNumber 2 4}}人去过</a> <a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/">{{RandNumber 2 4}}人想去</a></p>
+                                                            <h4 class="item-name">{{Replace (index $arr 0) "-" "," 1}}</h4>
+                                                            <p class="item-desc"><br />{{RandNumber 2 4}}人去过 {{RandNumber 2 4}}人想去</p>
                                                         </td>
-                                                        <td class="item-" style="padding:0;vertical-align:top;text-align:right;width:90px;"><a class="item-icon" href="{{$url}}"><img style="width: 75px;height: 75px" class="image" src="http://{{$.HostCurrent}}/uploads/{{RandList $img_file}}" alt="{{index $arr 2}}" title="{{index $arr 2}}" /></a></td>
+                                                        <td class="item-" style="padding:0;vertical-align:top;text-align:right;width:90px;"><img style="width: 75px;height: 75px" class="image" src="http://{{$.HostCurrent}}/uploads/{{RandList $img_file}}" alt="{{index $arr 2}}" title="{{index $arr 2}}" /></td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
