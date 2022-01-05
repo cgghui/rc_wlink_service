@@ -1,22 +1,23 @@
-{{- $title := .StoreGet "tit" false -}}
+{{- $title := .StoreGet "tit_po" false -}}
 {{- if eq $title "" -}}
 {{- $area := RandKv "domain_all" -}}
 {{- $title = index (Split $area.val " ") 2 -}}
-{{- .StoreSet "tit" $title false -}}
+{{- $title = Join "" $title (RandLib "lhby_po") "公司"-}}
+{{- .StoreSet "tit_po" $title false -}}
 {{- end -}}
 <!DOCTYPE html>
 <html>
  <head> 
-  <title>{{$title}}铝合金百叶公司</title> 
+  <title>{{$title}}</title>
   <meta name="keywords" content="铸造工艺_翻砂铸造_铝合金铸造_铸造铝合金_铸铝_铝铸件_铝合金重力铸造_低压铸造" /> 
-  <meta name="description" content="{{$title}}铝合金百叶公司专业铝合金重力低压铸造工艺,是优质的铝铸造厂家。欢迎咨询铝合金铸造,翻砂铸造铝铸件价格。" /> 
+  <meta name="description" content="{{$title}}专业铝合金重力低压铸造工艺,是优质的铝铸造厂家。欢迎咨询铝合金铸造,翻砂铸造铝铸件价格。" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
-  <link href="http://www.al-casting.com/e/templates/default151119/style.css" type="text/css" rel="stylesheet" /> 
-  <link rel="stylesheet" type="text/css" href="http://www.al-casting.com/e/css/dropmenu.css" /> 
-  <link rel="stylesheet" href="http://www.al-casting.com/e/templates/default151119/responsive-nav.css" /> 
-  <link rel="stylesheet" href="http://www.al-casting.com/e/templates/default151119/ip.css" />
-  <link rel="stylesheet" href="http://www.al-casting.com/e/css/iconfont/iconfont.css" /> 
+  <link href="http://{{.HostRoot}}/e/templates/default151119/style.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="http://{{.HostRoot}}/e/css/dropmenu.css" />
+  <link rel="stylesheet" href="http://{{.HostRoot}}/e/templates/default151119/responsive-nav.css" />
+  <link rel="stylesheet" href="http://{{.HostRoot}}/e/templates/default151119/ip.css" />
+  <link rel="stylesheet" href="http://{{.HostRoot}}/e/css/iconfont/iconfont.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0" /> 
   <meta name="apple-mobile-web-app-capable" content="yes" /> 
  </head> 
@@ -25,7 +26,7 @@
    <div class="top_box"> 
     <div class="top_box_inner"> 
      <div class="logo"> 
-      <h1>{{$title}}铝合金百叶公司</h1> 
+      <h1>{{$title}}</h1>
      </div> 
      <div class="topcontent"> 
       <div style="text-align:right;" class="top_ss"> 
@@ -111,7 +112,7 @@
    <div class="bottom_box"> 
     <div style="padding-bottom:20px;padding-left:0px;padding-right:0px;padding-top:20px;" align="center"> 
      <div> 
-      <span style="font-family:';font-size:14px;"><span><span style="white-space:normal;"> </span>&copy;2010-2021 {{$title}}铝合金百叶公司 版权所有 </span><a target="_blank"> 网站地图 </a></span> 
+      <span style="font-family:';font-size:14px;"><span><span style="white-space:normal;"> </span>&copy;2010-2021 {{$title}} 版权所有 </span><a target="_blank"> 网站地图 </a></span>
      </div> 
      <div> 
       <span><strong>地址：</strong>东省东市东街道南路8号&nbsp;</span>
