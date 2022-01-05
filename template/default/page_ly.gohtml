@@ -147,7 +147,7 @@
                                             {{$to_city}}旅游推荐:
                                         </h2>
                                         <a href="#" id="city-sh" name="city-sh" onclick="change('sh','hz');return false;" class="city-name city-active">{{index (Split (RandKv "domain_city").val " ") 2}}出发到{{$to_city}}</a>
-                                        <a href="#" id="city-hz" name="city-hz" onclick="change('hz','sh');return false;" class="city-name">{{index (Split (RandKv "domain_city").val " ") 2}}出发到{{$to_city}}</a>
+{{/*                                        <a href="#" id="city-hz" name="city-hz" onclick="change('hz','sh');return false;" class="city-name">{{index (Split (RandKv "domain_city").val " ") 2}}出发到{{$to_city}}</a>*/}}
                                         <h2><a href="http://more.{{.HostRoot}}/" style="color:black;text-decoration:underline;float:right;font-weight:normal;font-size:12px;" target="_blank">更多{{$to_city}}旅游线路</a></h2>
                                     </div>
                                     <div id="place-travel-line-box" style="padding-bottom:15px;width:auto;">
@@ -179,32 +179,6 @@
                                                             <div class="shop-name-city">旅行社：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{RandLib "company"}}</a> &nbsp;&nbsp;&nbsp;&nbsp;出发地：{{index (Split (RandKv "domain_city").val " ") 2}}</div>
                                                         </td>
                                                     </tr>
-                                                    {{- end -}}
-                                                    {{- range $i, $company := (GetLib "company" 10) -}}
-                                                        {{- $arr := Split (RandKv "domain_city").val " " -}}
-                                                        {{- $tit := Join "" $to_city (RandWord "、" "至" "到") (index $arr 2) (RandLib "day") "日游" -}}
-                                                        {{- $url := Join "" "http://" (Replace (index $arr 1) "x.com" $.HostRoot 1) "/" -}}
-                                                        {{- $class := "" -}}
-                                                        {{- if eq $i 9 -}}{{- $class = " last-tr" -}}{{- end -}}
-                                                        <tr class="item-active item-tr{{$class}}">
-                                                            <td style="vertical-align:top;width:77px;">
-                                                                <a class="img-link" href="{{$url}}" title="{{$tit}}" target="_blank" style="background:url(http://{{$.HostCurrent}}/uploads/{{RandList $img_file}}) no-repeat center;"></a>
-                                                            </td>
-                                                            <td style="padding-top:0px;padding-left:10px;vertical-align:top;">
-                                                                <div>
-                                                                    <h3 style="margin-top:0;padding-top:0;"><a href="{{$url}}" target="_blank" style="text-decoration:underline;">{{$tit}}</a></h3>
-                                                                    &nbsp;<span class="price2">预定价：￥ <b style="font-size:16px;" class="price">{{RandNumber 2 3}}</b> 元/人</span>
-                                                                </div>
-                                                                <div class="tsse-text">
-                                                                    {{- $content := Join "" (RandLib "content") (RandLib "content") (RandLib "content") (RandLib "content") (RandLib "content") -}}
-                                                                    {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
-                                                                    {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
-                                                                    {{- $content = RandInsertWord $content (RandWord "旅游" "风景区" $to_city) -}}
-                                                                    {{Substr $content 130 "..." | Text2HTML}}
-                                                                </div>
-                                                                <div class="shop-name-city">旅行社：<a href="http://{{RandLib "diqu_ly"}}.{{$.HostRoot}}/" target="_blank">{{RandLib "company"}}</a> &nbsp;&nbsp;&nbsp;&nbsp;出发地：{{index (Split (RandKv "domain_city").val " ") 2}}</div>
-                                                            </td>
-                                                        </tr>
                                                     {{- end -}}
                                                     </tbody>
                                                 </table>
@@ -348,7 +322,7 @@
                                                                     <div class="place-circumjacent-place-box-inner">
                                                                         <h2>出境游热门目的地</h2>
                                                                         <ul class="plx2 clearfix">
-                                                                            {{- range $diqu := (GetLib "diqu_ly" 33) -}}
+                                                                            {{- range $diqu := (GetLib "diqu_ly" 15) -}}
                                                                                 {{- $area := RandKv "domain_all" -}}
                                                                                 <li><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$area.val}}" target="_blank">{{index (Split $area.val " ") 2}}</a></li>
                                                                             {{- end -}}
@@ -356,7 +330,7 @@
                                                                         <br />
                                                                         <h2>国内游热门目的地</h2>
                                                                         <ul class="plx2 clearfix">
-                                                                            {{- range $diqu := (GetLib "diqu_ly" 24) -}}
+                                                                            {{- range $diqu := (GetLib "diqu_ly" 15) -}}
                                                                                 {{- $area := RandKv "domain_all" -}}
                                                                                 <li><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$area.val}}" target="_blank">{{index (Split $area.val " ") 2}}</a></li>
                                                                             {{- end -}}
@@ -364,7 +338,7 @@
                                                                         <br />
                                                                         <h2>周边游热门目的地</h2>
                                                                         <ul class="plx2 clearfix">
-                                                                            {{- range $diqu := (GetLib "diqu_ly" 48) -}}
+                                                                            {{- range $diqu := (GetLib "diqu_ly" 15) -}}
                                                                                 {{- $area := RandKv "domain_all" -}}
                                                                                 <li><a href="http://{{$diqu}}.{{$.HostRoot}}/" title="{{$area.val}}" target="_blank">{{index (Split $area.val " ") 2}}</a></li>
                                                                             {{- end -}}
