@@ -69,7 +69,8 @@
                 </li>
             </ul>
         </div>
-        <div class="h_tel">{{RandWord "186" "189" "138" "177" "151"}}{{RandNumber 8 8}}</div>
+        {{$tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8)}}
+        <div class="h_tel">{{$tel}}</div>
     </div>
 </div>
 
@@ -1032,12 +1033,12 @@
                     <i></i>
                     <p> 联系电话 </p>
                 </div>
-                <div class="my-kefu-tel-right" phone400="">18602295664</div>
+                <div class="my-kefu-tel-right" phone400="">{{$tel}}</div>
             </div> </li>
         <li class="my-kefu-liuyan">
             <div class="my-kefu-main">
                 <div class="my-kefu-left">
-                    <a href="/help/leaveword.html" title="在线留言"> <i></i> <p> 在线留言 </p> </a>
+                    <a title="在线留言"> <i></i> <p> 在线留言 </p> </a>
                 </div>
                 <div class="my-kefu-right"></div>
             </div> </li>
