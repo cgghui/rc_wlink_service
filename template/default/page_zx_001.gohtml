@@ -147,11 +147,14 @@
     <div class="content">
         <div class="k_word fl">
             <b>热搜关键词：</b>
-            <a href="/product/" title="新房装修">新房装修</a><a href="/product/" title="二手房装修">二手房装修</a><a href="/Helps/gsjs.html" title="家装设计公司">家装设计公司</a><a href="/Helps/gsjs.html" title="{{$city}}装修公司">{{$city}}装修公司</a>
+            <a href="http://product.{{.HostRoot}}" title="新房装修">新房装修</a>
+            <a href="http://product.{{.HostRoot}}" title="二手房装修">二手房装修</a>
+            <a href="http://helps.{{.HostRoot}}" title="家装设计公司">家装设计公司</a>
+            <a href="http://helps.{{.HostRoot}}" title="{{$city}}装修公司">{{$city}}装修公司</a>
         </div>
         <div class="seach fr">
             <input class="serach" type="text" id="seachkeywords" onblur="if (value ==''){value='请输入关键词....'}" onfocus="if (value =='请输入关键词....'){value =''}"  type="text" value="请输入关键词....">
-            <button type="button" id="sousuo" value="搜索"></button>
+            <button type="button" value="搜索"></button>
         </div>
     </div>
 </div>
@@ -160,9 +163,9 @@
     <div class="content pr">
         <div class="ti_l wow fadeInLeft1">
             <div class="ti_las">
-                <a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装"><img src="picture/tils.jpg" alt="{{$company}}家装" title="{{$company}}家装"></a>
-                <a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装"><img src="picture/tils.jpg" alt="{{$company}}家装" title="{{$company}}家装"></a>
-                <a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装"><img src="picture/tils.jpg" alt="{{$company}}家装" title="{{$company}}家装"></a>
+                <a title="{{$company}}家装"><img src="http://{{.HostRoot}}/picture/tils.jpg" alt="{{$company}}家装" title="{{$company}}家装"></a>
+                <a title="{{$company}}家装"><img src="http://{{.HostRoot}}/picture/tils.jpg" alt="{{$company}}家装" title="{{$company}}家装"></a>
+                <a title="{{$company}}家装"><img src="http://{{.HostRoot}}/picture/tils.jpg" alt="{{$company}}家装" title="{{$company}}家装"></a>
             </div>
         </div>
         <div class="ti_r wow fadeInRight2">
@@ -170,13 +173,13 @@
             <dl>
                 <dt>
                     <p>
-                        <a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装"><img src="picture/t_pic1.jpg" title="{{$company}}家装" alt="{{$company}}家装"><i><img src="picture/t_pic2.jpg" alt="{{$company}}家装" title="{{$company}}家装"></i></a>
-                        <a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装"><img src="picture/t_pic1.jpg" title="{{$company}}家装" alt="{{$company}}家装"><i><img src="picture/t_pic2.jpg" alt="{{$company}}家装" title="{{$company}}家装"></i></a>
-                        <a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装"><img src="picture/t_pic1.jpg" title="{{$company}}家装" alt="{{$company}}家装"><i><img src="picture/t_pic2.jpg" alt="{{$company}}家装" title="{{$company}}家装"></i></a>
+                        <a title="{{$company}}家装"><img src="picture/t_pic1.jpg" title="{{$company}}家装" alt="{{$company}}家装"><i><img src="picture/t_pic2.jpg" alt="{{$company}}家装" title="{{$company}}家装"></i></a>
+                        <a title="{{$company}}家装"><img src="picture/t_pic1.jpg" title="{{$company}}家装" alt="{{$company}}家装"><i><img src="picture/t_pic2.jpg" alt="{{$company}}家装" title="{{$company}}家装"></i></a>
+                        <a title="{{$company}}家装"><img src="picture/t_pic1.jpg" title="{{$company}}家装" alt="{{$company}}家装"><i><img src="picture/t_pic2.jpg" alt="{{$company}}家装" title="{{$company}}家装"></i></a>
                     </p>
                 </dt>
                 <dd>
-                    <h4><a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装">{{$company}}家装</a></h4>
+                    <h4><a title="{{$company}}家装">{{$company}}家装</a></h4>
                     <p>
                         我们是一家专注新房（毛坯）及二手房装修设计、施工、售后的装修公司，在{{$city}}，如果您错过了{{$company}}，不是您的错，只是我们宣传的不够。历年来我们一直坚持做口碑，坚持以亲民价打造高品质家装，不漏项不增项，让您的每一分钱都花的清清楚楚！
                     </p>
@@ -197,7 +200,7 @@
 </div>
 <!---->
 <div class="anli">
-    <h2 class="main_title wow fadeInDown2"><a href="/zxali.html" title="装修案例" target="_blank">海量装修案例·给您灵感<span>您的需要，我们知道。家的愿望，我们实现</span></a></h2>
+    <h2 class="main_title wow fadeInDown2"><a title="装修案例">海量装修案例·给您灵感<span>您的需要，我们知道。家的愿望，我们实现</span></a></h2>
     <div class="a_nav content">
         <ul>
             <li><a href="/zxali.html?attr=2:2" target="_blank" title="现代风格">现代风格</a></li>
