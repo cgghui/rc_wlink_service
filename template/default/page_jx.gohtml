@@ -1,0 +1,622 @@
+﻿{{- $city := .StoreGet "city" false -}}
+{{- $company := .StoreGet "company" false -}}
+{{- if eq $city "" -}}
+    {{- $city = index (Split (RandKv "domain_all").val " ") 2 -}}
+    {{- .StoreSet "title" $city false -}}
+{{- end -}}
+{{- if eq $company "" -}}
+    {{- $company = RandLib "company_name" -}}
+    {{- .StoreSet "company" $company false -}}
+{{- end -}}
+{{- $tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8) -}}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="baidu-site-verification" content="dhM6zDJ9WO" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>搅拌器,搅拌设备,浓缩机,刮泥机,{{$city}}搅拌器、化工搅拌器生产厂家</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <script type='text/javascript' src='js/jquery.js'></script>
+    <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+    <!-- DX-Seo plugin -->
+    <meta name="keywords" content="搅拌器、{{$city}}搅拌器,搅拌器厂家,浓缩机、刮泥机、搅拌设备,搅拌装置,侧入式搅拌器,脱硫搅拌器,沼气发酵搅拌器,桨式搅拌器,液体混合搅拌器,污水搅拌器,反应釜搅拌器,塔釜搅拌机,发酵罐搅拌器,{{$city}}搅拌器厂家,德州搅拌器,{{$city}}发酵罐搅拌器,推进式搅拌器,液体搅拌器,{{$city}}化工搅拌器,{{$city}}浓密机" />
+    <meta name="description" content="{{$city}}{{$company}}机械设备有限公司致力于搅拌器、搅拌设备、浓缩机、刮泥机、化工搅拌装置、反应釜搅拌设备、发酵罐搅拌器、推进式搅拌器等液体搅拌机械的设计、研发与制造，公司产品广泛用于生物发酵、制药、化工、烟气脱硫、冶金、矿浆、能源、食品、造纸、污水处理等工业领域。" />
+    <script src="js/flash.js" type="text/javascript"></script>
+</head>
+<body style="background: url(images/bg.gif) repeat-x;background-color:#fff;">
+<div class="header">
+    <div class="h_top">
+        <span class="fl">欢迎来到搅拌器、浓缩机、刮泥机生产厂家&#8211;{{$city}}{{$company}}机械官方网站！</span>
+        <p class="fr">
+            <a href="http://www.{{.HostRoot}}/contact" target="_blank">联系我们</a>|<a href="http://www.{{.HostRoot}}/sitemap_baidu.xml" target="_blank">百度地图</a>|<a href="http://www.{{.HostRoot}}/sitemap.xml" target="_blank"></a></p>
+    </div>
+    <div class="logo">
+        <a href="http://www.{{.HostRoot}}" title="搅拌器、浓缩机、刮泥机生产厂家--{{$city}}{{$company}}机械"/><img src="picture/ac2d65014458ca0a32a5f71365a86c6f.png" alt="搅拌器、浓缩机、刮泥机生产厂家--{{$city}}{{$company}}机械" title="搅拌器、浓缩机、刮泥机生产厂家--{{$city}}{{$company}}机械" /></a>
+        <span>搅拌器、搅拌设备专业生产厂家</span>
+    </div>
+    <div class="h_pho fr">
+        <p class="fl">全国咨询热线：<span>{{$tel}}</span></p>
+    </div>
+    <div id="navbar">
+        <div id="main-nav" class="menu-%e4%b8%bb%e8%8f%9c%e5%8d%95-container"><ul id="menu-%e4%b8%bb%e8%8f%9c%e5%8d%95" class="main-nav"><li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-26"><a href="http://www.{{.HostRoot}}/">首页</a></li>
+                <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="http://about.{{.HostRoot}}">关于{{$company}}</a></li>
+                <li id="menu-item-162" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-162"><a href="http://products.{{.HostRoot}}">产品展示</a></li>
+                <li id="menu-item-164" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-164"><a href="http://demo.{{.HostRoot}}">工程案例</a></li>
+                <li id="menu-item-583" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-583"><a href="http://produce.{{.HostRoot}}">研发制造</a></li>
+                <li id="menu-item-165" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-165"><a href="http://support.{{.HostRoot}}">技术支持</a></li>
+                <li id="menu-item-166" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-166"><a href="http://news.{{.HostRoot}}">行业资讯</a></li>
+                <li id="menu-item-163" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-163"><a href="http://www.{{.HostRoot}}">企业新闻</a></li>
+                <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35"><a href="http://contact.{{.HostRoot}}">联系我们</a></li>
+                <li id="menu-item-1289 end" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1289 end"><a>English</a></li>
+            </ul></div></div>
+    <div class="h_ser">
+        <p class="fl">
+            <b>热门关键词：</b>
+            <span id="commonHeaderkeywords">
+                <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_parent">搅拌器</a>
+                <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_parent">搅拌装置</a>
+                <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_parent">搅拌设备</a>
+                <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_parent">浓密机</a>
+                <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_parent">刮泥机</a>
+                <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_parent">减速机</a>
+            </span>
+        </p>
+        <div class="s_inp fr">
+            <div class="search-inner">
+                <form class="search-form" action="http://www.{{.HostRoot}}" method="get" style="display:block">
+                    <input class="search-input" type="text" placeholder="搜索更多搅拌设备产品" name="s" x-webkit-speech="">
+                    <input class="search-submit" type="submit" value="">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+<script src="js/jquery_1.js" type="text/javascript"></script>
+<script type="text/javascript">
+    initCommonHeader();
+    var MARK = "";
+    if (!MARK) { MARK = "index"; }
+    initCommonHeaderKeywords(MARK);
+</script>
+
+<div class="banner pr">
+    <a id="flashbg1" href="#" target="_blank" style="height: 435px; width: 100%; margin: 0px auto; display: none; background-image: url(images/sdcd.jpg); background-attachment: scroll; background-color: transparent; background-position: 50% 0%; background-repeat: no-repeat;"></a>
+</div>
+
+<script type="text/javascript" src="js/flash2.js"></script>
+
+
+<div class="clear"></div>
+<div id="container">
+
+    <div class="eight pr">
+        <h2 class="pa"><a href="#" target="_blank"><img src="picture/c3.jpg" alt="丰富的搅拌器搅拌设备设计制造经验" title="丰富的搅拌器搅拌设备设计制造经验"></a></h2>
+        <p class="eitel pa"><span>我们的合作客户</span></p>
+        <div class="dvd pa"><a href="#" target="_blank"><img src="picture/hezuo.jpg" style="width:383px;height:298px"></a></div>
+        <div class="ei1 pa">
+            <h3><img src="picture/c1.jpg" alt="专业的研发技术 先进的生产设备"></h3>
+            <p>完善的<span>管理体系</span>和售后服务系统</p>
+            <p>吸引了众多国内外<span>大品牌的合作</span></p>
+        </div>
+        <div class="ei2 ei1 pa">
+            <h3><img src="picture/c2.jpg" alt="我们的产品在多个领域得到广泛应用"></h3>
+            <p>
+                <span><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" style=" color:#C32025;" target="_blank">生物发酵</a></span>
+                <span><a style=" color:#C32025;" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank">食品医药</a></span>
+                <span><a style=" color:#C32025;" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank">烟气脱硫</a></span>
+                <span style="width:180px;"><a style=" color:#C32025;" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank">矿山冶金/污水处理……</a></span>
+            </p>
+        </div>
+        <div class="ei3 ei1 pa">
+            <h3><img src="picture/ico_03.gif" alt="{{$company}}机械-搅拌设备生产专家"></h3>
+            <p>{{$city}}{{$company}}机械设备有限公司<span><h1>搅拌器<span>浓密机<h1></span><h3>领先品牌！<h3></p>
+        </div>
+        <div class="pho pa">0534-8150150</div>
+    </div>
+
+    <div class="bd01 pr">
+        <a href="#" title="搅拌器、浓缩机、刮泥机生产厂家&#8211;{{$city}}{{$company}}机械"><img src="picture/4002.png" alt="搅拌器、浓缩机、刮泥机生产厂家&#8211;{{$city}}{{$company}}机械" title="搅拌器、浓缩机、刮泥机生产厂家&#8211;{{$city}}{{$company}}机械" style="display: inline;"></a>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="sidebar">
+
+        <div class="fl lf_nav">
+            <div class="lf_nav_top">
+                <h3>产品分类</h3><span>PRODUCT CATEGORIES</span>
+            </div>
+            <div class="lf_nav_ct">
+                <ul id="menu-%e4%ba%a7%e5%93%81%e5%88%86%e7%b1%bb" class="case-nav"><li id="menu-item-107" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-107"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">搅拌装置</a>
+                        <ul class="sub-menu">
+                            <li id="menu-item-111" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-111"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">顶入式搅拌装置</a></li>
+                            <li id="menu-item-108" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-108"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">侧入式搅拌装置</a></li>
+                            <li id="menu-item-109" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-109"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">底入式搅拌装置</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu-item-112" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-112"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">浓密机、刮泥机</a></li>
+                    <li id="menu-item-104" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-104"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">搅拌器</a>
+                        <ul class="sub-menu">
+                            <li id="menu-item-106" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-106"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">桨式搅拌器</a></li>
+                            <li id="menu-item-105" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-105"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">开启涡轮式搅拌器</a></li>
+                            <li id="menu-item-134" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-134"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">圆盘涡轮式搅拌器</a></li>
+                            <li id="menu-item-136" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-136"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">框式搅拌器</a></li>
+                            <li id="menu-item-137" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-137"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">螺带螺杆式搅拌器</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu-item-103" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-103"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">减速机</a></li>
+                    <li id="menu-item-113" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-113"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">机架/机封/联轴器</a></li>
+                </ul>			</div>
+            <div class="lf_nav_btm"></div>
+        </div>
+
+        <div id="sidlx"><h2>联系我们</h2>
+            <ul class="list">
+                <img src="picture/contact.jpg" alt="联系我们" />
+                <li>{{$city}}{{$company}}机械设备有限公司<li>
+                <li>电话：{{$tel}}<li>
+                <li>胡经理：{{Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8)}}<li>
+                <li>张经理：{{Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8)}}<li>
+                <li>于经理：{{Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8)}}<li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="pro" id="sid-202">
+        <h2>
+            <p><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank"><img src="picture/btn1.gif" alt="更多"></a></p>
+            <span class="fr">热门搜索:
+                <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="搅拌器">搅拌器</a>
+                <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="搅拌装置">搅拌装置</a>
+        </span>
+            热销产品		</h2>
+        <div class="pro_con">
+            <ul>
+                <li>
+                    {{- $url_po := Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <a href="http://{{$url_po}}"><img class="left" src="picture/972efcb33f53a47a1535bfd43b99fbb3-300x300.jpg" alt="顶入式搅拌装置" width="170" height="170" /></a>					<a href="http://{{$url_po}}" style="line-height: 28px;" title='顶入式搅拌装置'>顶入式搅拌装置</a>
+                    <a href="http://{{$url_po}}" style="display: block;height: 24px;line-height: 24px;color: #ff6700;text-align: center;" tagert="_blank">点击查看产品详情&gt;&gt;</a>
+                </li>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <a href="http://{{$url_po}}"><img class="left" src="picture/72523459b3a1033e0033cb7b7874907e-300x300.jpg" alt="顶入式搅拌装置" width="170" height="170" /></a>					<a href="http://{{$url_po}}" style="line-height: 28px;" title='顶入式搅拌装置'>顶入式搅拌装置</a>
+                    <a href="http://{{$url_po}}" style="display: block;height: 24px;line-height: 24px;color: #ff6700;text-align: center;" tagert="_blank">点击查看产品详情&gt;&gt;</a>
+                </li>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <a href="http://{{$url_po}}"><img class="left" src="picture/cdccae433c9c6f8a399a83dd7aa2694f-300x300.jpg" alt="侧入式搅拌装置" width="170" height="170" /></a>					<a href="http://{{$url_po}}" style="line-height: 28px;" title='侧入式搅拌装置'>侧入式搅拌装置</a>
+                    <a href="http://{{$url_po}}" style="display: block;height: 24px;line-height: 24px;color: #ff6700;text-align: center;" tagert="_blank">点击查看产品详情&gt;&gt;</a>
+                </li>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <a href="http://{{$url_po}}"><img class="left" src="picture/920d43ffcd17166ba7d87892f3e9d8fb-300x300.jpg" alt="底入式搅拌装置" width="170" height="170" /></a>					<a href="http://{{$url_po}}" style="line-height: 28px;" title='底入式搅拌装置'>底入式搅拌装置</a>
+                    <a href="http://{{$url_po}}" style="display: block;height: 24px;line-height: 24px;color: #ff6700;text-align: center;" tagert="_blank">点击查看产品详情&gt;&gt;</a>
+                </li>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <a href="http://{{$url_po}}"><img class="left" src="picture/2474ce63d730ca477a2d772cdede1d38-300x300.jpg" alt="KSX-四宽叶旋桨式搅拌器" width="170" height="170" /></a>					<a href="http://{{$url_po}}" style="line-height: 28px;" title='KSX-四宽叶旋桨式搅拌器'>KSX-四宽叶旋桨式搅拌器</a>
+                    <a href="http://{{$url_po}}" style="display: block;height: 24px;line-height: 24px;color: #ff6700;text-align: center;" tagert="_blank">点击查看产品详情&gt;&gt;</a>
+                </li>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <a href="http://{{$url_po}}"><img class="left" src="picture/8c2a80ec7b483ad4e162448939aa06af-300x300.jpg" alt="TXL四叶推进式搅拌器" width="170" height="170" /></a>					<a href="http://{{$url_po}}" style="line-height: 28px;" title='TXL四叶推进式搅拌器'>TXL四叶推进式搅拌器</a>
+                    <a href="http://{{$url_po}}" style="display: block;height: 24px;line-height: 24px;color: #ff6700;text-align: center;" tagert="_blank">点击查看产品详情&gt;&gt;</a>
+                </li>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <a href="http://{{$url_po}}"><img class="left" src="picture/fb313a5a117447469652f7b522f41e32-300x300.jpg" alt="ZCX-高效轴流旋桨式搅拌器" width="170" height="170" /></a>					<a href="http://{{$url_po}}" style="line-height: 28px;" title='ZCX-高效轴流旋桨式搅拌器'>ZCX-高效轴流旋桨式搅拌器</a>
+                    <a href="http://{{$url_po}}" style="display: block;height: 24px;line-height: 24px;color: #ff6700;text-align: center;" tagert="_blank">点击查看产品详情&gt;&gt;</a>
+                </li>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <a href="http://{{$url_po}}"><img class="left" src="picture/14ba802616d1beefc045f75fd5a0dec9-300x300.jpg" alt="CBY-变截面弧叶桨式搅拌器" width="170" height="170" /></a>					<a href="http://{{$url_po}}" style="line-height: 28px;" title='CBY-变截面弧叶桨式搅拌器'>CBY-变截面弧叶桨式搅拌器</a>
+                    <a href="http://{{$url_po}}" style="display: block;height: 24px;line-height: 24px;color: #ff6700;text-align: center;" tagert="_blank">点击查看产品详情&gt;&gt;</a>
+                </li>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <a href="http://{{$url_po}}"><img class="left" src="picture/08a917d7449dd5cdaef97821ce08884b-300x300.jpg" alt="中心驱动式浓密机" width="170" height="170" /></a>					<a href="http://{{$url_po}}" style="line-height: 28px;" title='中心驱动式浓密机'>中心驱动式浓密机</a>
+                    <a href="http://{{$url_po}}" style="display: block;height: 24px;line-height: 24px;color: #ff6700;text-align: center;" tagert="_blank">点击查看产品详情&gt;&gt;</a>
+                </li>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <a href="http://{{$url_po}}"><img class="left" src="picture/f063bf6a9de1e26f396edf9f66c65ade-300x300.jpg" alt="中心传动刮泥机" width="170" height="170" /></a>					<a href="http://{{$url_po}}" style="line-height: 28px;" title='中心传动刮泥机'>中心传动刮泥机</a>
+                    <a href="http://{{$url_po}}" style="display: block;height: 24px;line-height: 24px;color: #ff6700;text-align: center;" tagert="_blank">点击查看产品详情&gt;&gt;</a>
+                </li>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <a href="http://{{$url_po}}"><img class="left" src="picture/1929740f32f821747246e13e375ef818-300x300.jpg" alt="周边传动浓缩机" width="170" height="170" /></a>					<a href="http://{{$url_po}}" style="line-height: 28px;" title='周边传动浓缩机'>周边传动浓缩机</a>
+                    <a href="http://{{$url_po}}" style="display: block;height: 24px;line-height: 24px;color: #ff6700;text-align: center;" tagert="_blank">点击查看产品详情&gt;&gt;</a>
+                </li>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <a href="http://{{$url_po}}"><img class="left" src="picture/60e3a5e206eddce6106529e122de8636-300x245.jpg" alt="新型高效浓缩机" width="170" height="170" /></a>					<a href="http://{{$url_po}}" style="line-height: 28px;" title='新型高效浓缩机'>新型高效浓缩机</a>
+                    <a href="http://{{$url_po}}" style="display: block;height: 24px;line-height: 24px;color: #ff6700;text-align: center;" tagert="_blank">点击查看产品详情&gt;&gt;</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="ys pr mt10">
+        <h2 class="pa"><img src="picture/e.jpg" alt="选择{{$company}}的6大理由" title="选择{{$company}}的6大理由"></h2>
+        <dl class="dl01 pa">
+            <dt><img src="picture/e1.jpg" alt="技术优势" title="技术优势"></dt>
+            <dd>公司常年与国内著名高校、专业院所紧密合作，总结汇集了各行业工程中的实际设备操作工艺。并形成了以技术研发为核心、以客户需求为导向的发展模式。<span></span></dd>
+        </dl>
+        <dl class="dl02 dl01 pa">
+            <dt><img src="picture/e2.jpg" alt="质量保证" title="质量保证"></dt>
+            <dd>公司通过了ISO90001质量管理体系认证，在产品研发生产过程中严格按照体系要求实施控制，保证产品质量。<span></span></dd>
+        </dl>
+        <dl class="dl03 dl01 pa">
+            <dt><img src="picture/e3.jpg" alt="生产制造" title="生产制造"></dt>
+            <dd>公司拥有先进的生产设备、专业的生产团队、精湛的制造工艺，并积累了丰富的搅拌设备生产制造经验。<span></span></dd>
+        </dl>
+        <dl class="dl04 dl01 pa">
+            <dt><img src="picture/e4.jpg" alt="价格优势" title="价格优势"></dt>
+            <dd>公司设计制造的产品或承接的技术项目，均以用户的实际需求为前提，采用先进的技术和合适的设备，既保证设备的应用效果和使用寿命，又充分考虑用户的投资费用，做到物美价廉。<span></span></dd>
+        </dl>
+        <dl class="dl05 dl01 pa">
+            <dt><img src="picture/ys5.gif" alt="服务支持" title="服务支持"></dt>
+            <dd>服务承诺：公司严格执行用户的合同要求和有关的国家标准，对合同有要求的，我公司可派专业技术人员到现场指导和调试，进行培训，保证参训人员能独立操作。<span></span></dd>
+        </dl>
+        <dl class="dl06 dl01 pa">
+            <dt><img src="picture/ys6.gif" alt="售后保障" title="售后保障"></dt>
+            <dd>公司承诺接报修电话后将在48小时内派人到现场抢修。质保期内如非人为因素引起的故障，可免费修理及更换配件。公司根据《设备年度保养书》每年组织一次设备检查，保证所售产品连续、安全、高效地运行。<span></span></dd>
+        </dl>
+    </div>
+
+
+    <div class="jz fl">
+        <h2>
+            <span class="fr"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="工程案例">更多</a></span>
+            工程案例<q>prestige</q></h2>
+        <div class="jz_con">
+            <dl>
+
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <dt>
+                        <a href="http://{{$url_po}}"><img class="left" src="picture/2f52f64033f3c2fc7cf68c076b434e81-300x300.jpg" alt="搅拌装置在矿山冶金行业的应用" width="138" height="108" /></a>					</dt>
+                    <dd>
+                        <h3><a href="http://{{$url_po}}" style="line-height: 28px;" title='搅拌装置在矿山冶金行业的应用'>搅拌装置在矿山冶金行业的应用</a></h3>
+                        <p>搅拌装置在矿山冶金行业的应用
+                            我公司研制生产的搅拌器在矿山冶金行业得到了广泛应用，与国内多家矿业工程公司如滨海金地矿...<a href="http://{{$url_po}}" title="了解更多搅拌装置在矿山冶金行业的应用信息" target="_blank">[了解更多]</a></p>
+                    </dd>
+
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <dt>
+                        <a href="http://{{$url_po}}"><img class="left" src="picture/34f5738752fa9a132e7b8ea4f01fca7b-300x300.jpg" alt="搅拌装置在生物发酵行业的应用" width="138" height="108" /></a>					</dt>
+                    <dd>
+                        <h3><a href="http://{{$url_po}}" style="line-height: 28px;" title='搅拌装置在生物发酵行业的应用'>搅拌装置在生物发酵行业的应用</a></h3>
+                        <p>搅拌装置在生物发酵行业的应用
+                            搅拌装置是生物发酵罐中必不可少的重要装置，在生物发酵罐中选用不同浆型的搅拌器满足使罐内...<a href="http://{{$url_po}}" title="了解更多搅拌装置在生物发酵行业的应用信息" target="_blank">[了解更多]</a></p>
+                    </dd>
+
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <dt>
+                        <a href="http://{{$url_po}}"><img class="left" src="picture/b01c544f18e898792727bad8d964f1cc-300x300.jpg" alt="刮泥机的应用" width="138" height="108" /></a>					</dt>
+                    <dd>
+                        <h3><a href="http://{{$url_po}}" style="line-height: 28px;" title='刮泥机的应用'>刮泥机的应用</a></h3>
+                        <p>刮泥机（浓缩机/浓密机）
+                            一、设备简介
+                            1.设备种类
+                            周边传动刮泥(浓缩)机，主要应用于池径为13-60m的初沉池、二沉池；浓缩...<a href="http://{{$url_po}}" title="了解更多刮泥机的应用信息" target="_blank">[了解更多]</a></p>
+                    </dd>
+
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <dt>
+                        <a href="http://{{$url_po}}"><img class="left" src="picture/b6a948fcb94d141de71501ce826d715e-300x285.jpg" alt="周边传动浓缩机（刮泥机）" width="138" height="108" /></a>					</dt>
+                    <dd>
+                        <h3><a href="http://{{$url_po}}" style="line-height: 28px;" title='周边传动浓缩机（刮泥机）'>周边传动浓缩机（刮泥机）</a></h3>
+                        <p>周边传动浓缩机/周边传动刮泥机
+                            1.周边传动浓缩机/刮泥机设备种类
+                            周边传动刮泥(浓缩机），主要应用于池径为13-60m的初沉池...<a href="http://{{$url_po}}" title="了解更多周边传动浓缩机（刮泥机）信息" target="_blank">[了解更多]</a></p>
+                    </dd>
+
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <dt>
+                        <a href="http://{{$url_po}}"><img class="left" src="picture/a2ec1fcc91c1248e7fb8eff8a7b21432.jpg" alt="吸收塔侧入式搅拌装置的应用" width="138" height="108" /></a>					</dt>
+                    <dd>
+                        <h3><a href="http://{{$url_po}}" style="line-height: 28px;" title='吸收塔侧入式搅拌装置的应用'>吸收塔侧入式搅拌装置的应用</a></h3>
+                        <p>脱硫侧式搅拌器
+                            在电厂烟气脱硫工程中，石灰石作为吸附剂，经粉碎为粉状输送到浆液箱与水混合，搅拌器对石灰石浆液进行充分...<a href="http://{{$url_po}}" title="了解更多吸收塔侧入式搅拌装置的应用信息" target="_blank">[了解更多]</a></p>
+                    </dd>
+                </li>
+            </dl>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="ry jz" id="NewsGroup">
+        <h2><span class="fr"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="搅拌器、浓缩机、刮泥机生产厂家&#8211;{{$city}}{{$company}}机械资质">更多</a></span>
+            研发制造<q>honors</q></h2>
+        <div id="main-bottom">
+            <div id="product">
+
+                <div id="commend">
+
+                    <div id="scroll">
+
+                        <div id="scroll-box">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                                <tr align="center">
+                                    <td class="scrollpic"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="生产加工"><img width="300" height="300" src="picture/de5bcf7d8eaea98b5a67b2b3883c44b3-300x300.jpg" class="attachment-thumbnail wp-post-image" alt="搅拌器生产厂家{{$company}}机械" />			<h3>生产加工</h3></a></td>
+                                    <td class="scrollpic"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="工厂面貌"><img width="300" height="168" src="picture/img_2935_11.jpg" class="attachment-thumbnail wp-post-image" alt="搅拌器厂家{{$company}}机械" />			<h3>工厂面貌</h3></a></td>
+                                    <td class="scrollpic"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="生产车间"><img width="300" height="300" src="picture/img_20200228_164611-300x300.jpg" class="attachment-thumbnail wp-post-image" alt="搅拌设备厂家{{$company}}机械_24" />			<h3>生产车间</h3></a></td>
+                                    <td class="scrollpic"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="生产车间"><img width="300" height="300" src="picture/cbed0074caaa3e283c744ddc8597fdc4-300x300.jpg" class="attachment-thumbnail wp-post-image" alt="搅拌设备厂家{{$company}}机械_20" />			<h3>生产车间</h3></a></td>
+                                    <td class="scrollpic"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="生产车间"><img width="300" height="300" src="picture/bd306bd1c41b79c557dd0c8af6b58988-300x300.jpg" class="attachment-thumbnail wp-post-image" alt="搅拌设备厂家{{$company}}机械_20" />			<h3>生产车间</h3></a></td>
+                                    <td class="scrollpic"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="流体模拟软件"><img width="300" height="300" src="picture/1232617261e4a48ead25f8ee8941ac35-300x300.jpg" class="attachment-thumbnail wp-post-image" alt="cdcd" />			<h3>流体模拟软件</h3></a></td>
+                                    <td class="scrollpic"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="实验室"><img width="205" height="124" src="picture/c53cfe836ea7ba07f308a714a33d4e34.jpg" class="attachment-thumbnail wp-post-image" alt="实验室" />			<h3>实验室</h3></a></td>
+                                    <td class="scrollpic"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="生产车间"><img width="300" height="300" src="picture/f15258ec3ed6d34b501ac6e08c6482bc-300x300.jpg" class="attachment-thumbnail wp-post-image" alt="搅拌设备厂家{{$company}}机械_23" />			<h3>生产车间</h3></a></td>
+                                    <td class="scrollpic"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="生产车间"><img width="300" height="300" src="picture/8a979563ff78dc199216d0af79b149cc-300x300.jpg" class="attachment-thumbnail wp-post-image" alt="{{$company}}搅拌器设备" />			<h3>生产车间</h3></a></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <script type="text/javascript" src="js/scroll.js"></script>
+                        <script type="text/javascript">
+                            var sc=new Scroll("scroll-box",980,160,20,0);
+                            sc.play();
+                        </script>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+
+    <div class="about jz fl">
+
+        <div class="a_con">
+            <div id="company">
+
+                <h2>
+                    <span class="fr"><a href="http://about.{{.HostRoot}}" target="_blank">更多</a></span>
+                    关于{{$company}}<q>about</q>
+                </h2>
+
+                <p><img width="300" height="142" src="picture/sdcdjx_3.jpg" class="attachment-thumbnail wp-post-image" alt="搅拌器厂家{{$company}}机械" />{{$city}}{{$company}}机械设备有限公司 {{$city}}{{$company}}技术设备有限公司是一家集设计、研发、制造、销售、于一体的机械类高新技术企业, 公司产品包括：搅拌设备﹑混合设备﹑刮泥机、浓缩机﹑常压容器等流体混合、分离设备。产品广泛应用于：生物技术、制药、化工、发酵、污水处理、烟气脱硫、食品、冶金等工业领域。 公司坚持技术创新的发展策略，不仅拥有技术过硬的设计团队，还与著名高校、科研院所紧 ...<a href="http://about.{{.HostRoot}}" style="color: #0065b5;padding-left: 5px;" target="_blank">[更多]</a> </p>
+            </div>
+            <div class="clear"></div>
+
+            <div id="product">
+
+                <div id="commend">
+
+                    <div id="scroll">
+
+                        <div id="demo">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                                <tr align="center">
+                                    <td class="scrollpic"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="热烈祝贺我公司获得两项国家专利"><img width="300" height="300" src="picture/5db37ca36ce4026eaae2cb660dbdd0fc-300x300.jpg" class="attachment-thumbnail wp-post-image" alt="专利封面" />			<h3>热烈祝贺我公司获得两</h3></a></td>
+                                    <td class="scrollpic"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="热烈庆祝{{$city}}{{$company}}机械获得两项国家实用新型专利"><img width="300" height="300" src="picture/f7ffd2af85901ccbe6d37af47826f566-300x300.jpg" class="attachment-thumbnail wp-post-image" alt="{{$city}}{{$company}}机械获得两项国家实用新型专利" />			<h3>热烈庆祝{{$city}}{{$company}}机械</h3></a></td>
+                                    <td class="scrollpic"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="专利"><img width="200" height="126" src="picture/8d35aac9887f4e4ff58cf698c03ce64b.jpg" class="attachment-thumbnail wp-post-image" alt="专利" />			<h3>专利</h3></a></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <script type="text/javascript" src="js/scroll.js"></script>
+                        <script type="text/javascript">
+                            var sc=new Scroll("demo",590,160,20,0);
+                            sc.play();
+                        </script>
+
+                    </div>
+
+                </div>
+
+            </div>    </div>
+    </div>
+
+    <div class="qua jz fl">
+        <h2>
+            <span class="fr"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="技术支持">更多</a></span>技术支持<q>technology</q></h2>
+        <div class="qu_con">
+            <dl>
+                <dt>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" style="line-height: 28px;" title='周边传动刮泥机工作原理与安全操作'>周边传动刮泥机工作原理与安全操</a>
+                </dt>
+                <dd>
+                    周边传动刮泥机
+                    周边传动刮泥机结构和工作原理：
+                    ZBG型周边传动刮泥机主要由稳流筒，集电装置、中心支...        </dd>
+                <dt>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" style="line-height: 28px;" title='搅拌桨层间距对搅拌釜内流体特性的影响研究'>搅拌桨层间距对搅拌釜内流体特性</a>
+                </dt>
+                <dd>
+                    搅拌设备搅拌桨叶的设计
+                    搅拌反应器广泛应用在化工、制药、废水处理等工业领域中。随着工业规模的不断...        </dd>
+                <dt>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" style="line-height: 28px;" title='挡板在搅拌中的作用'>挡板在搅拌中的作用</a>
+                </dt>
+                <dd>
+                    搅拌槽上的附件很多，这里主要介绍挡板对搅拌效果的影响。
+
+                    当搅拌器沿容器中心线安装，搅拌物料的黏...        </dd>
+                <dt>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" style="line-height: 28px;" title='搅拌设备中机械密封及填料密封泄露问题及解决方法'>搅拌设备中机械密封及填料密封泄</a>
+                </dt>
+                <dd>
+                    反应釜搅拌器与机械密封
+                    一、反应釜搅拌器中机械密封的常见泄露问题及解决方法如下：
+
+                    [caption id="...        </dd>
+                <dt>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" style="line-height: 28px;" title='{{$city}}{{$company}}机械设备有限公司搅拌装置提资表'>{{$city}}{{$company}}机械设备有限公司搅拌装</a>
+                </dt>
+                <dd>
+                    {{$company}}机械搅拌设备设计选型表
+                    点击下载可下载
+
+
+                    [caption id="attachment_1204" align="aligncenter"...        </dd>
+
+            </dl>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="bd01 pr">
+        <a href="#" title="搅拌器、浓缩机、刮泥机生产厂家&#8211;{{$city}}{{$company}}机械"><img src="picture/4002.png" alt="搅拌器、浓缩机、刮泥机生产厂家&#8211;{{$city}}{{$company}}机械" title="搅拌器、浓缩机、刮泥机生产厂家&#8211;{{$city}}{{$company}}机械" style="display: inline;"></a>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="new01 jz fl">
+        <h2><span class="fr"><a target="_blank" href="http://news.{{.HostRoot}}">更多</a></span>行业资讯<q>news</q></h2>
+        <div class="new01_con">
+            <dl>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <dt>
+                        <a href="http://{{$url_po}}"><img class="left" src="picture/default.gif" alt="搅拌器基本常识" width="138" height="108" /></a>					</dt>
+                    <dd>
+                        <h3><a href="http://{{$url_po}}" style="line-height: 28px;" title='搅拌器基本常识'>搅拌器基本常识</a></h3>
+                        <p>液体混合搅拌器
+                            搅拌机械是使液体、气体介质强迫对流并均匀混合的器件。搅拌器的类型、尺寸及转速，对搅拌功率在总体流动和...<a href="http://{{$url_po}}" title="了解更多搅拌器基本常识信息" target="_blank">[了解更多]</a></p>
+                    </dd>
+
+                </li>
+            </dl>
+            <ul>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{$url_po}}" title='搅拌器基本常识'>搅拌器基本常识</a>
+                </li>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='化工搅拌器结构与选型'>化工搅拌器结构与选型</a>
+                </li>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='搅拌设备的应用'>搅拌设备的应用</a>
+                </li>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='吸收塔侧入式搅拌器机械密封技术特点'>吸收塔侧入式搅拌器机械密封技术</a>
+                </li>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='框式搅拌设备构造特点与用途'>框式搅拌设备构造特点与用途</a>
+                </li>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='搅拌知识：高粘度互溶液体的搅拌与混合'>搅拌知识：高粘度互溶液体的搅拌</a>
+                </li>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='搅拌设备在沼气发酵过程中的作用及意义'>搅拌设备在沼气发酵过程中的作用</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="new01 jz fl">
+        <h2><span class="fr"><a target="_blank" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">更多</a></span>企业新闻<q>news</q></h2>
+        <div class="new01_con">
+            <dl>
+                <li>
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <dt>
+                        <a href="http://{{$url_po}}"><img class="left" src="picture/default.gif" alt="[验收公示]{{$city}}{{$company}}机械设备有限公司环保设备项目竣工环境保护验收公示" width="138" height="108" /></a>					</dt>
+                    <dd>
+                        <h3><a href="http://{{$url_po}}" style="line-height: 28px;" title='[验收公示]{{$city}}{{$company}}机械设备有限公司环保设备项目竣工环境保护验收公示'>[验收公示]{{$city}}{{$company}}机械设备有限</a></h3>
+                        <p>{{$city}}搅拌器生产厂家——{{$company}}机械
+                            根据《建设项目竣工环境保护验收暂行办法》，现将德州市平原经济开发区{{$company}}机械年产3000套环...<a href="http://{{$url_po}}" title="了解更多[验收公示]{{$city}}{{$company}}机械设备有限公司环保设备项目竣工环境保护验收公示信息" target="_blank">[了解更多]</a></p>
+                    </dd>
+
+                </li>
+            </dl>
+            <ul>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{$url_po}}" title='[验收公示]{{$city}}{{$company}}机械设备有限公司环保设备项目竣工环境保护验收公示'>[验收公示]{{$city}}{{$company}}机械设备有限</a>
+                </li>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='热烈祝贺我公司获得两项国家专利'>热烈祝贺我公司获得两项国家专利</a>
+                </li>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='我公司浓缩机在磷矿行业安装使用现场'>我公司浓缩机在磷矿行业安装使用</a>
+                </li>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='热烈庆祝{{$city}}{{$company}}机械获得两项国家实用新型专利'>热烈庆祝{{$city}}{{$company}}机械获得两项国</a>
+                </li>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='热烈欢迎澳大利亚客户来我司参观考察'>热烈欢迎澳大利亚客户来我司参观</a>
+                </li>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='热烈欢迎国外客户来我公司参观考察'>热烈欢迎国外客户来我公司参观考</a>
+                </li>
+                <li><span class="fr">[2022-01-08]</span>
+                    <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='技术方案才是搅拌设备的核心竞争力'>技术方案才是搅拌设备的核心竞争</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="clear"></div>
+
+    <div class="bd01 pr"><a href="#" title="搅拌器生产厂家"><img _src="picture/1111.jpg" alt="搅拌器生产厂家{{$company}}机械" title="搅拌器生产厂家" src="picture/4002.png" style="display: inline;"></a></div>
+
+    <div class="clear"></div>
+
+</div>
+
+<div id="footer">
+
+
+    <div id="copyright">
+        <div id="copyright">
+            搅拌设备制造专家——{{$city}}{{$company}}机械设备有限公司   网站备案：鲁ICP备16051289号-1<br>
+            公司地址：{{$city}}省德州市平原经济开发区民生路北段路西 电话：0534-8150150  公司主要产品：搅拌设备、搅拌器、浓密机、浓缩机、刮泥机 	</div>
+		</div>
+
+    <div class="f_img"><img alt="搅拌器、浓缩机、刮泥机生产厂家&#8211;{{$city}}{{$company}}机械" title="搅拌器、浓缩机、刮泥机生产厂家&#8211;{{$city}}{{$company}}机械" src="picture/anquanrenzhen.png"></div>
+</div>
+
+
+
+<script src="js/menu.js" type="text/javascript"></script>
+
+<!-- 返回顶部 -->
+<div style="display: none;" id="gotop"></div>
+<script type='text/javascript'>
+    backTop=function (btnId){
+        var btn=document.getElementById(btnId);
+        var d=document.documentElement;
+        var b=document.body;
+        window.onscroll=set;
+        btn.onclick=function (){
+            btn.style.display="none";
+            window.onscroll=null;
+            this.timer=setInterval(function(){
+                d.scrollTop-=Math.ceil((d.scrollTop+b.scrollTop)*0.1);
+                b.scrollTop-=Math.ceil((d.scrollTop+b.scrollTop)*0.1);
+                if((d.scrollTop+b.scrollTop)==0) clearInterval(btn.timer,window.onscroll=set);
+            },10);
+        };
+        function set(){btn.style.display=(d.scrollTop+b.scrollTop>600)?'block':"none"}
+    };
+    backTop('gotop');
+</script>
+<!-- 返回顶部END -->
+
+
+
+
+
+
+
+</body>
+</html>
