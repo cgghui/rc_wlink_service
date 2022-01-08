@@ -37,73 +37,25 @@
     <h1 class="logo fl"><a href="/"><img src="picture/logo.png" alt="仿古铝合金门窗-新中式复古铝合金门窗-断桥铝合金门窗厂家—{{$city}}{{$company}}门窗有限公司" title="仿古铝合金门窗-新中式复古铝合金门窗-断桥铝合金门窗厂家—{{$city}}{{$company}}门窗有限公司" height="62"/></a></h1>
     <ul class="nav fr">
         <li class="m"><a class="cur" href="/">首页</a></li>
-        <li class="m"><a  href="http://about.{{.HostRoot}}" >关于我们</a></li>
-        <li class="m"><a  href="http://product.{{.HostRoot}}" >仿古门窗 </a>
-            <ul class="navSub">
-
-                <li ><a href="/product/14.html">60系列平面仿古门窗</a></li>
-
-                <li ><a href="/product/13.html">65系列凹弧新中式门窗</a></li>
-
-                <li ><a href="/product/11.html">76系列复古重型折叠门</a></li>
-
-                <li ><a href="/product/12.html">80系列凹弧仿古门窗</a></li>
-
-                <li ><a href="/product/10.html">120系列仿古窗纱一体</a></li>
-
-                <li ><a href="/product/9.html">120系列重型推拉门</a></li>
-
-            </ul>
-        </li>
-        <li class="m"><a  href="/goujian/" >铝构件</a> </li>
-        <li class="m"><a  href="/about/service/" >服务支持</a> </li>
-        <li class="m"><a  href="/case/" >客户案例</a> </li>
-        <li class="m"><a  href="/news/" >新闻资讯 </a>
-            <ul class="navSub">
-
-                <li ><a href="/news/gsxw/">企业动态 </a></li>
-
-                <li ><a href="/news/hydt/">行业资讯 </a></li>
-
-                <li ><a href="/news/dzgl/">定制攻略 </a></li>
-
-                <li ><a href="/news/cjwt/">常见问题 </a></li>
-
-            </ul>
-        </li>
-
-        <li class="m"><a  href="/contact/" >联系我们</a></li>
+        <li class="m"><a href="http://about.{{.HostRoot}}">关于我们</a></li>
+        <li class="m"><a href="http://product.{{.HostRoot}}">仿古门窗</a></li>
+        <li class="m"><a href="http://goujian.{{.HostRoot}}">铝构件</a></li>
+        <li class="m"><a href="http://service.{{.HostRoot}}">服务支持</a></li>
+        <li class="m"><a href="http://case.{{.HostRoot}}">客户案例</a></li>
+        <li class="m"><a href="http://news.{{.HostRoot}}">新闻资讯</a></li>
+        <li class="m"><a  href="http://contact.{{.HostRoot}}">联系我们</a></li>
     </ul>
-
-
-
 </div>
-
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?5e71bdc04def6f7df7095a8d2e17c52d";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-
 <div class="banner fullSlide">
     <div class="bd">
         <ul>
-
-            <li ><a href="" title="" target="_blank"><img src="picture/h1.jpg" /></a></li>
-
-            <li ><a href="" title="" target="_blank"><img src="picture/h2.jpg" /></a></li>
-
-            <li ><a href="" title="" target="_blank"><img src="picture/h3.jpg" /></a></li>
-
+            <li><a><img src="picture/h1.jpg" /></a></li>
+            <li><a><img src="picture/h2.jpg" /></a></li>
+            <li><a><img src="picture/h3.jpg" /></a></li>
         </ul>
     </div>
     <div class="hd">
-        <ul>
-        </ul>
+        <ul></ul>
     </div>
     <span class="prev png"></span> <span class="next png"></span> </div>
 <div class="g_ser f_fw">
@@ -111,14 +63,12 @@
         <div class="h_sea f_cb">
             <ul class="f_fl u_serlst">
                 <li><a href="javascript:void(0);" onclick="javascript:addBookmark(this)" rel="nofollow" title="收藏{{$company}}" target="_blank">收藏{{$company}}</a></li>
-                <li><a href="/contact/" title="在线留言" target="_blank" class="laster" rel="nofollow">在线留言</a></li>
-                <li><a href="/sitemap.xml" title="网站地图" target="_blank" class="laster">网站地图</a></li>
-                <li><a href="/" target="_blank" title="进入手机站" rel="nofollow">添加微信</a></li>
-                <div class="yymc_code"><img src="picture/yymc_code.png" alt="添加微信"/></div>
+                <li><a href="http://contact.{{.HostRoot}}" title="在线留言" target="_blank" class="laster" rel="nofollow">在线留言</a></li>
+                <li><a href="http://sitemap.{{.HostRoot}}" title="网站地图" target="_blank" class="laster">网站地图</a></li>
             </ul>
             <div class="m_serr">
                 <div class="s_inp">
-                    <form  name="formsearch" action="/search/">
+                    <form  name="formsearch" action="http://search.{{.HostRoot}}">
                         <input type="text" value="" id="searchkeywords" name="keyword" class="inp01" />
                         <input type="submit" class="s_ss" />
                     </form>
@@ -129,17 +79,17 @@
     </div>
 </div>
 <div class="g_cp f_fw">
-    <h2><a href="/product/12.html" target="_blank" title="{{$company}}品牌复古门窗">{{$company}} · 门窗<em>taste  weite</em></a></h2>
+    <h2><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="{{$company}}品牌复古门窗">{{$company}} · 门窗<em>taste  weite</em></a></h2>
     <div class="m_cp cp_solid">
         <div class="cp_tit">
             <ul class="u_cplst f_cb">
-                <li class=""><a href="/product/12.html" target="_blank" title="断桥复古门窗">断桥复古门窗<em> <!--英语---></em></a></li>
-                <li class=""><a href="/product/14.html" target="_blank" title="平面仿古门窗">平面仿古门窗<em><!--英语---></em></a></li>
-                <li class=""><a href="/product/13.html" target="_blank" title="凹弧新中式门窗">凹弧新中式门窗<em><!--英语---></em></a></li>
-                <li class=""><a href="/product/11.html" target="_blank" title="复古重型折叠门">复古重型折叠门<em><!--英语---></em></a></li>
-                <li class=""><a href="/product/12.html" target="_blank" title="仿古门窗">仿古门窗<em><!--英语---></em></a></li>
-                <li class=""><a href="/product/10.html" target="_blank" title="仿古窗纱一体">仿古窗纱一体<em><!--英语---></em></a></li>
-                <li class=""><a href="/product/9.html" target="_blank" title="重型推拉门">重型推拉门<em><!--英语---></em></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="断桥复古门窗">断桥复古门窗<em></em></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="平面仿古门窗">平面仿古门窗<em></em></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="凹弧新中式门窗">凹弧新中式门窗<em></em></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="复古重型折叠门">复古重型折叠门<em></em></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="仿古门窗">仿古门窗<em></em></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="仿古窗纱一体">仿古窗纱一体<em></em></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="重型推拉门">重型推拉门<em></em></a></li>
             </ul>
         </div>
         <div class="cp_main">
@@ -155,16 +105,16 @@
 </div>
 <div class="g_dz f_fw">
     <div class="content"  style="width:1000px">
-        <h2><a href="/product/12.html" title="仿古门窗定制攻略" target="_blank">门窗开启攻略<em>DOOR AND WINDOW OPENING RAIDERS</em></a></h2>
+        <h2><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="仿古门窗定制攻略" target="_blank">门窗开启攻略<em>DOOR AND WINDOW OPENING RAIDERS</em></a></h2>
         <div class="m_dz">
             <ul class="u_dztab f_cb">
                 <div class="GL_tit">
-                    <li class="dztit1 cur"><a href="/product/12.html" target="_blank" title="断桥复古门窗">断桥复古</a></li>
-                    <li class="dztit2 "><a href="/product/14.html" target="_blank" title="平面仿古">平面仿古</a></li>
-                    <li class="dztit3 "><a href="/product/13.html" target="_blank" title="凹弧新中式">凹弧新中式</a></li>
-                    <li class="dztit4 "><a href="/product/12.html" target="_blank" title="仿古门窗">仿古门窗</a></li>
-                    <li class="dztit5 "><a href="/product/10.html" target="_blank" title="断桥铝门窗">断桥铝门窗</a></li>
-                    <li class="dztit6 "><a href="/product/9.html" target="_blank" title="中式铝合金门窗">中式铝合金门窗</a></li>
+                    <li class="dztit1 cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="断桥复古门窗">断桥复古</a></li>
+                    <li class="dztit2 "><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="平面仿古">平面仿古</a></li>
+                    <li class="dztit3 "><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="凹弧新中式">凹弧新中式</a></li>
+                    <li class="dztit4 "><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="仿古门窗">仿古门窗</a></li>
+                    <li class="dztit5 "><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="断桥铝门窗">断桥铝门窗</a></li>
+                    <li class="dztit6 "><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="中式铝合金门窗">中式铝合金门窗</a></li>
                 </div>
             </ul>
             <div class="GL_main">
@@ -343,8 +293,8 @@
 </div>
 <div class="g_kf f_fw">
     <div class="content">
-        <h2><a href="/list/16.html" title="聆听他们的声音" target="_blank" rel="nofollow"><span style="font-weight:bold;font-size:32px;">业主</span>眼中的{{$company}}</a></h2>
-        <h3><a href="/list/16.html" title="MORE" target="_blank" rel="nofollow">—— MORE ——</a></h3>
+        <h2><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="聆听他们的声音" target="_blank" rel="nofollow"><span style="font-weight:bold;font-size:32px;">业主</span>眼中的{{$company}}</a></h2>
+        <h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="MORE" target="_blank" rel="nofollow">—— MORE ——</a></h3>
 
         <dl class="u_dlst2 ">
             <dt><a target="_blank" title="上饶望仙峡谷小镇"><img src="picture/1-2105231q233o8.jpg" alt="上饶望仙峡谷小镇" rel="nofollow"/></a></dt>
@@ -428,18 +378,13 @@
 </div>
 <div class="g_dz2 f_fw">
     <div class="content">
-        <h2><a href="/case/gcal/" title="{{$company}}个性化高端定制服务,满足不同别墅建筑风格需求" target="_blank">{{$company}}个性化高端定制服务 <em> 满足不同别墅建筑风格需求</em></a></h2>
+        <h2><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="{{$company}}个性化高端定制服务,满足不同别墅建筑风格需求" target="_blank">{{$company}}个性化高端定制服务 <em> 满足不同别墅建筑风格需求</em></a></h2>
         <div class="m_dz f_pr">
             <div class="m_dz_main">
                 <ul class="dzimg ">
-
-                    <li><a href="/case/gcal/185.html" target="_blank" title="绿城桃李春风" rel="nofollow"><img src="picture/1-21052019504c58.jpg" alt="绿城桃李春风" /><em>绿城桃李春风 </em></a></li>
-
-                    <li><a href="/case/gcal/186.html" target="_blank" title="蓝城桃花源" rel="nofollow"><img src="picture/1-210520194z5605.jpg" alt="蓝城桃花源" /><em>蓝城桃花源 </em></a></li>
-
-                    <li><a href="/case/gcal/187.html" target="_blank" title="翼天?十里风荷" rel="nofollow"><img src="picture/1-210520192353d6.jpg" alt="翼天?十里风荷" /><em>翼天?十里风荷 </em></a></li>
-
-
+                    <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="绿城桃李春风" rel="nofollow"><img src="picture/1-21052019504c58.jpg" alt="绿城桃李春风" /><em>绿城桃李春风 </em></a></li>
+                    <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="蓝城桃花源" rel="nofollow"><img src="picture/1-210520194z5605.jpg" alt="蓝城桃花源" /><em>蓝城桃花源 </em></a></li>
+                    <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="翼天?十里风荷" rel="nofollow"><img src="picture/1-210520192353d6.jpg" alt="翼天?十里风荷" /><em>翼天?十里风荷 </em></a></li>
                 </ul>
             </div>
             <div class="clear"></div>
@@ -453,195 +398,168 @@
         <div class="m_news f_fl">
             <ul class="u_lst8 f_cb">
                 <div class="ul_tit">
-                    <li class="cur"><a href="/news/gsxw/" target="_blank" title="新闻动态">新闻动态</a></li>
-                    <li><a href="/news/hydt/" target="_blank" title="行业资讯">行业资讯</a></li>
-                    <li><a href="/news/dzgl/" target="_blank" title="定制攻略">定制攻略</a></li>
+                    <li class="cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="新闻动态">新闻动态</a></li>
+                    <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="行业资讯">行业资讯</a></li>
+                    <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank" title="定制攻略">定制攻略</a></li>
                 </div>
             </ul>
             <div class="news-main">
-
-
                 <div>
-
                     <div class="dtimg f_fl">
                         <dl>
                             <dt><img src="picture/1-210g2113s2142.jpg" alt="铝合金门窗代理需要如何经营？这里有你要的经销商经营宝典。" /></dt>
                             <dd>
-                                <h3> <a href="/news/gsxw/224.html"  target="_blank" title="铝合金门窗代理需要如何经营？这里有你要的经销商经营宝典。">铝合金门窗代理需要如何经营？这里有你要的···</a></h3>
+                                <h3> <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="铝合金门窗代理需要如何经营？这里有你要的经销商经营宝典。">铝合金门窗代理需要如何经营？这里有你要的···</a></h3>
                                 <p>对于下游客户来说，经销商的价值主要是服务和公司品牌，能够获得及时的需求响应和市场服务。一个好的经销商···...</p>
                             </dd>
                         </dl>
                     </div>
-
                     <div class="dtr f_fr">
-
                         <dl class="u_dlst1 f_cb  ">
                             <dt>12<em>2021-07</em></dt>
                             <dd>
-                                <h3><a href="/news/gsxw/225.html"  target="_blank" title="铝合金门窗加盟后如何有序开展经营工作">铝合金门窗加盟后如何有序开展经营工作</a></h3>
+                                <h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="铝合金门窗加盟后如何有序开展经营工作">铝合金门窗加盟后如何有序开展经营工作</a></h3>
                                 <p>本次展会期间，大量商家参观了德兰西尼，并签约加盟。之后，商家开始尽快装修和取样。那么铝合金门窗项目如···...</p>
                             </dd>
                         </dl>
-
                         <dl class="u_dlst1 f_cb  ">
                             <dt>16<em>2021-01</em></dt>
                             <dd>
-                                <h3><a href="/news/gsxw/64.html"  target="_blank" title="{{$city}}{{$company}}门窗有限公司入驻抖音了，欢迎关注！">{{$city}}{{$company}}门窗有限公司入驻抖音了，欢迎关注！</a></h3>
+                                <h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="{{$city}}{{$company}}门窗有限公司入驻抖音了，欢迎关注！">{{$city}}{{$company}}门窗有限公司入驻抖音了，欢迎关注！</a></h3>
                                 <p>{{$city}}{{$company}}门窗有限公司入驻抖音了，企业号：zj6543218769，个人号：599662399，欢迎···...</p>
                             </dd>
                         </dl>
-
-
                     </div>
                 </div>
 
 
                 <div>
-
                     <div class="dtimg f_fl">
                         <dl>
                             <dt><img src="picture/1-210616101s30-l.jpg" alt="什么是隔热断桥铝型材" /></dt>
                             <dd>
-                                <h3> <a href="/news/hydt/204.html"  target="_blank" title="什么是隔热断桥铝型材">什么是隔热断桥铝型材</a></h3>
+                                <h3> <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="什么是隔热断桥铝型材">什么是隔热断桥铝型材</a></h3>
                                 <p> “断桥隔热”这个词，很多消费者耳熟能详，也经常能听到，但真正懂的人很少。这也使得很多普通消费者在购···...</p>
                             </dd>
                         </dl>
                     </div>
 
                     <div class="dtr f_fr">
-
                         <dl class="u_dlst1 f_cb  ">
                             <dt>16<em>2021-01</em></dt>
                             <dd>
-                                <h3><a href="/news/hydt/184.html"  target="_blank" title="仿古铝合金门窗">仿古铝合金门窗</a></h3>
+                                <h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="仿古铝合金门窗">仿古铝合金门窗</a></h3>
                                 <p> 近年来仿古铝合金门窗很流行。仿古铝合金门窗可以说是兼具实用性和美观性，仿古铝合金门窗会通过先进的技···...</p>
                             </dd>
                         </dl>
-
                         <dl class="u_dlst1 f_cb  ">
                             <dt>09<em>2021-06</em></dt>
                             <dd>
-                                <h3><a href="/news/hydt/198.html"  target="_blank" title="仿古铝合金门窗效果图">仿古铝合金门窗效果图</a></h3>
+                                <h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="仿古铝合金门窗效果图">仿古铝合金门窗效果图</a></h3>
                                 <p>以前的中式装修会被年轻人贴上“中老年人”的标签，与年轻人的世界格格不入，如今，新中式装修受到许多年轻···...</p>
                             </dd>
                         </dl>
-
                         <dl class="u_dlst1 f_cb  ">
                             <dt>23<em>2021-08</em></dt>
                             <dd>
-                                <h3><a href="/news/hydt/251.html"  target="_blank" title="新中式门窗（仿古铝合金门窗）">新中式门窗（仿古铝合金门窗）</a></h3>
+                                <h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="新中式门窗（仿古铝合金门窗）">新中式门窗（仿古铝合金门窗）</a></h3>
                                 <p>我们生活在一个浮躁喧嚣的时代，每个人对家的定义和向往都应该是舒适、自由和淡定它也许没有绚丽的色彩和繁···...</p>
                             </dd>
                         </dl>
-
                         <dl class="u_dlst1 f_cb  ">
                             <dt>23<em>2021-08</em></dt>
                             <dd>
-                                <h3><a href="/news/hydt/252.html"  target="_blank" title="新中式门窗（门窗如何搭配）">新中式门窗（门窗如何搭配）</a></h3>
+                                <h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="新中式门窗（门窗如何搭配）">新中式门窗（门窗如何搭配）</a></h3>
                                 <p>过去两年最热门的家居风格有哪些？新中式绝对榜上有名。优雅大气的中式风格，适当融入现代简约的个性元素，···...</p>
                             </dd>
                         </dl>
-
-
                     </div>
                 </div>
 
-
                 <div>
-
                     <div class="dtimg f_fl">
                         <dl>
                             <dt><img src="picture/1-2106161041180-l.jpg" alt="隔热断桥铝型材如何判断优劣" /></dt>
                             <dd>
-                                <h3> <a href="/news/dzgl/206.html"  target="_blank" title="隔热断桥铝型材如何判断优劣">隔热断桥铝型材如何判断优劣</a></h3>
+                                <h3> <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="隔热断桥铝型材如何判断优劣">隔热断桥铝型材如何判断优劣</a></h3>
                                 <p>从断桥铝型材的表面可以观察型材的质量。好的断桥铝型材表面有光泽，表面喷色处理自然，手感光滑；差的断桥···...</p>
                             </dd>
                         </dl>
                     </div>
-
                     <div class="dtr f_fr">
-
                         <dl class="u_dlst1 f_cb  ">
                             <dt>16<em>2021-01</em></dt>
                             <dd>
-                                <h3><a href="/news/dzgl/143.html"  target="_blank" title="中式仿古铝合金门窗">中式仿古铝合金门窗</a></h3>
+                                <h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="中式仿古铝合金门窗">中式仿古铝合金门窗</a></h3>
                                 <p>门窗是景，也纳景。仿古窗棂是自然画框，无论从庭院别墅的哪个角落看都自成一景。...</p>
                             </dd>
                         </dl>
-
                         <dl class="u_dlst1 f_cb  ">
                             <dt>09<em>2021-06</em></dt>
                             <dd>
-                                <h3><a href="/news/dzgl/199.html"  target="_blank" title="中式仿古装修效果图里学中式装修">中式仿古装修效果图里学中式装修</a></h3>
+                                <h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="中式仿古装修效果图里学中式装修">中式仿古装修效果图里学中式装修</a></h3>
                                 <p>知道这一点后，我建议朋友不仅要找专业的设计公司，还要知道一些塑造中国风的方法，至于那个他不了解中式风···...</p>
                             </dd>
                         </dl>
-
                         <dl class="u_dlst1 f_cb  ">
                             <dt>29<em>2021-06</em></dt>
                             <dd>
-                                <h3><a href="/news/dzgl/212.html"  target="_blank" title="新中式这么火，门窗应该怎么搭呢？">新中式这么火，门窗应该怎么搭呢？</a></h3>
+                                <h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="新中式这么火，门窗应该怎么搭呢？">新中式这么火，门窗应该怎么搭呢？</a></h3>
                                 <p>新中式这么火，门窗应该怎么搭呢？ 这两年最热门的家居风格有哪些？新中式肯定在榜上。优雅大气的中式风格···...</p>
                             </dd>
                         </dl>
-
                         <dl class="u_dlst1 f_cb  ">
                             <dt>10<em>2021-06</em></dt>
                             <dd>
-                                <h3><a href="/news/dzgl/200.html"  target="_blank" title="铝合金门窗品牌排行">铝合金门窗品牌排行</a></h3>
+                                <h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"  target="_blank" title="铝合金门窗品牌排行">铝合金门窗品牌排行</a></h3>
                                 <p>铝合金门窗是我国门窗产品中占比最高的产品之一。从2020年门窗产品市场占有率的统计表格可以看出，铝合···...</p>
                             </dd>
                         </dl>
-
-
                     </div>
                 </div>
-
-
-
             </div>
         </div>
         <div class="faq ">
-            <h2><a href="/news/cjwt/" title="常见问题" target="_blank">常见问题</a> </h2>
+            <h2><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="常见问题" target="_blank">常见问题</a> </h2>
             <div class="fa_con" id="cjwt">
 
                 <dl >
-                    <dt><a href="/news/cjwt/215.html" title="【什么是系统门窗】系统窗跟断桥铝门窗的区别？" target="_blank">【什么是系统门窗】系统窗跟断桥铝门窗的区···</a></dt>
+                    <dt><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="【什么是系统门窗】系统窗跟断桥铝门窗的区别？" target="_blank">【什么是系统门窗】系统窗跟断桥铝门窗的区···</a></dt>
                     <dd>门窗种类繁多，其中有性能优越的系统门窗。很多人问什么是系统门窗？系统窗和断桥铝有什么区别？以下由{{$company}}给您一一介绍。...</dd>
                 </dl>
 
                 <dl >
-                    <dt><a href="/news/cjwt/216.html" title="塑钢窗户漏风怎么办？" target="_blank">塑钢窗户漏风怎么办？</a></dt>
+                    <dt><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="塑钢窗户漏风怎么办？" target="_blank">塑钢窗户漏风怎么办？</a></dt>
                     <dd>冬天，天气很冷。如果窗户漏风，会使室内温度降低，人会变得很不舒服。如果想让室内温度更高，就需要及时解决窗户漏水的问题，让居住环境更加舒适。下面是如何解决塑钢窗漏风...</dd>
                 </dl>
 
                 <dl >
-                    <dt><a href="/news/cjwt/208.html" title="铝合金门窗日常维护有哪些办法？" target="_blank">铝合金门窗日常维护有哪些办法？</a></dt>
+                    <dt><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="铝合金门窗日常维护有哪些办法？" target="_blank">铝合金门窗日常维护有哪些办法？</a></dt>
                     <dd>家里门窗如果密封不好，真的很头疼！夏天房子开着空调冷气跑出去，冬天外面冷风吹进来。那么，门窗密封性差，该怎么解决呢？...</dd>
                 </dl>
 
                 <dl >
-                    <dt><a href="/news/cjwt/209.html" title="铝合金门窗日常维护有哪些办法？" target="_blank">铝合金门窗日常维护有哪些办法？</a></dt>
+                    <dt><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="铝合金门窗日常维护有哪些办法？" target="_blank">铝合金门窗日常维护有哪些办法？</a></dt>
                     <dd>  铝合金门窗市场越来越大。现在很多建筑和家庭都用铝合金门窗。那么，铝合金门窗日常维护有哪些办法？在这里，{{$company}}会给到您一些建议。...</dd>
                 </dl>
 
                 <dl >
-                    <dt><a href="/news/cjwt/104.html" title="仿古铝合金门窗多少钱一平方?" target="_blank">仿古铝合金门窗多少钱一平方?</a></dt>
+                    <dt><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="仿古铝合金门窗多少钱一平方?" target="_blank">仿古铝合金门窗多少钱一平方?</a></dt>
                     <dd>仿古铝合金门窗现在是门窗的一种比较流行的选择，因此人们经常问仿古铝合金门窗多少钱一平方？...</dd>
                 </dl>
 
                 <dl >
-                    <dt><a href="/news/cjwt/103.html" title="断桥铝合金窗和塑钢窗哪个好？" target="_blank">断桥铝合金窗和塑钢窗哪个好？</a></dt>
+                    <dt><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="断桥铝合金窗和塑钢窗哪个好？" target="_blank">断桥铝合金窗和塑钢窗哪个好？</a></dt>
                     <dd>朋友的房子最近装修过，所以我去看了看。我的朋友很难决择窗户的材料，听了装饰师傅说，安装最多的是断桥的铝合金窗户和塑钢窗户，他的建议让朋友缩小了材料的选择范围，但断桥铝合金...</dd>
                 </dl>
 
                 <dl >
-                    <dt><a href="/news/cjwt/195.html" title="为什么铝合金门窗还没使用到一年就变形了？" target="_blank">为什么铝合金门窗还没使用到一年就变形了？</a></dt>
+                    <dt><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="为什么铝合金门窗还没使用到一年就变形了？" target="_blank">为什么铝合金门窗还没使用到一年就变形了？</a></dt>
                     <dd>铝合金型材具有强度高、耐腐蚀性强、不易变形的特点。为什么有些铝合金门还没用一年就变形了？经分析，铝合金门在正常使用下的变形可能是由于使用的铝合金型材厚度较薄造成的...</dd>
                 </dl>
 
                 <dl >
-                    <dt><a href="/news/cjwt/201.html" title="什么样的门窗才算是好门窗?" target="_blank">什么样的门窗才算是好门窗?</a></dt>
+                    <dt><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="什么样的门窗才算是好门窗?" target="_blank">什么样的门窗才算是好门窗?</a></dt>
                     <dd>好的门窗主要体现在节能、静音、防尘、美观上，与所用材料、五金、制造工艺、设备等密切相关。下面网络小编给你深入讲解一下门窗。今天主要介绍一款真正好的的铝合金门窗是怎...</dd>
                 </dl>
 
@@ -656,56 +574,6 @@
     </div>
 </div>
 <div class="g_link f_fw">
-    <div class="content">
-        <h2> <em><a href="/" title="友情链接" target="_blank">LINKS</a></em> <span class="more01"></span> </h2>
-        <div class="link_c">
-            <a href="http://www.chaoyapai.com/" target="_blank">潮雅派门窗</a>
-
-            <a href="http://www.xxljcg.com" target="_blank">全铝家居厂家</a>
-
-            <a href="http://www.xdlwoods.com" target="_blank">兰州板材批发</a>
-
-            <a href="http://www.ccgs.cc" target="_blank">深圳拆除公司</a>
-
-            <a href="http://www.linzsafety.com" target="_blank">防穿刺鞋垫</a>
-
-            <a href="http://www.jszxcm.com" target="_blank">玻璃钢采光板</a>
-
-            <a href="http://www.shylzs.cn" target="_blank">太仓装饰设计</a>
-
-            <a href="http://www.gxhongmu.com" target="_blank">红木家具</a>
-
-            <a href="http://www.hsdongyi.com" target="_blank">PVC装饰膜</a>
-
-            <a href="http://www.motuw.com" target="_blank">瓷器</a>
-
-            <a href="http://www.floatinghouse.cn" target="_blank">水上建筑</a>
-
-            <a href="https://www.gdbowson.com" target="_blank">酒店家具公司</a>
-
-            <a href="http://www.sz-hanhua.com" target="_blank">湖南办公装修设计</a>
-
-            <a href="http://www.jwsmm.com" target="_blank">铝合金门窗</a>
-
-            <a href="http://www.yckaosite.com" target="_blank">考斯特中巴车</a>
-
-            <a href="http://www.bagkee.com" target="_blank">燃气热水器</a>
-
-            <a href="http://www.dapaoly.com" target="_blank">铝单板厂家</a>
-
-            <a href="http://www.dapaolvye.com" target="_blank">铝单板厂家</a>
-
-            <a href="https://www.otoa.cn" target="_blank">惠州装修公司</a>
-
-            <a href="http://www.bmcrm.cn" target="_blank">缠绕膜</a>
-
-            <a href="https://www.cdpino.com" target="_blank">成都装地暖</a>
-
-            <a href="https://www.tsbaiyun.com" target="_blank">白云租房</a>
-
-            <a href="http://www.fangxiniu.com/goufangwiki" target="_blank">购房知识</a>
-        </div>
-    </div>
 </div>
 <!--[if IE 6]>
 <script src="js/dd_belatedpng.js"></script>
@@ -715,28 +583,21 @@
         <div class="m_fnav menu2">
             <ul>
                 <li><a href="/" title="网站首页">网站首页<em></em></a></li>
-                <li><a href='/about/us/'  rel='dropmenu1'>关于我们</a></li>
-
-                <li><a href='/product/' >仿古门窗</a></li>
-
-                <li><a href='/goujian/' >铝构件</a></li>
-
-                <li><a href='/news/'  rel='dropmenu4'>新闻动态</a></li>
-
-                <li><a href='/case/'  rel='dropmenu5'>客户案例</a></li>
-
-                <li><a href='/contact/' >联系我们</a></li>
-
-                <li><a href="/sitemap.xml" target="_blank">Xml地图<em></em></a></li>
-
+                <li><a href='http://about.{{.HostRoot}}'  rel='dropmenu1'>关于我们</a></li>
+                <li><a href='http://product.{{.HostRoot}}' >仿古门窗</a></li>
+                <li><a href='http://goujian.{{.HostRoot}}' >铝构件</a></li>
+                <li><a href='http://news.{{.HostRoot}}'  rel='dropmenu4'>新闻动态</a></li>
+                <li><a href='http://case.{{.HostRoot}}'  rel='dropmenu5'>客户案例</a></li>
+                <li><a href='http://contact.{{.HostRoot}}' >联系我们</a></li>
+                <li><a href="http://sitemap.{{.HostRoot}}" target="_blank">Xml地图<em></em></a></li>
             </ul>
         </div>
         <div class="f_ftcon">
             <p> <span style="font-weight:bold;">{{$city}}{{$company}}门窗有限公司  版权所有</span><br/>
-                电话：13632616846 　　手机：13632616846（方经理） 　<br/>
-                邮箱：fr13632616846@163.com 　　QQ:507793092<br/>
-                厂址：江西省{{$city}}广信区罗桥街道办旭日大道307号<br/>
-                Copyright &copy; 2002-2017 {{$company}}门窗 版权所有 <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="nofollow">备案号：赣ICP备2021004220号-1 </a> <em></em> <em></em> </p>
+                电话：{{RandWord "186" "189" "138" "177" "151"}}{{RandNumber 8 8}} 　　手机：{{RandWord "186" "189" "138" "177" "151"}}{{RandNumber 8 8}}（方经理） 　<br/>
+                邮箱：{{$tel}}@163.com 　　QQ:{{RandNumber 8 9}}<br/>
+                厂址：{{$city}}广信区罗桥街道办旭日大道{{RandNumber 2 3}}号<br/>
+                Copyright &copy; 2002-2017 {{$company}}门窗 版权所有 <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="nofollow">备案号：赣ICP备{{RandNumber 6 6}}号-1 </a> <em></em> <em></em> </p>
         </div>
         <p class="flogo f_pa"><a href="/" target="_self"><img src="picture/flogo.png" alt="仿古铝合金门窗-新中式复古铝合金门窗-断桥铝合金门窗厂家—{{$city}}{{$company}}门窗有限公司" /></a></p>
         <p class="code f_pa" style="right:100px;top:90px;"><img src="picture/wxfw.jpg" alt="仿古铝合金门窗-新中式复古铝合金门窗-断桥铝合金门窗厂家—{{$city}}{{$company}}门窗有限公司微信"  /><em>官方微信</em></p>
@@ -792,13 +653,7 @@
         <li class="onlinewx">
             <div class="onlineico"> <img src="picture/onlineico1.png" alt="仿古门窗"/> </div>
             <div class="onlinewximg onlinewxtel">
-                <p>13632616846</p>
-            </div>
-        </li>
-        <li class="onlinewx">
-            <div class="onlineico"> <img src="picture/onlineico2.png" alt="仿古门窗微信定制"/> </div>
-            <div class="onlinewximg"> <img src="picture/wxfw.jpg">
-                <p>官方微信</p>
+                <p>{{$tel}}</p>
             </div>
         </li>
         <li class="onlinetop">
