@@ -8,7 +8,6 @@
     {{- $company = RandLib "company_name" -}}
     {{- .StoreSet "company" $company false -}}
 {{- end -}}
-{{- $company = Join "" $company "装饰" -}}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-CN" xml:lang="zh-CN">
 <head>
@@ -20,9 +19,9 @@
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <meta name="applicable-device" content="pc,mobile" />
-    <title>{{$city}}装修公司官网首页-家装公司-室内装修-{{$city}}{{$company}}</title>
-    <meta name="keywords" content="装修公司,新房装修,二手房装修,大包装修,半包装修,{{$company}}" />
-    <meta name="description" content="{{$city}}{{$company}}工程有限公司是一家专注新房装修,二手房装修设计、室内装修施工、售后于一体的{{$city}}装修公司，自有装修工人统一管理，基础装修、品牌主材、家具选购、软装配饰设计一站式服务" />
+    <title>{{$city}}装修公司官网首页-家装公司-室内装修-{{$city}}{{$company}}装修</title>
+    <meta name="keywords" content="装修公司,新房装修,二手房装修,大包装修,半包装修,{{$company}}装修" />
+    <meta name="description" content="{{$city}}{{$company}}装修工程有限公司是一家专注新房装修,二手房装修设计、室内装修施工、售后于一体的{{$city}}装修公司，自有装修工人统一管理，基础装修、品牌主材、家具选购、软装配饰设计一站式服务" />
     <link href="http://{{.HostRoot}}/css/resetcommon.css" rel="stylesheet" type="text/css" />
     <link href="http://{{.HostRoot}}/css/index.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://{{.HostRoot}}/js/nsw_index.js"></script>
@@ -32,41 +31,41 @@
 <div class="header">
     <div class="h_con content clearfix">
         <h1 class="logo">
-            <a class="a1" href="http://www.{{.HostRoot}}/" title="{{$city}}{{$company}}"><img src="http://{{.HostRoot}}/picture/20200331140234_1602.jpg" alt="{{$city}}{{$company}}" title="{{$city}}{{$company}}"></a>
-            <a class="a2" href="http://www.{{.HostRoot}}/" title="{{$city}}{{$company}}"><img src="http://{{.HostRoot}}/picture/logo2.jpg" alt="{{$city}}{{$company}}" title="{{$city}}{{$company}}"></a></h1>
+            <a class="a1" href="http://www.{{.HostRoot}}/" title="{{$city}}{{$company}}装修"><img src="http://{{.HostRoot}}/picture/20200331140234_1602.jpg" alt="{{$city}}{{$company}}装修" title="{{$city}}{{$company}}装修"></a>
+            <a class="a2" href="http://www.{{.HostRoot}}/" title="{{$city}}{{$company}}装修"><img src="http://{{.HostRoot}}/picture/logo2.jpg" alt="{{$city}}{{$company}}装修" title="{{$city}}{{$company}}装修"></a></h1>
         <div class="menu">
             <ul class="clearfix">
-                <li><a href="http://www.{{.HostRoot}}/" >首页</a></li>
-                <li><a href="http://www.{{.HostRoot}}/product/" >装修案例</a></li>
+                <li><a href="http://www.{{.HostRoot}}">首页</a></li>
+                <li><a href="http://product.{{.HostRoot}}">装修案例</a></li>
                 <li>
-                    <a href="http://www.{{.HostRoot}}/project/" >保障与服务</a>
+                    <a href="http://project.{{.HostRoot}}">保障与服务</a>
                     <p class="erji">
-                        <a href="http://www.{{.HostRoot}}/Projects/ppzc.html" >品牌主材</a>
-                        <a href="http://www.{{.HostRoot}}/Projects/shbz.html" >售后保障</a>
+                        <a href="http://ppzc.{{.HostRoot}}">品牌主材</a>
+                        <a href="http://shbz.{{.HostRoot}}">售后保障</a>
                     </p>
                 </li>
                 <li>
-                    <a href="http://www.{{.HostRoot}}/sggs.html" >施工故事</a>
+                    <a href="http://sggs.{{.HostRoot}}">施工故事</a>
                 </li>
                 <li>
-                    <a href="http://www.{{.HostRoot}}/zxzx.html" >装修资讯</a>
+                    <a href="http://zxzx.{{.HostRoot}}">装修资讯</a>
                     <p class="erji">
-                        <a href="http://www.{{.HostRoot}}/hzx.html" >惠装修</a>
-                        <a href="http://www.{{.HostRoot}}/cjwt.html" >常见问题</a>
-                        <a href="http://www.{{.HostRoot}}/khpj.html" >客户评价</a>
+                        <a href="http://hzx.{{.HostRoot}}">惠装修</a>
+                        <a href="http://cjwt.{{.HostRoot}}">常见问题</a>
+                        <a href="http://khpj.{{.HostRoot}}">客户评价</a>
                     </p>
                 </li>
                 <li>
-                    <a href="http://www.{{.HostRoot}}/Helps/gsjs.html" >走进创之鸿</a>
+                    <a href="http://help.{{.HostRoot}}">走进{{$company}}</a>
                     <p class="erji">
-                        <a href="http://www.{{.HostRoot}}/Helps/gsjs.html" >关于创之鸿</a>
-                        <a href="http://www.{{.HostRoot}}/sjtd.html" >设计团队</a>
-                        <a href="http://www.{{.HostRoot}}/zxgj.html" >装修管家</a>
-                        <a href="http://www.{{.HostRoot}}/ryzz.html" >荣誉资质</a>
+                        <a href="http://help.{{.HostRoot}}">关于{{$company}}</a>
+                        <a href="http://sjtd.{{.HostRoot}}">设计团队</a>
+                        <a href="http://zxgj.{{.HostRoot}}">装修管家</a>
+                        <a href="http://ryzz.{{.HostRoot}}">荣誉资质</a>
                     </p>
                 </li>
                 <li>
-                    <a href="http://www.{{.HostRoot}}/Helps/lxczh.html" >联系创之鸿</a>
+                    <a href="http://lxczh.{{.HostRoot}}">联系{{$company}}</a>
                 </li>
             </ul>
         </div>
@@ -113,13 +112,13 @@
     <div class="bd">
         <ul class="con">
             <li class="li" style="display: block;">
-                <a href=http://www.{{.HostRoot}}/product/ title="{{$city}}找家装 先看创之鸿" target="_blank"><img src="picture/20200328115109_9494.jpg" alt="{{$city}}找家装 先看创之鸿" /></a>
+                <a href="http://product.{{.HostRoot}}" title="{{$city}}找家装 先看{{$company}}" target="_blank"><img src="http://{{.HostRoot}}/picture/20200328115109_9494.jpg" alt="{{$city}}找家装 先看{{$company}}" /></a>
             </li>
             <li class="li" style="display: block;">
-                <a href=http://www.{{.HostRoot}}/khpj.html title="{{$company}} 口碑见证 我们是好评的搬运工" target="_blank"><img src="picture/20200331150618_7750.jpg" alt="{{$company}} 口碑见证 我们是好评的搬运工" /></a>
+                <a href="http://khpj.{{.HostRoot}}" title="{{$company}}装修 口碑见证 我们是好评的搬运工" target="_blank"><img src="http://{{.HostRoot}}/picture/20200331150618_7750.jpg" alt="{{$company}}装修 口碑见证 我们是好评的搬运工" /></a>
             </li>
             <li class="li" style="display: block;">
-                <a href=http://www.{{.HostRoot}}/Helps/gsjs.html title="{{$company}} 匠人 匠心 匠艺" target="_blank"><img src="picture/20200331150628_4285.jpg" alt="{{$company}} 匠人 匠心 匠艺" /></a>
+                <a href="http://helps.{{.HostRoot}}" title="{{$company}}装修 匠人 匠心 匠艺" target="_blank"><img src="http://{{.HostRoot}}/picture/20200331150628_4285.jpg" alt="{{$company}}装修 匠人 匠心 匠艺" /></a>
             </li>
         </ul>
     </div>
@@ -130,8 +129,8 @@
             <li></li>
         </ul>
     </div>
-    <p class="prev2"><a href="javascript:void(0);"><img alt="上一张" src="picture/c_prev.png"></a></p>
-    <p class="next2"><a href="javascript:void(0);"><img alt="下一张" src="picture/c_next.png"></a></p>
+    <p class="prev2"><a href="javascript:void(0);"><img alt="上一张" src="http://{{.HostRoot}}/picture/c_prev.png"></a></p>
+    <p class="next2"><a href="javascript:void(0);"><img alt="下一张" src="http://{{.HostRoot}}/picture/c_next.png"></a></p>
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
@@ -161,9 +160,9 @@
     <div class="content pr">
         <div class="ti_l wow fadeInLeft1">
             <div class="ti_las">
-                <a href="/Helps/gsjs.html" target="_blank" title="创之鸿家装"><img src="picture/tils.jpg" alt="创之鸿家装" title="创之鸿家装"></a>
-                <a href="/Helps/gsjs.html" target="_blank" title="创之鸿家装"><img src="picture/tils.jpg" alt="创之鸿家装" title="创之鸿家装"></a>
-                <a href="/Helps/gsjs.html" target="_blank" title="创之鸿家装"><img src="picture/tils.jpg" alt="创之鸿家装" title="创之鸿家装"></a>
+                <a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装"><img src="picture/tils.jpg" alt="{{$company}}家装" title="{{$company}}家装"></a>
+                <a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装"><img src="picture/tils.jpg" alt="{{$company}}家装" title="{{$company}}家装"></a>
+                <a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装"><img src="picture/tils.jpg" alt="{{$company}}家装" title="{{$company}}家装"></a>
             </div>
         </div>
         <div class="ti_r wow fadeInRight2">
@@ -171,15 +170,15 @@
             <dl>
                 <dt>
                     <p>
-                        <a href="/Helps/gsjs.html" target="_blank" title="创之鸿家装"><img src="picture/t_pic1.jpg" title="创之鸿家装" alt="创之鸿家装"><i><img src="picture/t_pic2.jpg" alt="创之鸿家装" title="创之鸿家装"></i></a>
-                        <a href="/Helps/gsjs.html" target="_blank" title="创之鸿家装"><img src="picture/t_pic1.jpg" title="创之鸿家装" alt="创之鸿家装"><i><img src="picture/t_pic2.jpg" alt="创之鸿家装" title="创之鸿家装"></i></a>
-                        <a href="/Helps/gsjs.html" target="_blank" title="创之鸿家装"><img src="picture/t_pic1.jpg" title="创之鸿家装" alt="创之鸿家装"><i><img src="picture/t_pic2.jpg" alt="创之鸿家装" title="创之鸿家装"></i></a>
+                        <a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装"><img src="picture/t_pic1.jpg" title="{{$company}}家装" alt="{{$company}}家装"><i><img src="picture/t_pic2.jpg" alt="{{$company}}家装" title="{{$company}}家装"></i></a>
+                        <a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装"><img src="picture/t_pic1.jpg" title="{{$company}}家装" alt="{{$company}}家装"><i><img src="picture/t_pic2.jpg" alt="{{$company}}家装" title="{{$company}}家装"></i></a>
+                        <a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装"><img src="picture/t_pic1.jpg" title="{{$company}}家装" alt="{{$company}}家装"><i><img src="picture/t_pic2.jpg" alt="{{$company}}家装" title="{{$company}}家装"></i></a>
                     </p>
                 </dt>
                 <dd>
-                    <h4><a href="/Helps/gsjs.html" target="_blank" title="创之鸿家装">创之鸿家装</a></h4>
+                    <h4><a href="/Helps/gsjs.html" target="_blank" title="{{$company}}家装">{{$company}}家装</a></h4>
                     <p>
-                        我们是一家专注新房（毛坯）及二手房装修设计、施工、售后的装修公司，在{{$city}}，如果您错过了创之鸿，不是您的错，只是我们宣传的不够。历年来我们一直坚持做口碑，坚持以亲民价打造高品质家装，不漏项不增项，让您的每一分钱都花的清清楚楚！
+                        我们是一家专注新房（毛坯）及二手房装修设计、施工、售后的装修公司，在{{$city}}，如果您错过了{{$company}}，不是您的错，只是我们宣传的不够。历年来我们一直坚持做口碑，坚持以亲民价打造高品质家装，不漏项不增项，让您的每一分钱都花的清清楚楚！
                     </p>
                 </dd>
             </dl>
@@ -417,7 +416,7 @@
 <!---->
 <div class="huh">
     <div class="content pr">
-        <h2 class="main_title wow fadeInDown2"><a title="创之鸿家装·为您全程护航">创之鸿家装·为您全程护航<span>设计师全程跟踪，专属管家全程负责，老板设计师穿插巡查</span></a></h2>
+        <h2 class="main_title wow fadeInDown2"><a title="{{$company}}家装·为您全程护航">{{$company}}家装·为您全程护航<span>设计师全程跟踪，专属管家全程负责，老板设计师穿插巡查</span></a></h2>
         <div class="huh1">
             <ul>
                 <li class="wow fadeInLeft1" data-wow-duration="1s" data-wow-delay="0.2s"><em><span>计划时</span>顾问咨询</em>
@@ -469,7 +468,7 @@
                 </ul>
                 <h5><button type="button" onclick="PostUsersInfoYYSJ(this,'')">提交</button></h5>
             </div>
-            <div class="huh_r wow pulse"><a href="http://wpa.qq.com/msgrd?v=3&site={{$city}}{{$company}}&menu=yes&uin=770409195" rel="nofollow" target="_blank"  target="_blank" title="点击获取人工报价"><span>点击获取</span>人工报价</a></div>
+            <div class="huh_r wow pulse"><a href="http://wpa.qq.com/msgrd?v=3&site={{$city}}{{$company}}装修&menu=yes&uin=770409195" rel="nofollow" target="_blank"  target="_blank" title="点击获取人工报价"><span>点击获取</span>人工报价</a></div>
         </div>
     </div>
 </div>
@@ -674,7 +673,7 @@
         <div class="desg_bom">
             <p>设计小组式服务，多人头脑风暴、设计师全程跟踪，确保实际装修与设计效果0差别、设计师平均10年从业经验，
                 设计总监亲自监督。</p>
-            <h4><a href="http://wpa.qq.com/msgrd?v=3&site={{$city}}{{$company}}&menu=yes&uin=770409195" rel="nofollow" target="_blank"  title="预约您的设计师" >预约您的设计师</a></h4>
+            <h4><a href="http://wpa.qq.com/msgrd?v=3&site={{$city}}{{$company}}装修&menu=yes&uin=770409195" rel="nofollow" target="_blank"  title="预约您的设计师" >预约您的设计师</a></h4>
         </div>
         <div class="de_ua"><img src="picture/d_uu.png"></div>
         <div class="de_da"><img src="picture/d_dd.png"></div>
@@ -684,7 +683,7 @@
     jQuery(".desg").slide({ mainCell: ".desg_l", autoPlay: true, effect: "fade", vis: 1, prevCell: ".de_ua", nextCell: ".de_da" });
 </script>    <!---->
 <div class="ys wow fadeInLeft" >
-    <h2 class="main_title wow fadeInDown2"><a title="创之鸿家装 · 实力见证">创之鸿家装 · 实力见证<span>{{$city}}本土实力派，服务信誉有保障</span></a></h2>
+    <h2 class="main_title wow fadeInDown2"><a title="{{$company}}家装 · 实力见证">{{$company}}家装 · 实力见证<span>{{$city}}本土实力派，服务信誉有保障</span></a></h2>
     <div class="con">
         <ul class="clearfix">
             <li class="wow cur fadeInLeft" data-wow-duration="1.2s">
@@ -730,43 +729,43 @@
         <h2 class="main_title wow fadeInDown2"><a href="http://www.{{.HostRoot}}/khpj.html" title="口碑见证" target="_blank">口碑见证<span>只有客户说好才是真的好</span></a></h2>
         <div class="koub_dls">
             <dl>
-                <dt><a href="/Article/czhzszxsdk.html" title="{{$company}}装修速度快 员工责任心和落实能力非常强" target="_blank"><img alt="{{$company}}装修速度快 员工责任心和落实能力非常强" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330215352_0474.jpg" title="{{$company}}装修速度快 员工责任心和落实能力非常强"><span><img src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330215235_6924.jpg" alt="{{$company}}装修速度快 员工责任心和落实能力非常强" title="{{$company}}装修速度快 员工责任心和落实能力非常强"></span></a></dt>
+                <dt><a href="/Article/czhzszxsdk.html" title="{{$company}}装修装修速度快 员工责任心和落实能力非常强" target="_blank"><img alt="{{$company}}装修装修速度快 员工责任心和落实能力非常强" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330215352_0474.jpg" title="{{$company}}装修装修速度快 员工责任心和落实能力非常强"><span><img src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330215235_6924.jpg" alt="{{$company}}装修装修速度快 员工责任心和落实能力非常强" title="{{$company}}装修装修速度快 员工责任心和落实能力非常强"></span></a></dt>
                 <dd>
-                    <h4><a href="/Article/czhzszxsdk.html" title="{{$company}}装修速度快 员工责任心和落实能力非常强" target="_blank">{{$company}}装修速度快 员工责任心和落实能力非常强</a></h4>
-                    <p>之前急着搬家，我找了好几家装修公司，他们都说时间太赶，装修不出来，直到我们找到了{{$company}}，他们在了解我们的情况后，跟我们说在规定的时间内一定帮我们把房子装修好，因此我选择了他们！今天顺利搬家，感谢创之鸿装修团队，把不可能的事情变成可能，余工和小冯责任心和落实能力太强啦，尤其是余工今天辛苦啦！</p>
-                    <em><a href="/Article/czhzszxsdk.html" title="{{$company}}装修速度快 员工责任心和落实能力非常强" target="_blank">了解更多</a></em>
+                    <h4><a href="/Article/czhzszxsdk.html" title="{{$company}}装修装修速度快 员工责任心和落实能力非常强" target="_blank">{{$company}}装修装修速度快 员工责任心和落实能力非常强</a></h4>
+                    <p>之前急着搬家，我找了好几家装修公司，他们都说时间太赶，装修不出来，直到我们找到了{{$company}}装修，他们在了解我们的情况后，跟我们说在规定的时间内一定帮我们把房子装修好，因此我选择了他们！今天顺利搬家，感谢{{$company}}装修团队，把不可能的事情变成可能，余工和小冯责任心和落实能力太强啦，尤其是余工今天辛苦啦！</p>
+                    <em><a href="/Article/czhzszxsdk.html" title="{{$company}}装修装修速度快 员工责任心和落实能力非常强" target="_blank">了解更多</a></em>
                 </dd>
             </dl>
             <dl>
-                <dt><a href="/Article/czhzsgsdzcdg.html" title="{{$company}}公司的主材代购模式给我们业务带来了很大的实惠" target="_blank"><img alt="{{$company}}公司的主材代购模式给我们业务带来了很大的实惠" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330220923_2804.jpg" title="{{$company}}公司的主材代购模式给我们业务带来了很大的实惠"><span><img src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330220814_7674.jpg" alt="{{$company}}公司的主材代购模式给我们业务带来了很大的实惠" title="{{$company}}公司的主材代购模式给我们业务带来了很大的实惠"></span></a></dt>
+                <dt><a href="/Article/czhzsgsdzcdg.html" title="{{$company}}装修公司的主材代购模式给我们业务带来了很大的实惠" target="_blank"><img alt="{{$company}}装修公司的主材代购模式给我们业务带来了很大的实惠" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330220923_2804.jpg" title="{{$company}}装修公司的主材代购模式给我们业务带来了很大的实惠"><span><img src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330220814_7674.jpg" alt="{{$company}}装修公司的主材代购模式给我们业务带来了很大的实惠" title="{{$company}}装修公司的主材代购模式给我们业务带来了很大的实惠"></span></a></dt>
                 <dd>
-                    <h4><a href="/Article/czhzsgsdzcdg.html" title="{{$company}}公司的主材代购模式给我们业务带来了很大的实惠" target="_blank">{{$company}}公司的主材代购模式给我们业务带来了很大的实惠</a></h4>
-                    <p>当初家里要装修时，对比过市场上好几家室内装修设计公司，最终选择了{{$company}}公司，主要是因为他们有个主材代购，但是可以自己去市场询价选择的模式，这让我不用担心他们给我们装不好的材料，并且通过他们购买主材，可以享受到更优惠的价格，如今，装修完成了，不管是装修过程中的沟通还是出来的装修效果，都是很不错的，感谢创之鸿装修团队！</p>
-                    <em><a href="/Article/czhzsgsdzcdg.html" title="{{$company}}公司的主材代购模式给我们业务带来了很大的实惠" target="_blank">了解更多</a></em>
+                    <h4><a href="/Article/czhzsgsdzcdg.html" title="{{$company}}装修公司的主材代购模式给我们业务带来了很大的实惠" target="_blank">{{$company}}装修公司的主材代购模式给我们业务带来了很大的实惠</a></h4>
+                    <p>当初家里要装修时，对比过市场上好几家室内装修设计公司，最终选择了{{$company}}装修公司，主要是因为他们有个主材代购，但是可以自己去市场询价选择的模式，这让我不用担心他们给我们装不好的材料，并且通过他们购买主材，可以享受到更优惠的价格，如今，装修完成了，不管是装修过程中的沟通还是出来的装修效果，都是很不错的，感谢{{$company}}装修团队！</p>
+                    <em><a href="/Article/czhzsgsdzcdg.html" title="{{$company}}装修公司的主材代购模式给我们业务带来了很大的实惠" target="_blank">了解更多</a></em>
                 </dd>
             </dl>
             <dl>
-                <dt><a href="/Article/czhzsgfhsg.html" title="{{$company}}规范化施工 平整度几乎零误差" target="_blank"><img alt="{{$company}}规范化施工 平整度几乎零误差" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330222130_0584.jpg" title="{{$company}}规范化施工 平整度几乎零误差"><span><img src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330222027_3744.jpg" alt="{{$company}}规范化施工 平整度几乎零误差" title="{{$company}}规范化施工 平整度几乎零误差"></span></a></dt>
+                <dt><a href="/Article/czhzsgfhsg.html" title="{{$company}}装修规范化施工 平整度几乎零误差" target="_blank"><img alt="{{$company}}装修规范化施工 平整度几乎零误差" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330222130_0584.jpg" title="{{$company}}装修规范化施工 平整度几乎零误差"><span><img src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330222027_3744.jpg" alt="{{$company}}装修规范化施工 平整度几乎零误差" title="{{$company}}装修规范化施工 平整度几乎零误差"></span></a></dt>
                 <dd>
-                    <h4><a href="/Article/czhzsgfhsg.html" title="{{$company}}规范化施工 平整度几乎零误差" target="_blank">{{$company}}规范化施工 平整度几乎零误差</a></h4>
-                    <p>这是我买的第二套房子，之前买第一套的时候因为对装修不了解，所以吃了很多亏，此次我对比了市面上好几家装修公司，并到他们的施工现场进行了考察，决定选择{{$company}}，因为我觉得他们施工非常规范，最后在验收时，我量了一下，墙砖的平整度几乎零误差，创之鸿团队真的太棒了！</p>
-                    <em><a href="/Article/czhzsgfhsg.html" title="{{$company}}规范化施工 平整度几乎零误差" target="_blank">了解更多</a></em>
+                    <h4><a href="/Article/czhzsgfhsg.html" title="{{$company}}装修规范化施工 平整度几乎零误差" target="_blank">{{$company}}装修规范化施工 平整度几乎零误差</a></h4>
+                    <p>这是我买的第二套房子，之前买第一套的时候因为对装修不了解，所以吃了很多亏，此次我对比了市面上好几家装修公司，并到他们的施工现场进行了考察，决定选择{{$company}}装修，因为我觉得他们施工非常规范，最后在验收时，我量了一下，墙砖的平整度几乎零误差，{{$company}}团队真的太棒了！</p>
+                    <em><a href="/Article/czhzsgfhsg.html" title="{{$company}}装修规范化施工 平整度几乎零误差" target="_blank">了解更多</a></em>
                 </dd>
             </dl>
             <dl>
-                <dt><a href="/Article/czhzsgsfwfc.html" title="{{$company}}公司服务非常贴心 让我很省心" target="_blank"><img alt="{{$company}}公司服务非常贴心 让我很省心" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330224809_5304.jpg" title="{{$company}}公司服务非常贴心 让我很省心"><span><img src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330223422_3984.jpg" alt="{{$company}}公司服务非常贴心 让我很省心" title="{{$company}}公司服务非常贴心 让我很省心"></span></a></dt>
+                <dt><a href="/Article/czhzsgsfwfc.html" title="{{$company}}装修公司服务非常贴心 让我很省心" target="_blank"><img alt="{{$company}}装修公司服务非常贴心 让我很省心" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330224809_5304.jpg" title="{{$company}}装修公司服务非常贴心 让我很省心"><span><img src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330223422_3984.jpg" alt="{{$company}}装修公司服务非常贴心 让我很省心" title="{{$company}}装修公司服务非常贴心 让我很省心"></span></a></dt>
                 <dd>
-                    <h4><a href="/Article/czhzsgsfwfc.html" title="{{$company}}公司服务非常贴心 让我很省心" target="_blank">{{$company}}公司服务非常贴心 让我很省心</a></h4>
-                    <p>此次选择{{$company}}公司来装修家里的房子，真的是一件很幸运的事情，因为他们真的让人省心了，装修时我找别的人给家里安装了地暖，他们发现后还帮我洒水养护，真的是太贴心了，完全在我的意料之外，他们细致周到的服务让我很感动，如果我身边的朋友需要找装修公司，我一定会向他们推荐{{$company}}公司！</p>
-                    <em><a href="/Article/czhzsgsfwfc.html" title="{{$company}}公司服务非常贴心 让我很省心" target="_blank">了解更多</a></em>
+                    <h4><a href="/Article/czhzsgsfwfc.html" title="{{$company}}装修公司服务非常贴心 让我很省心" target="_blank">{{$company}}装修公司服务非常贴心 让我很省心</a></h4>
+                    <p>此次选择{{$company}}装修公司来装修家里的房子，真的是一件很幸运的事情，因为他们真的让人省心了，装修时我找别的人给家里安装了地暖，他们发现后还帮我洒水养护，真的是太贴心了，完全在我的意料之外，他们细致周到的服务让我很感动，如果我身边的朋友需要找装修公司，我一定会向他们推荐{{$company}}装修公司！</p>
+                    <em><a href="/Article/czhzsgsfwfc.html" title="{{$company}}装修公司服务非常贴心 让我很省心" target="_blank">了解更多</a></em>
                 </dd>
             </dl>
         </div>
         <ul>
-            <li><a href="/Article/czhzszxsdk.html" title="{{$company}}装修速度快 员工责任心和落实能力非常强" target="_blank"><img alt="{{$company}}装修速度快 员工责任心和落实能力非常强" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330215352_0474.jpg" title="{{$company}}装修速度快 员工责任心和落实能力非常强"><i></i></a></li>
-            <li><a href="/Article/czhzsgsdzcdg.html" title="{{$company}}公司的主材代购模式给我们业务带来了很大的实惠" target="_blank"><img alt="{{$company}}公司的主材代购模式给我们业务带来了很大的实惠" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330220923_2804.jpg" title="{{$company}}公司的主材代购模式给我们业务带来了很大的实惠"><i></i></a></li>
-            <li><a href="/Article/czhzsgfhsg.html" title="{{$company}}规范化施工 平整度几乎零误差" target="_blank"><img alt="{{$company}}规范化施工 平整度几乎零误差" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330222130_0584.jpg" title="{{$company}}规范化施工 平整度几乎零误差"><i></i></a></li>
-            <li><a href="/Article/czhzsgsfwfc.html" title="{{$company}}公司服务非常贴心 让我很省心" target="_blank"><img alt="{{$company}}公司服务非常贴心 让我很省心" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330224809_5304.jpg" title="{{$company}}公司服务非常贴心 让我很省心"><i></i></a></li>
+            <li><a href="/Article/czhzszxsdk.html" title="{{$company}}装修装修速度快 员工责任心和落实能力非常强" target="_blank"><img alt="{{$company}}装修装修速度快 员工责任心和落实能力非常强" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330215352_0474.jpg" title="{{$company}}装修装修速度快 员工责任心和落实能力非常强"><i></i></a></li>
+            <li><a href="/Article/czhzsgsdzcdg.html" title="{{$company}}装修公司的主材代购模式给我们业务带来了很大的实惠" target="_blank"><img alt="{{$company}}装修公司的主材代购模式给我们业务带来了很大的实惠" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330220923_2804.jpg" title="{{$company}}装修公司的主材代购模式给我们业务带来了很大的实惠"><i></i></a></li>
+            <li><a href="/Article/czhzsgfhsg.html" title="{{$company}}装修规范化施工 平整度几乎零误差" target="_blank"><img alt="{{$company}}装修规范化施工 平整度几乎零误差" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330222130_0584.jpg" title="{{$company}}装修规范化施工 平整度几乎零误差"><i></i></a></li>
+            <li><a href="/Article/czhzsgsfwfc.html" title="{{$company}}装修公司服务非常贴心 让我很省心" target="_blank"><img alt="{{$company}}装修公司服务非常贴心 让我很省心" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330224809_5304.jpg" title="{{$company}}装修公司服务非常贴心 让我很省心"><i></i></a></li>
         </ul>
         <div class="k_u"><img src="picture/a_u.jpg"></div>
         <div class="k_d"><img src="picture/a_d.jpg"></div>
@@ -905,14 +904,14 @@
 <!---->
 <div class="about">
     <div class="content">
-        <h2 class="main_title wow fadeInDown2"><a href="/Helps/gsjs.html" title="走进创之鸿" target="_blank">走进创之鸿<span>有家的地方，就有{{$company}}</span></a></h2>
+        <h2 class="main_title wow fadeInDown2"><a href="/Helps/gsjs.html" title="走进{{$company}}" target="_blank">走进{{$company}}<span>有家的地方，就有{{$company}}装修</span></a></h2>
         <div class="about_con wow fadeInUp2" data-wow-delay="0.4s">
             <div class="album">
                 <ul>
-                    <li><img src="picture/load.gif" _src="/uploadfiles/pictures/help/20210411151753_0939.jpg" alt="创之鸿员工旅游合影" title="创之鸿员工旅游合影" /></li>
-                    <li><img src="picture/load.gif" _src="/uploadfiles/pictures/help/20210411152128_5213.jpg" alt="{{$company}}工程部" title="{{$company}}工程部" /></li>
-                    <li><img src="picture/load.gif" _src="/uploadfiles/pictures/help/20210411151945_4654.jpg" alt="创之鸿设计师团队" title="创之鸿设计师团队" /></li>
-                    <li><img src="picture/load.gif" _src="/uploadfiles/pictures/help/20210411151643_1179.jpg" alt="创之鸿网络团队合影" title="创之鸿网络团队合影" /></li>
+                    <li><img src="picture/load.gif" _src="/uploadfiles/pictures/help/20210411151753_0939.jpg" alt="{{$company}}员工旅游合影" title="{{$company}}员工旅游合影" /></li>
+                    <li><img src="picture/load.gif" _src="/uploadfiles/pictures/help/20210411152128_5213.jpg" alt="{{$company}}装修工程部" title="{{$company}}装修工程部" /></li>
+                    <li><img src="picture/load.gif" _src="/uploadfiles/pictures/help/20210411151945_4654.jpg" alt="{{$company}}设计师团队" title="{{$company}}设计师团队" /></li>
+                    <li><img src="picture/load.gif" _src="/uploadfiles/pictures/help/20210411151643_1179.jpg" alt="{{$company}}网络团队合影" title="{{$company}}网络团队合影" /></li>
                 </ul>
             </div>
             <div class="album_prev"><img src="picture/a_u.jpg" alt="上一篇"></div>
@@ -920,7 +919,7 @@
         </div>
         <p class="wow fadeInUp2" data-wow-delay="0.2s">
             <i><a href="/Helps/gsjs.html" title="关于我们" target="_blank">关于我们</a></i>
-            <em>创之鸿前身为创鸿设计事务所，成立于2009年，专业从事普通住宅、公寓、别墅、跃层（loft）等室内空间的设计施工工作，实力雄厚，口碑上佳。经过5年的励精图治，于2014年扩大规模并正式更名为{{$city}}市{{$company}}工程有限公司（以下简称{{$company}}）。{{$company}}致力于成为中国具影响力的健康家居装修品牌，多年来为成千上万家业主提供了服务，积累了丰富的设计与施工经验。
+            <em>{{$company}}前身为创鸿设计事务所，成立于2009年，专业从事普通住宅、公寓、别墅、跃层（loft）等室内空间的设计施工工作，实力雄厚，口碑上佳。经过5年的励精图治，于2014年扩大规模并正式更名为{{$city}}市{{$company}}装修工程有限公司（以下简称{{$company}}装修）。{{$company}}装修致力于成为中国具影响力的健康家居装修品牌，多年来为成千上万家业主提供了服务，积累了丰富的设计与施工经验。
                 <a href="/Helps/gsjs.html" title="关于我们" target="_blank" class="more">
                     <img src="picture/a_mor.jpg">
                 </a>
@@ -954,7 +953,7 @@
             <ul>
                 <li>
                     <i>Address</i>
-                    <span>{{$city}}市南开区长江道55号清新大厦3层{{$company}}</span>
+                    <span>{{$city}}市南开区长江道55号清新大厦3层{{$company}}装修</span>
                 </li>
                 <li>
                     <i>E-mail</i>
@@ -968,11 +967,11 @@
         </div>
         <div class="f_logo fl">
             <h3>
-                <a href="/" title="{{$city}}{{$company}}">
-                    <img src="picture/20200331163945_9667.jpg" alt="{{$city}}{{$company}}"></a></h3>
+                <a href="/" title="{{$city}}{{$company}}装修">
+                    <img src="picture/20200331163945_9667.jpg" alt="{{$city}}{{$company}}装修"></a></h3>
         </div>
         <div class="f_menu fl">
-            <ul><li  ><a href="http://www.{{.HostRoot}}/" title="网站首页">网站首页</a></li><li  ><a href="http://www.{{.HostRoot}}/zxzx.html" title="装修资讯">装修资讯</a></li><li  ><a href="http://www.{{.HostRoot}}/product/" title="家装案例">家装案例</a></li><li  ><a href="http://www.{{.HostRoot}}/Helps/gsjs.html" title="走进创之鸿">走进创之鸿</a></li><li  ><a href="http://www.{{.HostRoot}}/project/" title="保障与服务">保障与服务</a></li><li  ><a href="http://www.{{.HostRoot}}/Helps/lxczh.html" title="联系创之鸿">联系创之鸿</a></li><li  ><a href="http://www.{{.HostRoot}}/sggs.html" title="施工故事">施工故事</a></li><li  ><a href="http://www.{{.HostRoot}}/sitemap.html" title="网站地图" target="_blank">网站地图</a></li></ul>
+            <ul><li  ><a href="http://www.{{.HostRoot}}/" title="网站首页">网站首页</a></li><li  ><a href="http://www.{{.HostRoot}}/zxzx.html" title="装修资讯">装修资讯</a></li><li  ><a href="http://www.{{.HostRoot}}/product/" title="家装案例">家装案例</a></li><li  ><a href="http://www.{{.HostRoot}}/Helps/gsjs.html" title="走进{{$company}}">走进{{$company}}</a></li><li  ><a href="http://www.{{.HostRoot}}/project/" title="保障与服务">保障与服务</a></li><li  ><a href="http://www.{{.HostRoot}}/Helps/lxczh.html" title="联系{{$company}}">联系{{$company}}</a></li><li  ><a href="http://www.{{.HostRoot}}/sggs.html" title="施工故事">施工故事</a></li><li  ><a href="http://www.{{.HostRoot}}/sitemap.html" title="网站地图" target="_blank">网站地图</a></li></ul>
         </div>
         <div class="f_con fr">
             <ul>
@@ -1018,7 +1017,7 @@
                 <a href="http://bj.dayemj.com" title="北京装修公司" target="_blank">北京装修公司</a>
                 <a href="http://www.cqkuailian.cn" title="重庆轻钢别墅" target="_blank">重庆轻钢别墅</a>
             </i>
-            {{$city}}市{{$company}}工程有限公司·版权所有 <span>备案号：<a href="http://www.beian.miit.gov.cn" target="_blank">津ICP备16007824号</a></span><span>技术支持：牛商网
+            {{$city}}市{{$company}}装修工程有限公司·版权所有 <span>备案号：<a href="http://www.beian.miit.gov.cn" target="_blank">津ICP备16007824号</a></span><span>技术支持：牛商网
             </span>百度统计
         </div>
     </div>
@@ -1031,7 +1030,7 @@
         <li class="my-kefu-qq">
             <div class="my-kefu-main">
                 <div class="my-kefu-left">
-                    <a class="online-contact-btn"   href="http://wpa.qq.com/msgrd?v=3&site={{$city}}{{$company}}&menu=yes&uin=770409195" rel="nofollow" target="_blank"
+                    <a class="online-contact-btn"   href="http://wpa.qq.com/msgrd?v=3&site={{$city}}{{$company}}装修&menu=yes&uin=770409195" rel="nofollow" target="_blank"
                     > <i></i> <p> 在线咨询 </p> </a>
                 </div>
                 <div class="my-kefu-right"></div>
