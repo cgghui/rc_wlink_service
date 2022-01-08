@@ -29,15 +29,48 @@
 </head>
 <body>
 <!--头部-->
-<div class="header $css">
+<div class="header">
     <div class="h_con content clearfix">
         <h1 class="logo">
-            <a class="a1" href="http://www.czhztjz.com/" title="{{$city}}{{$company}}"><img src="http://{{.HostRoot}}/picture/20200331140234_1602.jpg" alt="{{$city}}{{$company}}" title="{{$city}}{{$company}}"></a>
-            <a class="a2" href="http://www.czhztjz.com/" title="{{$city}}{{$company}}"><img src="http://{{.HostRoot}}/picture/logo2.jpg" alt="{{$city}}{{$company}}" title="{{$city}}{{$company}}"></a></h1>
+            <a class="a1" href="http://www.{{.HostRoot}}/" title="{{$city}}{{$company}}"><img src="http://{{.HostRoot}}/picture/20200331140234_1602.jpg" alt="{{$city}}{{$company}}" title="{{$city}}{{$company}}"></a>
+            <a class="a2" href="http://www.{{.HostRoot}}/" title="{{$city}}{{$company}}"><img src="http://{{.HostRoot}}/picture/logo2.jpg" alt="{{$city}}{{$company}}" title="{{$city}}{{$company}}"></a></h1>
         <div class="menu">
-            <ul class="clearfix"><li data-id="menu_ad205408518"><a href="http://www.czhztjz.com/" >首页</a></li><li data-id="menu_ad204632826"><a href="http://www.czhztjz.com/product/" >装修案例</a></li><li data-id="menu_ad204632846"><a href="http://www.czhztjz.com/project/" >保障与服务</a><p class="erji"><a href="http://www.czhztjz.com/Projects/ppzc.html" >品牌主材</a><a href="http://www.czhztjz.com/Projects/shbz.html" >售后保障</a></p></li><li data-id="menu_ad204632866"><a href="http://www.czhztjz.com/sggs.html" >施工故事</a></li><li data-id="menu_ad204632886"><a href="http://www.czhztjz.com/zxzx.html" >装修资讯</a><p class="erji"><a href="http://www.czhztjz.com/hzx.html" >惠装修</a><a href="http://www.czhztjz.com/cjwt.html" >常见问题</a><a href="http://www.czhztjz.com/khpj.html" >客户评价</a></p></li><li data-id="menu_ad204632906"><a href="http://www.czhztjz.com/Helps/gsjs.html" >走进创之鸿</a><p class="erji"><a href="http://www.czhztjz.com/Helps/gsjs.html" >关于创之鸿</a><a href="http://www.czhztjz.com/sjtd.html" >设计团队</a><a href="http://www.czhztjz.com/zxgj.html" >装修管家</a><a href="http://www.czhztjz.com/ryzz.html" >荣誉资质</a></p></li><li data-id="menu_ad2020749"><a href="http://www.czhztjz.com/Helps/lxczh.html" >联系创之鸿</a></li></ul>
+            <ul class="clearfix">
+                <li><a href="http://www.{{.HostRoot}}/" >首页</a></li>
+                <li><a href="http://www.{{.HostRoot}}/product/" >装修案例</a></li>
+                <li>
+                    <a href="http://www.{{.HostRoot}}/project/" >保障与服务</a>
+                    <p class="erji">
+                        <a href="http://www.{{.HostRoot}}/Projects/ppzc.html" >品牌主材</a>
+                        <a href="http://www.{{.HostRoot}}/Projects/shbz.html" >售后保障</a>
+                    </p>
+                </li>
+                <li>
+                    <a href="http://www.{{.HostRoot}}/sggs.html" >施工故事</a>
+                </li>
+                <li>
+                    <a href="http://www.{{.HostRoot}}/zxzx.html" >装修资讯</a>
+                    <p class="erji">
+                        <a href="http://www.{{.HostRoot}}/hzx.html" >惠装修</a>
+                        <a href="http://www.{{.HostRoot}}/cjwt.html" >常见问题</a>
+                        <a href="http://www.{{.HostRoot}}/khpj.html" >客户评价</a>
+                    </p>
+                </li>
+                <li>
+                    <a href="http://www.{{.HostRoot}}/Helps/gsjs.html" >走进创之鸿</a>
+                    <p class="erji">
+                        <a href="http://www.{{.HostRoot}}/Helps/gsjs.html" >关于创之鸿</a>
+                        <a href="http://www.{{.HostRoot}}/sjtd.html" >设计团队</a>
+                        <a href="http://www.{{.HostRoot}}/zxgj.html" >装修管家</a>
+                        <a href="http://www.{{.HostRoot}}/ryzz.html" >荣誉资质</a>
+                    </p>
+                </li>
+                <li>
+                    <a href="http://www.{{.HostRoot}}/Helps/lxczh.html" >联系创之鸿</a>
+                </li>
+            </ul>
         </div>
-        <div class="h_tel">18602295664</div>
+        <div class="h_tel">{{RandWord "186" "189" "138" "177" "151"}}{{RandNumber 8 8}}</div>
     </div>
 </div>
 
@@ -80,13 +113,13 @@
     <div class="bd">
         <ul class="con">
             <li class="li" style="display: block;">
-                <a href=http://www.czhztjz.com/product/ title="{{$city}}找家装 先看创之鸿" target="_blank"><img src="picture/20200328115109_9494.jpg" alt="{{$city}}找家装 先看创之鸿" /></a>
+                <a href=http://www.{{.HostRoot}}/product/ title="{{$city}}找家装 先看创之鸿" target="_blank"><img src="picture/20200328115109_9494.jpg" alt="{{$city}}找家装 先看创之鸿" /></a>
             </li>
             <li class="li" style="display: block;">
-                <a href=http://www.czhztjz.com/khpj.html title="{{$company}} 口碑见证 我们是好评的搬运工" target="_blank"><img src="picture/20200331150618_7750.jpg" alt="{{$company}} 口碑见证 我们是好评的搬运工" /></a>
+                <a href=http://www.{{.HostRoot}}/khpj.html title="{{$company}} 口碑见证 我们是好评的搬运工" target="_blank"><img src="picture/20200331150618_7750.jpg" alt="{{$company}} 口碑见证 我们是好评的搬运工" /></a>
             </li>
             <li class="li" style="display: block;">
-                <a href=http://www.czhztjz.com/Helps/gsjs.html title="{{$company}} 匠人 匠心 匠艺" target="_blank"><img src="picture/20200331150628_4285.jpg" alt="{{$company}} 匠人 匠心 匠艺" /></a>
+                <a href=http://www.{{.HostRoot}}/Helps/gsjs.html title="{{$company}} 匠人 匠心 匠艺" target="_blank"><img src="picture/20200331150628_4285.jpg" alt="{{$company}} 匠人 匠心 匠艺" /></a>
             </li>
         </ul>
     </div>
@@ -694,7 +727,7 @@
 
 <div class="koub">
     <div class="content pr">
-        <h2 class="main_title wow fadeInDown2"><a href="http://www.czhztjz.com/khpj.html" title="口碑见证" target="_blank">口碑见证<span>只有客户说好才是真的好</span></a></h2>
+        <h2 class="main_title wow fadeInDown2"><a href="http://www.{{.HostRoot}}/khpj.html" title="口碑见证" target="_blank">口碑见证<span>只有客户说好才是真的好</span></a></h2>
         <div class="koub_dls">
             <dl>
                 <dt><a href="/Article/czhzszxsdk.html" title="{{$company}}装修速度快 员工责任心和落实能力非常强" target="_blank"><img alt="{{$company}}装修速度快 员工责任心和落实能力非常强" src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330215352_0474.jpg" title="{{$company}}装修速度快 员工责任心和落实能力非常强"><span><img src="picture/load.gif" _src="/uploadfiles/pictures/news/20200330215235_6924.jpg" alt="{{$company}}装修速度快 员工责任心和落实能力非常强" title="{{$company}}装修速度快 员工责任心和落实能力非常强"></span></a></dt>
@@ -757,7 +790,7 @@
     <h2 class="main_title wow fadeInDown2"><a href="/zxzx.html" title="装修资讯" target="_blank">装修资讯<span>活动进行时，最新优惠早知道</span></a></h2>
     <div class="wiki wow fadeInUp2" data-wow-delay="0.4s">
         <div class="news_l fl">
-            <h3><em><a href="http://www.czhztjz.com/hzx.html" title="惠装修" target="_blank">more</a></em><i><a href="http://www.czhztjz.com/hzx.html" title="惠装修" target="_blank">“惠”装修</a></i></h3>
+            <h3><em><a href="http://www.{{.HostRoot}}/hzx.html" title="惠装修" target="_blank">more</a></em><i><a href="http://www.{{.HostRoot}}/hzx.html" title="惠装修" target="_blank">“惠”装修</a></i></h3>
             <div class="news_dls">
                 <dl>
                     <dt><a href="/Article/rb1111ljhl.html" title="燃爆11·11 ，裸价豪礼火拼“涨价潮”" target="_blank"><img alt="燃爆11·11 ，裸价豪礼火拼“涨价潮”" src="picture/load.gif" _src="/uploadfiles/pictures/news/20211110150803_7214.jpg" title="燃爆11·11 ，裸价豪礼火拼“涨价潮”"></a></dt>
@@ -834,7 +867,7 @@
 
         </script>
         <div class="news_r fr">
-            <h3><em><a href="http://www.czhztjz.com/cjwt.html" title="常见问题" target="_blank">more</a></em><i><a href="http://www.czhztjz.com/cjwt.html" title="常见问题" target="_blank">常见问题</a></i></h3>
+            <h3><em><a href="http://www.{{.HostRoot}}/cjwt.html" title="常见问题" target="_blank">more</a></em><i><a href="http://www.{{.HostRoot}}/cjwt.html" title="常见问题" target="_blank">常见问题</a></i></h3>
             <ul>
                 <li>
                     <i><span>07</span>2022-01</i>
@@ -939,7 +972,7 @@
                     <img src="picture/20200331163945_9667.jpg" alt="{{$city}}{{$company}}"></a></h3>
         </div>
         <div class="f_menu fl">
-            <ul><li  ><a href="http://www.czhztjz.com/" title="网站首页">网站首页</a></li><li  ><a href="http://www.czhztjz.com/zxzx.html" title="装修资讯">装修资讯</a></li><li  ><a href="http://www.czhztjz.com/product/" title="家装案例">家装案例</a></li><li  ><a href="http://www.czhztjz.com/Helps/gsjs.html" title="走进创之鸿">走进创之鸿</a></li><li  ><a href="http://www.czhztjz.com/project/" title="保障与服务">保障与服务</a></li><li  ><a href="http://www.czhztjz.com/Helps/lxczh.html" title="联系创之鸿">联系创之鸿</a></li><li  ><a href="http://www.czhztjz.com/sggs.html" title="施工故事">施工故事</a></li><li  ><a href="http://www.czhztjz.com/sitemap.html" title="网站地图" target="_blank">网站地图</a></li></ul>
+            <ul><li  ><a href="http://www.{{.HostRoot}}/" title="网站首页">网站首页</a></li><li  ><a href="http://www.{{.HostRoot}}/zxzx.html" title="装修资讯">装修资讯</a></li><li  ><a href="http://www.{{.HostRoot}}/product/" title="家装案例">家装案例</a></li><li  ><a href="http://www.{{.HostRoot}}/Helps/gsjs.html" title="走进创之鸿">走进创之鸿</a></li><li  ><a href="http://www.{{.HostRoot}}/project/" title="保障与服务">保障与服务</a></li><li  ><a href="http://www.{{.HostRoot}}/Helps/lxczh.html" title="联系创之鸿">联系创之鸿</a></li><li  ><a href="http://www.{{.HostRoot}}/sggs.html" title="施工故事">施工故事</a></li><li  ><a href="http://www.{{.HostRoot}}/sitemap.html" title="网站地图" target="_blank">网站地图</a></li></ul>
         </div>
         <div class="f_con fr">
             <ul>
