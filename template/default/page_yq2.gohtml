@@ -24,12 +24,6 @@
     <script src="js/jquery_1.js" type="text/javascript"></script>
     <script src="js/jquery.pack.js" type="text/javascript"></script>
     <script src="js/jquery.superslide.js" type="text/javascript"></script>
-    <meta name="mobile-agent" content="format=html5;url=http://m.{{.HostRoot}}">
-    <script type="text/javascript">
-        if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
-            window.location = window.location.href.replace("www", "m");
-        }
-    </script>
 </head>
 <body class="index_body">
 <!--头部开始-->
@@ -40,14 +34,18 @@
             <div class="nie">
                 <div id="xn_h_21_wrap" class="xn_h_21_wrap">
                     <div class="xn_h_21_box">
-                        <div class="xn_h_21_columnName"><a href="/aboutus.html" rel="nofollow" >关于我们 -</a><a href="/contact.html" rel="nofollow">联系我们 -</a><a rel="nofollow" href="/order.html">在线留言</a></div>
+                        <div class="xn_h_21_columnName">
+                            <a href="http://aboutus.{{.HostRoot}}">关于我们 -</a>
+                            <a href="http://contact.{{.HostRoot}}">联系我们 -</a>
+                            <a href="http://order.{{.HostRoot}}">在线留言</a>
+                        </div>
                     </div>
                 </div>
                 <div id="t_name" class="t_name">欢迎访问{{$city}}{{$company}}检测设备有限公司网站！</div>
             </div>
 
             <div id="t_search" class="t_search">
-                <form id="form1" name="tk"  method="post" onSubmit="return checkFrom(this);" action="/products.html">
+                <form id="form1" name="tk"  method="post" onSubmit="return checkFrom(this);" action="http://products.{{.HostRoot}}">
                     <table cellspacing="0" cellpadding="0" border="0">
                         <tbody>
                         <tr>
@@ -66,14 +64,14 @@
                 <div id="xn_n_14_wrap" class="xn_n_14_wrap">
                     <div class="xn_n_14_wrap_main">
                         <ul id="xn_n_14_VMenu1" class="type1Ul type1Ul_n000" style="display: block;">
-                            <li class="xn_n_14_wrap_menu1_2"><a href="/" target="_self">首页</a></li>
-                            <li class="xn_n_14_wrap_menu1"><a rel="nofollow" href="/aboutus.html" target="_self">关于我们</a></li>
-                            <li class="xn_n_14_wrap_menu1"><a href="/products.html" target="_self">产品中心</a></li>
-                            <li class="xn_n_14_wrap_menu1"><a href="/news.html" target="_self">新闻动态</a></li>
-                            <li class="xn_n_14_wrap_menu1"><a href="/article.html" target="_self">技术文章</a></li>
-                            <li class="xn_n_14_wrap_menu1"><a rel="nofollow" href="/successcase.html" target="_self">合作伙伴</a></li>
-                            <li class="xn_n_14_wrap_menu1"><a rel="nofollow" href="/order.html" target="_self">在线留言</a></li>
-                            <li class="xn_n_14_wrap_menu1"><a rel="nofollow" href="/contact.html" target="_self">联系我们</a></li>
+                            <li class="xn_n_14_wrap_menu1_2"><a href="http://{{.HostCurrent}}" target="_self">首页</a></li>
+                            <li class="xn_n_14_wrap_menu1"><a href="http://aboutus.{{.HostRoot}}" target="_self">关于我们</a></li>
+                            <li class="xn_n_14_wrap_menu1"><a href="http://products.{{.HostRoot}}" target="_self">产品中心</a></li>
+                            <li class="xn_n_14_wrap_menu1"><a href="http://news.{{.HostRoot}}" target="_self">新闻动态</a></li>
+                            <li class="xn_n_14_wrap_menu1"><a href="http://article.{{.HostRoot}}" target="_self">技术文章</a></li>
+                            <li class="xn_n_14_wrap_menu1"><a href="http://successcase.{{.HostRoot}}" target="_self">合作伙伴</a></li>
+                            <li class="xn_n_14_wrap_menu1"><a href="http://order.{{.HostRoot}}" target="_self">在线留言</a></li>
+                            <li class="xn_n_14_wrap_menu1"><a href="http://contact.{{.HostRoot}}" target="_self">联系我们</a></li>
                         </ul>
                     </div>
                 </div>
@@ -82,8 +80,6 @@
     </div>
 </div>
 <!--头部结束-->
-
-<script src="js/mystat.aspx"></script><!--头部结束-->
 <div id="ea_ba">
     <div id="xn_ba_js_1_banner" class="xn_ba_js_1_banner" style="visibility: visible;">
         <div class="xn_ba_js_1_element" style="opacity: 1; left: 1752px;">
@@ -115,6 +111,7 @@
                                     <li class="xn_c_index_508_t2li" style="display: list-item;">
                                         <ul class="xn_c_index_508_c2ul">
                                             <li class="xn_c_index_508_ccli xn_c_index_508_c2li" index="$num">
+                                                {{$url_po := Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
                                                 <div class="xn_c_index_508_img xn_c_index_508_c2img">
                                                     <div class="proimg_bk">
                                                         <a target="_blank" title="" ><img src="picture/asmt.png"></a>
@@ -122,15 +119,15 @@
                                                 </div>
                                                 <div class="xn_c_index_508_ft xn_c_index_508_c2ft">
                                                     <div class="xn_c_index_508_title xn_c_index_508_c2title">
-                                                        <a target="_blank" href="/Products-12255598.html">无水加热盐雾试验机</a>
+                                                        <a target="_blank" href="http://{{$url_po}}">无水加热盐雾试验机</a>
                                                     </div>
                                                     <div class="xn_c_index_508_Unit xn_c_index_508_c2Unit">
                                                         <p><b>产品型号：</b><span style="color:#e3a91a;">ASTM</span></p>
                                                         <p><b>产品描述：</b>ASTM无水加热盐雾试验机在短时间内可以测出被测材料暴露在相应自然环境中的抗腐蚀能力，从而为用户筛选产品或配方提供数据和依据。</p>
                                                     </div>
                                                     <div class="xn_c_index_508_more xn_c_index_508_c2more">
-                                                        <a target="_blank" href="/Products-12255598.html"><span>查看详情</span></a>
-                                                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2564069771&amp;site=qq&amp;menu=yes" rel="nofollow"><span>在线咨询</span></a>
+                                                        <a target="_blank" href="http://{{$url_po}}"><span>查看详情</span></a>
+                                                        <a target="_blank" href="javascript:" rel="nofollow"><span>在线咨询</span></a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -142,173 +139,222 @@
                     </div>
                     <ul class="xn_c_index_51_ul_box">
 
-
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-12542224.html"><img src="picture/637229982101665345365_200_190_5.jpg" alt="新款热辐射盐雾试验机"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637229982101665345365_200_190_5.jpg" alt="新款热辐射盐雾试验机"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-12542224.html">新款热辐射盐雾试验机</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">新款热辐射盐雾试验机</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-12243386.html"><img src="picture/637030184999705584991_200_190_5.jpg" alt="IPX7淋雨试验机"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637030184999705584991_200_190_5.jpg" alt="IPX7淋雨试验机"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-12243386.html">IPX7淋雨试验机</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">IPX7淋雨试验机</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-12798468.html"><img src="picture/637229982101665345365_200_190_5.jpg" alt="热辐射盐雾机"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637229982101665345365_200_190_5.jpg" alt="热辐射盐雾机"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-12798468.html">热辐射盐雾机</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">热辐射盐雾机</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-12243356.html"><img src="picture/637596202204036574858_200_190_5.jpg" alt="盐干湿试验机"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637596202204036574858_200_190_5.jpg" alt="盐干湿试验机"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-12243356.html">盐干湿试验机</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">盐干湿试验机</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-12761725.html"><img src="picture/637224515846780136938_200_190_5.jpg" alt="瓷白PP材质盐雾试验机"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637224515846780136938_200_190_5.jpg" alt="瓷白PP材质盐雾试验机"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-12761725.html">瓷白PP材质盐雾试验机</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">瓷白PP材质盐雾试验机</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-12243378.html"><img src="picture/637030184999705584991_200_190_5.jpg" alt="IPX8淋雨试验机"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637030184999705584991_200_190_5.jpg" alt="IPX8淋雨试验机"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-12243378.html">IPX8淋雨试验机</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">IPX8淋雨试验机</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-12243246.html"><img src="picture/637030165571893467334_200_190_5.jpg" alt="三综合恒温恒湿试验机"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637030165571893467334_200_190_5.jpg" alt="三综合恒温恒湿试验机"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-12243246.html">三综合恒温恒湿试验机</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">三综合恒温恒湿试验机</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-12264434.html"><img src="picture/637229982101665345365_200_190_5.jpg" alt="无水型盐雾试验机"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637229982101665345365_200_190_5.jpg" alt="无水型盐雾试验机"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-12264434.html">无水型盐雾试验机</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">无水型盐雾试验机</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-12243328.html"><img src="picture/637038087358672362931_200_190_5.jpg" alt="IPX9淋雨试验机"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637038087358672362931_200_190_5.jpg" alt="IPX9淋雨试验机"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-12243328.html">IPX9淋雨试验机</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">IPX9淋雨试验机</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-12767858.html"><img src="picture/637224515846780136938_200_190_5.jpg" alt="2020款盐雾试验机"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637224515846780136938_200_190_5.jpg" alt="2020款盐雾试验机"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-12767858.html">2020款盐雾试验机</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">2020款盐雾试验机</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-12798161.html"><img src="picture/637093336337392298929_200_190_5.jpg" alt="熔布材料拉力试验机"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637093336337392298929_200_190_5.jpg" alt="熔布材料拉力试验机"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-12798161.html">熔布材料拉力试验机</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">熔布材料拉力试验机</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-13762115.html"><img src="picture/637631460166045828253_200_190_5.jpg" alt="BS-500EX纳米加热板"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637631460166045828253_200_190_5.jpg" alt="BS-500EX纳米加热板"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-13762115.html">BS-500EX纳米加热板</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">BS-500EX纳米加热板</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-13760353.html"><img src="picture/637637561332842062526_200_190_5.jpg" alt="复合式盐雾实验仪器"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637637561332842062526_200_190_5.jpg" alt="复合式盐雾实验仪器"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-13760353.html">复合式盐雾实验仪器</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">复合式盐雾实验仪器</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-13759622.html"><img src="picture/637637534097377449857_200_190_5.jpg" alt="复合式盐雾试验仪"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637637534097377449857_200_190_5.jpg" alt="复合式盐雾试验仪"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-13759622.html">复合式盐雾试验仪</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">复合式盐雾试验仪</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-13759383.html"><img src="picture/637551971596774792885_200_190_5.jpg" alt="换气老化实验仪器"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637551971596774792885_200_190_5.jpg" alt="换气老化实验仪器"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-13759383.html">换气老化实验仪器</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">换气老化实验仪器</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-13758502.html"><img src="picture/637636853842482581257_200_190_5.jpg" alt="步入式高温老化试验仪器"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637636853842482581257_200_190_5.jpg" alt="步入式高温老化试验仪器"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-13758502.html">步入式高温老化试验仪器</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">步入式高温老化试验仪器</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-13758465.html"><img src="picture/637030170351669384512_200_190_5.png" alt="综合淋雨试验仪器"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637030170351669384512_200_190_5.png" alt="综合淋雨试验仪器"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-13758465.html">综合淋雨试验仪器</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">综合淋雨试验仪器</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
 
-                        <li class="xn_c_index_51_li"> <div class="xn_c_index_51_nrbox">
+                        <li class="xn_c_index_51_li">
+                            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
+                            <div class="xn_c_index_51_nrbox">
                                 <div class="xn_c_index_51_lftbox">
-                                    <a target="_blank" href="/Products-13756871.html"><img src="picture/637093336337392298929_200_190_5.jpg" alt="拉力试验器"></a>
+                                    <a target="_blank" href="http://{{$url_po}}"><img src="picture/637093336337392298929_200_190_5.jpg" alt="拉力试验器"></a>
                                 </div>
                                 <div class="xn_c_index_51_ritbox">
-                                    <div class="xn_c_index_51_name"><a target="_blank" href="/Products-13756871.html">拉力试验器</a></div>
+                                    <div class="xn_c_index_51_name"><a target="_blank" href="http://{{$url_po}}">拉力试验器</a></div>
                                 </div>
-                            </div> </li>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div>
@@ -321,273 +367,180 @@
                             <div class="n_content_left_cnt1">
                                 <ul class="left_typeUl left_typeUl_n000" style="display: block;">
                                     <ul class="left_typeUl left_typeUl_t100">
-
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671208.html" target="_self" onMouseOver="showsubmenu('盐雾试验机')">盐雾试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('盐雾试验机')">盐雾试验机</a></li>
                                         <div id="submenu_盐雾试验机" style="display:none">
                                             <ul class="ml_xl">
-
-                                                <li><a href="/SonList-760658.html" target="_self">干热型盐雾腐蚀试验箱</a></li>
-                                                <li><a href="/SonList-760656.html" target="_self">pp盐雾腐蚀试验箱</a></li>
-                                                <li><a href="/SonList-760444.html" target="_self">盐雾腐蚀试验机</a></li>
-                                                <li><a href="/SonList-760443.html" target="_self">精密盐雾试验机</a></li>
-                                                <li><a href="/SonList-760442.html" target="_self">无水加热盐雾腐蚀试验机</a></li>
-                                                <li><a href="/SonList-760441.html" target="_self">干热型盐雾腐蚀试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">干热型盐雾腐蚀试验箱</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">pp盐雾腐蚀试验箱</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">盐雾腐蚀试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">精密盐雾试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">无水加热盐雾腐蚀试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">干热型盐雾腐蚀试验机</a></li>
                                             </ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671189.html" target="_self" onMouseOver="showsubmenu('可程式恒温恒湿试验机')">可程式恒温恒湿试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('可程式恒温恒湿试验机')">可程式恒温恒湿试验机</a></li>
                                         <div id="submenu_可程式恒温恒湿试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671205.html" target="_self" onMouseOver="showsubmenu('可程式高低温试验机')">可程式高低温试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('可程式高低温试验机')">可程式高低温试验机</a></li>
                                         <div id="submenu_可程式高低温试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671209.html" target="_self" onMouseOver="showsubmenu('无水加热盐雾试验机')">无水加热盐雾试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('无水加热盐雾试验机')">无水加热盐雾试验机</a></li>
                                         <div id="submenu_无水加热盐雾试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671210.html" target="_self" onMouseOver="showsubmenu('冷热冲击试验机')">冷热冲击试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('冷热冲击试验机')">冷热冲击试验机</a></li>
                                         <div id="submenu_冷热冲击试验机" style="display:none">
                                             <ul class="ml_xl">
-
-                                                <li><a href="/SonList-679948.html" target="_self">高低温冲击试验机</a></li>
-                                                <li><a href="/SonList-671312.html" target="_self">三箱冷热冲击试验机</a></li>
-                                                <li><a href="/SonList-671311.html" target="_self">两箱冷热冲击试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">高低温冲击试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">三箱冷热冲击试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">两箱冷热冲击试验机</a></li>
                                             </ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-683490.html" target="_self" onMouseOver="showsubmenu('二氧化硫试验机')">二氧化硫试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('二氧化硫试验机')">二氧化硫试验机</a></li>
                                         <div id="submenu_二氧化硫试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671211.html" target="_self" onMouseOver="showsubmenu('高温试验机')">高温试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('高温试验机')">高温试验机</a></li>
                                         <div id="submenu_高温试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671212.html" target="_self" onMouseOver="showsubmenu('快速温变试验机')">快速温变试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('快速温变试验机')">快速温变试验机</a></li>
                                         <div id="submenu_快速温变试验机" style="display:none">
                                             <ul class="ml_xl">
-
-                                                <li><a href="/SonList-671314.html" target="_self">快速温变试验机（非线性）</a></li>
-                                                <li><a href="/SonList-671313.html" target="_self">快速温变试验机（线性）</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">快速温变试验机（非线性）</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">快速温变试验机（线性）</a></li>
                                             </ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671214.html" target="_self" onMouseOver="showsubmenu('紫外耐气候试验机')">紫外耐气候试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('紫外耐气候试验机')">紫外耐气候试验机</a></li>
                                         <div id="submenu_紫外耐气候试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671215.html" target="_self" onMouseOver="showsubmenu('氙灯耐气候试验机')">氙灯耐气候试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('氙灯耐气候试验机')">氙灯耐气候试验机</a></li>
                                         <div id="submenu_氙灯耐气候试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671216.html" target="_self" onMouseOver="showsubmenu('臭氧老化试验机')">臭氧老化试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('臭氧老化试验机')">臭氧老化试验机</a></li>
                                         <div id="submenu_臭氧老化试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-674754.html" target="_self" onMouseOver="showsubmenu('防尘试验机')">防尘试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('防尘试验机')">防尘试验机</a></li>
                                         <div id="submenu_防尘试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671217.html" target="_self" onMouseOver="showsubmenu('淋雨试验机')">淋雨试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('淋雨试验机')">淋雨试验机</a></li>
                                         <div id="submenu_淋雨试验机" style="display:none">
                                             <ul class="ml_xl">
-
-                                                <li><a href="/SonList-707435.html" target="_self">IPX3-IPX6综合淋雨试验机</a></li>
-                                                <li><a href="/SonList-671309.html" target="_self">IPX1/2滴水淋雨试验机</a></li>
-                                                <li><a href="/SonList-671308.html" target="_self">IPX3/4摆管淋雨试验机</a></li>
-                                                <li><a href="/SonList-671307.html" target="_self">IPX5/6强喷水淋雨试验机</a></li>
-                                                <li><a href="/SonList-671306.html" target="_self">IPX7/8加压浸水试验机</a></li>
-                                                <li><a href="/SonList-671305.html" target="_self">IPX9/9K喷淋试验机</a></li>
-                                                <li><a href="/SonList-671304.html" target="_self">步入式淋雨试验室</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">IPX3-IPX6综合淋雨试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">IPX1/2滴水淋雨试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">IPX3/4摆管淋雨试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">IPX5/6强喷水淋雨试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">IPX7/8加压浸水试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">IPX9/9K喷淋试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">步入式淋雨试验室</a></li>
                                             </ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671218.html" target="_self" onMouseOver="showsubmenu('循环腐蚀试验机')">循环腐蚀试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('循环腐蚀试验机')">循环腐蚀试验机</a></li>
                                         <div id="submenu_循环腐蚀试验机" style="display:none">
                                             <ul class="ml_xl">
-
-                                                <li><a href="/SonList-675891.html" target="_self">循环腐蚀试验机</a></li>
-                                                <li><a href="/SonList-674762.html" target="_self">盐干湿试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">循环腐蚀试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">盐干湿试验机</a></li>
                                             </ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-671219.html" target="_self" onMouseOver="showsubmenu('三综合恒温恒湿试验机')">三综合恒温恒湿试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('三综合恒温恒湿试验机')">三综合恒温恒湿试验机</a></li>
                                         <div id="submenu_三综合恒温恒湿试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-672150.html" target="_self" onMouseOver="showsubmenu('拉力试验机')">拉力试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('拉力试验机')">拉力试验机</a></li>
                                         <div id="submenu_拉力试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-674758.html" target="_self" onMouseOver="showsubmenu('气密性测试仪')">气密性测试仪</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('气密性测试仪')">气密性测试仪</a></li>
                                         <div id="submenu_气密性测试仪" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-678830.html" target="_self" onMouseOver="showsubmenu('冷凝水试验机')">冷凝水试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('冷凝水试验机')">冷凝水试验机</a></li>
                                         <div id="submenu_冷凝水试验机" style="display:none">
                                             <ul class="ml_xl">
-
-                                                <li><a href="/SonList-701961.html" target="_self">冷凝水试验箱</a></li>
-                                                <li><a href="/SonList-697738.html" target="_self">SO2冷凝水试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">冷凝水试验箱</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">SO2冷凝水试验机</a></li>
                                             </ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-684655.html" target="_self" onMouseOver="showsubmenu('跌落试验设备')">跌落试验设备</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('跌落试验设备')">跌落试验设备</a></li>
                                         <div id="submenu_跌落试验设备" style="display:none">
                                             <ul class="ml_xl">
-
-                                                <li><a href="/SonList-762914.html" target="_self">跌落试验台</a></li>
-                                                <li><a href="/SonList-762017.html" target="_self">跌落试验机</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">跌落试验台</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">跌落试验机</a></li>
                                             </ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-693395.html" target="_self" onMouseOver="showsubmenu('影像测量仪')">影像测量仪</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('影像测量仪')">影像测量仪</a></li>
                                         <div id="submenu_影像测量仪" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-715767.html" target="_self" onMouseOver="showsubmenu('真空烘箱')">真空烘箱</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('真空烘箱')">真空烘箱</a></li>
                                         <div id="submenu_真空烘箱" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-715768.html" target="_self" onMouseOver="showsubmenu('熔融指数测试仪')">熔融指数测试仪</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('熔融指数测试仪')">熔融指数测试仪</a></li>
                                         <div id="submenu_熔融指数测试仪" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-715775.html" target="_self" onMouseOver="showsubmenu('便携式滤料检测仪')">便携式滤料检测仪</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('便携式滤料检测仪')">便携式滤料检测仪</a></li>
                                         <div id="submenu_便携式滤料检测仪" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-749406.html" target="_self" onMouseOver="showsubmenu('ROHS2.0')">ROHS2.0</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('ROHS2.0')">ROHS2.0</a></li>
                                         <div id="submenu_ROHS2.0" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-755720.html" target="_self" onMouseOver="showsubmenu('金相系列')">金相系列</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('金相系列')">金相系列</a></li>
                                         <div id="submenu_金相系列" style="display:none">
                                             <ul class="ml_xl">
-
-                                                <li><a href="/SonList-755721.html" target="_self">金相显微镜</a></li>
+                                                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self">金相显微镜</a></li>
                                             </ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-761643.html" target="_self" onMouseOver="showsubmenu('周期浸润腐蚀试验机')">周期浸润腐蚀试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('周期浸润腐蚀试验机')">周期浸润腐蚀试验机</a></li>
                                         <div id="submenu_周期浸润腐蚀试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-762041.html" target="_self" onMouseOver="showsubmenu('步入式盐雾腐蚀试验舱')">步入式盐雾腐蚀试验舱</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('步入式盐雾腐蚀试验舱')">步入式盐雾腐蚀试验舱</a></li>
                                         <div id="submenu_步入式盐雾腐蚀试验舱" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-762833.html" target="_self" onMouseOver="showsubmenu('换气老化试验机')">换气老化试验机</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('换气老化试验机')">换气老化试验机</a></li>
                                         <div id="submenu_换气老化试验机" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-764161.html" target="_self" onMouseOver="showsubmenu('步入式恒温恒湿试验室')">步入式恒温恒湿试验室</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('步入式恒温恒湿试验室')">步入式恒温恒湿试验室</a></li>
                                         <div id="submenu_步入式恒温恒湿试验室" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-766308.html" target="_self" onMouseOver="showsubmenu('循环腐蚀试验箱')">循环腐蚀试验箱</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('循环腐蚀试验箱')">循环腐蚀试验箱</a></li>
                                         <div id="submenu_循环腐蚀试验箱" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-766336.html" target="_self" onMouseOver="showsubmenu('复合式耐循环腐蚀试验箱')">复合式耐循环腐蚀试验箱</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('复合式耐循环腐蚀试验箱')">复合式耐循环腐蚀试验箱</a></li>
                                         <div id="submenu_复合式耐循环腐蚀试验箱" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-766343.html" target="_self" onMouseOver="showsubmenu('立式循环腐蚀试验箱')">立式循环腐蚀试验箱</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('立式循环腐蚀试验箱')">立式循环腐蚀试验箱</a></li>
                                         <div id="submenu_立式循环腐蚀试验箱" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-797000.html" target="_self" onMouseOver="showsubmenu('步入式老化房')">步入式老化房</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('步入式老化房')">步入式老化房</a></li>
                                         <div id="submenu_步入式老化房" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
+                                            <ul class="ml_xl"></ul>
                                         </div>
-                                        <li class="left_menu1_cur">
-                                            <a href="/ParentList-803249.html" target="_self" onMouseOver="showsubmenu('纳米加热板')">纳米加热板</a></li>
+                                        <li class="left_menu1_cur"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_self" onMouseOver="showsubmenu('纳米加热板')">纳米加热板</a></li>
                                         <div id="submenu_纳米加热板" style="display:none">
-                                            <ul class="ml_xl">
-
-                                            </ul>
-                                        </div></ul>
+                                            <ul class="ml_xl"></ul>
+                                        </div>
+                                    </ul>
                                 </ul>
                             </div>
-                        </div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -663,28 +616,27 @@
             <span class="xn_c_index_17_colName11w">
         <span name="_xn_c_index_17_colName11w">不断努力，不断创新进取。</span>
       </span>
-            <span class="xn_c_index_17_morew"><span name="_xn_c_index_17_morew"><a href="/news.html">+MORE</a></span></span>
+            <span class="xn_c_index_17_morew"><span name="_xn_c_index_17_morew"><a href="http://news.{{.HostRoot}}">+MORE</a></span></span>
         </div>
         <div class="xn_c_index_15_hot">
-
+            {{$url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}
             <div class="xn_c_index_15_hotbox" id="xn_c_index_15_hotbox">
                 <div class="xn_c_index_15_item" style="display: block;">
-                    <div class="xn_c_index_15_img"><a href="/News-318253.html" target="_blank"><img src="picture/637604736394724092164.jpg"></a></div>
+                    <div class="xn_c_index_15_img"><a href="http://{{$url_po}}" target="_blank"><img src="picture/637604736394724092164.jpg"></a></div>
                 </div>
-                <div class="news_tlt"><a href="/News-318253.html"><b>祝贺{{$city}}{{$company}}与{{$city}}日泰汽车标准件再次达成紧密合作</b></a><span>2021-06-28</span></div>
+                <div class="news_tlt"><a href="http://{{$url_po}}"><b>祝贺{{$city}}{{$company}}与{{$city}}日泰汽车标准件再次达成紧密合作</b></a><span>2021-06-28</span></div>
             </div>
             <div class="xn_c_index_15_focus" id="xn_c_index_15_focus"><span class="curr"></span></div>
         </div>
         <div class="xn_c_index_15_list">
             <ul class="xn_c_index_15_listUl">
-
                 <li class="xn_c_index_15_listLi">
-                    <div class="xwb"><a href="/News-349424.html" target="_blank">冷凝水试验机的一些产品相关知识介绍</a></div>
+                    <div class="xwb"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank">冷凝水试验机的一些产品相关知识介绍</a></div>
                     <div class="xn_c_index_15_ldate">
-                        <span class="xn_c_index_15_lisDay">17</span>
-                        <span class="xn_c_index_15_lisYear">2021</span>
+                        <span class="xn_c_index_15_lisDay">10</span>
+                        <span class="xn_c_index_15_lisYear">2022</span>
                         <span class="xn_c_index_15_lisLine">-</span>
-                        <span class="xn_c_index_15_lisMonth">12</span>
+                        <span class="xn_c_index_15_lisMonth">01</span>
                     </div>
                     <div class="xn_c_index_15_lcont">
                         <span>冷凝水试验机可做湿度测试，并同时可实验低温、高温、湿度于一体的测试，是质检院校、...</span>
@@ -692,12 +644,12 @@
                 </li>
 
                 <li class="xn_c_index_15_listLi">
-                    <div class="xwb"><a href="/News-328968.html" target="_blank">不同系统 盐雾试验机对其安装要求也不同</a></div>
+                    <div class="xwb"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank">不同系统 盐雾试验机对其安装要求也不同</a></div>
                     <div class="xn_c_index_15_ldate">
-                        <span class="xn_c_index_15_lisDay">22</span>
-                        <span class="xn_c_index_15_lisYear">2021</span>
+                        <span class="xn_c_index_15_lisDay">10</span>
+                        <span class="xn_c_index_15_lisYear">2022</span>
                         <span class="xn_c_index_15_lisLine">-</span>
-                        <span class="xn_c_index_15_lisMonth">10</span>
+                        <span class="xn_c_index_15_lisMonth">01</span>
                     </div>
                     <div class="xn_c_index_15_lcont">
                         <span>盐雾对金属材料的腐蚀，主要是导电的盐溶液渗入金属内部发生电化学反应，形成&ldq...</span>
@@ -705,12 +657,12 @@
                 </li>
 
                 <li class="xn_c_index_15_listLi">
-                    <div class="xwb"><a href="/News-326954.html" target="_blank">沙尘试验箱是防尘及耐尘试验的重要仪器</a></div>
+                    <div class="xwb"><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" target="_blank">沙尘试验箱是防尘及耐尘试验的重要仪器</a></div>
                     <div class="xn_c_index_15_ldate">
-                        <span class="xn_c_index_15_lisDay">9</span>
-                        <span class="xn_c_index_15_lisYear">2021</span>
+                        <span class="xn_c_index_15_lisDay">10</span>
+                        <span class="xn_c_index_15_lisYear">2022</span>
                         <span class="xn_c_index_15_lisLine">-</span>
-                        <span class="xn_c_index_15_lisMonth">10</span>
+                        <span class="xn_c_index_15_lisMonth">01</span>
                     </div>
                     <div class="xn_c_index_15_lcont">
                         <span>沙尘试验箱由风机推动一定浓度的沙尘以一定的流速吹过试验样品表面，测试这些试验样暴...</span>
@@ -731,7 +683,7 @@
                 本公司前身为创建于1997年的&ldquo;淮安市清河区中亚试验设备厂&rdquo;，并于2003年改制为&ldquo;淮安市中亚试验设备有限公司&rdquo;，又于2009年在淮安经济技术开发区购买56亩土地新建厂房，成立注册资本为1100万元的新公司&ldquo;淮安罗格朗电气有限公司&rdquo;，两个公司均位于周恩来总理故乡&mdash;&mdash;淮安市，环境优美，物产丰富，地理优越，交通方便，是专业生产环境试验设备的制造商。公司为了在华东区有一席之地，又于2017年在{{$city}}成立&mdash;{{$city}}{{$company}}检测设备有限公司，主要负责华东区的销售与售后工作，2018年下半年在{{$city}}金山区也成立第三方检测公司--{{$city}}岚策科技有限公司，并取得的国家资质认证的第三方检测机构，另我司在武汉、西安、广...
 
             </div>
-            <a href="/aboutus.html" rel="nofollow">查看更多 +</a>
+            <a href="http://aboutus.{{.HostRoot}}">查看更多 +</a>
         </div>
     </div>
 </div><!--公司简介结束-->
@@ -744,7 +696,7 @@
                 <span class="xn_c_index_17_colName11">
             <span name="_xn_c_index_17_colName11"></span>
           </span>
-                <span class="xn_c_index_17_more"><span name="_xn_c_index_17_more"><a href="/successcase.html" rel="nofollow">+MORE</a></span></span>
+                <span class="xn_c_index_17_more"><span name="_xn_c_index_17_more"><a href="http://successcase.{{.HostRoot}}">+MORE</a></span></span>
             </div>
             <div class="xn_c_index_17_main" id="xn_c_index_17_main">
                 <div class="xn_c_index_17_left" id="xn_c_index_17_left"></div>
@@ -900,8 +852,8 @@
             <div class="xn_c_index_130_faqbox2">
                 <div class="xn_c_index_130_faqContent">
                     <div class="xn_c_index_130_faqTitle">
-                        <span class="xn_c_index_130_faqTitle_t1"><a target="_blank" href="/Article-537100.html">分享一下高低温冲击试验机四步电路检修方法</a></span>
-                        <div>发布日期：2021-12-29 </div>
+                        <span class="xn_c_index_130_faqTitle_t1"><a target="_blank" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">分享一下高低温冲击试验机四步电路检修方法</a></span>
+                        <div>发布日期：2022-01-10 </div>
                     </div>
                     <div class="xn_c_index_130_faqContext">高低温冲击试验机可以进行快速温变试验，可以模拟出温度骤变的环境，从低温到高温或高温到低温的骤变，温度变化速率高，可以在短时间内检测出试验样品在温度变化下产生的物理和化学上的性质改变引起的样品质量变化。由于环境气候多变带来的影响对产品的性能和...</div>
                 </div>
@@ -909,8 +861,8 @@
             <div class="xn_c_index_130_faqbox2">
                 <div class="xn_c_index_130_faqContent">
                     <div class="xn_c_index_130_faqTitle">
-                        <span class="xn_c_index_130_faqTitle_t1"><a target="_blank" href="/Article-532668.html">紫外光老化试验机的维护知识</a></span>
-                        <div>发布日期：2021-12-20 </div>
+                        <span class="xn_c_index_130_faqTitle_t1"><a target="_blank" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">紫外光老化试验机的维护知识</a></span>
+                        <div>发布日期：2022-01-10 </div>
                     </div>
                     <div class="xn_c_index_130_faqContext">紫外光老化试验机是采用荧光紫外灯为光源，通过模拟自然阳光中的紫外辐射和冷凝来对材料进行试验的，所以对于紫外老化试验机的维护保养也是格外重要的，下面{{$city}}{{$company}}带大家一起来了解一下它的一些维护保养知识吧！1、如果紫外老化试验箱处在非工作情况下，应...</div>
                 </div>
@@ -918,101 +870,13 @@
             <div class="xn_c_index_130_faqbox2">
                 <div class="xn_c_index_130_faqContent">
                     <div class="xn_c_index_130_faqTitle">
-                        <span class="xn_c_index_130_faqTitle_t1"><a target="_blank" href="/Article-532663.html">冷热冲击试验箱保养方法</a></span>
-                        <div>发布日期：2021-12-20 </div>
+                        <span class="xn_c_index_130_faqTitle_t1"><a target="_blank" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">冷热冲击试验箱保养方法</a></span>
+                        <div>发布日期：2022-01-10 </div>
                     </div>
                     <div class="xn_c_index_130_faqContext">a.冷热冲击试验机冷冻机组之散热器(冷凝器)应定期保养,保持清洁。灰尘粘糊冷凝器会使压缩机高压开关跳脱而产生误报警，冷凝器应定期每月保养,利用真空吸尘器将冷凝器散热网片上附着之其尘吸除或开机后使用质硬的毛刷刷之或用高压气嘴吹干净灰尘。b.开...</div>
                 </div>
                 <div class="clear"></div></div>
             <div class="clear"></div>
-        </div>
-    </div>
-</div>
-<div class="xn_c_index_130_woanzjc">
-    <div id="xn_c_69_wrap" class="xn_c_69_wrap">
-        <div class="xn_c_69_topbox"><span class="xn_c_69_cnname">友情链接 :</span></div>
-        <div class="xn_c_69_nrbox">
-            <div class="xn_c_69_xhbox">
-
-                <a href="http://www.zibotnby.com" target="_blank">耐腐蚀中开泵</a>
-
-                <a href="http://www.ytzbsj.com" target="_blank">破碎锤</a>
-
-                <a href="http://www.ailihu.com" target="_blank">1吨压路机</a>
-
-                <a href="https://www.ibiaobing.com" target="_blank">金刚石刀片</a>
-
-                <a href="http://www.zwdldj.com" target="_blank">中心钻</a>
-
-                <a href="http://www.0511ty.com" target="_blank">叉车蓄电池</a>
-
-                <a href="http://www.lxxbwb.com" target="_blank">养殖设备</a>
-
-                <a href="http://www.sdjcqbcj.com" target="_blank">应急照明</a>
-
-                <a href="http://www.rayvalve.com" target="_blank">不锈钢阀门</a>
-
-                <a href="http://www.fofilter.cn" target="_blank">过滤布</a>
-
-                <a href="http://www.nbxswenhan.com" target="_blank">卫生级呼吸阀</a>
-
-                <a href="http://www.gaogonghb.com" target="_blank">脱硫设备</a>
-
-                <a href="http://www.wy1718.com" target="_blank">臭氧检测仪</a>
-
-                <a href="http://www.psjingangshi.com" target="_blank">金刚石刀具</a>
-
-                <a href="http://www.tjdeguitai.com" target="_blank">玻璃温室</a>
-
-                <a href="http://www.sdwlby.cn" target="_blank">轴流泵</a>
-
-                <a href="http://www.chinesey.cn" target="_blank">工业加湿器</a>
-
-                <a href="http://www.66241190.com" target="_blank">滤油车</a>
-
-                <a href="http://www.botedianji.com" target="_blank">高速电机</a>
-
-                <a href="http://www.datatest.cn" target="_blank">温度记录仪</a>
-
-                <a href="http://www.huace2000.com" target="_blank">电压击穿试验仪</a>
-
-                <a href="http://www.demiledq.com" target="_blank">防水配电箱</a>
-
-                <a href="http://www.sytmshan.cn" target="_blank">球墨铸铁井盖</a>
-
-                <a href="http://www.sdwfblg.com" target="_blank">凉水塔</a>
-
-                <a href="http://www.shushuif.com" target="_blank">蒸汽锅炉</a>
-
-                <a href="http://www.hnbf-pv.com" target="_blank">耐酸泵</a>
-
-                <a href="http://www.chpea.com" target="_blank">滤水器厂家</a>
-
-                <a href="http://www.shanghaishengwei.com" target="_blank">冷冻干燥机</a>
-
-                <a href="http://www.xetar.com.cn" target="_blank">灌胶机</a>
-
-                <a href="http://www.zbzldj.com" target="_blank">直流电机</a>
-
-                <a href="http://www.hc-dq.com" target="_blank">桥架</a>
-
-                <a href="http://www.nm-ele.com" target="_blank">软启动器</a>
-
-                <a href="http://www.ourjsa.com" target="_blank">烟气检测仪</a>
-
-                <a href="http://www.13530906269.com" target="_blank">防静电服</a>
-
-                <a href="http://www.xycxie.net" target="_blank">接触角测试仪</a>
-
-                <a href="http://www.jnhenglida.com" target="_blank">洗瓶机</a>
-
-                <a href="http://www.sdlx198.com" target="_blank">分散机</a>
-
-                <a href="http://www.jtdclhq.com" target="_blank">电磁离合器</a>
-
-                <a href="http://www.sdrgyb.com" target="_blank">双金属温度计</a>
-
-            </div>
         </div>
     </div>
 </div>
@@ -1022,28 +886,19 @@
     <div class="footer_in">
         <div class="footer_nav">
             <ul>
-                <li><a href="/" >网站首页</a><span>|</span></li>
-                <li><a rel="nofollow" href="/aboutus.html" >关于我们</a><span>|</span></li>
-                <li><a href="/products.html" >产品中心</a><span>|</span></li>
-                <li><a href="/news.html" >新闻动态</a><span>|</span></li>
-                <li><a href="/article.html" >技术文章</a><span>|</span></li>
-                <li><a rel="nofollow" href="/successcase.html" >合作伙伴</a><span>|</span></li>
-                <li><a rel="nofollow" href="/order.html" >在线留言</a><span>|</span></li>
-                <li><a rel="nofollow" href="/contact.html" >联系我们</a></li>
+                <li><a href="http://{{.HostCurrent}}" >网站首页</a><span>|</span></li>
+                <li><a href="http://aboutus.{{.HostRoot}}" >关于我们</a><span>|</span></li>
+                <li><a href="http://products.{{.HostRoot}}" >产品中心</a><span>|</span></li>
+                <li><a href="http://news.{{.HostRoot}}" >新闻动态</a><span>|</span></li>
+                <li><a href="http://article.{{.HostRoot}}" >技术文章</a><span>|</span></li>
+                <li><a href="http://successcase.{{.HostRoot}}" >合作伙伴</a><span>|</span></li>
+                <li><a href="http://order.{{.HostRoot}}" >在线留言</a><span>|</span></li>
+                <li><a href="http://contact.{{.HostRoot}}" >联系我们</a></li>
             </ul>
         </div>
         <div class="foot_info">
             <div class="foot_info_l">
-                <p>总流量：128855 <A href="http://www.ybzhan.cn/login" target="_blank" rel="nofollow">管理登陆</A>  技术支持：<A href="http://www.ybzhan.cn" target="_blank" rel="nofollow">仪表网</A> </p>
-                <p> 联系人：王经理&nbsp;&nbsp;传真：021-31263729&nbsp;&nbsp;<A href="/sitemap.xml" target="_blank">GoogleSitemap</A>  <br />手机：18136381268&nbsp;&nbsp; 邮 箱：baoshiyq@126.com</p>
-            </div>
-            <div class="foot_info_r">
-                <div class="wz">
-                    <p>地址：{{$city}}金山区廊下镇工业园荣春路266号（分厂）</p>
-                    <p>地址：江苏省淮安经济开发区开明路8号（总厂）</p>
-                    <p>电话：021-31263719 </p>
-
-                </div>
+                <p> 手机：{{$tel}}&nbsp;&nbsp; 邮 箱：{{$tel}}@126.com</p>
             </div>
         </div>
 
@@ -1052,7 +907,7 @@
 
 <div class="footer2">
     <div class="footer2_in">
-        <div class="r">版权所有&copy;2019 {{$city}}{{$company}}检测设备有限公司 备案号：<a href="http://beian.miit.gov.cn/" target="_blank" style=" color:#fff;" rel="nofollow">沪ICP备18008183号-4</a></div>
+        <div class="r">版权所有&copy;2019 {{$city}}{{$company}}检测设备有限公司 </div>
     </div>
 </div>
 
@@ -1064,9 +919,6 @@
         </div>
         <div class="kefuCont">
             <ul>
-                <li class="pic"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2564069771&amp;site=qq&amp;menu=yes"><img src="picture/qq.png"></a>
-                    <p>扫一扫,关注我们</p>
-                    <span><img src="picture/2wm.jpg"></span> </li>
             </ul>
         </div>
         <div class="kefuBottom"></div>
@@ -1095,19 +947,4 @@
 <!--底部结束-->
 <script type="text/javascript" src="js/prolist_img.js"></script>
 </body>
-<!--QRCode模板开始-->
-<link href="css/qrcodecss.css" rel="stylesheet" type="text/css">
-<div id="elevator_item" title="扫一扫访问手机站">
-    <div class="elevatorBox">
-        <a class="showLeft" id="showLeft" onclick="hideQr();"></a><a class="qr" id="qratag"></a><b id="descSSb">扫一扫访问手机站</b><span
-                style="display: none;"><a href="http://m.{{.HostRoot}}" target="_blank">扫一扫访问手机站</a></span>
-    </div>
-</div>
-<div id="elevator_item2" onmouseover="showQr();">
-    <a class="showRight">访问手机站</a></div>
-<script language="javaScript" src="js/qrcodejs.js"></script>
-<script type="text/javascript">
-    document.getElementById("qratag").style.backgroundImage = "url(http://www.ybzhan.cn/QrCode.aspx?s=" + escape("http://m.{{.HostRoot}}") + ")";
-</script>
-<!--QRCode模板结束-->
 </html>
