@@ -1,0 +1,290 @@
+﻿{{- $city := .StoreGet "city" false -}}
+{{- $company := .StoreGet "company" false -}}
+{{- if eq $city "" -}}
+    {{- $city = index (Split (RandKv "domain_all").val " ") 2 -}}
+    {{- .StoreSet "title" $city false -}}
+{{- end -}}
+{{- if eq $company "" -}}
+    {{- $company = RandLib "company_name" -}}
+    {{- .StoreSet "company" $company false -}}
+{{- end -}}
+{{- $tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8) -}}<!DOCTYPE html PUBliC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>四柱液压机-单柱液压机-龙门液压机-{{$city}}{{$company}}机床有限责任公司</title>
+    <meta name="keywords" content="四柱液压机,单柱液压机,龙门液压机" />
+    <meta name="description" content="{{$city}}{{$company}}机床有限责任公司专业生产四柱液压机，单柱（臂）液压机，龙门液压机,拉伸液压机,粉末成型液压机等液压机设备的定制。公司拥有15年液压机生产经验和高效售后技术团队，欢迎来公司洽谈业务！" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+<div class="topWrap">
+    <div class="header">
+        <div class="h_top"><h1><a href="http://www.{{.HostRoot}}/">四柱液压机</a></h1>
+            <span class="fr">
+                <a href="addBookmark(this);"><img alt="收藏网站" src="picture/ico1.gif">收藏网站</a>
+                <a href="http://arti_contact.{{.HostRoot}}"><img alt="联系我们" src="picture/ico2.gif">联系我们</a>
+                <a href="http://sitemap.{{.HostRoot}}" target="_blank"><img alt="网站地图" src="picture/ico3.gif">网站地图</a>
+            </span>
+        </div>
+        <div class="h_nr">
+            <div class="h_logo fl">
+                <span class="fl">
+                    <a href="http://{{.HostCurrent}}"><img src="picture/logo.jpg" alt="{{$city}}{{$company}}机床有限责任公司" title="{{$city}}{{$company}}机床有限责任公司" ></a>
+                </span>
+                <div class="hhtop1 fl">
+                    <b>{{$city}}{{$company}}机床有限责任公司</b>优质品牌厂家-多年经验专注生产制造四柱液压机
+                </div>
+            </div>
+            <div class="h_lx fr">全国咨询热线:<span>{{$tel}}</span></div></div>
+        <div class="h_nav menu">
+            <ul>
+                <li class="cur"><a href="http://www.{{.HostCurrent}}" >网站首页</a></li>
+                <li><a href="http://about.{{.HostRoot}}">公司简介</a></li>
+                <li><a href="http://product.{{.HostRoot}}">产品中心</a></li>
+                <li><a href="http://news.{{.HostRoot}}">新闻中心</a></li>
+                <li><a href="http://fwchengnuo.{{.HostRoot}}">服务承诺</a></li>
+                <li><a href="http://qiywenhua.{{.HostRoot}}">企业文化</a></li>
+                <li><a href="http://gsrongyu.{{.HostRoot}}">企业荣誉</a></li>
+                <li><a href="http://contact.{{.HostRoot}}">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="banner">
+    <ul><li><img class="cubeRandom" src="picture/banner1.jpg" alt="四柱液压机" title="四柱液压机"/></li></ul>
+</div>
+<div class="sousuo">
+    <div class="sousuo1">
+        <div class="ssl">
+            <strong>推荐产品 : </strong>
+            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 三维扣扳机 金属成型液压机</a>
+            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">大型800T四柱三梁液压机 </a>
+            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">200吨龙门液压机</a>
+        </div>
+        <div class="ssk fr">
+            <form name="formsearch">
+                <input type="text" class="itx" name="q" id="search-keyword" value="在这里搜索..." />
+                <input class="sbt" type="submit"  />
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="works wb1200 clear">
+    <div class="works-left">
+        <dl class="tips">
+            <dt>
+                <a href="http://product.{{.HostRoot}}" title="产品分类">产品分类</a>
+            </dt>
+            <dt>PRODUCTS</dt>
+        </dl>
+        <div class="leftfenlei">
+            <ul>
+                <li><a href="http://sizhuyeyaji.{{.HostRoot}}">四柱液压机</a></li>
+                <li><a href="http://danzhuyeyaji.{{.HostRoot}}">单柱液压机</a></li>
+                <li><a href="http://longmenyeyaji.{{.HostRoot}}">龙门液压机</a></li>
+                <li><a href="http://zhuanyongyeyaji.{{.HostRoot}}">专用液压机</a></li>
+            </ul>
+        </div>
+        <div class="bg-call">
+            <dl><dt><span>全国服务热线</span></dt><dd>{{$tel}}</dd></dl>
+        </div>
+    </div>
+
+    <div class="works-right">
+        <div class="titless">
+            <strong><a href="http://product.{{.HostRoot}}" title="产品中心">产品中心</a></strong><span>/ RECOMMENDED</span><a class="a-link">More+</a>	</div>
+        <div class="works-lists">
+            <ul>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="315吨龙门液压机"><img src="picture/315tlm.jpg" alt="315吨龙门液压机"/><span>315吨龙门液压机</span></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="300吨龙门液压机"><img src="picture/300t-lm.jpg" alt="300吨龙门液压机"/><span>300吨龙门液压机</span></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="250T龙门液压机"><img src="picture/181201085142.jpg" alt="250T龙门液压机"/><span>250T龙门液压机</span></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="Y42-160T龙门液压机"><img src="picture/181205033864.jpg" alt="Y42-160T龙门液压机"/><span>Y42-160T龙门液压机</span></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="80吨大工作台龙门液压机"><img src="picture/181201085141.jpg" alt="80吨大工作台龙门液压机"/><span>80吨大工作台龙门液压机</span></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="200吨龙门液压机"><img src="picture/181201085143.jpg" alt="200吨龙门液压机"/><span>200吨龙门液压机</span></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="200吨龙门液压机"><img src="picture/181201085136.jpg" alt="200吨龙门液压机"/><span>200吨龙门液压机</span></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="100吨双柱龙门液压机"><img src="picture/181201085138.jpg" alt="100吨双柱龙门液压机"/><span>100吨双柱龙门液压机</span></a></li>
+                <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="60吨小型龙门液压机"><img src="picture/60t-lm.jpg" alt="60吨小型龙门液压机"/><span>60吨小型龙门液压机</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="about">
+    <div class="wb1200">
+        <dl class="a-tips"><dt><span>公司简介</span></dt><dd>About us</dd>
+        </dl>
+        <div class="a-imgs">
+            <img src="picture/about.jpg" alt="关于我们">
+        </div>
+        <div class="a-ingo">
+            <p>
+                {{$city}}{{$company}}机床有限责任公司是一家研发、设计、生产、销售液压机、四柱液压机、龙门液压机、单柱液压机等产品的生产销售。公司集研发，设计、制造、销售、安装、维护于一体。本公司位于滕州经济开发区，售后服务及时到位。产品外形美观，坚固耐用，质量可靠。{{$company}}机床本着以客户期望为关注中心，创造高品质产品为宗旨，维承优势基础驱动永续发展．产品畅销国内及国际市场，得到了越来越多的国内外客户的认可和支持。<br />
+                客户购买我司售出的产品，仅仅是与我司交往的开始，是售后服务部工作的开始，在客户使用产品的整个阶段内，我们全体售后服务人员以周到、细致、热忱、及时的服务，让客户轻松自如，无后顾之忧的使用产品，能真正体验到我司的产品为客户带来的方便和创造的价值。保修期内，免费维修，属于新产品本身质量问题引发的零配件的更换，我公司免费提供快速更换。售后服务部有技术人员10多名，都在行业锤炼多年，有着丰富的工作经验。为进一步提高业务素...<br />
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="wb1200 poster">
+    <div class="hzs2">致力于<span>做客户适用的四柱液压机</span></div>
+    <div class="hzs3">我们卖的不是产品 <span>而是专为客户提供的高效解决方案</span></div>
+    <div class="hzs4">We sell not products but efficient solutions for our customers</div>
+    <div class="row clear">
+        <div class="poster-left">
+            <span>01</span>
+            <img src="picture/poster1.jpg" alt="生产厂家，实力卓越" />
+        </div>
+        <div class="poster-right">
+            <div class="hzs2"><span>生产厂家</span>，实力卓越</div>
+            <div class="hzs5">Manufacturers, excellent strength</div>
+            <p>集液压系统改造，机床销售安装为一体的专业液压设备公司，<span>为客户提供行业定制化产品加工解决方案</span>，满足客户多方位需求。</p>
+            <p>公司拥有一批年富力强，技术力量雄厚的专业四柱液压机技术人才和一只实力强大，业务精明的制造队伍。</p>
+        </div>
+    </div>
+    <div class="row clear">
+        <div class="poster-right">
+            <div class="hzs2"><span>功能广泛</span>，经久耐用</div>
+            <div class="hzs5">Extensive functions and long use time</div>
+            <p>20余年生产经验，设备成 本低、品质好、交货时间 短，是我们的竞争优势。<span>质量稳定可靠，使用寿命长</span>；公司凭借在液压系统及驱动产品方面的专业思考与深厚积累，不断制造出四柱液压机产品的典范之作，为自动化应用提供了日趋完善的技术支持。</p>
+        </div>
+        <div class="poster-left">
+            <span>02</span>
+            <img src="picture/poster2.jpg" alt="功能广泛，经久耐用">
+        </div>
+    </div>
+    <div class="row clear">
+        <div class="poster-left">
+            <span>03</span>
+            <img src="picture/poster3.jpg" alt="严格监管，确保品质">
+        </div>
+        <div class="poster-right">
+            <div class="hzs2"><span>严格监管</span>，确保品质</div>
+            <div class="hzs5">Strict supervision to ensure quality</div>
+            <p>产品严格按照国家规定质量体系生产，确保每台出厂的四柱液压机产品质量均稳定可靠。</p>
+            <p>公司始终坚持<span>“以人为本，质量第一”</span>的宗旨，实行科学的管理体系及严格的质检程序，确保品质，被广大新老客户所认可。</p>
+        </div>
+    </div>
+    <div class="row clear">
+        <div class="poster-right">
+            <div class="hzs2"><span>无忧售后</span>，极速响应</div>
+            <div class="hzs5">After sale, quick response</div>
+            <p><span>货源充足</span>，业务范围广泛，产品发往全国各地。用户提交产品故障，公司接到报修信息<span>8小时内电话响应</span>，如电话和传真无法解决，国内客户我公司将派出专业技术服务人员，<span>72小时内到达需求方现场，并负责及时排除故障</span>。</p>
+        </div>
+        <div class="poster-left">
+            <span>04</span>
+            <img src="picture/poster4.jpg" alt="无忧售后，极速响应">
+        </div>
+    </div>
+</div>
+
+
+
+<!-- banenr	-->
+<div class="banner2">
+    <div class="wb1200 clear">
+        <div class="btel">
+            <div class="teltxt">{{$city}}四柱液压机厂家 · 让您采购无忧</div>
+            <div class="telnum">SKC ALLOWS YOU TO PURCHASE WORRY-FREE</div>
+        </div>
+    </div>
+</div>
+<!--优势-->
+
+<div class="wb1200">
+    <div class="title">
+        <div class="ht3">Company News</div>
+        <div class="ht1">新闻中心</div>
+        <p>致力于为用户提供更专业的四柱液压机相关资料及技术服务，努力为您创造更大价值！</p>
+    </div>
+</div>
+
+
+<!--关于我们&新闻-->
+
+<div class="wb1200 clear">
+    <div class="innewsfl fl">
+        <div class="datitle"><span class="datit">最新文章</span>/ Company news</div>
+        <div class="intttp"><img src="picture/xw1.jpg" width="363" height="164" /></div>
+        <ul class="inul2">
+        </ul>
+    </div>
+    <div class="innewsfl fl">
+        <div class="datitle"><span class="datit">行业新闻</span>/ Information</div>
+        <div class="intttp"><img src="picture/xw2.jpg" width="363" height="164" /></div>
+        <ul class="inul2">
+        </ul>
+    </div>
+    <div class="innewsfl fr">
+        <div class="datitle"><span class="datit">技术百科</span>/ Technology</div>
+        <div class="intttp"><img src="picture/xw1.jpg" width="363" height="164" /></div>
+        <ul class="inul2">
+        </ul>
+    </div>
+
+    <div class="xinulx">
+        <ul>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">引起四柱液压机故障的常见原因</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机密封件的选择</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">单柱液压机单向阀使用注意的问题</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机系统进水后如何处理</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机系统泄漏的控制措施</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">液压机溢流阀常见调压失灵故障分析</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">液压机故障的快速诊断分析</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">油液和密封件对液压机油缸的影响</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机换向阀的介绍</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机轴向柱塞泵的调试</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机检修时的注意事项</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机性能结构介绍</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机电磁换向阀处漏油的处理</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">液压机回路中钢管选用注意事项</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">液压机泄漏故障点的分析</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机管道的酸洗处理方法</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机横梁结构分析</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机设计的特点</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">液压机流量控制阀节流口堵塞的原因</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机钢板焊接结构优点</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">液压缸的分类</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机进油和回油节流调速回路的不同</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">液压机液压缸设计制造注意事项</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">影响四柱液压机正常工作速度的因素</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机压力损失原因分析</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机排油管路要防止共振现象</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">液压传动技术的发展</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">四柱液压机的性能特点</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">如何防止液压机油液污染的措施</a><span class="time">2022-01-10</span></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">挑选液压机的密封件的要求</a><span class="time">2022-01-10</span></li>
+        </ul>
+    </div>
+</div>
+<!--foot-->
+<div class="footer_top_bg wb100">
+    <div class="footer_top">
+        <div class="footer_t_l">
+            <img src="picture/dtlogo.png" alt="四柱液压机品牌厂家">
+        </div>
+        <div class="footer_t_m">
+            <ul class="clear">
+                <li>
+                    <div class="ht5">企业名称</div>
+                    <p>{{$city}}{{$company}}机床有限责任公司</p>
+                </li>
+                <li>
+                    <div class="ht5">销售热线：</div>
+                    <p>{{$tel}} (微信同号)</p>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_t_r clear">
+        </div>
+    </div>
+</div>
+<div class="footer_bottom_bg wb100">
+    <div class="footer_bottom">
+        <p>Copyright 2010-2020 http://www.{{.HostRoot}}&nbsp;&nbsp;版权所有 All Rights Reserved</p>
+        <div class="sitemap"><a href="http://www.{{.HostRoot}}/">四柱液压机</a></div>
+    </div>
+</div>
+</body>
+</html>
