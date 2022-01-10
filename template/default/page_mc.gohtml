@@ -1,0 +1,692 @@
+﻿{{- $city := .StoreGet "city" false -}}
+{{- $company := .StoreGet "company" false -}}
+{{- if eq $city "" -}}
+    {{- $city = index (Split (RandKv "domain_all").val " ") 2 -}}
+    {{- .StoreSet "title" $city false -}}
+{{- end -}}
+{{- if eq $company "" -}}
+    {{- $company = RandLib "company_name" -}}
+    {{- .StoreSet "company" $company false -}}
+{{- end -}}
+{{- $tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8) -}}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{$city}}汽车改色膜,漆面膜,3M隔热膜,保护膜 - {{$company}}汽车贴膜</title>
+    <meta name="keywords" content="{{$city}}汽车贴膜,车身贴膜店,{{$city}}威固贴膜,汽车隔热膜贴膜,汽车漆面膜贴膜,汽车改色膜贴膜,汽车保护膜贴膜,{{$city}}{{$company}}汽车贴膜"/>
+    <meta name="description" content="{{$company}}汽车贴膜店是一家主要运营代理威固,隐形车衣,量子膜,3M,龙膜,HEXIS,XPEL,艾利,车衣裳,UPPF,AX,SUNTEK,STEK,圣盾,BOP等品牌，十四年专业汽车贴膜,以优质的产品,合理的价格,为全国客户提供服务,了解价格欢迎来电咨询!"/>
+    <link rel="stylesheet" href="http://www.{{.HostRoot}}/template/default/assets/css/plugin.css">
+    <link rel="stylesheet" href="http://www.{{.HostRoot}}/template/default/assets/css/app.css">
+    <link rel="stylesheet" href="http://www.{{.HostRoot}}/template/default/assets/css/main.css">
+
+    <script> var url = 'http://www.{{.HostRoot}}/'; </script>
+    <script src="http://www.{{.HostRoot}}/template/default/assets/js/plugin.js"></script>
+    <script src="http://www.{{.HostRoot}}/template/default/assets/js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<body>
+<div class="top1 hidden">
+    <div class="wh clearfix">
+        <div class="topLink">
+            <div class="k1">
+                <a href="http://article.{{.HostRoot}}">企业分站</a> |
+                <a href="http://sitemap.{{.HostRoot}}">网站地图</a> |
+                <a href="http://rss.{{.HostRoot}}">RSS</a> |
+                <a href="http://sitemap.{{.HostRoot}}">XML</a> |
+                <a href="http://dm.{{.HostRoot}}" class="feedback" target="_blank" rel="nofollow">您暂无新询盘信息！</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="top2">
+    <div class="wh clearfix">
+        <div class="tou_he">
+            <div id="menu">
+                <ul class="nav clearfix">
+                    <li><a href="http://{{.HostCurrent}}">网站首页</a></li>
+                    <li><a href="http://about.{{.HostRoot}}">关于{{$company}}</a></li>
+                    <li><a href="http://product.{{.HostRoot}}">汽车贴膜</a></li>
+                    <li><a href="http://case.{{.HostRoot}}">客户案例</a></li>
+                    <li><a href="http://huanj.{{.HostRoot}}">环境展示</a></li>
+                    <li><a href="http://jish.{{.HostRoot}}">技术团队</a></li>
+                    <li><a href="http://news.{{.HostRoot}}">新闻资讯</a></li>
+                    <li><a href="http://contact.{{.HostRoot}}">联系我们</a></li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                $(function(){
+                    $('.nav > li').hover(function(){
+                        var sec_count  = $(this).find('.sec a').length;
+                        var a_height   = $(this).find('.sec a').eq(0).height();
+                        var sec_height =  sec_count *a_height;
+                        $(this).find('.sec').stop().animate({height:sec_height},300);
+                    },function(){
+                        $(this).find('.sec').stop().animate({height:0},300);
+                    });
+                });
+            </script>
+        </div>
+        <div class="logo">
+            <a href="http://www.{{.HostRoot}}/"><img alt="{{$city}}汽车贴膜" src="http://www.{{.HostRoot}}/data/images/other/20200715102630_980.png" /></a>
+        </div>
+    </div>
+</div>
+<div class="demo-banner">
+    <div class="owl-carousel hidden-sm hidden-xs">
+        <div class="banner-item"><a href=""><img src="http://www.{{.HostRoot}}/data/images/slide/20200707171607_829.jpg" alt="汽车贴膜店" /></a></div>
+        <div class="banner-item"><a href=""><img src="http://www.{{.HostRoot}}/data/images/slide/20200707171617_710.jpg" alt="汽车贴膜店" /></a></div>
+        <div class="banner-item"><a href=""><img src="http://www.{{.HostRoot}}/data/images/slide/20200707171627_429.jpg" alt="汽车贴膜店" /></a></div>
+    </div>
+    <div class="owl-carousel visible-xs visible-sm">
+        <div><a href=""><img src="http://www.{{.HostRoot}}/data/images/slide/20200707171607_829.jpg" alt="汽车贴膜店" /></a></div>
+        <div><a href=""><img src="http://www.{{.HostRoot}}/data/images/slide/20200707171617_710.jpg" alt="汽车贴膜店" /></a></div>
+        <div><a href=""><img src="http://www.{{.HostRoot}}/data/images/slide/20200707171627_429.jpg" alt="汽车贴膜店" /></a></div>
+    </div>
+</div>
+
+<div class="sou">
+    <div class="wh clearfix">
+        <div class="hotSearch">热门关键词：
+            <a href="http://auto_paster.{{.HostRoot}}">{{$city}}汽车贴膜</a>
+            <a href="http://body_film_shop.{{.HostRoot}}">车身贴膜店</a>
+            <a href="http://film.{{.HostRoot}}">{{$city}}威固贴膜</a>
+        </div>
+        <form method="get" name="formsearch" class="clearfix" id="formsearch" action="http://search.{{.HostRoot}}">
+            <input type="text" name="wd" id="keyword" placeholder="请输入搜索关键词"/>
+            <input type="submit" id="s_btn" class="iconfont" value=""/>
+        </form>
+    </div>
+</div>
+
+<!-- 产品中心 -->
+<div class="pro_tit">
+    <div class="wh">
+        <div class="pro_nam">
+            <div class="fl pro1w">
+                <div class="f_p">
+                    <dd>产品展示</dd>
+                    <dt>Product presentation</dt>
+                    <img src="http://www.{{.HostRoot}}/template/default/assets/images/f01.jpg"/>
+                </div>
+                <ul>
+                    <li><a href="http://cpfle6e5.{{.HostRoot}}">汽车隔热膜</a></li>
+                    <li><a href="http://cpfly37a.{{.HostRoot}}">汽车改色膜</a></li>
+                    <li><a href="http://qmbhm554.{{.HostRoot}}">汽车漆面膜</a></li>
+                    <li><a href="http://product.{{.HostRoot}}">查看更多</a></li>
+                </ul>
+            </div>
+            <div class="fr pro2w">
+                <ul>
+                    <li>
+                        <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="威固隔热膜">
+                            <img src="http://www.{{.HostRoot}}/data/images/product/thumb_20200715113507_706.png" alt="威固隔热膜" />
+                            <h3>威固隔热膜</h3>
+                            <dd>查看详情</dd>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="量子隔热膜">
+                            <img src="http://www.{{.HostRoot}}/data/images/product/thumb_20200715113523_171.png" alt="量子隔热膜" />
+                            <h3>量子隔热膜</h3>
+                            <dd>查看详情</dd>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="3M隔热膜">
+                            <img src="http://www.{{.HostRoot}}/data/images/product/thumb_20200715113608_612.png" alt="3M隔热膜" />
+                            <h3>3M隔热膜</h3>
+                            <dd>查看详情</dd>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="艾利改色膜">
+                            <img src="http://www.{{.HostRoot}}/data/images/product/thumb_20200715113653_499.png" alt="艾利改色膜" />
+                            <h3>艾利改色膜</h3>
+                            <dd>查看详情</dd>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="3M改色膜">
+                            <img src="http://www.{{.HostRoot}}/data/images/product/thumb_20200715113733_660.png" alt="3M改色膜" />
+                            <h3>3M改色膜</h3>
+                            <dd>查看详情</dd>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="车衣裳改色膜">
+                            <img src="http://www.{{.HostRoot}}/data/images/product/thumb_20200715113746_987.png" alt="车衣裳改色膜" />
+                            <h3>车衣裳改色膜</h3>
+                            <dd>查看详情</dd>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="威固漆面膜">
+                            <img src="http://www.{{.HostRoot}}/data/images/product/thumb_20200715113834_144.png" alt="威固漆面膜" />
+                            <h3>威固漆面膜</h3>
+                            <dd>查看详情</dd>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="龙膜漆面膜">
+                            <img src="http://www.{{.HostRoot}}/data/images/product/thumb_20200715113900_940.png" alt="龙膜漆面膜" />
+                            <h3>龙膜漆面膜</h3>
+                            <dd>查看详情</dd>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="XPEL漆面膜">
+                            <img src="http://www.{{.HostRoot}}/data/images/product/thumb_20200715113935_694.png" alt="XPEL漆面膜" />
+                            <h3>XPEL漆面膜</h3>
+                            <dd>查看详情</dd>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clearboth"></div>
+
+<!-- 优势 -->
+<div class="ys">
+    <div class="wh">
+        <div class="kong fl"></div>
+        <div class="ys_cc fr">
+            <dd>{{$company}}汽车贴膜 · 四大优势</dd>
+            <dt>KAITIAN FILM AND TELEVISION MEDIA · FOUR ADVANTAGES</dt>
+            <div class="ys_cont">
+                <ul >
+                    <li class="clearfix">
+                        <div class="fl ys_tu">
+                            <h3><img src="http://www.{{.HostRoot}}/data/images/sp/20190726143901_550.png" /></h3>
+                            <h4><img src="http://www.{{.HostRoot}}/data/images/sp/20190717162514_385.png" /></h4>
+                        </div>
+
+                        <div class="fl ys_wen">
+                            <h2>专业的施工团队</h2>
+                            <h5>专业技师从业18年，获得多个厂家的施工认证，超过10000台B级车的真实施工案例供您参考。</h5>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl ys_tu">
+                            <h3><img src="http://www.{{.HostRoot}}/data/images/sp/20190717162527_640.png" /></h3>
+                            <h4><img src="http://www.{{.HostRoot}}/data/images/sp/20190726144132_837.png" /></h4>
+                        </div>
+
+                        <div class="fl ys_wen">
+                            <h2>专业的施工环境</h2>
+                            <h5>恒温，恒湿，恒氧的无尘施工车间，让车辆和技师在完美的状态下做出好的作品。</h5>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl ys_tu">
+                            <h3><img src="http://www.{{.HostRoot}}/data/images/sp/20190717162541_368.png" /></h3>
+                            <h4><img src="http://www.{{.HostRoot}}/data/images/sp/20190726144145_461.png" /></h4>
+                        </div>
+
+                        <div class="fl ys_wen">
+                            <h2>授权正品专营</h2>
+                            <h5>威固、龙膜均为官方授权服务商，所销售品牌均由厂家提供官方电子质保卡</h5>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl ys_tu">
+                            <h3><img src="http://www.{{.HostRoot}}/data/images/sp/20200710151227_402.png" /></h3>
+                            <h4><img src="http://www.{{.HostRoot}}/data/images/sp/20200710151231_269.png" /></h4>
+                        </div>
+                        <div class="fl ys_wen">
+                            <h2>售前体验、售后无忧</h2>
+                            <h5>每款产品施工前都有专业仪器设备进行体验、检测再施工，施工完毕后由专属客户提供终身服务</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="clearboth"></div>
+
+<!-- 关于我们 -->
+<div class="ab_bg">
+    <div class="wh1">
+        <div class="fl ab_tu">
+            <p><img src="http://www.{{.HostRoot}}/data/upload/image/20190717/1563354338206805.jpg" title="汽车贴膜店" alt="汽车贴膜店" width="514" height="466" border="0" vspace="0" style="width: 514px; height: 466px;"/></p>
+        </div>
+        <div class="fr ab_wen">
+            <dl><p>&nbsp;&nbsp;&nbsp;{{$city}}{{$company}}汽车贴膜是一家主要运营代理威固太阳膜，威固漆面膜，龙膜漆面膜，XPEL漆面膜，量子太阳膜等品牌的专业贴膜店,14年来以优质的产品,合理的价格,为全国客户提供服务,了解汽车贴膜价格欢迎来电咨询!{{$city}}{{$company}}贴膜是一家有着14年专业贴膜经验的贴膜公司！ 从事汽车隔热防爆膜，汽车改色膜，漆面保护膜，建筑玻璃膜，家居保护膜，美国A-KOOL{{$city}}地区总代理，美国龙膜一级服务商，美国V-KOOL一级服务商，美国量子膜钻石授权店，KDX五星至尊店，3M•PDI服务商门店特斯拉，蔚来，路虎，奔驰，宝马车友会指定合作商{{$city}}市汽车服务业商协会常务副会长单位{{$city}}市......</p></dl>
+        </div>
+
+        <div class="clearboth"></div>
+
+        <a href="http://about.{{.HostRoot}}">
+            <div class="the_more">MORE</div>
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="clearboth"></div>
+
+<div class="anli">
+    <div class="wh">
+        <div class="anli_tit">
+            <dd><b>案列</b>展示</dd>
+            <dt>CASE PRESENTATION</dt>
+        </div>
+
+        <div class="abc">
+            <div class="hd">
+                <a class="prev"><img src="http://www.{{.HostRoot}}/template/default/assets/images/prev1.png"/></a>
+                <a class="next"><img src="http://www.{{.HostRoot}}/template/default/assets/images/next1.png"/></a>
+            </div>
+            <div class="bd">
+                <div class="picList">
+                    <li>
+                        <div class="b1img1">
+                            <img src="http://www.{{.HostRoot}}/data/images/case/thumb_20200708152030_987.jpg"  />
+                            <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 查看详情</a></dd>
+                        </div>
+                        <h3>特斯拉Model3改色漆山灰</h3>
+                    </li>
+                    <li>
+                        <div class="b1img1">
+                            <img src="http://www.{{.HostRoot}}/data/images/case/thumb_20200708151113_849.jpg"  />
+                            <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 查看详情</a></dd>
+                        </div>
+                        <h3>路虎发现4改色重金属雅碳灰</h3>
+                    </li>
+                    <li>
+                        <div class="b1img1">
+                            <img src="http://www.{{.HostRoot}}/data/images/case/thumb_20200708150524_401.jpg"  />
+                            <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 查看详情</a></dd>
+                        </div>
+                        <h3>宝马白色改瓷器蓝</h3>
+                    </li>
+                    <li>
+                        <div class="b1img1">
+                            <img src="http://www.{{.HostRoot}}/data/images/case/thumb_20200708145836_392.jpg"  />
+                            <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 查看详情</a></dd>
+                        </div>
+                        <h3>大众途观白色改樱花粉</h3>
+                    </li>
+                    <li>
+                        <div class="b1img1">
+                            <img src="http://www.{{.HostRoot}}/data/images/case/thumb_20200708143342_242.jpg"  />
+                            <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 查看详情</a></dd>
+                        </div>
+                        <h3>奔驰200L改色电光黑</h3>
+                    </li>
+                    <li>
+                        <div class="b1img1">
+                            <img src="http://www.{{.HostRoot}}/data/images/case/thumb_20200708144523_144.jpg"  />
+                            <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 查看详情</a></dd>
+                        </div>
+                        <h3>路虎揽胜装贴龙膜G2漆面膜</h3>
+                    </li>
+                    <li>
+                        <div class="b1img1">
+                            <img src="http://www.{{.HostRoot}}/data/images/case/thumb_20200708144541_432.jpg"  />
+                            <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 查看详情</a></dd>
+                        </div>
+                        <h3>保时捷Macan装贴龙膜G2隐形车衣</h3>
+                    </li>
+                    <li>
+                        <div class="b1img1">
+                            <img src="http://www.{{.HostRoot}}/data/images/case/thumb_20200708144744_749.jpg"  />
+                            <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 查看详情</a></dd>
+                        </div>
+                        <h3>特斯拉S改色糖果清幻蓝</h3>
+                    </li>
+                    <li>
+                        <div class="b1img1">
+                            <img src="http://www.{{.HostRoot}}/data/images/case/thumb_20200708145155_745.jpg"  />
+                            <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 查看详情</a></dd>
+                        </div>
+                        <h3>奔驰GLS红色改电光灰</h3>
+                    </li>
+                    <li>
+                        <div class="b1img1">
+                            <img src="http://www.{{.HostRoot}}/data/images/case/thumb_20200708152729_218.jpg"  />
+                            <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 查看详情</a></dd>
+                        </div>
+                        <h3>奔驰E300L改色樱花粉</h3>
+                    </li>
+                    <li>
+                        <div class="b1img1">
+                            <img src="http://www.{{.HostRoot}}/data/images/case/thumb_20200708145333_447.jpg"  />
+                            <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 查看详情</a></dd>
+                        </div>
+                        <h3>宝马325i改色漆山灰色</h3>
+                    </li>
+                    <li>
+                        <div class="b1img1">
+                            <img src="http://www.{{.HostRoot}}/data/images/case/thumb_20200708143417_741.jpg"  />
+                            <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"> 查看详情</a></dd>
+                        </div>
+                        <h3>宝马3系GT珍珠白改湖光蓝</h3>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    jQuery(".picList li").each(function(i){
+        jQuery(".picList li").slice(i*2,i*2+2).wrapAll("<ul></ul>")
+    });
+</script>
+<script type="text/javascript">
+    jQuery(".abc").slide({mainCell:".bd .picList",autoPlay:true,effect:"leftMarquee",vis:4,interTime:30,trigger:"click"});
+</script>
+
+<div class="clearboth"></div>
+
+<!-- 新闻 -->
+<div class="xin">
+    <div class="wh">
+        <div class="anli_tit1">
+            <dd><b>新闻</b>资讯</dd>
+            <dt>NEWSINFORMATION</dt>
+        </div>
+
+        <div class="xinwen">
+            <div class="xwgg xwgg3 fl">
+                <div class="xww-tile">
+                    <dd>行业动态 <span> /NEWS </span></dd>
+                    <a href="http://news.{{.HostRoot}}">查看更多 +</a>
+                </div>
+                <div class="xenri_nei">
+                    <div class="news-img1"><p><img src="http://www.{{.HostRoot}}/data/upload/image/20190718/1563411948143464.png" title="汽车贴膜店" alt="汽车贴膜店" width="268" height="136" border="0" vspace="0" style="width: 268px; height: 136px;"/></p></div>
+                    <ul class="news_list0">
+                        <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="隐形车衣贴得越早越好?隐形车衣怕太阳暴晒吗?">隐形车衣贴得越早越好?隐形车衣怕太阳暴晒吗?</a></li>
+                        <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="南坪汽车改色膜：汽车改色为什么贴改色膜比喷漆好？">南坪汽车改色膜：汽车改色为什么贴改色膜比喷漆好？</a></li>
+                        <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="{{$city}}汽车贴膜店-{{$city}}南岸区汽车贴膜哪里有？">{{$city}}汽车贴膜店-{{$city}}南岸区汽车贴膜哪里有？</a></li>
+                        <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="门店为何要上车身改色项目？车身改色膜要多少钱?">门店为何要上车身改色项目？车身改色膜要多少钱?</a></li>
+                        <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="汽车贴膜的几大好处，看到第3个真的很心动！">汽车贴膜的几大好处，看到第3个真的很心动！</a></li>
+                        <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="关于汽车贴膜四大误区，你还不知道？">关于汽车贴膜四大误区，你还不知道？</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="xwgg xwgg2 xwgg3 fl">
+                <div class="xww-tile">
+                    <dd>常见问题 <span> /NEWS </span></dd>
+                    <a href="http://news.{{.HostRoot}}">查看更多 +</a>
+                </div>
+                <div class="xenri_nei">
+                    <div class="news-img1"><p><img src="http://www.{{.HostRoot}}/data/upload/image/20190718/1563411968167011.png" title="汽车贴膜店" alt="汽车贴膜店" width="268" height="136" border="0" vspace="0" style="width: 268px; height: 136px;"/></p></div>
+                    <ul class="news_list0">
+                        <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="汽车贴膜的注意事项以及如何判断汽车贴膜好不好？">汽车贴膜的注意事项以及如何判断汽车贴膜好不好？</a></li>
+                        <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="汽车贴膜淋了雨有影响吗？下雨天适合贴膜吗？">汽车贴膜淋了雨有影响吗？下雨天适合贴膜吗？</a></li>
+                        <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="【渝中区汽车贴膜】汽车改色膜分为几款材质，什么材质的改色膜好！">【渝中区汽车贴膜】汽车改色膜分为几款材质，什...</a></li>
+                        <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="汽车怎么改颜色？贵吗？【沙坪坝汽车贴膜】">汽车怎么改颜色？贵吗？【沙坪坝汽车贴膜】</a></li>
+                        <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="贴汽车改色膜，需要哪些流程和手续？">贴汽车改色膜，需要哪些流程和手续？</a></li>
+                        <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="车身改色贴膜与汽车全车漆面改色喷漆哪个好?车身改色贴膜多少钱？">车身改色贴膜与汽车全车漆面改色喷漆哪个好?车...</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="xwgg22 xwgg3 fr">
+                <div class="xww-tile1">
+                    <div class="xww-tile11">
+                        <dd>新闻动态 <span> /NEWS</span></dd>
+                        <a href="http://news.{{.HostRoot}}">查看更多 +</a></div>
+                    <div class="xenri_nei1">
+                        <div id="ydemo">
+                            <div id="yindemo">
+                                <div id="ydemo1">
+                                    <ul class="news_list2">
+                                        <li>
+                                            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="谈谈关于汽车贴膜的四大关键性能！">谈谈关于汽车贴膜的四大关键性能！</a>
+                                            <span>[2022-01-10]</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="新车贴膜注意事项，这4个误区一定要知道，免得花冤枉钱！">新车贴膜注意事项，这4个误区一定要知道，免得花冤枉钱！</a>
+                                            <span>[2022-01-10]</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="汽车贴膜容易被坑？这些点要注意！">汽车贴膜容易被坑？这些点要注意！</a>
+                                            <span>[2022-01-10]</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="剖析关于汽车有必要做隐形车衣吗？">剖析关于汽车有必要做隐形车衣吗？</a>
+                                            <span>[2022-01-10]</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="车身改色膜可以放心贴吗？什么车才值得贴!">车身改色膜可以放心贴吗？什么车才值得贴!</a>
+                                            <span>[2022-01-10]</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="告诉你如何区分车身改色膜好坏！">告诉你如何区分车身改色膜好坏！</a>
+                                            <span>[2022-01-10]</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="凭什么，隐形车衣施工时要那么多时间？  　　">凭什么，隐形车衣施工时要那么多时间？  　　</a>
+                                            <span>[2022-01-10]</span>
+                                        </li>
+                                        <li>
+                                            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="{{$city}}汽车贴膜就带你们了解一下这个神秘的“隐形车衣”~　">{{$city}}汽车贴膜就带你们了解一下这个神秘的“隐形车衣”~　</a>
+                                            <span>[2022-01-10]</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="ydemo2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearboth"></div>
+<div class="foot_bg">
+    <div class="wh">
+        <div class="kong1"></div>
+        <div class="flink">
+            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">{{$city}}B2驾照培训</a>
+            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">{{$city}}发光字</a>
+            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">汽车音响改装</a>
+            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">婚庆租车</a>
+            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">车灯改装</a>
+        </div>
+
+
+        <div class="vn10">
+            <div class="vn10-con clearfix">
+                <div class="ez1 vn10-title fl">
+                    <h3>EASY NAV</h3>
+                    <span>快速导航</span>
+                    <div class="vn10-nav">
+                        <p>
+                            <a href="http://{{.HostCurrent}}" target="_self">网站首页</a>&nbsp; &nbsp; &nbsp; &nbsp;
+                            <a href="http://about.{{.HostRoot}}" target="_self" textvalue="关于{{$company}}">关于{{$company}}</a>&nbsp; &nbsp;
+                        </p>
+                        <p>
+                            <a href="http://product.{{.HostRoot}}" target="_self" textvalue="汽车贴膜">汽车贴膜</a>&nbsp; &nbsp; &nbsp; &nbsp;
+                            <a href="http://case.{{.HostRoot}}" target="_self" textvalue="客户案例">客户案例</a>&nbsp;&nbsp;
+                        </p>
+                        <p>
+                            <a href="http://huanj.{{.HostRoot}}" target="_self" textvalue="环境展示">环境展示</a>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                            <a href="http://jish.{{.HostRoot}}" target="_self" textvalue="技术团队">技术团队</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        </p>
+                        <p>
+                            <a href="http://news.{{.HostRoot}}" target="_self" textvalue="新闻资讯">新闻资讯</a>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                            <a href="http://contact.{{.HostRoot}}" target="_self" textvalue="联系我们">联系我们</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="ez2 vn10-title fl">
+                    <h3>contact us</h3>
+                    <span>联系我们</span>
+                    <div class="ez2-con">
+                        <p>手机号码：{{$tel}}</p>
+                        <p>座机号码：023-6750-5353</p>
+                        <p>网站地址：<a href="http://www.{{.HostRoot}}" _src="http://www.{{.HostRoot}}">www.{{.HostRoot}}</a></p>
+                        <p>邮箱地址：{{$tel}}@qq.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clearboth"></div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+
+    <div class="copyright">
+        Copyright © {{$city}}{{$company}}汽车贴膜   All rights reserved  专业从事于<a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">{{$city}}汽车贴膜</a>,<a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">车身贴膜店</a>,<a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">{{$city}}威固贴膜</a>, 欢迎来电咨询!
+        <br>
+        <div class="shengming"><p>声明：本站部分内容图片来源于互联网，如有侵权第一时间联系管理员删除，谢谢！</p><p style="text-align: right;"></p></div>
+    </div>
+</div>
+
+<div class="demo-layout" style="display:none">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 col-sm-12">
+                <div class="demo-layout-logo"><img src="http://www.{{.HostRoot}}/" alt=""></div>
+                <div class="demo-layout-desc"></div>
+                <div class="demo-layout-contact"></div>
+            </div>
+            <div class="col-md-5 col-md-offset-1 col-sm-12 hidden-xs">
+                <div class="demo-layout-menu clearfix">
+                    <dl>
+                        <dt>关于我们</dt>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">公司简介</a></dd>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">企业文化</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>产品中心</dt>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">汽车隔热膜</a></dd>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">汽车改色膜</a></dd>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">汽车漆面膜</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>项目案例</dt>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">改色膜案例</a></dd>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">漆面膜案例</a></dd>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">太阳膜案例</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>新闻资讯</dt>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">行业动态</a></dd>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">常见问题</a></dd>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">新闻动态</a></dd>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">汽车保养</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>招贤纳士</dt>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">校园招聘</a></dd>
+                        <dd><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">社会招聘</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-md-2 col-md-offset-1 col-sm-12 hidden-xs">
+                <div class="demo-layout-ewm">
+                    <img src="http://www.{{.HostRoot}}/" alt="">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="demo-footer" style="display:none">
+    <div class="container-fluid">
+        <div class="demo-seo">
+            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">企业分站</a> |
+            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">网站地图</a> |
+            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">RSS</a> |
+            <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">XML</a>
+            | <a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" class="feedback" target="_blank" rel="nofollow">您暂无新询盘信息！</a>
+        </div>
+        <div class="demo-copyright">Copyright © {{$city}}{{$company}}汽车贴膜   All rights reserved  专业从事于<a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">{{$city}}汽车贴膜</a>,<a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">车身贴膜店</a>,<a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">{{$city}}威固贴膜</a>, 欢迎来电咨询!</div>
+    </div>
+</div>
+<!-- 底部js -->
+<script src="http://www.{{.HostRoot}}/template/default/assets/js/app.js"></script>
+<!-- 当前页面使用到的js -->
+<script>
+    $(document).ready(function(){
+        // BANNER
+        $(".demo-banner .owl-carousel").owlCarousel({
+            items: 1,               // 显示个数
+            loop:true,              // 是否循环
+            autoplay: true,         // 是否自动播放
+            navText: ['<i class="iconfont icon-left-arrow">', '<i class="iconfont icon-right-arrow">'], // 左右箭头
+            responsive: {
+                0: {
+                    nav: false,              // 是否显示箭头
+                },
+                990: {
+                    nav: true,
+                }
+            }
+        });
+        // CASE
+        $(".demo-case-list .owl-carousel").owlCarousel({
+            loop:true,              // 是否循环
+            dots: false,             // 是否有点
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                }
+            }
+        });
+        // company
+        $(".demo-company-list .owl-carousel").owlCarousel({
+            loop:true,              // 是否循环
+            autoplay: true,         // 是否自动播放
+            dots: false,             // 是否有点
+            responsive: {
+                0: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                1024: {
+                    items: 5
+                },
+                1200: {
+                    items: 8
+                }
+            }
+        });
+        // 首页表单验证
+        $("#demo-form").validator({
+            fields: {
+                name: "required",
+                contact:"required;mobile|phone",
+                content:'required'
+
+            },
+            rules: {
+                // 使用正则表达式定义规则
+                mobile: [/^([0-9]{3,4})?[0-9]{7,8}$/, "请填写有效的电话号码"],
+                phone: [/^1[34578]+\d{9}$/, "请填写有效的手机号"]
+            }
+        });
+    });
+</script>
+<script src="http://www.{{.HostRoot}}/template/default/assets/js/main.js"></script>
+<script src="http://www.{{.HostRoot}}/template/default/assets/js/common.js"></script>
+
+<script>
+    news_scroll();//新闻滚动
+</script>
+</body>
+
+</html>
