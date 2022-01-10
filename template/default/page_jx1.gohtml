@@ -1,0 +1,390 @@
+﻿{{- $city := .StoreGet "city" false -}}
+{{- $company := .StoreGet "company" false -}}
+{{- if eq $city "" -}}
+    {{- $city = index (Split (RandKv "domain_all").val " ") 2 -}}
+    {{- .StoreSet "title" $city false -}}
+{{- end -}}
+{{- if eq $company "" -}}
+    {{- $company = RandLib "company_name" -}}
+    {{- .StoreSet "company" $company false -}}
+{{- end -}}
+{{- $tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8) -}}
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>气液增压缸液压油缸生产厂家-{{$city}}{{$company}}机械设备有限公司</title>
+    <meta name="keywords" content="汽液缸，液压油缸厂家,气液增压缸油缸液压油缸油压缸" />
+    <meta name="description" content="{{$city}}{{$company}}机械设备有限公司是专业的气液增压缸生产厂家，公司主营油缸,液压油缸，气液增压器,气液增压缸，油压机压床,冷热油压机等产品" />
+    <meta name="applicable-device"content="pc,mobile">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bxslider.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bxslider.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<header>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="top_menu">语言选择：
+                <a href="javascript:" title="中文版"><img src="picture/chinese.gif" alt="中文版"></a>
+                <img src="picture/topline.gif" alt="line">
+                <a href="javascript:" title="English"><img src="picture/english.gif" alt="英文版"></a>
+            </div>
+
+            <div class="col-xs-12 col-sm-9 col-md-9">
+                <a href="http://{{.HostCurrent}}"><img src="picture/5e62418d7f494.jpg" class="logo" alt="{{$city}}{{$company}}机械设备有限公司"/></a>
+            </div>
+
+            <div id="topsearch" class="col-xs-12 col-sm-3 col-md-3">
+                <form id="searchform" method="get" action="http://search.{{.HostRoot}}">
+                    <div class="input-group search_group">
+                        <input type="text" name="name" class="form-control input-sm" placeholder="产品搜索">
+                        <span class="input-group-btn">
+                            <a href="javascript:searchform.submit();" class="btn btn-sm mysearch_btn" type="button">搜 索</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span id="small_search" class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                <a class="navbar-brand" href="#">导航菜单</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://{{.HostCurrent}}">网站首页</a></li>
+                    <li>
+                        <a href="http://about.{{.HostRoot}}">公司简介</a></li><li class="dropdown">
+                        <a href="http://product.{{.HostRoot}}">产品中心</a>
+                        <a href="http://product.{{.HostRoot}}" id="app_menudown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-down btn-xs"></span></a>
+                        <ul class="dropdown-menu nav_small" role="menu">
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HQ系标准型增压缸</a></li>
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HQC系直压式增压缸</a></li>
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HQD系行程可调增压缸</a></li>
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HCQ系多倍出力气压缸</a></li>
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HOC系空油转换器</a></li>
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HO系油压缸</a></li>
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HP系列增压器</a></li>
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HPC/H压机压床</a></li>
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">其他相关产品</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://new.{{.HostRoot}}">新闻中心</a>
+                        <a href="http://new.{{.HostRoot}}" id="app_menudown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-down btn-xs"></span></a>
+                        <ul class="dropdown-menu nav_small" role="menu">
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">增压系统常见问题</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://fqa.{{.HostRoot}}">解决问题</a>
+                        <a href="http://fqa.{{.HostRoot}}" id="app_menudown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-down btn-xs"></span></a>
+                        <ul class="dropdown-menu nav_small" role="menu">
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">客户案例</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="http://download.{{.HostRoot}}">技术资讯</a>
+                        <a href="http://download.{{.HostRoot}}" id="app_menudown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-down btn-xs"></span></a>
+                        <ul class="dropdown-menu nav_small" role="menu">
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">帮助文档</a></li>
+                            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">档案下载</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://feedback.{{.HostRoot}}">在线留言</a></li>
+                    <li><a href="http://contact.{{.HostRoot}}">联系我们</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <!-- bxslider -->
+    <div class="flash">
+        <ul class="bxslider">
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"><img src="picture/5e6240f709382.jpg" alt="油缸液压友缸" /></a></li>
+            <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}"><img src="picture/5dfdd59b28b6b.jpg" alt="气液增压缸" /></a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $('.bxslider').bxSlider({
+            adaptiveHeight: true,
+            infiniteLoop: true,
+            hideControlOnEnd: true,
+            auto:true
+        });
+    </script>
+</header>
+
+<!-- main -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="about_box">
+                <h1 class="about_h1">公司简介</h1><span class="about_span">ABOUT US</span>
+                <section>
+                    <img align="left" src="picture/about.png" alt="公司简介">
+                    <p class="about_contents">苏州{{$city}}{{$company}}机械是一家基于专业研发，销售、生产气压、液压、油压以及空油压转换等相关产品的公司，产品包括增压缸、增压器、增压压床、气液增压缸、倍力缸、液压缸、液压缸压机压床及其他相关配件。尤其在空油转换之增压系列上有研发相关与制造经验，其产品能达到多元化，寿命长，精度高，出力大，体积小，不漏油等特性，并能在同行业中脱颖而出，进而达到领导地位，深受客户欢迎，信赖。“ 不断研发创新，永保领导品牌 品牌是信誉，信誉为无价，&nbsp; 最高的质量，最好的一体化服务 。研发、制造、销售、服务一体化。”是{{$city}}{{$company}}设备的经营理念。 ...</p>
+                    <a href="http://about.{{.HostRoot}}" class="about_more">了解我们更多&gt;&gt;</a>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="index_product">
+                <h1 class="about_h1">产品展示</h1><span class="about_span">PRODUCT DISPLAY</span>
+                <div class="product_list">
+                    <div class="col-sm-4 col-md-3 col-mm-6 product_img">
+                        {{- $url_po := Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                        <a href="http://{{$url_po}}"><img src="picture/60acf7b0553fe.jpg" class="opacity_img" alt="冷热油压压机"></a>
+                        <p class="product_title"><a href="http://{{$url_po}}" title="冷热油压压机">冷热油压压机</a></p>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-mm-6 product_img">
+                        {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                        <a href="http://{{$url_po}}"><img src="picture/5df483fa329a6.jpg" class="opacity_img" alt="1T3T标准增压缸"></a>
+                        <p class="product_title"><a href="http://{{$url_po}}" title="1T3T标准增压缸">1T3T标准增压缸</a></p>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-mm-6 product_img">
+                        {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                        <a href="http://{{$url_po}}"><img src="picture/5df4918287aac.jpg" class="opacity_img" alt="油压缸"></a>
+                        <p class="product_title"><a href="http://{{$url_po}}" title="油压缸">油压缸</a></p>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-mm-6 product_img">
+                        {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                        <a href="http://{{$url_po}}"><img src="picture/5e43a2ecbde6c.jpg" class="opacity_img" alt="1T3T直压式增压缸"></a>
+                        <p class="product_title"><a href="http://{{$url_po}}" title="1T3T直压式增压缸">1T3T直压式增压缸</a></p>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-mm-6 product_img">
+                        {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                        <a href="http://{{$url_po}}"><img src="picture/1582523444158252338915825228455e531205aceb4.jpg" class="opacity_img" alt="30T40T标准增压缸 "></a>
+                        <p class="product_title"><a href="http://{{$url_po}}" title="30T40T标准增压缸 ">30T40T标准增压缸 </a></p>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-mm-6 product_img">
+                        {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                        <a href="http://{{$url_po}}"><img src="picture/5e43a238ee0f9.jpg" class="opacity_img" alt="HQD行程可调增压缸"></a>
+                        <p class="product_title"><a href="http://{{$url_po}}" title="HQD行程可调增压缸">HQD行程可调增压缸</a></p>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-mm-6 product_img">
+                        {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                        <a href="http://{{$url_po}}"><img src="picture/5df492d1638bb.jpg" class="opacity_img" alt="HP系气液增压器"></a>
+                        <p class="product_title"><a href="http://{{$url_po}}" title="HP系气液增压器">HP系气液增压器</a></p>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-mm-6 product_img">
+                        {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                        <a href="http://{{$url_po}}"><img src="picture/5e53937039c4f.jpg" class="opacity_img" alt="HOC空油转换器"></a>
+                        <p class="product_title"><a href="http://{{$url_po}}" title="HOC空油转换器">HOC空油转换器</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="left_nav index_left_nav" id="categories">
+                <h1 class="left_h1">导航栏目</h1>
+                <ul class="left_nav_ul" id="firstpane">
+                    <li>
+                        <a class="biglink" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HQ系标准型增压缸</a><span class="menu_head">+</span>
+                        <ul class="left_snav_ul menu_body"></ul>
+                    </li>
+                    <li>
+                        <a class="biglink" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HQC系直压式增压缸</a><span class="menu_head">+</span>
+                        <ul class="left_snav_ul menu_body"></ul>
+                    </li>
+                    <li>
+                        <a class="biglink" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HQD系行程可调增压缸</a><span class="menu_head">+</span>
+                        <ul class="left_snav_ul menu_body"></ul>
+                    </li>
+                    <li>
+                        <a class="biglink" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HCQ系多倍出力气压缸</a><span class="menu_head">+</span>
+                        <ul class="left_snav_ul menu_body"></ul>
+                    </li>
+                    <li>
+                        <a class="biglink" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HOC系空油转换器</a><span class="menu_head">+</span>
+                        <ul class="left_snav_ul menu_body"></ul>
+                    </li>
+                    <li>
+                        <a class="biglink" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HO系油压缸</a><span class="menu_head">+</span>
+                        <ul class="left_snav_ul menu_body"></ul>
+                    </li>
+                    <li>
+                        <a class="biglink" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HP系列增压器</a><span class="menu_head">+</span>
+                        <ul class="left_snav_ul menu_body"></ul>
+                    </li>
+                    <li>
+                        <a class="biglink" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">HPC/H压机压床</a><span class="menu_head">+</span>
+                        <ul class="left_snav_ul menu_body"></ul>
+                    </li>
+                    <li>
+                        <a class="biglink" href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}">其他相关产品</a><span class="menu_head">+</span>
+                        <ul class="left_snav_ul menu_body"></ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7">
+            <div class="news_box">
+                <h1 class="about_h1">新闻中心</h1><span class="about_span">NEWS CENTER</span>
+                <ul class="index_news">
+                    <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="冷热压机">冷热压机</a><span class='news_time'>2022-01-10</span></li>
+                    <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="液压阀的工作原理还不会？溢流阀、减压阀、调速阀一次性讲明白">液压阀的工作原理还不会？溢流阀、减压阀、调速阀一次性讲明白</a><span class='news_time'>2022-01-10</span></li>
+                    <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="液压系统管接头的安装标准">液压系统管接头的安装标准</a><span class='news_time'>2022-01-10</span></li>
+                    <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="螺栓是用平垫，还是弹垫，到底如何选择比较好？">螺栓是用平垫，还是弹垫，到底如何选择比较好？</a><span class='news_time'>2022-01-10</span></li>
+                    <li><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title="电磁阀基础知识">电磁阀基础知识</a><span class='news_time'>2022-01-10</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-5">
+            <div class="index_contact">
+                <h1 class="about_h1">联系我们</h1><span class="about_span">CONTACT US</span>
+                <p style="padding-top:20px;">联系人：王经理</p>
+                <p>手机：{{$tel}}</p>
+                <p>电话：{{$tel}}</p>
+                <p>邮箱：{{$tel}}@163.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom footer_nav">
+    <div class="foot_nav btn-group dropup">
+        <a class="dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+            <span class="glyphicon glyphicon-share btn-lg" aria-hidden="true"></span>
+            分享</a>
+        <div class="dropdown-menu webshare">
+            <!-- JiaThis Button BEGIN -->
+            <div class="jiathis_style_32x32">
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_tqq"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_renren"></a>
+                <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+            </div>
+            <script type="text/javascript" src="js/jia.js" charset="utf-8"></script>
+            <!-- JiaThis Button END -->            </div>
+    </div>
+    <div class="foot_nav"><a href="tel:15262360912"><span class="glyphicon glyphicon-phone btn-lg" aria-hidden="true"></span>手机</a></div>
+    <div class="foot_nav"><a id="gotocate" href="#"><span class="glyphicon glyphicon-th-list btn-lg" aria-hidden="true"></span>分类</a></div>
+    <div class="foot_nav"><a id="gototop" href="#"><span class="glyphicon glyphicon-circle-arrow-up btn-lg" aria-hidden="true"></span>顶部</a></div>
+</nav>
+
+<footer>
+    <div class="copyright">
+        <p>CopyRight 2019 All Right Reserved &nbsp;苏ICP备19066339号-1<a href= http://www.beian.miit.gov.cn>苏ICP备19066339号-1</a> <a href="/c_sitemap.html" target="_blank">网站地图</a></p>
+        <p class="copyright_p">地址：昆山市巴城镇新建路168号金顺达工业园 &nbsp;电话：15262360912 &nbsp;传真：&nbsp;</p>
+    </div>
+    <div id="translate">
+        <!-- Begin TranslateThis Button -->
+        <div id="translate-this"><a style="width:180px;height:18px;display:block;" class="translate-this-button" href="http://www.translatecompany.com/"></a></div>
+        <script type="text/javascript" src="http://x.translateth.is/translate-this.js"></script>
+        <script type="text/javascript">
+            TranslateThis();
+        </script>
+        <!-- End TranslateThis Button -->
+    </div>
+</footer>
+
+<!--客服面板-->
+<link rel="stylesheet" type="text/css" href="css/online.css" />
+<div id="cmsFloatPanel">
+    <div class="ctrolPanel">
+        <a class="service" href="#"></a>
+        <a class="message" href="#"></a>
+        <a class="qrcode" href="#"></a>
+        <a class="arrow" title="返回顶部" href="#"></a>
+    </div>
+    <div class="servicePanel">
+        <div class="servicePanel-inner">
+            <div class="serviceMsgPanel">
+                <div class="serviceMsgPanel-hd"><a href="#"><span>关闭</span></a></div>
+                <div class="serviceMsgPanel-bd">
+                    <!--在线QQ-->
+                    <div class="msggroup">
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=455842504&site=qq&menu=yes"><img class="qqimg" src="picture/44b448113170458b995e4ae9f30d8aee.gif" alt="QQ在线客服"/>技术咨询</a>
+                    </div>                          <!--在线MSN-->
+                    <!--在线SKYPE-->
+                    <!--淘宝旺旺-->
+                    <!--旺旺国内版-->
+                    <!--旺旺国际版-->
+
+                </div>
+                <div class="serviceMsgPanel-ft"></div>
+            </div>
+            <div class="arrowPanel">
+                <div class="arrow02"></div>
+            </div>
+        </div>
+    </div>
+    <div class="messagePanel">
+        <div class="messagePanel-inner">
+            <div class="formPanel">
+
+                <div class="formPanel-bd">
+                    <!-- JiaThis Button BEGIN -->
+                    <div class="jiathis_style_32x32">
+                        <a class="jiathis_button_qzone"></a>
+                        <a class="jiathis_button_tsina"></a>
+                        <a class="jiathis_button_tqq"></a>
+                        <a class="jiathis_button_weixin"></a>
+                        <a class="jiathis_button_renren"></a>
+                        <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+                    </div>
+                    <script type="text/javascript" src="js/jia.js" charset="utf-8"></script>
+                    <!-- JiaThis Button END -->                            <a type="button" class="btn btn-default btn-xs" href="#" style="margin: 6px 0px 0px 10px;">关闭</a>
+                </div>
+
+            </div>
+            <div class="arrowPanel">
+                <div class="arrow01"></div>
+                <div class="arrow02"></div>
+            </div>
+        </div>
+    </div>
+    <div class="qrcodePanel">
+        <div class="qrcodePanel-inner">
+            <div class="codePanel">
+                <div class="codePanel-hd"><span style="float:left">用手机扫描二维码</span><a href="#"><span>关闭</span></a></div>
+                <div class="codePanel-bd">
+                    <img src="picture/5e61ebb03454b.jpg" alt="二维码"/>
+                </div>
+            </div>
+            <div class="arrowPanel">
+                <div class="arrow01"></div>
+                <div class="arrow02"></div>
+            </div>
+        </div>
+    </div>    </div>
+<script type="text/javascript" src="js/online.js"></script>
+</body>
+</html>
