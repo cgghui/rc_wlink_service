@@ -1,0 +1,284 @@
+﻿{{- $city := .StoreGet "city" false -}}
+{{- $company := .StoreGet "company" false -}}
+{{- if eq $city "" -}}
+    {{- $city = index (Split (RandKv "domain_all").val " ") 2 -}}
+    {{- .StoreSet "title" $city false -}}
+{{- end -}}
+{{- if eq $company "" -}}
+    {{- $company = RandLib "company_name" -}}
+    {{- .StoreSet "company" $company false -}}
+{{- end -}}
+{{- $tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8) -}}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <title>蜗轮箱_伞齿轮_阀门执行器_阀门驱动_蜗轮头-{{$city}}{{$company}}机械科技有限公司</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/public.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <meta name="Keywords" content="蜗轮箱,伞齿轮,阀门执行器,阀门驱动,蜗轮头" />
+    <meta name="Description" content="{{$city}}{{$company}}机械科技有限公司是一家集开发、设计、生产、销售为一体的阀门执行器厂家,专业生产蜗轮箱,伞齿轮,阀门执行器,阀门驱动,蜗轮头等产品,价格实惠,质量可靠,热线电话:0577-67958770" />
+</head>
+<body style=" margin:0">
+<!--头部开始-->
+<div id="header">
+    <div class="container">
+
+        <h1>
+            <a href="http://{{.HostCurrent}}/" title="{{$city}}{{$company}}机械科技有限公司-蜗轮箱,伞齿轮,阀门执行器,阀门驱动,蜗轮头">
+                <img src="picture/logo.jpg" id="logo" class="fl" alt="蜗轮箱,伞齿轮,阀门执行器,阀门驱动,蜗轮头" />
+            </a>
+        </h1>
+
+        <div id="head" class="fr">
+            <div id="head_txt">
+                <img src="picture/fwrx.jpg" />
+                <ul>
+                    <li><img src="picture/china.jpg" alt="china" /><a href="javascript:">中文版</a></li>
+                    <li><img src="picture/english.jpg" alt="English" /><a href="javascript:">English</a></li>
+                    <li><img src="picture/s1.jpg" alt="Русский" /><a href="javascript:">Русский</a></li>
+                </ul>
+            </div>
+            <div id="navigation">
+                <ul>
+                    <li><a class="first" href="http://www.{{.HostRoot}}">网站首页</a></li>
+                    <li><a href="http://about.{{.HostRoot}}">走进{{$company}}</a></li>
+                    <li><a href="http://article.{{.HostRoot}}">公司图片</a></li>
+                    <li><a href="http://new.{{.HostRoot}}">企业资讯</a></li>
+                    <li><a href="http://product.{{.HostRoot}}">产品中心</a></li>
+                    <li><a href="http://ryzs.{{.HostRoot}}">荣誉证书</a></li>
+                    <li><a href="http://order.{{.HostRoot}}">在线订单</a> </li>
+                    <li><a href="http://network.{{.HostRoot}}">销售网络</a></li>
+                    <li><a href="http://contact.{{.HostRoot}}">联系我们</a></li>
+                </ul>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+</div>
+
+
+<div class="header">
+    <div id="onebyone_slider">
+        <div class="oneByOne_item">
+            <span class="ob1_title">{{$company}}科技</span>
+            <span class="ob1_description">自主研发设计阀门执行器，提供优质服务</span>
+            <span class="ob1_title">YUEZHONG TECH.</span>
+            <span class="ob1_description">DESIGN AND MANUFACTURE VALVE ACTUATORS, SUPPLY EXCELLENT SERVICE</span>
+            <img src="picture/2.png" class="ob1_img_device1" alt="MY-4WCB" />
+        </div>
+        <div class="oneByOne_item">
+            <span class="ob1_title">{{$company}}远航，共创辉煌</span>
+            <span class="ob1_description">高品质不锈钢 铸钢蜗轮箱 伞齿轮</span>
+            <span style="margin-top:-5px" class="ob1_title">VOYAGE FROM CHINA<br /> WIN TOGETHER WITH YOU</span>
+            <span class="ob1_description">HIGH QUALITY STAINLESS STEEL,CAST STEEL WORM GEAR ACTUATOR, BEVEL GEAR ACTUATOR </span>
+            <img src="picture/9.png" class="ob1_img_device1" alt="MY-8" />
+        </div>
+        <div class="oneByOne_item">
+            <span class="ob1_title">6000平方米车间，先进的生产设备</span>
+            <span class="ob1_description">产品已通过CE 国际质量认证</span>
+            <span style="margin-top:-5px" class="ob1_title">6000 SQ.M PLANT WITH <br />ADVANCED PRODUCING MACHINES</span>
+            <span class="ob1_description">PRODUCTS HAS PASSED CE INTERNATIONAL CERTIFICATION</span>
+            <img src="picture/8.png" class="ob1_img_device1" alt="MY-9-2" />
+        </div>
+    </div>
+</div>
+
+<!--头部结束-->
+<!--内容开始-->
+<div id="content" class="container">
+    <div id="content_top">
+        <a href="http://hxxfm.{{.HostRoot}}"><img src="picture/wlx.jpg" class="fl" alt="蜗轮箱" /></a>
+        <a href="http://dhzxfm.{{.HostRoot}}"><img src="picture/scl.jpg" class="fl" alt="伞齿轮" /></a>
+        <a href="http://products.{{.HostRoot}}"><img src="picture/new.jpg" class="fl" /></a>
+        <div class="clear"></div>
+    </div>
+    <div id="content_center">
+        <div id="content_center_left" class=" fl">
+            <div class="title">
+                <span class="fl" style="font-weight:bold"><h2>新闻中心</h2></span>
+                <img src="picture/news.jpg" alt="蜗轮箱,伞齿轮,阀门执行器,阀门驱动,蜗轮头新闻中心" />
+                <a href="http://new.{{.HostRoot}}" class="fr rfont">More</a>
+            </div>
+            <ul>
+                <li><h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='伞齿轮的加工方法有哪些'>伞齿轮的加工方法有哪些</a></h3></li>
+                <li><h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='伞齿轮的常见维修方法有哪些？'>伞齿轮的常见维修方法有哪些？</a></h3></li>
+                <li><h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='螺旋伞齿轮的特点及应用'>螺旋伞齿轮的特点及应用</a></h3></li>
+                <li><h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='伞齿轮的设计基准选择及预热处理方法'>伞齿轮的设计基准选择及预热处理方.</a></h3></li>
+                <li><h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='螺旋伞齿轮有哪些特点？'>螺旋伞齿轮有哪些特点？</a></h3></li>
+                <li><h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='阀门驱动装置故障原因及改进建议'>阀门驱动装置故障原因及改进建议</a></h3></li>
+                <li><h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='电动阀门驱动装置故障原因分析'>电动阀门驱动装置故障原因分析</a></h3></li>
+                <li><h3><a href="http://{{Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1}}" title='伞齿轮装配注意事项'>伞齿轮装配注意事项</a></h3></li>
+            </ul>
+        </div>
+        <div id="content_center_middle" class="fl">
+            <div class="title">
+                <span class="fl">关于我们<img src="picture/gywm.jpg" alt="{{$city}}{{$company}}公司简介"/></span>
+                <a href="http://about.{{.HostRoot}}" class="fr rfont" rel="nofollow">More</a>
+            </div>
+            <div id="gsjjInfo">
+                <img src="picture/index_gywm.jpg" class="fr" id="com" alt="{{$city}}{{$company}}机械科技有限公司公司简介" />
+                <p style="line-height:24px">{{$city}}{{$company}}机械科技有限公司,座落于中国{{$city}}“泵阀之乡”--瓯北镇，是一家集开发、设计、生产、销售为一体的阀门执行器企业。专业生产有<em>蜗轮箱、伞齿轮、阀门执行器、阀门驱动、蜗轮头</em>等,工厂占地面积6000平方米,生产设备精良,专业有素团队,产品现已通过CE认证和ISO9001质量体系认证,并获得五项专利。</p>
+            </div>
+        </div>
+        <div id="content_center_right" class="fr">
+            <div class="title">
+                <span class="fl">联系我们<img src="picture/lxwm.jpg" alt="{{$city}}{{$company}}机械联系方式"/></span>
+                <a href="http://contact.{{.HostRoot}}" class="fr rfont" rel="nofollow">More</a>
+            </div>
+            <p>
+                <span style="font-weight:bold">{{$city}}{{$company}}机械科技有限公司</span><br />
+                <label>手机：</label><span class="rfont">{{$tel}}</span><br />
+                <label>电话：</label><span class="rfont">{{$tel}}</span><br />
+                <label>传真：</label><span class="rfont">{{$tel}}</span><br />
+                <label>邮编：</label><span class="rfont">{{RandNumber 6 6}}</span><br />
+                <label>邮箱：</label><span class="rfont"><a href="mailto:sales@{{.HostRoot}}" rel="nofollow">sales@{{.HostRoot}}</a></span></p>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div id="content_bottom">
+        <div class="title">
+            <div>
+                <h2 class="fl bold_14">产品展示</h2><a class="fr rfont">More</a>
+            </div>
+        </div>
+        <div id="content_bottom_list">
+            <div id="button_left" class="fl both">
+                <img src="picture/anniu.jpg" alt="" />
+            </div>
+            <div id="middle_list" class="fl img_List">
+                <div class="img_box">
+                    {{- $url_po := Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <div class="for_img">
+                        <a href="http://{{$url_po}}" title="电站风门专用蜗轮箱"><img src="picture/20151016141439449.jpg" alt="电站风门专用蜗轮箱" /></a>
+                    </div>
+                    <div class="sypro">
+                        <a href="http://{{$url_po}}" title="电站风门专用蜗轮箱">电站风门专用蜗轮箱</a>
+                    </div>
+                </div>
+                <div class="img_box">
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <div class="for_img">
+                        <a href="http://{{$url_po}}" title="YZ-ZC&nbsp;全回转齿轮箱"><img src="picture/20178318447767.jpg" alt="YZ-ZC&nbsp;全回转齿轮箱" /></a>
+                    </div>
+                    <div class="sypro">
+                        <a href="http://{{$url_po}}" title="YZ-ZC&nbsp;全回转齿轮箱">YZ-ZC&nbsp;全回转齿轮箱</a>
+                    </div>
+                </div>
+                <div class="img_box">
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <div class="for_img">
+                        <a href="http://{{$url_po}}" title="带仪表伞齿轮，暗杆闸阀，地."><img src="picture/20151016143418687.jpg" alt="带仪表伞齿轮，暗杆闸阀，地." /></a>
+                    </div>
+                    <div class="sypro">
+                        <a href="http://{{$url_po}}" title="带仪表伞齿轮，暗杆闸阀，地.">带仪表伞齿轮，暗杆闸阀，地.</a>
+                    </div>
+                </div>
+                <div class="img_box">
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <div class="for_img">
+                        <a href="http://{{$url_po}}" title="管网伞齿轮"><img src="picture/20151016141934985.jpg" alt="管网伞齿轮" /></a>
+                    </div>
+                    <div class="sypro">
+                        <a href="http://{{$url_po}}" title="管网伞齿轮">管网伞齿轮</a>
+                    </div>
+                </div>
+                <div class="img_box">
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <div class="for_img">
+                        <a href="http://{{$url_po}}" title="拨叉式"><img src="picture/2015129151037829.jpg" alt="拨叉式" /></a>
+                    </div>
+                    <div class="sypro">
+                        <a href="http://{{$url_po}}" title="拨叉式">拨叉式</a>
+                    </div>
+                </div>
+                <div class="img_box">
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <div class="for_img">
+                        <a href="http://{{$url_po}}" title="MY-YZ手轮尺寸"><img src="picture/20201124165634190.jpg" alt="MY-YZ手轮尺寸" /></a>
+                    </div>
+                    <div class="sypro">
+                        <a href="http://{{$url_po}}" title="MY-YZ手轮尺寸">MY-YZ手轮尺寸</a>
+                    </div>
+                </div>
+                <div class="img_box">
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <div class="for_img">
+                        <a href="http://{{$url_po}}" title="BA-G蜗轮箱"><img src="picture/20201124165528113.jpg" alt="BA-G蜗轮箱" /></a>
+                    </div>
+                    <div class="sypro">
+                        <a href="http://{{$url_po}}" title="BA-G蜗轮箱">BA-G蜗轮箱</a>
+                    </div>
+                </div>
+                <div class="img_box">
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <div class="for_img">
+                        <a href="http://{{$url_po}}" title="YZ-ZC蜗轮箱"><img src="picture/20201124165038237.jpg" alt="YZ-ZC蜗轮箱" /></a>
+                    </div>
+                    <div class="sypro">
+                        <a href="http://{{$url_po}}" title="YZ-ZC蜗轮箱">YZ-ZC蜗轮箱</a>
+                    </div>
+                </div>
+
+                <div class="img_box">
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <div class="for_img">
+                        <a href="http://{{$url_po}}" title="YZ-ZC-D蜗轮箱"><img src="picture/2020112416494424.jpg" alt="YZ-ZC-D蜗轮箱" /></a>
+                    </div>
+                    <div class="sypro">
+                        <a href="http://{{$url_po}}" title="YZ-ZC-D蜗轮箱">YZ-ZC-D蜗轮箱</a>
+                    </div>
+                </div>
+                <div class="img_box">
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <div class="for_img">
+                        <a href="http://{{$url_po}}" title="MY-V-D蜗轮箱"><img src="picture/20201124164436400.jpg" alt="MY-V-D蜗轮箱" /></a>
+                    </div>
+                    <div class="sypro">
+                        <a href="http://{{$url_po}}" title="MY-V-D蜗轮箱">MY-V-D蜗轮箱</a>
+                    </div>
+                </div>
+                <div class="img_box">
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <div class="for_img">
+                        <a href="http://{{$url_po}}" title="MY-V-SD蜗轮箱"><img src="picture/20201124163619639.jpg" alt="MY-V-SD蜗轮箱" /></a>
+                    </div>
+                    <div class="sypro">
+                        <a href="http://{{$url_po}}" title="MY-V-SD蜗轮箱">MY-V-SD蜗轮箱</a>
+                    </div>
+                </div>
+                <div class="img_box">
+                    {{- $url_po = Replace (index (Split (RandKv "domain_200").val " ") 1) "x.com" .HostRoot 1 -}}
+                    <div class="for_img">
+                        <a href="http://{{$url_po}}" title="BA-Z蜗轮箱"><img src="picture/2020112416337680.jpg" alt="BA-Z蜗轮箱" /></a>
+                    </div>
+                    <div class="sypro">
+                        <a href="http://{{$url_po}}" title="BA-Z蜗轮箱">BA-Z蜗轮箱</a>
+                    </div>
+                </div>
+            </div>
+            <div id="button_right" class="fr both"><img src="picture/anniu.jpg" alt="" /></div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<!--内容结束-->
+<!--底部开始-->
+
+<div id="footer">
+    <div>
+        <p class="fl">
+            <span class="rfont"> Copyright @ 2014 </span><span style="font-weight:bold">{{$city}}{{$company}}机械科技有限公司</span>-蜗轮箱,阀门驱动<span class="rfont"> All Rights Reserved.</span><br />
+            技术支持：<span>主营：<strong>蜗轮箱,蜗轮头,伞齿轮,阀门执行器,阀门驱动</strong> </span>
+        </p>
+        <div class="clear"></div>
+    </div>
+</div>
+</body>
+</html>
