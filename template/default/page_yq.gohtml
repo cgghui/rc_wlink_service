@@ -1,0 +1,520 @@
+﻿{{- $city := .StoreGet "city" false -}}
+{{- $company := .StoreGet "company" false -}}
+{{- if eq $city "" -}}
+    {{- $city = index (Split (RandKv "domain_all").val " ") 2 -}}
+    {{- .StoreSet "title" $city false -}}
+{{- end -}}
+{{- if eq $company "" -}}
+    {{- $company = RandLib "company_name" -}}
+    {{- .StoreSet "company" $company false -}}
+{{- end -}}
+{{- $tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8) -}}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script language="javaScript" src="js/jschat.js"></script><script language="javaScript">function ChatBoxClickGXH() { DoChatBoxClickGXH('http://chat.chem17.com',479161) }</script><script type="text/javascript" src="js/jquery.js"></script><script type="text/javascript" src="js/9fff7346a4de44f4b8286978ffcdc7af.js"></script><script type="text/javascript" src="js/720072dab6e74b2896ce194181fdedcf.js"></script><meta name="baidu-site-verification" content="code-m8r31y6EsN" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <TITLE>化妆品冷冻干燥机-一平方冷冻干燥机-冬虫夏草冷冻干燥机-{{$city}}{{$company}}仪器设备有限公司</TITLE>
+    <META NAME="Description" CONTENT="{{$city}}{{$company}}仪器设备有限公司(www.{{.HostRoot}})主营化妆品冷冻干燥机,一平方冷冻干燥机,冬虫夏草冷冻干燥机等产品,我们信奉以诚信广交好友,为实验室行业共谋长久发展,欢迎四海朋友垂询">
+    <META NAME="Keywords" CONTENT="化妆品冷冻干燥机,一平方冷冻干燥机,冬虫夏草冷冻干燥机">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    <script type="text/javascript" src="js/jquery.pack.js"></script>
+    <script type="text/javascript" src="/skins/475671/js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <!--导航当前状态 JS-->
+    <script language="javascript" type="text/javascript">
+        var nav= '1';
+    </script>
+    <!--导航当前状态 JS END-->
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+</head>
+
+<body>
+<!--头部开始-->
+<div id="header">
+    <div class="head_t">
+        <div class="w1200"> <span class="fl">您好，欢迎访问{{$city}}{{$company}}仪器设备有限公司！</span> <span class="top_tel fr">咨询热线：<b>{{$tel}}</b></span></div>
+    </div>
+    <div class="head_b w1200">
+        <div class="logo fl"><a href="/"><img src="picture/logo.jpg" alt="{{$city}}{{$company}}仪器设备有限公司" /></a></div>
+        <div class="nav fr">
+            <ul>
+                <li id="navId1"><a href="http://{{.HostCurrent}}">网站首页</a></li>
+                <li id="navId2"><a href="http://aboutus.{{.HostRoot}}">关于我们</a></li>
+                <li id="navId3"><a href="http://products.{{.HostRoot}}">产品展示</a></li>
+                <li id="navId4"><a href="http://news.{{.HostRoot}}">新闻资讯</a></li>
+                <li id="navId5"><a href="http://article.{{.HostRoot}}">技术文章</a></li>
+                <li id="navId6" ><a href="http://order.{{.HostRoot}}">在线留言</a></li>
+                <li id="navId7" ><a href="http://contact.{{.HostRoot}}">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--头部结束-->
+<script language="javascript" type="text/javascript">
+    try {
+        document.getElementById("navId" + nav).className = "nav_active";
+    }
+    catch (e) {}
+</script>
+<script src="js/mystat.aspx"></script>
+
+<!--首页banner开始-->
+<div id="banner_big" class="clear clearfix">
+    <div class="picBtnLeft">
+        <!--数字按钮-->
+        <div class="hd">
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!--箭头按钮-->
+        <div class="hdd"> <a class="prev"></a> <a class="next"></a> </div>
+        <div class="bd">
+            <ul>
+                <li>
+                    <div class="bg"></div>
+                    <div class="pic"><img src="picture/banner1.jpg"/></div>
+                    <div class="title"><a></a></div>
+                </li>
+                <li>
+                    <div class="bg"></div>
+                    <div class="pic"><img src="picture/banner2.jpg"/></div>
+                    <div class="title"><a></a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">jQuery("#banner_big .picBtnLeft").slide({ mainCell:".bd ul",autoPlay:true });</script>
+</div>
+<!--banner结束-->
+
+<!--主营产品和搜索框开始-->
+<div class="mainprotl clear clearfix">
+    <div class="w1235 mainpro">
+        <div class="search">
+            <form name="form1" method="post" action="/products.html" onsubmit="return checkform(form1)">
+                <input class="ss_input" type="text" name="keyword" value="输入您需要的关键词" autocomplete="off" onfocus="if(this.value=='输入您需要的关键词'){this.value='';this.style.color='#a4ada9' }" onblur="if(this.value=='') if(this.value=='')">
+                <input name="" type="submit" class="ss_an" value="搜 索">
+            </form>
+        </div>
+    </div>
+</div>
+<!--主营产品和搜索框结束-->
+
+<!--首页推荐产品开始-->
+<div class="sy_tjcp clear clearfix">
+    <div class="w1200">
+        <div class="sy_tlt"> <span>推荐产品</span>
+            <p>roducts</p>
+        </div>
+        <div class="pro_box">
+            <div class="pro_scorll">
+                <div class="tempWrap">
+                    <ul class="clearfix">
+
+
+                        <li>
+                            <div class="proimg_bk"><a href="/Products-35714268.html" class="proimg"><img src="picture/637515870271392226496_250_250_5.jpg" alt="分配型智能蠕动泵"><i class="iblock"></i></a></div>
+                            <p><a href="/Products-35714268.html" >分配型智能蠕动泵</a></p>
+
+
+                        </li>
+
+                        <li>
+                            <div class="proimg_bk"><a href="/Products-35707046.html" class="proimg"><img src="picture/637514036991189346468_250_250_5.jpg" alt="防爆电机型蠕动泵"><i class="iblock"></i></a></div>
+                            <p><a href="/Products-35707046.html" >防爆电机型蠕动泵</a></p>
+
+
+                        </li>
+
+                        <li>
+                            <div class="proimg_bk"><a href="/Products-35668760.html" class="proimg"><img src="picture/637505605520887545461_250_250_5.jpg" alt="冬虫夏草冷冻干燥机"><i class="iblock"></i></a></div>
+                            <p><a href="/Products-35668760.html" >冬虫夏草冷冻干燥机</a></p>
+
+
+                        </li>
+
+
+
+                        <li>
+                            <div class="proimg_bk"><a href="/Products-35735904.html" class="proimg"><img src="picture/637520279004001243416_250_250_5.jpg" alt="一平方冷冻干燥机"><i class="iblock"></i></a></div>
+                            <p><a href="/Products-35735904.html" >一平方冷冻干燥机</a></p>
+
+
+                        </li>
+
+                        <li>
+                            <div class="proimg_bk"><a href="/Products-35735769.html" class="proimg"><img src="picture/637520279004001243416_250_250_5.jpg" alt="化妆品冷冻干燥机"><i class="iblock"></i></a></div>
+                            <p><a href="/Products-35735769.html" >化妆品冷冻干燥机</a></p>
+
+
+                        </li>
+
+                        <li>
+                            <div class="proimg_bk"><a href="/Products-36158747.html" class="proimg"><img src="picture/637515870271392226496_250_250_5.jpg" alt="培养基定时定量分装蠕动泵BT600F"><i class="iblock"></i></a></div>
+                            <p><a href="/Products-36158747.html" >培养基定时定量分装蠕动泵BT600F</a></p>
+
+
+                        </li>
+
+
+
+                        <li>
+                            <div class="proimg_bk"><a href="/Products-36112126.html" class="proimg"><img src="picture/637527975069410142331_250_250_5.jpg" alt="一平方蛋白冻干粉中型真空冷冻干燥机"><i class="iblock"></i></a></div>
+                            <p><a href="/Products-36112126.html" >一平方蛋白冻干粉中型真空冷冻干燥机</a></p>
+
+
+                        </li>
+
+                        <li>
+                            <div class="proimg_bk"><a href="/Products-36112027.html" class="proimg"><img src="picture/637592012472240592319_250_250_5.jpg" alt="化妆品冻干粉一平方自动压盖冷冻干燥机"><i class="iblock"></i></a></div>
+                            <p><a href="/Products-36112027.html" >化妆品冻干粉一平方自动压盖冷冻干燥机</a></p>
+
+
+                        </li>
+
+                        <li>
+                            <div class="proimg_bk"><a href="/Products-36009797.html" class="proimg"><img src="picture/637545995461190126718_250_250_5.jpg" alt="化妆品冷冻干燥机一平方冻干粉压盖冻干机"><i class="iblock"></i></a></div>
+                            <p><a href="/Products-36009797.html" >化妆品冷冻干燥机一平方冻干粉压盖冻干机</a></p>
+
+
+                        </li>
+
+
+
+                        <li>
+                            <div class="proimg_bk"><a href="/Products-35854107.html" class="proimg"><img src="picture/637546003770948660466_250_250_5.jpg" alt="冬虫夏草低温干燥机6个盘子真空冻干机"><i class="iblock"></i></a></div>
+                            <p><a href="/Products-35854107.html" >冬虫夏草低温干燥机6个盘子真空冻干机</a></p>
+
+
+                        </li>
+
+                        <li>
+                            <div class="proimg_bk"><a href="/Products-35775634.html" class="proimg"><img src="picture/637527975069410142331_250_250_5.jpg" alt="一平方生物多肽冷冻干燥机LGJ-100F"><i class="iblock"></i></a></div>
+                            <p><a href="/Products-35775634.html" >一平方生物多肽冷冻干燥机LGJ-100F</a></p>
+
+
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="pro_btn"> <a href="javascript:;" class="pro_left"></a> <a href="javascript:;" class="pro_right"></a> </div>
+        </div>
+    </div>
+</div>
+
+<!--首页产品展示开始-->
+<div class="index_pro clear clearfix">
+    <div class="w1200">
+        <div class="sy_tlt"> <span>产品展示</span>
+            <p>roducts</p>
+        </div>
+        <div class="index_list">
+            <ul>
+
+                <li><a href="/ParentList-2224701.html">真空冷冻干燥机</a></li>
+
+                <li><a href="/ParentList-2224704.html">生命科学仪器</a></li>
+
+                <li><a href="/ParentList-2224707.html">实验室仪器设备</a></li>
+
+                <li><a href="/ParentList-2224708.html">恒温培养箱</a></li>
+
+                <li><a href="/ParentList-2224711.html">恒温干燥箱</a></li>
+
+                <li><a href="/ParentList-2224713.html">低温恒温制冷仪器</a></li>
+
+                <li><a href="/ParentList-2224714.html">电子分析天平</a></li>
+
+                <li><a href="/ParentList-2224715.html">光学光谱仪器</a></li>
+
+                <li><a href="/ParentList-2233047.html">洁净实验室仪器</a></li>
+
+            </ul>
+        </div>
+        <div class="index-proimg clear clearfix">
+            <ul>
+
+
+                <li>
+                    <div class="proimg_bk"><a href="/Products-35714268.html" class="proimg"><img src="picture/637515870271392226496_250_250_5.jpg" alt="BT100F分配型智能蠕动泵"><i class="iblock"></i></a></div>
+                    <p><a href="/Products-35714268.html" >分配型智能蠕动泵</a></p>
+
+
+                </li>
+
+                <li>
+                    <div class="proimg_bk"><a href="/Products-35707046.html" class="proimg"><img src="picture/637514036991189346468_250_250_5.jpg" alt="FG600S-W3防爆电机型蠕动泵"><i class="iblock"></i></a></div>
+                    <p><a href="/Products-35707046.html" >防爆电机型蠕动泵</a></p>
+
+
+                </li>
+
+                <li>
+                    <div class="proimg_bk"><a href="/Products-35668760.html" class="proimg"><img src="picture/637505605520887545461_250_250_5.jpg" alt="LGJ-50FD冬虫夏草冷冻干燥机"><i class="iblock"></i></a></div>
+                    <p><a href="/Products-35668760.html" >冬虫夏草冷冻干燥机</a></p>
+
+
+                </li>
+
+
+
+                <li>
+                    <div class="proimg_bk"><a href="/Products-35735904.html" class="proimg"><img src="picture/637520279004001243416_250_250_5.jpg" alt="LGJ-100F普通型一平方冷冻干燥机"><i class="iblock"></i></a></div>
+                    <p><a href="/Products-35735904.html" >一平方冷冻干燥机</a></p>
+
+
+                </li>
+
+                <li>
+                    <div class="proimg_bk"><a href="/Products-35735769.html" class="proimg"><img src="picture/637520279004001243416_250_250_5.jpg" alt="LGJ-100F压盖型化妆品冷冻干燥机"><i class="iblock"></i></a></div>
+                    <p><a href="/Products-35735769.html" >化妆品冷冻干燥机</a></p>
+
+
+                </li>
+
+                <li>
+                    <div class="proimg_bk"><a href="/Products-36657719.html" class="proimg"><img src="picture/637654231371701775232_250_250_5.jpg" alt="胶体金中试真空冷冻干燥机价格"><i class="iblock"></i></a></div>
+                    <p><a href="/Products-36657719.html" >胶体金中试真空冷冻干燥机价格</a></p>
+
+
+                </li>
+
+
+
+                <li>
+                    <div class="proimg_bk"><a href="/Products-36657708.html" class="proimg"><img src="picture/637545136483608884271_250_250_5.jpg" alt="西林瓶冻干粉压塞中型冷冻干燥机价格"><i class="iblock"></i></a></div>
+                    <p><a href="/Products-36657708.html" >西林瓶冻干粉压塞中型冷冻干燥机价格</a></p>
+
+
+                </li>
+
+                <li>
+                    <div class="proimg_bk"><a href="/Products-36657678.html" class="proimg"><img src="picture/637545242614076286495_250_250_5.jpg" alt="4个盘子虫草真空冷冻干燥机价格"><i class="iblock"></i></a></div>
+                    <p><a href="/Products-36657678.html" >4个盘子虫草真空冷冻干燥机价格</a></p>
+
+
+                </li>
+
+                <li>
+                    <div class="proimg_bk"><a href="/Products-36657665.html" class="proimg"><img src="picture/637546003775004712734_250_250_5.jpg" alt="低温干燥虫草冷冻干燥机6个盘子中型冻干机"><i class="iblock"></i></a></div>
+                    <p><a href="/Products-36657665.html" >低温干燥虫草冷冻干燥机6个盘子中型冻干机</a></p>
+
+
+                </li>
+
+
+
+                <li>
+                    <div class="proimg_bk"><a href="/Products-36657658.html" class="proimg"><img src="picture/637648143257125178707_250_250_5.jpg" alt="0.2平米压塞多肽冻干粉真空冷冻干燥机"><i class="iblock"></i></a></div>
+                    <p><a href="/Products-36657658.html" >0.2平米压塞多肽冻干粉真空冷冻干燥机</a></p>
+
+
+                </li>
+
+                <li>
+                    <div class="proimg_bk"><a href="/Products-36657649.html" class="proimg"><img src="picture/637505604206094261466_250_250_5.jpg" alt="生物冻干粉中型冷冻干燥机0.4平米价格"><i class="iblock"></i></a></div>
+                    <p><a href="/Products-36657649.html" >生物冻干粉中型冷冻干燥机0.4平米价格</a></p>
+
+
+                </li>
+
+                <li>
+                    <div class="proimg_bk"><a href="/Products-36657634.html" class="proimg"><img src="picture/637528884352257851298_250_250_5.jpg" alt="自动压盖0.3平米硅油加热冷冻干燥机"><i class="iblock"></i></a></div>
+                    <p><a href="/Products-36657634.html" >自动压盖0.3平米硅油加热冷冻干燥机</a></p>
+
+
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+<!--首页产品展示结束-->
+
+<!--横幅开始-->
+<div class="hengfu"></div>
+<!--横幅结束-->
+
+<!--首页关于我们开始-->
+<div class="index_about clear clearfix">
+    <div class="w1200 about_box">
+        <div class="con_syabout">
+            <div class="con_left_about">
+                <div class="about_tlt"><b>{{$city}}{{$company}}仪器设备有限公司</b></div>
+                <p class="desc">
+                    {{$city}}{{$company}}仪器设备有限公司是实验室仪器设备集成供应商，主要经营冷冻干燥机、低温冷却液循环泵、低温恒温槽、生命科学仪器、生物实验室仪器、洁净实验室仪器等，主要面向生命科学、食品营养、制药化工、疾控中心、生物技术、生物科技等领域。公司以诚信立命、以信誉发展，广结天下顾客朋友，为生命科学、食品营养、生物科学等领域提供性价比优良的实验室仪器设备。一次合作，永结挚友。我们信奉以诚信广交好友，为实验室行业共谋长久发展，欢迎四海朋友垂询。
+                </p>
+                <a href="/aboutus.html" class="btn-more1" target="_blank">了解更多 +</a> </div>
+            <div class="con_img_about"><img src="picture/women.jpg"></div>
+        </div>
+    </div>
+</div>
+<!--首页关于我们结束-->
+
+<!--首页新闻开始-->
+<div class="news-wrapper clearfix">
+    <div class="w1200">
+        <div class="sy_tlt1"><span>新闻中心</span>
+            <p>ews center</p>
+        </div>
+        <div class="news_box">
+            <div class="new fl" id="news_group">
+                <div class="news02-til clearfix">
+                    <div class="h2 fl">新闻资讯</div>
+                    <a href="/news.html" class="nt-more fr">MORE&nbsp;+</a> </div>
+                <div class="n_con">
+
+                    <div class="clear"></div>
+                    <ul>
+
+                        <li><span class="fr">2021-12-20</span><a href="/News-1381672.html" >低温冷却循环泵的主要特点和功能设计特性说明</a></li>
+
+                        <li><span class="fr">2021-11-22</span><a href="/News-1375706.html" >微生物限度检验仪的技术特点和使用方法是怎样的</a></li>
+
+                        <li><span class="fr">2021-10-23</span><a href="/News-1369886.html" >生化霉菌培养箱的主要应用和产品特点介绍</a></li>
+
+                        <li><span class="fr">2021-09-22</span><a href="/News-1363704.html" >电子分析天平的特点和内校外校要怎么做</a></li>
+
+                        <li><span class="fr">2021-08-25</span><a href="/News-1358308.html" >小型压力蒸汽灭菌器杀菌的原理和优点概述</a></li>
+
+                        <li><span class="fr">2021-07-15</span><a href="/News-1349767.html" >小型冻干机设计制造工艺和使用的整个过程</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="cinuo_wt fr">
+                <div class="news02-til clearfix">
+                    <div class="h2 fl">技术文章</div>
+                    <a href="/article.html" class="nt-more fr">MORE&nbsp;+</a> </div>
+                <div class="cinuo_wtm">
+
+                    <dl>
+                        <dt><a href="/Article-2885377.html" title="化妆品冷冻干燥机的系统缓存和常规冻干方法的优点">化妆品冷冻干燥机的系统缓存和常规冻干方法的优点</a><span>2021-12-24</span></dt>
+                        <dd>化妆品冷冻干燥机是利用水三相态在不同温度和真空环境下相互转换的原理。随着冻干技术发展，经过不断优化技术工艺，目前冻干机广泛应用于化妆品行业，比如化妆品冻干粉，冻干面膜、化妆品冻干片和化妆品冻干球等冻干物品，因天然，不用添...</dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="/Article-2853065.html" title="实验室冷冻干燥机的主要特点及从功能上分类介绍">实验室冷冻干燥机的主要特点及从功能上分类介绍</a><span>2021-11-25</span></dt>
+                        <dd>实验室冷冻干燥机是实验室真空冷冻干燥的一种装置，主要用于实验研发真空冷冻干燥物料用途。工作原理是：先把含有水分实验的物料进行预冻结晶成固态，然后在真空环境下进行一次干燥和解析干燥，直接在固态升华成气体的除去水分，得到含水...</dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="/Article-2818608.html" title="高温高压消毒锅的产品优点和全自动控制系统说明">高温高压消毒锅的产品优点和全自动控制系统说明</a><span>2021-10-25</span></dt>
+                        <dd>高温高压消毒锅由锅体、锅盖、开启装置、锁紧楔块、安全联锁装置、轨道、灭菌筐、蒸汽喷管及若干管口等组成。锅盖密封采用充气式硅橡胶耐温密封圈，密封可靠，使用寿命长。高温高压消毒锅的产品优点：1.本设备具备双层水浴式杀菌锅的特...</dd>
+                    </dl>
+
+                    <dl>
+                        <dt><a href="/Article-2790124.html" title="尘埃粒子计数器在日常使用和保养中要注意哪几点">尘埃粒子计数器在日常使用和保养中要注意哪几点</a><span>2021-09-24</span></dt>
+                        <dd>尘埃粒子计数器根据颗粒的光散原理，即空气中的尘埃粒子在一定强度的光束照射下，向其周围空间散射出与其粒径成一定比例关系的光通量的原理而设计的。用于室内空气质量和工业卫生相关的任务，一个数组，如定位来源的颗粒排放和气溶胶的运...</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--首页新闻结束-->
+
+<!--底部开始-->
+<div class="g_ft f_fw">
+    <div class="w1200 f_pr">
+        <div class="m_fnav "> <a href="/">网站首页</a> <a href="/aboutus.html" rel="nofollow">关于我们</a> <a href="/products.html">产品展示</a> <a href="/news.html">新闻资讯</a> <a href="/article.html">技术文章</a> <a href="/honor.html" rel="nofollow">荣誉资质</a> <a href="/order.html" rel="nofollow">在线留言</a> <a href="/contact.html" rel="nofollow">联系我们</a></div>
+        <div class="f_ftcon">
+            <ul class="f_cb">
+                <li><em><img alt="邮箱" src="picture/ftico3.png"></em>邮箱<b>649570722@qq.com</b></li>
+                <li class="ftico4"><em><img alt="地址" src="picture/ftico4.png"></em>公司地址<b>郑州市惠济区新城路24号</b></li>
+            </ul>
+            <div class="cpr"> &copy; 2022 版权所有：{{$city}}{{$company}}仪器设备有限公司&nbsp;&nbsp;&nbsp;备案号：<a target="_blank" href="http://beian.miit.gov.cn/" rel="nofollow">豫ICP备2021006420号-1</a>&nbsp;&nbsp;&nbsp;<a href="/sitemap.xml" target="_blank">sitemap.xml</a>&nbsp;&nbsp;&nbsp;<a href="http://www.chem17.com/login" target="_blank" rel="nofollow">管理登陆</a>&nbsp;&nbsp;&nbsp;技术支持：<a href="http://www.chem17.com" target="_blank" rel="nofollow">化工仪器网</a>&nbsp;&nbsp; <a href="javascript:void(0);" target="_blank" title="">&nbsp;&nbsp;</a>&nbsp;&nbsp; </div>
+        </div>
+        <div class="m_code">
+            <ul class="codelst f_cb">
+                <li class="code2"><em>公众号二维码</em><img src="picture/code.jpg"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--底部结束-->
+
+<!--网站漂浮 begin-->
+<div class="pf_new">
+    <div class="hd"><p>联系我们</p><span>contact us</span><em class="close"></em></div>
+    <div class="conn">
+        <div class="lxr">
+            <!--<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=649570722&amp;site=qq&amp;menu=yes" target="_blank" class="qq" rel="nofollow"><img src="picture/qq.png" title="QQ交谈">QQ交谈</a>-->
+            <a onclick="ChatBoxClickGXH()" href="#" class="zx" target="_self" rel="nofollow"><img src="picture/zx2.png" title="点击这里给我发消息">在线交流</a>
+        </div>
+        <div class="wx"><p><img src="picture/code.jpg" /><i class="iblock"></i></p><span>扫一扫，<em>关注</em>我们</span></div>
+    </div>
+    <div class="bd"><a href="javascript:goTop();" rel="nofollow"><p></p><span>返回顶部</span></a></div>
+</div>
+<div class="pf_new_bx"><p></p><span>联<br />系<br />我<br />们</span><em></em></div>
+<!--网站漂浮 end-->
+
+<script type="text/javascript" src="js/pt_js.js"></script>
+<!--友情链接开始-->
+<div class="g_link f_fw">
+    <div class="w1200">
+        <div class="link_bt"><b>友情链接</b></div>
+        <ul class="link_c">
+            <li class="clearfix">
+
+                <a href="http://www.yuken-wx.com" target="_blank">单片电磁离合器</a>
+
+                <a href="http://www.shrd2008.com" target="_blank">管路五项测试</a>
+
+                <a href="http://www.lyxidanji.com" target="_blank">咸鸭蛋清洗机</a>
+
+                <a href="http://www.sdzccp.com" target="_blank">金花菜气泡清洗机</a>
+
+                <a href="http://www.ziboyuxin.com" target="_blank">单级反渗透设备</a>
+
+                <a href="http://www.sdymcc.com" target="_blank">工地施工围挡批发</a>
+
+                <a href="http://www.jkrly888.com" target="_blank">辊道窑</a>
+
+                <a href="http://www.shijilanjian.com/" target="_blank">聚氨酯防水涂料</a>
+
+                <a href="http://www.hzkingbox.com/" target="_blank">定制集装箱房</a>
+
+                <a href="http://www.ahjysk.com/" target="_blank">四轴五轴加工中心</a>
+
+            </li>
+        </ul>
+    </div>
+</div>
+<!--友情链接结束-->
+<script>
+    $('.pro_box').slide({
+        titCell:"",
+        mainCell:'.pro_scorll ul',
+        autoPage:true,
+        effect:"leftLoop",
+        autoPlay:true,
+        vis:4,
+        prevCell:'.pro_left',
+        nextCell:'.pro_right'
+    })
+</script>
+</body>
+</html>
