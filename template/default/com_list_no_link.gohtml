@@ -1,0 +1,6 @@
+{{- $host := .Request.Header.Get "Param-TopHost" -}}
+{{- range $company := (GetKv "company" 90) -}}
+    <li style="height: inherit;">
+        <div class="index_mq_box_name nowrap" style="text-align: left"><a target="_blank" title="{{$company.val}}">{{$company.val}}</a></div>
+    </li>
+{{- end -}}
