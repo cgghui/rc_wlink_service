@@ -1,6 +1,6 @@
 {{- $company := .StoreGet .HostCurrent false -}}
 {{- if eq $company "" -}}
-    {{- $company = Join "" (index (Split (RandKv "domain_all").val " ") 2) (RandLib "company_type") -}}
+    {{- $company = Join "" (index (Split (RandKv "domain_city").val " ") 2) (RandLib "company_type") -}}
     {{- .StoreSet .HostCurrent $company false -}}
 {{- end -}}
 {{$tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8)}}<!DOCTYPE html>
