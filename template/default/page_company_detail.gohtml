@@ -1,0 +1,138 @@
+{{- $city := .StoreGet "city" false -}}
+{{- $company := .StoreGet "company" false -}}
+{{- if eq $city "" -}}
+    {{- $city = index (Split (RandKv "domain_all").val " ") 2 -}}
+    {{- .StoreSet "title" $city false -}}
+{{- end -}}
+{{- if eq $company "" -}}
+    {{- $company = RandLib "company" -}}
+    {{- .StoreSet "company" $company false -}}
+{{- end -}}
+{{$tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8)}}<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{{$company}}</title>
+    <meta name="keywords" content="{{$company}}"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/company.css"/>
+</head>
+<body>
+<div class="head" id="head">
+    <div class="head_m">
+        <div class="head_r" id="destoon_member"></div>
+        <div class="head_l">
+            <ul>
+                <li class="h_fav"></li>
+                <li class="h_mobile"><a>手机版</a></li>
+                <li class="h_qrcode"><a>二维码</a></li>
+                <li class="h_cart"><a>购物车</a>(<span class="head_t" id="destoon_cart">0</span>)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="m head_s" id="destoon_space"></div>
+<div class="m">
+    <div id="search_tips" style="display:none;"></div>
+</div>
+<div id="destoon_qrcode" style="display:none;"></div>
+<div class="m">
+    <div id="search_module" style="display:none;" onmouseout="Dh('search_module');" onmouseover="Ds('search_module');">
+        <ul>
+            <li onclick="setModule('5','供应信息')">供应信息</li>
+            <li onclick="setModule('6','求购信息')">求购信息</li>
+            <li onclick="setModule('4','企业信息')">企业信息</li>
+            <li onclick="setModule('11','宣传专题')">宣传专题</li>
+            <li onclick="setModule('21','行业资讯')">行业资讯</li>
+            <li onclick="setModule('13','企业品牌')">企业品牌</li>
+            <li onclick="setModule('8','行业展会')">行业展会</li>
+        </ul>
+    </div>
+</div>
+<div class="m">
+    <div class="logo f_l"><a><img src="" alt="{{$company}}"/></a></div>
+    <form id="destoon_search" action="" onsubmit="return Dsearch(1);">
+        <input type="hidden" name="moduleid" value="4" id="destoon_moduleid"/>
+        <input type="hidden" name="spread" value="0" id="destoon_spread"/>
+        <div class="head_search">
+            <div>
+                <input name="kw" id="destoon_kw" type="text" class="search_i" value="请输入关键词" onfocus="if(this.value=='请输入关键词') this.value='';" onkeyup="STip(this.value);" autocomplete="off" x-webkit-speech="" speech=""/>
+                <input type="text" id="destoon_select" class="search_m" value="企业信息" readonly="" onfocus="this.blur();" onclick=""/>
+                <input type="submit" value=" " class="search_s"/>
+            </div>
+        </div>
+    </form>
+    <div class="head_search_kw f_l">
+        <a onclick=""><strong>推广</strong></a>
+        <a onclick=""><strong>热搜：</strong></a>
+        <span id="destoon_word"><a>陶瓷</a>&nbsp;<a>潮州</a>&nbsp;<a>卫浴</a>&nbsp;<a>日用陶瓷</a>&nbsp;<a>花盆</a>&nbsp;<a>雅</a>&nbsp;<a>日用</a>&nbsp;<a>不锈钢</a>&nbsp;<a>餐具</a>&nbsp;<a>欧式</a>&nbsp;</span>
+    </div>
+</div>
+<div class="m">
+    <div class="menu">
+        <ul>
+            <li><a><span>首页</span></a></li>
+            <li><a><span>供应信息</span></a></li>
+            <li><a><span>求购信息</span></a></li>
+            <li class="menuon"><a><span>企业信息</span></a></li>
+            <li><a><span>宣传专题</span></a></li>
+            <li><a><span>行业资讯</span></a></li>
+            <li><a><span>企业品牌</span></a></li>
+            <li><a><span>行业展会</span></a></li>
+        </ul>
+    </div>
+</div>
+<div class="m b20" id="headb"></div>
+<div class="m">
+    <div class="m_l f_l">
+        <div class="left_box">
+            <div class="pos"> 当前位置: <a>首页</a> &raquo; <a>企业信息</a> &raquo; {{$company}}</div>z
+            <div class="content c_b" id="content"><img src="" align="right"
+                                                       style="margin:5px 0 5px 10px;padding:5px;border:#C0C0C0 1px solid;"/>
+                <font face="Verdana, Arial"><span style="font-size: 16px;">&nbsp; &nbsp; &nbsp;{{$company}}  位于有着“瓷”称号—。是一家专业研发、生产、销售于一体的专业制造商。主要致力于陶瓷手柄系列产品刀、叉、勺；各式厨具套装。&nbsp;</span></font>
+                <br data-filtered="filtered"
+                    style="word-break: break-all; font-family: Verdana, Arial; text-size-adjust: none; font-size: 16px;"/>
+                <font face="Verdana, Arial"><span style="font-size: 16px;">&nbsp; &nbsp; &nbsp;陶瓷厂以产品质优价良，做工精细，风格独特，款式新颖，具有国际时尚最新潮流，深受国内外客户和消费者的青睐和热爱。秉承“顾客至上，锐意进取”的经营理念，坚持“客户第一”的原则为广大客户提供优质的服务。热诚欢迎各界前来参观、考察、洽谈业务。</span></font>
+            </div>
+            <br class="c_b"/> <br/></div>
+    </div>
+    <div class="m_n f_l"> &nbsp;</div>
+    <div class="m_r f_l">
+        <div class="contact_head"> 公司资料</div>
+        <div class="contact_body">
+            <ul>
+                <li class="f_b t_c" style="padding:3px 0 5px 0;font-size:16px;"><a target="_blank">{{$company}} </a></li>
+                <li class="f_green" style="padding-top:6px;padding-bottom:6px;"> &nbsp;<img src="picture/check-ok.png" align="absmiddle"/> 业资料过</li>
+                <li style="padding-top:6px;padding-bottom:6px;">
+                    <span>联系人</span>{{RandLib "xm"}}女士|先生&nbsp;&nbsp; <a target="_blank" rel="nofollow"><img src="" title="点击交谈/留言" alt="" align="absmiddle" onerror="this.src=DTPath+'file/image/web-off.gif';"/></a>&nbsp;
+                </li>
+                <li><span>会员</span> <a>[加为商友]</a> <a>[发送信件]</a></li>
+                <li><span>电话</span><img src="" align="absmddle"/></li>
+                <li><span>所在地</span>{{index (Split (RandKv "domain_all").val " ") 2}}</li>
+                <li><span>地址</span>州市枫区藏港发区</li>
+                <li title="专业生产陶瓷柄刀叉勺、陶瓷厨具套等系列"><span>主营行业</span>专业生产陶瓷柄刀叉勺、陶瓷厨具套等系列</li>
+                <li><span>公司类型</span>企业单位</li>
+                <li><span>经营模式</span>制造商</li>
+                <li><span>公司规模</span>{{RandInt 0 99}}-{{RandInt 100 999}}人</li>
+                <li><span>注册年份</span>2022</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="m b20" id="footb"></div>
+<div class="m">
+    <div class="foot_page"><a>网站首页</a> &nbsp;|&nbsp; <a>货运物流</a> &nbsp;|&nbsp; <a>黄金展位</a> &nbsp;|&nbsp; <a>版权隐私</a>&nbsp;|&nbsp; <a>使用协议</a> &nbsp;|&nbsp; <a>联系方式</a> &nbsp;|&nbsp; <a>关于我们</a> &nbsp;|&nbsp; <a>网站地图</a> &nbsp;|&nbsp;<a>排名推广</a> &nbsp;|&nbsp; <a>广告服务</a> &nbsp;|&nbsp; <a>积分换礼</a> &nbsp;|&nbsp; <a>网站留言</a> &nbsp;|&nbsp;<a>RSS订阅</a> &nbsp;|&nbsp; <a target="_blank">ICP备{{RandChar 6 6}}号</a></div>
+</div>
+<div class="m">
+    <div class="foot">
+        <div id="copyright">
+            <div align="center"> 声明:本站部分资料来源于互联网及企业自行提供,本站不承担任何法律责任 如有侵犯作者著作权,请及时与我们联系,我们将及时更正或删除。 <br/> <a href="http://www.{{.HostRoot}}">{{$company}}</a> <br/>(c){{$tel}}
+                {{.HostRoot}} B2B SYSTEM All
+                Rights Reserved 客服QQ： <a target="_blank"><img border="0" src="" alt="{{$company}}  " title="{{$company}}"/></a>
+                技术支持:{{$company}} <br/> <a><img src="" width="94" height="28" border="0"/></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
