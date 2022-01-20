@@ -5,7 +5,7 @@
     {{- .StoreSet "title" $city false -}}
 {{- end -}}
 {{- if eq $company "" -}}
-    {{- $company = RandLib .HostCurrent -}}
+    {{- $company = RandLib "company" -}}
     {{- .StoreSet .HostCurrent $company false -}}
 {{- end -}}
 {{$tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8)}}<!DOCTYPE html>
