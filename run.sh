@@ -14,6 +14,8 @@
 #chmod 0755 "./delete_domain.txt"
 #nohup "./clear" >> ./log_clear.log 2>&1 &
 
+chmod 0755 "./rc_wlink_service_v2"
+
 # shellcheck disable=SC2009
 ID=$(ps -ef | grep "./rc_wlink_service_v2" | grep -v "grep" | awk '{print $2}')
 if [ "$ID" ]; then
