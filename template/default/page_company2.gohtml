@@ -2,7 +2,7 @@
 {{- $company := .StoreGet "company" false -}}
 {{- if eq $city "" -}}
     {{- $city = index (Split (RandKv "domain_all").val " ") 2 -}}
-    {{- .StoreSet "title" $city false -}}
+    {{- .StoreSet "city" $city false -}}
 {{- end -}}
 {{- if eq $company "" -}}
     {{- $company = Join "" (RandLib "company_name") -}}
