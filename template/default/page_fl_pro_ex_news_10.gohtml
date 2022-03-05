@@ -1,0 +1,6 @@
+{{- $host := .Request.Header.Get "Param-TopHost" -}}
+{{- $now := TimeNow -}}
+{{- range $dq := (GetLib "fl_diqu" 30) -}}
+    {{- $url := Join "" "http://" $dq "." $host -}}
+    <li> <span>{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span> [<a href="{{$url}}/" class="black" target="_blank">{{RandLib "fl_diqu_name"}}</a>] <a href="{{Join "" "http://" (RandLib "fl_diqu") "." $host}}/" class="link" target="_blank">{{RandLib "company"}}</a> </li>
+{{ end -}}

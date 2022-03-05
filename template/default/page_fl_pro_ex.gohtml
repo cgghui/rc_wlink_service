@@ -1,4 +1,3 @@
-
 {{- $host := .Request.Header.Get "Param-TopHost" -}}
 {{- $domain := .Request.Header.Get "Param-Host" -}}
 {{- $title := .StoreGet "tit" false -}}
@@ -86,11 +85,8 @@
         </div>
         <div class="list clearfix">
             <ul class="clearfix">
-                {{- $now := TimeNow -}}
-                {{- range $dq := (GetLib "fl_diqu" 40) -}}
-                    {{- $url := Join "" "http://" $dq "." $host -}}
-                    <li> <span>{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span> [<a href="{{$url}}/" class="black" target="_blank">{{RandLib "fl_diqu_name"}}</a>] <a href="{{Join "" "http://" (RandLib "fl_diqu") "." $host}}/" class="link" target="_blank">{{RandLib "company"}}</a> </li>
-                {{ end -}}
+                {{- .LoadTmplHTML "page_fl_pro_ex_news_10" "page_fl_pro_ex_news_10" 3600 true false true -}}
+                {{- .LoadTmplHTML "page_fl_pro_ex_news_30" "page_fl_pro_ex_news_30" 604800 true false true -}}
             </ul>
         </div>
     </div>
