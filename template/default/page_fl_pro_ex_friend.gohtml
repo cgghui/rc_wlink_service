@@ -1,0 +1,8 @@
+{{- $host := .Request.Header.Get "Param-TopHost" -}}
+<div class="list clearfix">
+    <ul class="clearfix">
+        {{- range $area := (GetLib "fl_diqu" 50) -}}
+            <a href="http://{{$area}}.{{$host}}" class="link" target="_blank">{{RandLib "company"}}</a>
+        {{ end -}}
+    </ul>
+</div>
