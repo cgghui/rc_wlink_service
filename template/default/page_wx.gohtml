@@ -158,105 +158,116 @@
     <div class="w1200">
         <div class="column atcomBorder ">
             <div class="attitle">
-                <div class="subss"><h2 class="active"><a href="http://operate.yadut.com/">阅读推荐</a></h2></div>
-                <div class="subss"><h2><a href="http://daishu.yadut.com/" target="_blank">爱情说说</a></h2></div>
-                <div class="subss"><h2><a href="http://kanzi.yadut.com/" target="_blank">心情日记</a></h2></div>
+                <div class="subss"><h2 class="active"><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">阅读推荐</a></h2></div>
+                <div class="subss"><h2><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_blank">爱情说说</a></h2></div>
+                <div class="subss"><h2><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_blank">心情日记</a></h2></div>
             </div>
             <div class="wxArticle">
                 <ul class="wxUl">
                     <li>
+                        {{- $tit = RandLib "wx_title" -}}
                         <div class="wxItem clearfix">
                             <div class="img">
-                                <a href="http://dianliu.yadut.com/" title="为生活打拼的励志语句">
-                                    <img class="lazy" src="http://www.hxqba.com/d/file/sgss/2021-03-28/53435beafa69f42e5615f2175e9c445e.jpg" alt="为生活打拼的励志语句">
+                                <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" title="{{$tit}}">
+                                    <img class="lazy" src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}" alt="{{$tit}}">
                                 </a>
                             </div>
                             <div class="txt">
-                                <p class="t_name ellips"><a href="http://dixing.yadut.com/">给女友留言的小情话</a></p>
-                                <p class="t_intro">今天好凉快的说说</p>
+                                <p class="t_name ellips"><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{RandLib "wx_title"}}</a></p>
+                                <p class="t_intro">{{RandLib "wx_title"}}</p>
                                 <p class="share_detail">
-                                    <span class="attime">发布时间：2022-02-22 05:06</span>
+                                    <span class="attime">发布时间：{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span>
                                     <span class="atshare"><i class="weixinqunICON views"></i></span>
                                 </p>
                             </div>
                         </div>
                     </li>
                     <li>
+                        {{- $tit = RandLib "wx_title" -}}
                         <div class="wxItem clearfix">
                             <div class="img">
-                                <a href="http://duoxian.yadut.com/" title="空间说说看不到浏览量">
-                                    <img class="lazy" src="http://www.hxqba.com/d/file/aiqing/2020-04-16/02b4c14f8209b79902a4c33ddb5adeea.jpg" alt="空间说说看不到浏览量">
+                                <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" title="{{$tit}}">
+                                    <img class="lazy" src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}" alt="{{$tit}}">
                                 </a>
                             </div>
                             <div class="txt">
-                                <p class="t_name ellips"><a href="http://chisheng.yadut.com/">适合发小酒馆的文艺句子</a></p>
-                                <p class="t_intro">带儿子理发的说说</p>
-                                <p class="share_detail"><span class="attime">发布时间：2022-02-22 04:46</span>
-                                    <span class="atshare"> <i class="weixinqunICON views"></i></span>
+                                <p class="t_name ellips"><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{RandLib "wx_title"}}</a></p>
+                                <p class="t_intro">{{RandLib "wx_title"}}</p>
+                                <p class="share_detail">
+                                    <span class="attime">发布时间：{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span>
+                                    <span class="atshare"><i class="weixinqunICON views"></i></span>
                                 </p>
                             </div>
                         </div>
                     </li>
                     <li>
+                        {{- $tit = RandLib "wx_title" -}}
                         <div class="wxItem clearfix">
                             <div class="img">
-                                <a href="http://duoxian.yadut.com/" title="空间说说看不到浏览量">
-                                    <img class="lazy" src="http://www.hxqba.com/d/file/aiqing/2020-04-16/02b4c14f8209b79902a4c33ddb5adeea.jpg" alt="空间说说看不到浏览量">
+                                <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" title="{{$tit}}">
+                                    <img class="lazy" src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}" alt="{{$tit}}">
                                 </a>
                             </div>
                             <div class="txt">
-                                <p class="t_name ellips"><a href="http://chisheng.yadut.com/">适合发小酒馆的文艺句子</a></p>
-                                <p class="t_intro">带儿子理发的说说</p>
-                                <p class="share_detail"><span class="attime">发布时间：2022-02-22 04:46</span>
-                                    <span class="atshare"> <i class="weixinqunICON views"></i></span>
+                                <p class="t_name ellips"><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{RandLib "wx_title"}}</a></p>
+                                <p class="t_intro">{{RandLib "wx_title"}}</p>
+                                <p class="share_detail">
+                                    <span class="attime">发布时间：{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span>
+                                    <span class="atshare"><i class="weixinqunICON views"></i></span>
                                 </p>
                             </div>
                         </div>
                     </li>
                     <li>
+                        {{- $tit = RandLib "wx_title" -}}
                         <div class="wxItem clearfix">
                             <div class="img">
-                                <a href="http://duoxian.yadut.com/" title="空间说说看不到浏览量">
-                                    <img class="lazy" src="http://www.hxqba.com/d/file/aiqing/2020-04-16/02b4c14f8209b79902a4c33ddb5adeea.jpg" alt="空间说说看不到浏览量">
+                                <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" title="{{$tit}}">
+                                    <img class="lazy" src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}" alt="{{$tit}}">
                                 </a>
                             </div>
                             <div class="txt">
-                                <p class="t_name ellips"><a href="http://chisheng.yadut.com/">适合发小酒馆的文艺句子</a></p>
-                                <p class="t_intro">带儿子理发的说说</p>
-                                <p class="share_detail"><span class="attime">发布时间：2022-02-22 04:46</span>
-                                    <span class="atshare"> <i class="weixinqunICON views"></i></span>
+                                <p class="t_name ellips"><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{RandLib "wx_title"}}</a></p>
+                                <p class="t_intro">{{RandLib "wx_title"}}</p>
+                                <p class="share_detail">
+                                    <span class="attime">发布时间：{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span>
+                                    <span class="atshare"><i class="weixinqunICON views"></i></span>
                                 </p>
                             </div>
                         </div>
                     </li>
                     <li>
+                        {{- $tit = RandLib "wx_title" -}}
                         <div class="wxItem clearfix">
                             <div class="img">
-                                <a href="http://duoxian.yadut.com/" title="空间说说看不到浏览量">
-                                    <img class="lazy" src="http://www.hxqba.com/d/file/aiqing/2020-04-16/02b4c14f8209b79902a4c33ddb5adeea.jpg" alt="空间说说看不到浏览量">
+                                <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" title="{{$tit}}">
+                                    <img class="lazy" src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}" alt="{{$tit}}">
                                 </a>
                             </div>
                             <div class="txt">
-                                <p class="t_name ellips"><a href="http://chisheng.yadut.com/">适合发小酒馆的文艺句子</a></p>
-                                <p class="t_intro">带儿子理发的说说</p>
-                                <p class="share_detail"><span class="attime">发布时间：2022-02-22 04:46</span>
-                                    <span class="atshare"> <i class="weixinqunICON views"></i></span>
+                                <p class="t_name ellips"><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{RandLib "wx_title"}}</a></p>
+                                <p class="t_intro">{{RandLib "wx_title"}}</p>
+                                <p class="share_detail">
+                                    <span class="attime">发布时间：{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span>
+                                    <span class="atshare"><i class="weixinqunICON views"></i></span>
                                 </p>
                             </div>
                         </div>
                     </li>
                     <li>
+                        {{- $tit = RandLib "wx_title" -}}
                         <div class="wxItem clearfix">
                             <div class="img">
-                                <a href="http://duoxian.yadut.com/" title="空间说说看不到浏览量">
-                                    <img class="lazy" src="http://www.hxqba.com/d/file/aiqing/2020-04-16/02b4c14f8209b79902a4c33ddb5adeea.jpg" alt="空间说说看不到浏览量">
+                                <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" title="{{$tit}}">
+                                    <img class="lazy" src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}" alt="{{$tit}}">
                                 </a>
                             </div>
                             <div class="txt">
-                                <p class="t_name ellips"><a href="http://chisheng.yadut.com/">适合发小酒馆的文艺句子</a></p>
-                                <p class="t_intro">带儿子理发的说说</p>
-                                <p class="share_detail"><span class="attime">发布时间：2022-02-22 04:46</span>
-                                    <span class="atshare"> <i class="weixinqunICON views"></i></span>
+                                <p class="t_name ellips"><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{RandLib "wx_title"}}</a></p>
+                                <p class="t_intro">{{RandLib "wx_title"}}</p>
+                                <p class="share_detail">
+                                    <span class="attime">发布时间：{{TimeFormat "2006-01-02"}} {{RandInt 0 $now.Hour}}:{{RandInt 1 60}}</span>
+                                    <span class="atshare"><i class="weixinqunICON views"></i></span>
                                 </p>
                             </div>
                         </div>
