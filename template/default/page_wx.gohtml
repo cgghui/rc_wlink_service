@@ -1,0 +1,494 @@
+{{- $city := .StoreGet "city" false -}}
+{{- $company := .StoreGet "company" false -}}
+{{- if eq $city "" -}}
+    {{- $city = index (Split (RandKv "domain_all").val " ") 2 -}}
+    {{- .StoreSet "title" $city false -}}
+{{- end -}}
+{{- if eq $company "" -}}
+    {{- $company = RandLib "company_name" -}}
+    {{- .StoreSet "company" $company false -}}
+{{- end -}}
+{{$tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8)}}
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{$city}}{{$company}}工程有限公司</title>
+    <meta name="keywords" content="{{$city}}{{$company}}工程有限公司">
+    <meta name="description" content="{{$city}}{{$company}}工程有限公司">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="mobile-agent" content="format=html5; url=http://{{.HostRoot}}/">
+    <meta http-equiv="mobile-agent" content="format=xhtml; url=http://{{.HostRoot}}/">
+    <link rel="alternate" media="only screen and(max-width:640px)" href="http://{{.HostRoot}}/">
+    <link href="http://{{.HostRoot}}/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="http://{{.HostCurrent}}/css/css.css">
+</head>
+<body style="margin:0; padding:0;">
+<div class="nav">
+    <div class="menu">
+        <ul class="fl w1200">
+            <li class="active"><a href="http://{{.HostCurrent}}">首页</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">心情说说</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">搞笑说说</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">心情随笔</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">经典说说</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">心情短语</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">情绪管理</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">心情美文</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">伤感说说</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">心情语录</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">心情图片</a></li>
+        </ul>
+    </div>
+</div>
+<div class="p1">
+    <div class="left f_l">
+        <div class="fpic">
+            <a href="http://jiangjie.yadut.com/" title="关于友情的说说" target="_blank">
+                <p>关于友情的说说</p>
+                <img src="http://www.hxqba.com/d/file/qxgl/2021-06-09/a50e44a7034926e001f4d9ffadde77fc.jpg" alt="关于友情的说说" width="320" height="250">
+            </a>
+        </div>
+    </div>
+    <div class="center f_l">
+        <h3>
+            <a href="http://qichuang.yadut.com/" title="有妈就有家的心情短语"> <font color="#8cae12">有妈就有家的心情短语</font></a>
+        </h3>
+        <p><a href="http://shifeng.yadut.com/" title=""> <font color="#8cae12">最近胖了的说说</font></a></p>
+        <ul class="cont_390">
+            <li class="line"></li>
+            <li><i>2022-02-22</i> <a href="http://shifei.yadut.com/" title="女人到中年的经典感悟">女人到中年的经典感悟</a></li>
+            <li><i>2022-02-22</i> <a href="http://zuanta.yadut.com/" title="累了关机睡觉的说说">累了关机睡觉的说说</a></li>
+            <li><i>2022-02-22</i> <a href="http://randian.yadut.com/" title="说说简单有内涵的">说说简单有内涵的</a></li>
+            <li><i>2022-02-22</i> <a href="http://jiuzao.yadut.com/" title="深情的话朋友圈说说">深情的话朋友圈说说</a></li>
+            <li><i>2022-02-22</i> <a href="http://lundian.yadut.com/" title="宝宝生日快乐祝福语">宝宝生日快乐祝福语</a></li>
+            <li><i>2022-02-22</i> <a href="http://zhouxiang.yadut.com/" title="结束忙碌的一天感悟">结束忙碌的一天感悟</a></li>
+            <li><i>2022-02-22</i> <a href="http://dangdao.yadut.com/" title="晒闺蜜送礼物幽默说说">晒闺蜜送礼物幽默说说</a></li>
+            <li><i>2022-02-22</i> <a href="http://jiegao.yadut.com/" title="爱情句子表达心情甜蜜短句">2爱情句子表达心情甜蜜短句</a></li>
+            <li><i>2022-02-22</i> <a href="http://shanguang.yadut.com/" title="封存记忆的网名">封存记忆的网名</a></li>
+            <li><i>2022-02-22</i> <a href="http://bujiu.yadut.com/" title="处q友的个人介绍强势">处q友的个人介绍强势</a></li>
+            <li><i>2022-02-22</i> <a href="http://chengchong.yadut.com/" title="正能量文艺范简短句子">正能量文艺范简短句子</a></li>
+            <li><i>2022-02-22</i> <a href="http://shengpu.yadut.com/" title="形容太热的搞笑说说">形容太热的搞笑说说</a></li>
+        </ul>
+    </div>
+    <div class="right f_r">
+        <div id="txtMarqueeTop" class="sideBox">
+            <div class="hd"><h3><a href="http://pixiu.yadut.com/">最新心情说说</a></h3></div>
+            <div class="bd">
+                <ul>
+                    <li><span>2022-02-22</span> <a href="http://lianyungang.yadut.com/">朋友圈关于牛奶的说说</a></li>
+                    <li><span>2022-02-22</span> <a href="http://caoxie.yadut.com/">回忆小孩照片的说说</a></li>
+                    <li><span>2022-02-22</span> <a href="http://gouyuan.yadut.com/">qq被屏蔽了怎么看出来</a></li>
+                    <li><span>2022-02-22</span> <a href="http://yuyi.yadut.com/">发微信不回的心情说说</a></li>
+                    <li><span>2022-02-21</span> <a href="http://fupiao.yadut.com/">运动后流汗的心情说说</a></li>
+                    <li><span>2022-02-22</span> <a href="http://jiezhong.yadut.com/">春游的说说心情的句子</a></li>
+                    <li><span>2022-02-22</span> <a href="http://bibi.yadut.com/">女人中年危机说说</a></li>
+                    <li><span>2022-02-22</span> <a href="http://shenban.yadut.com/">强颜欢笑背后的心酸</a></li>
+                    <li><span>2022-02-22</span> <a href="http://jun1liang.yadut.com/">出来吹吹风唯美的说说</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="p1">
+    <div class="w386 fl">
+        <div class="modbox"><h3><span class="tt">心情说说</span> <a href="http://huaji.yadut.com/" target="_blank"
+                                                                class="more">更多&gt;&gt;</a></h3>
+            <div class="info"><a href="http://keju.yadut.com/" title="不允许自己难过说说"> <img
+                            src="http://www.hxqba.com/d/file/xinqing/2021-06-27/d278c963dbe5e802c4f2462298e3a239.jpg"
+                            alt="不允许自己难过说说"> <span class="tt">不允许自己难过说说</span></a>
+                <p>　　关于友谊的说说短句</p></div>
+            <div class="box">
+                <ul class="cont_320">
+                    <li><a href="http://yuxu.yadut.com/">发体重数字的朋友圈</a> <span>2022-02-22</span></li>
+                    <li><a href="http://wangzi.yadut.com/">不要把脾气给最亲的人</a> <span>2022-02-22</span></li>
+                    <li><a href="http://perform.yadut.com/">好好上班努力赚钱说说</a> <span>2022-02-22</span></li>
+                    <li><a href="http://chunfeng.yadut.com/">晚安短句子简单致自己</a> <span>2022-02-22</span></li>
+                    <li><a href="http://quanbao.yadut.com/">孤独到没朋友的说说</a> <span>2022-02-21</span></li>
+                    <li><a href="http://wuman.yadut.com/">祝福宝贝成长的说说</a> <span>2022-02-21</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="w386 fl ml20">
+        <div class="modbox"><h3><span class="tt">搞笑说说</span> <a href="http://gumo.yadut.com/" target="_blank"
+                                                                class="more">更多&gt;&gt;</a></h3>
+            <div class="info"><a href="http://yaoming.yadut.com/" title="怀孕胖了发朋友圈的说说"> <img
+                            src="http://www.hxqba.com/d/file/gxss/2021-05-20/4844504fb4352a369236a341e255d7e6.jpg"
+                            alt="怀孕胖了发朋友圈的说说"> <span class="tt">怀孕胖了发朋友圈的说说</span></a>
+                <p>猖狂不怕死的说说</p></div>
+            <div class="box">
+                <ul class="cont_320">
+                    <li><a href="http://tigong.yadut.com/">友情图片带字唯美图片</a> <span>2022-02-22</span></li>
+                    <li><a href="http://chuanyan.yadut.com/">一个人一辈子的说说</a> <span>2022-02-22</span></li>
+                    <li><a href="http://zongkuo.yadut.com/">做人的道理人生感悟</a> <span>2022-02-22</span></li>
+                    <li><a href="http://kuozhan.yadut.com/">我就是我的说说坏脾气</a> <span>2022-02-22</span></li>
+                    <li><a href="http://dipu.yadut.com/">对待感情顺其自然</a> <span>2022-02-22</span></li>
+                    <li><a href="http://pingxian.yadut.com/">晒照片发朋友圈的句子</a> <span>2022-02-22</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="w386 fr">
+        <div class="modbox"><h3><span class="tt">心情随笔</span> <a href="http://shixiao.yadut.com/" target="_blank"
+                                                                class="more">更多&gt;&gt;</a></h3>
+            <div class="info"><a href="http://baohang.yadut.com/" title="伤感的说说心情一句话"> <img
+                            src="http://www.hxqba.com/d/file/xqsb/2021-04-18/1fc405f9bc2d1b6bc8655f43a8437166.jpg"
+                            alt="伤感的说说心情一句话"> <span class="tt">伤感的说说心情一句话</span></a>
+                <p>低血糖难受的说说</p></div>
+            <div class="box">
+                <ul class="cont_320">
+                    <li><a href="http://shengeng.yadut.com/">一个路痴的感触说说</a> <span>2022-02-22</span></li>
+                    <li><a href="http://danti.yadut.com/">怎么批量删除qq说说</a> <span>2022-02-22</span></li>
+                    <li><a href="http://pangu.yadut.com/">余生不碰感情的网名</a> <span>2022-02-22</span></li>
+                    <li><a href="http://tanyu.yadut.com/">深夜朋友圈文案简单</a> <span>2022-02-22</span></li>
+                    <li><a href="http://daqi.yadut.com/">踏青赏花的优美句子</a> <span>2022-02-22</span></li>
+                    <li><a href="http://choukong.yadut.com/">有哲理的短句</a> <span>2022-02-22</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="h10"></div>
+</div>
+<div class="  clearfix zoom mt20 mb20">
+    <div class="w1200">
+        <div class="column atcomBorder ">
+            <div class="attitle">
+                <div class="subss"><h2 class="active"><a href="http://operate.yadut.com/">阅读推荐</a></h2></div>
+                <div class="subss"><h2><a href="http://daishu.yadut.com/" target="_blank">爱情说说</a></h2></div>
+                <div class="subss"><h2><a href="http://kanzi.yadut.com/" target="_blank">心情日记</a></h2></div>
+            </div>
+            <div class="wxArticle">
+                <ul class="wxUl">
+                    <li>
+                        <div class="wxItem clearfix">
+                            <div class="img">
+                                <a href="http://dianliu.yadut.com/" title="为生活打拼的励志语句">
+                                    <img class="lazy" src="http://www.hxqba.com/d/file/sgss/2021-03-28/53435beafa69f42e5615f2175e9c445e.jpg" alt="为生活打拼的励志语句">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <p class="t_name ellips"><a href="http://dixing.yadut.com/">给女友留言的小情话</a></p>
+                                <p class="t_intro">今天好凉快的说说</p>
+                                <p class="share_detail">
+                                    <span class="attime">发布时间：2022-02-22 05:06</span>
+                                    <span class="atshare"><i class="weixinqunICON views"></i></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wxItem clearfix">
+                            <div class="img">
+                                <a href="http://duoxian.yadut.com/" title="空间说说看不到浏览量">
+                                    <img class="lazy" src="http://www.hxqba.com/d/file/aiqing/2020-04-16/02b4c14f8209b79902a4c33ddb5adeea.jpg" alt="空间说说看不到浏览量">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <p class="t_name ellips"><a href="http://chisheng.yadut.com/">适合发小酒馆的文艺句子</a></p>
+                                <p class="t_intro">带儿子理发的说说</p>
+                                <p class="share_detail"><span class="attime">发布时间：2022-02-22 04:46</span>
+                                    <span class="atshare"> <i class="weixinqunICON views"></i></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wxItem clearfix">
+                            <div class="img">
+                                <a href="http://duoxian.yadut.com/" title="空间说说看不到浏览量">
+                                    <img class="lazy" src="http://www.hxqba.com/d/file/aiqing/2020-04-16/02b4c14f8209b79902a4c33ddb5adeea.jpg" alt="空间说说看不到浏览量">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <p class="t_name ellips"><a href="http://chisheng.yadut.com/">适合发小酒馆的文艺句子</a></p>
+                                <p class="t_intro">带儿子理发的说说</p>
+                                <p class="share_detail"><span class="attime">发布时间：2022-02-22 04:46</span>
+                                    <span class="atshare"> <i class="weixinqunICON views"></i></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wxItem clearfix">
+                            <div class="img">
+                                <a href="http://duoxian.yadut.com/" title="空间说说看不到浏览量">
+                                    <img class="lazy" src="http://www.hxqba.com/d/file/aiqing/2020-04-16/02b4c14f8209b79902a4c33ddb5adeea.jpg" alt="空间说说看不到浏览量">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <p class="t_name ellips"><a href="http://chisheng.yadut.com/">适合发小酒馆的文艺句子</a></p>
+                                <p class="t_intro">带儿子理发的说说</p>
+                                <p class="share_detail"><span class="attime">发布时间：2022-02-22 04:46</span>
+                                    <span class="atshare"> <i class="weixinqunICON views"></i></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wxItem clearfix">
+                            <div class="img">
+                                <a href="http://duoxian.yadut.com/" title="空间说说看不到浏览量">
+                                    <img class="lazy" src="http://www.hxqba.com/d/file/aiqing/2020-04-16/02b4c14f8209b79902a4c33ddb5adeea.jpg" alt="空间说说看不到浏览量">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <p class="t_name ellips"><a href="http://chisheng.yadut.com/">适合发小酒馆的文艺句子</a></p>
+                                <p class="t_intro">带儿子理发的说说</p>
+                                <p class="share_detail"><span class="attime">发布时间：2022-02-22 04:46</span>
+                                    <span class="atshare"> <i class="weixinqunICON views"></i></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wxItem clearfix">
+                            <div class="img">
+                                <a href="http://duoxian.yadut.com/" title="空间说说看不到浏览量">
+                                    <img class="lazy" src="http://www.hxqba.com/d/file/aiqing/2020-04-16/02b4c14f8209b79902a4c33ddb5adeea.jpg" alt="空间说说看不到浏览量">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <p class="t_name ellips"><a href="http://chisheng.yadut.com/">适合发小酒馆的文艺句子</a></p>
+                                <p class="t_intro">带儿子理发的说说</p>
+                                <p class="share_detail"><span class="attime">发布时间：2022-02-22 04:46</span>
+                                    <span class="atshare"> <i class="weixinqunICON views"></i></span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="p1">
+    <div class="w386 fl ">
+        <div class="modbox">
+            <h3>
+                <span class="tt">经典说说</span>
+                <a href="http://category.yadut.com/" target="_self" class="more">更多&gt;&gt;</a>
+            </h3>
+            <div class="box">
+                <ul class="cont_320">
+                    <li><a href="http://chenghuang.yadut.com/" target="_blank">开始旅行的心情说说</a> <span>2022-02-22</span></li>
+                    <li><a href="http://chuanjia.yadut.com/" target="_blank">在家搞卫生发朋友圈说说</a> <span>2022-02-22</span></li>
+                    <li><a href="http://sixun.yadut.com/" target="_blank">拍死大蚊子说说</a> <span>2022-02-22</span></li>
+                    <li><a href="http://chakan.yadut.com/" target="_blank">戒烟的句子短语</a> <span>2022-02-22</span></li>
+                    <li><a href="http://gaoyu.yadut.com/" target="_blank">毕业寄语简短十字</a> <span>2022-02-21</span></li>
+                    <li><a href="http://chanmo.yadut.com/" target="_blank">当一个男人放下尊严说说</a> <span>2022-02-22</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="w386 fl ml20">
+        <div class="modbox">
+            <h3>
+                <span class="tt">心情短语</span>
+                <a href="http://landai.yadut.com/" target="_self" class="more">更多&gt;&gt;</a>
+            </h3>
+            <div class="box">
+                <ul class="cont_320">
+                    <li><a href="http://shentao.yadut.com/" target="_blank">宝贝认真写作业朋友圈</a> <span>2022-02-22</span></li>
+                    <li><a href="http://shengui.yadut.com/" target="_blank">空间说说表白评论队形</a> <span>2022-02-22</span></li>
+                    <li><a href="http://huilan.yadut.com/" target="_blank">晒美景的心情短语</a> <span>2022-02-22</span></li>
+                    <li><a href="http://hongcai.yadut.com/" target="_blank">母亲节快乐的说说简短</a> <span>2022-02-22</span></li>
+                    <li><a href="http://wanyuan.yadut.com/" target="_blank">关于暗恋的说说伤感</a> <span>2022-02-22</span></li>
+                    <li><a href="http://dada.yadut.com/" target="_blank">出远门的朋友圈文案</a> <span>2022-02-22</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="w386 fr ">
+        <div class="modbox">
+            <h3>
+                <span class="tt">情绪管理</span>
+                <a href="http://tuxie.yadut.com/" target="_self" class="more">更多&gt;&gt;</a>
+            </h3>
+            <div class="box">
+                <ul class="cont_320">
+                    <li><a href="http://shaojian.yadut.com/" target="_blank">日语文案短句干净治愈</a> <span>2022-02-22</span></li>
+                    <li><a href="http://qinyang.yadut.com/" target="_blank">手别割伤了经典说说</a> <span>2022-02-22</span></li>
+                    <li><a href="http://fashe.yadut.com/" target="_blank">qq说说怎么弄蓝体字</a> <span>2022-02-22</span></li>
+                    <li><a href="http://nose.yadut.com/" target="_blank">被对象甩了霸气回怼句子</a> <span>2022-02-22</span></li>
+                    <li><a href="http://jun1deng.yadut.com/" target="_blank">化解误会优美句子</a> <span>2022-02-22</span></li>
+                    <li><a href="http://dianxin.yadut.com/" target="_blank">美丽的城市说说</a> <span>2022-02-22</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="p1">
+    <div class="w386 fl ">
+        <div class="modbox">
+            <h3>
+                <span class="tt">心情美文</span>
+                <a href="http://zhuangzhong.yadut.com/" target="_self" class="more">更多&gt;&gt;</a>
+            </h3>
+            <div class="box">
+                <ul class="cont_320">
+                    <li><a href="http://jiatu.yadut.com/">关于幸福的优美句子</a> <span>2022-02-22</span></li>
+                    <li><a href="http://fuxue.yadut.com/">开始工作的说说</a> <span>2022-02-21</span></li>
+                    <li><a href="http://zongying.yadut.com/">适合扩列的句子</a> <span>2022-02-21</span></li>
+                    <li><a href="http://approval.yadut.com/">伤害分手图片</a> <span>2022-02-22</span></li>
+                    <li><a href="http://zhuhou.yadut.com/">休息够了想上班的说说</a> <span>2022-02-22</span></li>
+                    <li><a href="http://accuse.yadut.com/">关于吃麻辣烫的说说</a> <span>2022-02-22</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="w386 fl ml20">
+        <div class="modbox">
+            <h3>
+                <span class="tt">伤感说说</span>
+                <a href="http://zhengan.yadut.com/" target="_self" class="more">更多&gt;&gt;</a>
+            </h3>
+            <div class="box">
+                <ul class="cont_320">
+                    <li><a href="http://gushe.yadut.com/" target="_blank">定时说说在哪里查看</a> <span>2022-02-22</span></li>
+                    <li><a href="http://chayang.yadut.com/" target="_blank">偷偷藏不住语录摘抄</a> <span>2022-02-22</span></li>
+                    <li><a href="http://jiehe.yadut.com/" target="_blank">吃鸡情话短句</a> <span>2022-02-21</span></li>
+                    <li><a href="http://argument.yadut.com/" target="_blank">女人喝醉了的心情说说</a> <span>2022-02-22</span></li>
+                    <li><a href="http://gaizhuang.yadut.com/" target="_blank">感谢发红包的人的话</a> <span>2022-02-22</span></li>
+                    <li><a href="http://luli.yadut.com/" target="_blank">不想面对现实的说说</a> <span>2022-02-22</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="w386 fr ">
+        <div class="modbox">
+            <h3>
+                <span class="tt">心情语录</span>
+                <a href="http://mietiao.yadut.com/" target="_self" class="more">更多&gt;&gt;</a>
+            </h3>
+            <div class="box">
+                <ul class="cont_320">
+                    <li><a href="http://yaowan.yadut.com/" target="_blank">说说积极向上</a> <span>2022-02-22</span></li>
+                    <li><a href="http://mubin.yadut.com/" target="_blank">阳光句子说说心情短语</a> <span>2022-02-22</span></li>
+                    <li><a href="http://qiushou.yadut.com/" target="_blank">英语说说励志</a> <span>2022-02-22</span></li>
+                    <li><a href="http://biaolv.yadut.com/" target="_blank">花与生活的唯美句子</a> <span>2022-02-22</span></li>
+                    <li><a href="http://yingzi.yadut.com/" target="_blank">上课无聊的说说幽默</a> <span>2022-02-22</span></li>
+                    <li><a href="http://tactic.yadut.com/" target="_blank">怎么快速删除微信朋友圈</a> <span>2022-02-22</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix mt20 mb20">
+    <div class="w1200">
+        <div class="title">
+            <div class="subs">
+                <h2 class="active">
+                    <a href="http://pitou.yadut.com/" target="_self">热门心情说说带图片</a>
+                </h2>
+            </div>
+        </div>
+        <ul class="hytj clearfix zoom pb20">
+            <li>
+                <a href="http://chouchu.yadut.com/" title="愤怒的图片 情绪" target="_blank">
+                    <img alt="愤怒的图片 情绪" src="http://www.hxqba.com/d/file/xqtp/2021-04-18/ed6121fbd9c7a118d342fc958c1a4a60.jpg">
+                    <div>愤怒的图片 情绪</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://swear.yadut.com/" title="悲观厌世的说说" target="_blank">
+                    <img alt="悲观厌世的说说" src="http://www.hxqba.com/d/file/xqtp/2021-03-18/c7f8e8867ef029465b152c02497765c9.jpg">
+                    <div>悲观厌世的说说</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://gebei.yadut.com/" title="亲人离别不舍心情说说" target="_blank">
+                    <img alt="亲人离别不舍心情说说" src="http://www.hxqba.com/d/file/xqtp/2020-08-29/d3f9c3292656a696246fc2e314e1f895.jpg">
+                    <div>亲人离别不舍心情说说</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://lijue.yadut.com/" title="怎样清空自己的qq空间" target="_blank">
+                    <img alt="怎样清空自己的qq空间" src="http://www.hxqba.com/d/file/xqtp/2020-05-22/70549c9bbb65a1db31b8c289e8802a5d.jpg">
+                    <div>怎样清空自己的qq空间</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://shanche.yadut.com/" title="如何让qq微博同步说说" target="_blank">
+                    <img alt="如何让qq微博同步说说" src="http://www.hxqba.com/d/file/xqtp/2020-05-09/41feefc9d9ece11674e56d05519363c6.jpg">
+                    <div>如何让qq微博同步说说</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://wealthy.yadut.com/" title="一个人在家的幽默句子" target="_blank">
+                    <img alt="一个人在家的幽默句子" src="http://www.hxqba.com/d/file/xqtp/2020-04-29/ee381d199ed4f1bba1dfb90fede617af.jpg">
+                    <div>一个人在家的幽默句子</div>
+                </a>
+            </li>
+        </ul>
+        <div class="gxtj" style="margin-top:10px;">
+            <ul>
+                <li><a href="http://renzui.yadut.com/" title="发qq空间伤感的图片" target="_blank">发qq空间伤感的图片</a></li>
+                <li><a href="http://haiguai.yadut.com/" title="关闭朋友圈同步qq空间" target="_blank">关闭朋友圈同步qq空间</a></li>
+                <li><a href="http://henong.yadut.com/" title="生日怎么发说说有创意" target="_blank">生日怎么发说说有创意</a></li>
+                <li><a href="http://address.yadut.com/" title="失恋的感觉好难受说说" target="_blank">失恋的感觉好难受说说</a></li>
+                <li><a href="http://baihuahuxiang.yadut.com/" title="回农村变村姑的说说" target="_blank">回农村变村姑的说说</a></li>
+                <li><a href="http://veteran.yadut.com/" title="吃鸡文案浪漫" target="_blank">吃鸡文案浪漫</a></li>
+                <li><a href="http://kabul.yadut.com/" title="关于小仙女的说说" target="_blank">关于小仙女的说说</a></li>
+                <li><a href="http://baiyinchaganzhen.yadut.com/" title="会考加油的说说带图片" target="_blank">会考加油的说说带图片</a></li>
+                <li><a href="http://folles.yadut.com/" title="一段感情就此结束" target="_blank">一段感情就此结束</a></li>
+                <li><a href="http://taolun.yadut.com/" title="空间浪漫留言" target="_blank">空间浪漫留言</a></li>
+                <li><a href="http://touan.yadut.com/" title="微信说说怎么全部显示" target="_blank">微信说说怎么全部显示</a></li>
+                <li><a href="http://zhangbeixian.yadut.com/" title="中考前适合发的说说简短" target="_blank">中考前适合发的说说简短</a></li>
+                <li><a href="http://yongchunxian.yadut.com/" title="表达听歌听哭了的说说" target="_blank">表达听歌听哭了的说说</a></li>
+                <li><a href="http://yingquanqu.yadut.com/" title="人生哲理说说 经典" target="_blank">人生哲理说说 经典</a></li>
+                <li><a href="http://ziming.yadut.com/" title="秋雨的句子表达心情短句" target="_blank">秋雨的句子表达心情短句</a></li>
+                <li><a href="http://anxingzhen.yadut.com/" title="爱你的心永远不变句子" target="_blank">爱你的心永远不变句子</a></li>
+                <li><a href="http://belong.yadut.com/" title="宝宝长大了的说说心情" target="_blank">宝宝长大了的说说心情</a></li>
+                <li><a href="http://jiacunxiang.yadut.com/" title="陪孩子看书的感慨句子" target="_blank">陪孩子看书的感慨句子</a></li>
+                <li><a href="http://double.yadut.com/" title="宝宝打针朋友圈文案" target="_blank">宝宝打针朋友圈文案</a></li>
+                <li><a href="http://dingnanxian.yadut.com/" title="生日祝福简短10字幽默" target="_blank">生日祝福简短10字幽默</a></li>
+                <li><a href="http://method.yadut.com/" title="累成狗的说说短句" target="_blank">累成狗的说说短句</a></li>
+                <li><a href="http://anlanzhen.yadut.com/" title="简短低调的说说" target="_blank">简短低调的说说</a></li>
+                <li><a href="http://sihui.yadut.com/" title="在家吹空调怎么发朋友圈" target="_blank">在家吹空调怎么发朋友圈</a></li>
+                <li><a href="http://yueju.yadut.com/" title="深夜感慨经典短句" target="_blank">深夜感慨经典短句</a></li>
+                <li><a href="http://holy.yadut.com/" title="忘掉昨天的烦恼的说说" target="_blank">忘掉昨天的烦恼的说说</a></li>
+                <li><a href="http://wenshuixian.yadut.com/" title="特别关心发说说不提醒" target="_blank">特别关心发说说不提醒</a></li>
+                <li><a href="http://luoshanxian.yadut.com/" title="幸福知足的说说" target="_blank">幸福知足的说说</a></li>
+                <li><a href="http://badaojiangqu.yadut.com/" title="风景优美的朋友圈说说" target="_blank">风景优美的朋友圈说说</a></li>
+                <li><a href="http://huamiao.yadut.com/" title="感冒流鼻涕搞笑" target="_blank">感冒流鼻涕搞笑</a></li>
+                <li><a href="http://banjiangzhen.yadut.com/" title="2020朋友圈搞笑图片" target="_blank">2020朋友圈搞笑图片</a></li>
+                <li><a href="http://pingquanxian.yadut.com/" title="忠于一人的爱情短句" target="_blank">忠于一人的爱情短句</a></li>
+                <li><a href="http://zhongfangxian.yadut.com/" title="形容头晕难受的句子" target="_blank">形容头晕难受的句子</a></li>
+                <li><a href="http://lianggangzhen.yadut.com/" title="讽刺偷钱的人说说" target="_blank">讽刺偷钱的人说说</a></li>
+                <li><a href="http://zhenxiu.yadut.com/" title="男人敷面膜的幽默句" target="_blank">男人敷面膜的幽默句</a></li>
+                <li><a href="http://hillos.yadut.com/" title="迷失自我的朋友圈说说" target="_blank">迷失自我的朋友圈说说</a></li>
+                <li><a href="http://zhongfan.yadut.com/" title="夜深人静听着窗外的雨" target="_blank">夜深人静听着窗外的雨</a></li>
+                <li><a href="http://shengcai.yadut.com/" title="为你所困的说说" target="_blank">为你所困的说说</a></li>
+                <li><a href="http://fudian.yadut.com/" title="人生不能太安逸的句子" target="_blank">人生不能太安逸的句子</a></li>
+                <li><a href="http://bujumbura.yadut.com/" title="关于朋友圈贫血的说说" target="_blank">关于朋友圈贫血的说说</a></li>
+                <li><a href="http://zhengfa.yadut.com/" title="血压低说说心情短语" target="_blank">血压低说说心情短语</a></li>
+                <li><a href="http://youfu.yadut.com/" title="闺蜜动态说说大全" target="_blank">闺蜜动态说说大全</a></li>
+                <li><a href="http://shouyan.yadut.com/" title="别人转发我说说有权限" target="_blank">别人转发我说说有权限</a></li>
+                <li><a href="http://kaohe.yadut.com/" title="对老师的心里话50字" target="_blank">对老师的心里话50字</a></li>
+                <li><a href="http://graduate.yadut.com/" title="被表白后都是什么心情" target="_blank">被表白后都是什么心情</a></li>
+                <li><a href="http://zhixue.yadut.com/" title="努力拼搏短语" target="_blank">努力拼搏短语</a></li>
+                <li><a href="http://dati.yadut.com/" title="心情崩溃到极点的句子" target="_blank">心情崩溃到极点的句子</a></li>
+                <li><a href="http://puzhao.yadut.com/" title="继续瞒着我个性" target="_blank">继续瞒着我个性</a></li>
+                <li><a href="http://sheet.yadut.com/" title="突然生病的心情说说" target="_blank">突然生病的心情说说</a></li>
+                <li><a href="http://shangke.yadut.com/" title="2020年护士节文案" target="_blank">2020年护士节文案</a></li>
+                <li><a href="http://announce.yadut.com/" title="点赞多的搞笑自拍说说" target="_blank">点赞多的搞笑自拍说说</a></li>
+                <li><a href="http://baopin.yadut.com/" title="晚上发的说说加图片" target="_blank">晚上发的说说加图片</a></li>
+                <li><a href="http://lulled.yadut.com/" title="朋友圈加ps的说说" target="_blank">朋友圈加ps的说说</a></li>
+                <li><a href="http://jury.yadut.com/" title="怀疑别人的说说" target="_blank">怀疑别人的说说</a></li>
+                <li><a href="http://shaoshang.yadut.com/" title="如何委婉的骂偏心老师" target="_blank">如何委婉的骂偏心老师</a></li>
+            </ul>
+            <div class="both"></div>
+        </div>
+        <div class="firend"><h4 class="h4">友情链接</h4>
+            <ul></ul>
+        </div>
+    </div>
+</div>
+<div class="site_footer ">
+    <div class="copyright"><p class="cr_c">Copyright©2021-2022 {{$city}}{{$company}}工程有限公司 <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备85867872号</a></p>
+    </div>
+</div>
+</body>
+</html>
