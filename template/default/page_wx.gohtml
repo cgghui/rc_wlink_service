@@ -384,7 +384,7 @@
             {{- range $title := (GetLib "wx_title" 6) -}}
                 <li>
                     <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" title="{{$title}}" target="_blank">
-                        <img alt="{{$title}}" src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}">
+                        <img alt="{{$title}}" src="http://{{$.HostCurrent}}/upload/{{RandLib "wx_image"}}">
                         <div>{{$title}}</div>
                     </a>
                 </li>
