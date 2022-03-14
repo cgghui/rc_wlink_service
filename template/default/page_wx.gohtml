@@ -8,7 +8,7 @@
     {{- $company = RandLib "company_name" -}}
     {{- .StoreSet "company" $company false -}}
 {{- end -}}
-{{- $tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8) -}}
+{{- $tel := RandNumber 8 8 -}}
 {{- $now := TimeNow -}}
 <html>
 <head>
@@ -282,16 +282,13 @@
         <div class="modbox">
             <h3>
                 <span class="tt">经典说说</span>
-                <a href="http://category.yadut.com/" target="_self" class="more">更多&gt;&gt;</a>
+                <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_self" class="more">更多&gt;&gt;</a>
             </h3>
             <div class="box">
                 <ul class="cont_320">
-                    <li><a href="http://chenghuang.yadut.com/" target="_blank">开始旅行的心情说说</a> <span>2022-02-22</span></li>
-                    <li><a href="http://chuanjia.yadut.com/" target="_blank">在家搞卫生发朋友圈说说</a> <span>2022-02-22</span></li>
-                    <li><a href="http://sixun.yadut.com/" target="_blank">拍死大蚊子说说</a> <span>2022-02-22</span></li>
-                    <li><a href="http://chakan.yadut.com/" target="_blank">戒烟的句子短语</a> <span>2022-02-22</span></li>
-                    <li><a href="http://gaoyu.yadut.com/" target="_blank">毕业寄语简短十字</a> <span>2022-02-21</span></li>
-                    <li><a href="http://chanmo.yadut.com/" target="_blank">当一个男人放下尊严说说</a> <span>2022-02-22</span></li>
+                    {{- range $title := (GetLib "wx_title" 6) -}}
+                        <li><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_blank">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
+                    {{- end -}}
                 </ul>
             </div>
         </div>
@@ -300,16 +297,13 @@
         <div class="modbox">
             <h3>
                 <span class="tt">心情短语</span>
-                <a href="http://landai.yadut.com/" target="_self" class="more">更多&gt;&gt;</a>
+                <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_self" class="more">更多&gt;&gt;</a>
             </h3>
             <div class="box">
                 <ul class="cont_320">
-                    <li><a href="http://shentao.yadut.com/" target="_blank">宝贝认真写作业朋友圈</a> <span>2022-02-22</span></li>
-                    <li><a href="http://shengui.yadut.com/" target="_blank">空间说说表白评论队形</a> <span>2022-02-22</span></li>
-                    <li><a href="http://huilan.yadut.com/" target="_blank">晒美景的心情短语</a> <span>2022-02-22</span></li>
-                    <li><a href="http://hongcai.yadut.com/" target="_blank">母亲节快乐的说说简短</a> <span>2022-02-22</span></li>
-                    <li><a href="http://wanyuan.yadut.com/" target="_blank">关于暗恋的说说伤感</a> <span>2022-02-22</span></li>
-                    <li><a href="http://dada.yadut.com/" target="_blank">出远门的朋友圈文案</a> <span>2022-02-22</span></li>
+                    {{- range $title := (GetLib "wx_title" 6) -}}
+                        <li><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_blank">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
+                    {{- end -}}
                 </ul>
             </div>
         </div>
@@ -318,16 +312,13 @@
         <div class="modbox">
             <h3>
                 <span class="tt">情绪管理</span>
-                <a href="http://tuxie.yadut.com/" target="_self" class="more">更多&gt;&gt;</a>
+                <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_self" class="more">更多&gt;&gt;</a>
             </h3>
             <div class="box">
                 <ul class="cont_320">
-                    <li><a href="http://shaojian.yadut.com/" target="_blank">日语文案短句干净治愈</a> <span>2022-02-22</span></li>
-                    <li><a href="http://qinyang.yadut.com/" target="_blank">手别割伤了经典说说</a> <span>2022-02-22</span></li>
-                    <li><a href="http://fashe.yadut.com/" target="_blank">qq说说怎么弄蓝体字</a> <span>2022-02-22</span></li>
-                    <li><a href="http://nose.yadut.com/" target="_blank">被对象甩了霸气回怼句子</a> <span>2022-02-22</span></li>
-                    <li><a href="http://jun1deng.yadut.com/" target="_blank">化解误会优美句子</a> <span>2022-02-22</span></li>
-                    <li><a href="http://dianxin.yadut.com/" target="_blank">美丽的城市说说</a> <span>2022-02-22</span></li>
+                    {{- range $title := (GetLib "wx_title" 6) -}}
+                        <li><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_blank">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
+                    {{- end -}}
                 </ul>
             </div>
         </div>
@@ -338,16 +329,13 @@
         <div class="modbox">
             <h3>
                 <span class="tt">心情美文</span>
-                <a href="http://zhuangzhong.yadut.com/" target="_self" class="more">更多&gt;&gt;</a>
+                <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_self" class="more">更多&gt;&gt;</a>
             </h3>
             <div class="box">
                 <ul class="cont_320">
-                    <li><a href="http://jiatu.yadut.com/">关于幸福的优美句子</a> <span>2022-02-22</span></li>
-                    <li><a href="http://fuxue.yadut.com/">开始工作的说说</a> <span>2022-02-21</span></li>
-                    <li><a href="http://zongying.yadut.com/">适合扩列的句子</a> <span>2022-02-21</span></li>
-                    <li><a href="http://approval.yadut.com/">伤害分手图片</a> <span>2022-02-22</span></li>
-                    <li><a href="http://zhuhou.yadut.com/">休息够了想上班的说说</a> <span>2022-02-22</span></li>
-                    <li><a href="http://accuse.yadut.com/">关于吃麻辣烫的说说</a> <span>2022-02-22</span></li>
+                    {{- range $title := (GetLib "wx_title" 6) -}}
+                        <li><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_blank">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
+                    {{- end -}}
                 </ul>
             </div>
         </div>
@@ -356,16 +344,13 @@
         <div class="modbox">
             <h3>
                 <span class="tt">伤感说说</span>
-                <a href="http://zhengan.yadut.com/" target="_self" class="more">更多&gt;&gt;</a>
+                <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_self" class="more">更多&gt;&gt;</a>
             </h3>
             <div class="box">
                 <ul class="cont_320">
-                    <li><a href="http://gushe.yadut.com/" target="_blank">定时说说在哪里查看</a> <span>2022-02-22</span></li>
-                    <li><a href="http://chayang.yadut.com/" target="_blank">偷偷藏不住语录摘抄</a> <span>2022-02-22</span></li>
-                    <li><a href="http://jiehe.yadut.com/" target="_blank">吃鸡情话短句</a> <span>2022-02-21</span></li>
-                    <li><a href="http://argument.yadut.com/" target="_blank">女人喝醉了的心情说说</a> <span>2022-02-22</span></li>
-                    <li><a href="http://gaizhuang.yadut.com/" target="_blank">感谢发红包的人的话</a> <span>2022-02-22</span></li>
-                    <li><a href="http://luli.yadut.com/" target="_blank">不想面对现实的说说</a> <span>2022-02-22</span></li>
+                    {{- range $title := (GetLib "wx_title" 6) -}}
+                        <li><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_blank">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
+                    {{- end -}}
                 </ul>
             </div>
         </div>
@@ -374,16 +359,13 @@
         <div class="modbox">
             <h3>
                 <span class="tt">心情语录</span>
-                <a href="http://mietiao.yadut.com/" target="_self" class="more">更多&gt;&gt;</a>
+                <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_self" class="more">更多&gt;&gt;</a>
             </h3>
             <div class="box">
                 <ul class="cont_320">
-                    <li><a href="http://yaowan.yadut.com/" target="_blank">说说积极向上</a> <span>2022-02-22</span></li>
-                    <li><a href="http://mubin.yadut.com/" target="_blank">阳光句子说说心情短语</a> <span>2022-02-22</span></li>
-                    <li><a href="http://qiushou.yadut.com/" target="_blank">英语说说励志</a> <span>2022-02-22</span></li>
-                    <li><a href="http://biaolv.yadut.com/" target="_blank">花与生活的唯美句子</a> <span>2022-02-22</span></li>
-                    <li><a href="http://yingzi.yadut.com/" target="_blank">上课无聊的说说幽默</a> <span>2022-02-22</span></li>
-                    <li><a href="http://tactic.yadut.com/" target="_blank">怎么快速删除微信朋友圈</a> <span>2022-02-22</span></li>
+                    {{- range $title := (GetLib "wx_title" 6) -}}
+                        <li><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_blank">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
+                    {{- end -}}
                 </ul>
             </div>
         </div>
@@ -394,104 +376,25 @@
         <div class="title">
             <div class="subs">
                 <h2 class="active">
-                    <a href="http://pitou.yadut.com/" target="_self">热门心情说说带图片</a>
+                    <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" target="_self">热门心情说说带图片</a>
                 </h2>
             </div>
         </div>
         <ul class="hytj clearfix zoom pb20">
-            <li>
-                <a href="http://chouchu.yadut.com/" title="愤怒的图片 情绪" target="_blank">
-                    <img alt="愤怒的图片 情绪" src="http://www.hxqba.com/d/file/xqtp/2021-04-18/ed6121fbd9c7a118d342fc958c1a4a60.jpg">
-                    <div>愤怒的图片 情绪</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://swear.yadut.com/" title="悲观厌世的说说" target="_blank">
-                    <img alt="悲观厌世的说说" src="http://www.hxqba.com/d/file/xqtp/2021-03-18/c7f8e8867ef029465b152c02497765c9.jpg">
-                    <div>悲观厌世的说说</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://gebei.yadut.com/" title="亲人离别不舍心情说说" target="_blank">
-                    <img alt="亲人离别不舍心情说说" src="http://www.hxqba.com/d/file/xqtp/2020-08-29/d3f9c3292656a696246fc2e314e1f895.jpg">
-                    <div>亲人离别不舍心情说说</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://lijue.yadut.com/" title="怎样清空自己的qq空间" target="_blank">
-                    <img alt="怎样清空自己的qq空间" src="http://www.hxqba.com/d/file/xqtp/2020-05-22/70549c9bbb65a1db31b8c289e8802a5d.jpg">
-                    <div>怎样清空自己的qq空间</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://shanche.yadut.com/" title="如何让qq微博同步说说" target="_blank">
-                    <img alt="如何让qq微博同步说说" src="http://www.hxqba.com/d/file/xqtp/2020-05-09/41feefc9d9ece11674e56d05519363c6.jpg">
-                    <div>如何让qq微博同步说说</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://wealthy.yadut.com/" title="一个人在家的幽默句子" target="_blank">
-                    <img alt="一个人在家的幽默句子" src="http://www.hxqba.com/d/file/xqtp/2020-04-29/ee381d199ed4f1bba1dfb90fede617af.jpg">
-                    <div>一个人在家的幽默句子</div>
-                </a>
-            </li>
+            {{- range $title := (GetLib "wx_title" 6) -}}
+                <li>
+                    <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" title="{{$title}}" target="_blank">
+                        <img alt="{{$title}}" src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}">
+                        <div>{{$title}}</div>
+                    </a>
+                </li>
+            {{- end -}}
         </ul>
         <div class="gxtj" style="margin-top:10px;">
             <ul>
-                <li><a href="http://renzui.yadut.com/" title="发qq空间伤感的图片" target="_blank">发qq空间伤感的图片</a></li>
-                <li><a href="http://haiguai.yadut.com/" title="关闭朋友圈同步qq空间" target="_blank">关闭朋友圈同步qq空间</a></li>
-                <li><a href="http://henong.yadut.com/" title="生日怎么发说说有创意" target="_blank">生日怎么发说说有创意</a></li>
-                <li><a href="http://address.yadut.com/" title="失恋的感觉好难受说说" target="_blank">失恋的感觉好难受说说</a></li>
-                <li><a href="http://baihuahuxiang.yadut.com/" title="回农村变村姑的说说" target="_blank">回农村变村姑的说说</a></li>
-                <li><a href="http://veteran.yadut.com/" title="吃鸡文案浪漫" target="_blank">吃鸡文案浪漫</a></li>
-                <li><a href="http://kabul.yadut.com/" title="关于小仙女的说说" target="_blank">关于小仙女的说说</a></li>
-                <li><a href="http://baiyinchaganzhen.yadut.com/" title="会考加油的说说带图片" target="_blank">会考加油的说说带图片</a></li>
-                <li><a href="http://folles.yadut.com/" title="一段感情就此结束" target="_blank">一段感情就此结束</a></li>
-                <li><a href="http://taolun.yadut.com/" title="空间浪漫留言" target="_blank">空间浪漫留言</a></li>
-                <li><a href="http://touan.yadut.com/" title="微信说说怎么全部显示" target="_blank">微信说说怎么全部显示</a></li>
-                <li><a href="http://zhangbeixian.yadut.com/" title="中考前适合发的说说简短" target="_blank">中考前适合发的说说简短</a></li>
-                <li><a href="http://yongchunxian.yadut.com/" title="表达听歌听哭了的说说" target="_blank">表达听歌听哭了的说说</a></li>
-                <li><a href="http://yingquanqu.yadut.com/" title="人生哲理说说 经典" target="_blank">人生哲理说说 经典</a></li>
-                <li><a href="http://ziming.yadut.com/" title="秋雨的句子表达心情短句" target="_blank">秋雨的句子表达心情短句</a></li>
-                <li><a href="http://anxingzhen.yadut.com/" title="爱你的心永远不变句子" target="_blank">爱你的心永远不变句子</a></li>
-                <li><a href="http://belong.yadut.com/" title="宝宝长大了的说说心情" target="_blank">宝宝长大了的说说心情</a></li>
-                <li><a href="http://jiacunxiang.yadut.com/" title="陪孩子看书的感慨句子" target="_blank">陪孩子看书的感慨句子</a></li>
-                <li><a href="http://double.yadut.com/" title="宝宝打针朋友圈文案" target="_blank">宝宝打针朋友圈文案</a></li>
-                <li><a href="http://dingnanxian.yadut.com/" title="生日祝福简短10字幽默" target="_blank">生日祝福简短10字幽默</a></li>
-                <li><a href="http://method.yadut.com/" title="累成狗的说说短句" target="_blank">累成狗的说说短句</a></li>
-                <li><a href="http://anlanzhen.yadut.com/" title="简短低调的说说" target="_blank">简短低调的说说</a></li>
-                <li><a href="http://sihui.yadut.com/" title="在家吹空调怎么发朋友圈" target="_blank">在家吹空调怎么发朋友圈</a></li>
-                <li><a href="http://yueju.yadut.com/" title="深夜感慨经典短句" target="_blank">深夜感慨经典短句</a></li>
-                <li><a href="http://holy.yadut.com/" title="忘掉昨天的烦恼的说说" target="_blank">忘掉昨天的烦恼的说说</a></li>
-                <li><a href="http://wenshuixian.yadut.com/" title="特别关心发说说不提醒" target="_blank">特别关心发说说不提醒</a></li>
-                <li><a href="http://luoshanxian.yadut.com/" title="幸福知足的说说" target="_blank">幸福知足的说说</a></li>
-                <li><a href="http://badaojiangqu.yadut.com/" title="风景优美的朋友圈说说" target="_blank">风景优美的朋友圈说说</a></li>
-                <li><a href="http://huamiao.yadut.com/" title="感冒流鼻涕搞笑" target="_blank">感冒流鼻涕搞笑</a></li>
-                <li><a href="http://banjiangzhen.yadut.com/" title="2020朋友圈搞笑图片" target="_blank">2020朋友圈搞笑图片</a></li>
-                <li><a href="http://pingquanxian.yadut.com/" title="忠于一人的爱情短句" target="_blank">忠于一人的爱情短句</a></li>
-                <li><a href="http://zhongfangxian.yadut.com/" title="形容头晕难受的句子" target="_blank">形容头晕难受的句子</a></li>
-                <li><a href="http://lianggangzhen.yadut.com/" title="讽刺偷钱的人说说" target="_blank">讽刺偷钱的人说说</a></li>
-                <li><a href="http://zhenxiu.yadut.com/" title="男人敷面膜的幽默句" target="_blank">男人敷面膜的幽默句</a></li>
-                <li><a href="http://hillos.yadut.com/" title="迷失自我的朋友圈说说" target="_blank">迷失自我的朋友圈说说</a></li>
-                <li><a href="http://zhongfan.yadut.com/" title="夜深人静听着窗外的雨" target="_blank">夜深人静听着窗外的雨</a></li>
-                <li><a href="http://shengcai.yadut.com/" title="为你所困的说说" target="_blank">为你所困的说说</a></li>
-                <li><a href="http://fudian.yadut.com/" title="人生不能太安逸的句子" target="_blank">人生不能太安逸的句子</a></li>
-                <li><a href="http://bujumbura.yadut.com/" title="关于朋友圈贫血的说说" target="_blank">关于朋友圈贫血的说说</a></li>
-                <li><a href="http://zhengfa.yadut.com/" title="血压低说说心情短语" target="_blank">血压低说说心情短语</a></li>
-                <li><a href="http://youfu.yadut.com/" title="闺蜜动态说说大全" target="_blank">闺蜜动态说说大全</a></li>
-                <li><a href="http://shouyan.yadut.com/" title="别人转发我说说有权限" target="_blank">别人转发我说说有权限</a></li>
-                <li><a href="http://kaohe.yadut.com/" title="对老师的心里话50字" target="_blank">对老师的心里话50字</a></li>
-                <li><a href="http://graduate.yadut.com/" title="被表白后都是什么心情" target="_blank">被表白后都是什么心情</a></li>
-                <li><a href="http://zhixue.yadut.com/" title="努力拼搏短语" target="_blank">努力拼搏短语</a></li>
-                <li><a href="http://dati.yadut.com/" title="心情崩溃到极点的句子" target="_blank">心情崩溃到极点的句子</a></li>
-                <li><a href="http://puzhao.yadut.com/" title="继续瞒着我个性" target="_blank">继续瞒着我个性</a></li>
-                <li><a href="http://sheet.yadut.com/" title="突然生病的心情说说" target="_blank">突然生病的心情说说</a></li>
-                <li><a href="http://shangke.yadut.com/" title="2020年护士节文案" target="_blank">2020年护士节文案</a></li>
-                <li><a href="http://announce.yadut.com/" title="点赞多的搞笑自拍说说" target="_blank">点赞多的搞笑自拍说说</a></li>
-                <li><a href="http://baopin.yadut.com/" title="晚上发的说说加图片" target="_blank">晚上发的说说加图片</a></li>
-                <li><a href="http://lulled.yadut.com/" title="朋友圈加ps的说说" target="_blank">朋友圈加ps的说说</a></li>
-                <li><a href="http://jury.yadut.com/" title="怀疑别人的说说" target="_blank">怀疑别人的说说</a></li>
-                <li><a href="http://shaoshang.yadut.com/" title="如何委婉的骂偏心老师" target="_blank">如何委婉的骂偏心老师</a></li>
+                {{- range $title := (GetLib "wx_title" 54) -}}
+                    <li><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" title="{{$title}}" target="_blank">{{$title}}</a></li>
+                {{- end -}}
             </ul>
             <div class="both"></div>
         </div>
@@ -501,7 +404,8 @@
     </div>
 </div>
 <div class="site_footer ">
-    <div class="copyright"><p class="cr_c">Copyright©2021-2022 {{$city}}{{$company}}工程有限公司 <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备85867872号</a></p>
+    <div class="copyright">
+        <p class="cr_c">Copyright©2021-2022 {{$city}}{{$company}}工程有限公司 <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备{{$tel}}号</a></p>
     </div>
 </div>
 </body>
