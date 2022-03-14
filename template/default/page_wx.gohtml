@@ -68,7 +68,7 @@
         <ul class="cont_390">
             <li class="line"></li>
             {{- range $title := (GetLib "wx_title" 12) -}}
-                <li><i>{{TimeFormat "2006-01-02"}}</i> <a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/" title="{{$title}}">{{$title}}</a></li>
+                <li><i>{{TimeFormat "2006-01-02"}}</i> <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/" title="{{$title}}">{{$title}}</a></li>
             {{- end -}}
         </ul>
     </div>
@@ -78,7 +78,7 @@
             <div class="bd">
                 <ul>
                     {{- range $title := (GetLib "wx_title" 9) -}}
-                        <li><span>{{TimeFormat "2006-01-02"}}</span> <a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">{{$title}}</a></li>
+                        <li><span>{{TimeFormat "2006-01-02"}}</span> <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{$title}}</a></li>
                     {{- end -}}
                 </ul>
             </div>
@@ -102,7 +102,7 @@
             <div class="box">
                 <ul class="cont_320">
                     {{- range $title := (GetLib "wx_title" 6) -}}
-                        <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
+                        <li><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
                     {{- end -}}
                 </ul>
             </div>
@@ -124,7 +124,7 @@
             <div class="box">
                 <ul class="cont_320">
                     {{- range $title := (GetLib "wx_title" 6) -}}
-                        <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
+                        <li><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
                     {{- end -}}
                 </ul>
             </div>
@@ -146,7 +146,7 @@
             <div class="box">
                 <ul class="cont_320">
                     {{- range $title := (GetLib "wx_title" 6) -}}
-                        <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
+                        <li><a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
                     {{- end -}}
                 </ul>
             </div>
