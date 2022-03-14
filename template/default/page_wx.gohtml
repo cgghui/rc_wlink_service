@@ -8,7 +8,8 @@
     {{- $company = RandLib "company_name" -}}
     {{- .StoreSet "company" $company false -}}
 {{- end -}}
-{{$tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8)}}
+{{- $tel := Join "" (RandWord "186" "189" "138" "177" "151") (RandNumber 8 8) -}}
+{{- $now := TimeNow -}}
 <html>
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -45,47 +46,40 @@
 <div class="p1">
     <div class="left f_l">
         <div class="fpic">
-            <a href="http://jiangjie.yadut.com/" title="关于友情的说说" target="_blank">
-                <p>关于友情的说说</p>
-                <img src="http://www.hxqba.com/d/file/qxgl/2021-06-09/a50e44a7034926e001f4d9ffadde77fc.jpg" alt="关于友情的说说" width="320" height="250">
+            {{- $tit := RandLib "wx_title" -}}
+            <a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/" title="{{$tit}}" target="_blank">
+                <p>{{$tit}}</p>
+                <img src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}" alt="{{$tit}}" width="320" height="250" />
             </a>
         </div>
     </div>
     <div class="center f_l">
         <h3>
-            <a href="http://qichuang.yadut.com/" title="有妈就有家的心情短语"> <font color="#8cae12">有妈就有家的心情短语</font></a>
+            {{- $tit = RandLib "wx_title" -}}
+            <a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/" title="{{$tit}}">
+                <span style="color: #8cae12;">{{$tit}}</span>
+            </a>
         </h3>
-        <p><a href="http://shifeng.yadut.com/" title=""> <font color="#8cae12">最近胖了的说说</font></a></p>
+        <p>
+            <a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/" title="">
+                <span style="color: #8cae12;">{{RandLib "wx_title"}}</span>
+            </a>
+        </p>
         <ul class="cont_390">
             <li class="line"></li>
-            <li><i>2022-02-22</i> <a href="http://shifei.yadut.com/" title="女人到中年的经典感悟">女人到中年的经典感悟</a></li>
-            <li><i>2022-02-22</i> <a href="http://zuanta.yadut.com/" title="累了关机睡觉的说说">累了关机睡觉的说说</a></li>
-            <li><i>2022-02-22</i> <a href="http://randian.yadut.com/" title="说说简单有内涵的">说说简单有内涵的</a></li>
-            <li><i>2022-02-22</i> <a href="http://jiuzao.yadut.com/" title="深情的话朋友圈说说">深情的话朋友圈说说</a></li>
-            <li><i>2022-02-22</i> <a href="http://lundian.yadut.com/" title="宝宝生日快乐祝福语">宝宝生日快乐祝福语</a></li>
-            <li><i>2022-02-22</i> <a href="http://zhouxiang.yadut.com/" title="结束忙碌的一天感悟">结束忙碌的一天感悟</a></li>
-            <li><i>2022-02-22</i> <a href="http://dangdao.yadut.com/" title="晒闺蜜送礼物幽默说说">晒闺蜜送礼物幽默说说</a></li>
-            <li><i>2022-02-22</i> <a href="http://jiegao.yadut.com/" title="爱情句子表达心情甜蜜短句">2爱情句子表达心情甜蜜短句</a></li>
-            <li><i>2022-02-22</i> <a href="http://shanguang.yadut.com/" title="封存记忆的网名">封存记忆的网名</a></li>
-            <li><i>2022-02-22</i> <a href="http://bujiu.yadut.com/" title="处q友的个人介绍强势">处q友的个人介绍强势</a></li>
-            <li><i>2022-02-22</i> <a href="http://chengchong.yadut.com/" title="正能量文艺范简短句子">正能量文艺范简短句子</a></li>
-            <li><i>2022-02-22</i> <a href="http://shengpu.yadut.com/" title="形容太热的搞笑说说">形容太热的搞笑说说</a></li>
+            {{- range $title := (GetLib "wx_title" 12) -}}
+                <li><i>{{TimeFormat "2006-01-02"}}</i> <a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/" title="{{$title}}">{{$title}}</a></li>
+            {{- end -}}
         </ul>
     </div>
     <div class="right f_r">
         <div id="txtMarqueeTop" class="sideBox">
-            <div class="hd"><h3><a href="http://pixiu.yadut.com/">最新心情说说</a></h3></div>
+            <div class="hd"><h3><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">最新心情说说</a></h3></div>
             <div class="bd">
                 <ul>
-                    <li><span>2022-02-22</span> <a href="http://lianyungang.yadut.com/">朋友圈关于牛奶的说说</a></li>
-                    <li><span>2022-02-22</span> <a href="http://caoxie.yadut.com/">回忆小孩照片的说说</a></li>
-                    <li><span>2022-02-22</span> <a href="http://gouyuan.yadut.com/">qq被屏蔽了怎么看出来</a></li>
-                    <li><span>2022-02-22</span> <a href="http://yuyi.yadut.com/">发微信不回的心情说说</a></li>
-                    <li><span>2022-02-21</span> <a href="http://fupiao.yadut.com/">运动后流汗的心情说说</a></li>
-                    <li><span>2022-02-22</span> <a href="http://jiezhong.yadut.com/">春游的说说心情的句子</a></li>
-                    <li><span>2022-02-22</span> <a href="http://bibi.yadut.com/">女人中年危机说说</a></li>
-                    <li><span>2022-02-22</span> <a href="http://shenban.yadut.com/">强颜欢笑背后的心酸</a></li>
-                    <li><span>2022-02-22</span> <a href="http://jun1liang.yadut.com/">出来吹吹风唯美的说说</a></li>
+                    {{- range $title := (GetLib "wx_title" 9) -}}
+                        <li><span>{{TimeFormat "2006-01-02"}}</span> <a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">{{$title}}</a></li>
+                    {{- end -}}
                 </ul>
             </div>
         </div>
@@ -93,58 +87,67 @@
 </div>
 <div class="p1">
     <div class="w386 fl">
-        <div class="modbox"><h3><span class="tt">心情说说</span> <a href="http://huaji.yadut.com/" target="_blank"
-                                                                class="more">更多&gt;&gt;</a></h3>
-            <div class="info"><a href="http://keju.yadut.com/" title="不允许自己难过说说"> <img
-                            src="http://www.hxqba.com/d/file/xinqing/2021-06-27/d278c963dbe5e802c4f2462298e3a239.jpg"
-                            alt="不允许自己难过说说"> <span class="tt">不允许自己难过说说</span></a>
-                <p>　　关于友谊的说说短句</p></div>
+        <div class="modbox">
+            <h3>
+                <span class="tt">心情说说</span>
+                <a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/" target="_blank" class="more">更多&gt;&gt;</a>
+            </h3>
+            <div class="info">
+                {{- $tit = RandLib "wx_title" -}}
+                <a href="http://keju.yadut.com/" title="{{$tit}}">
+                    <img src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}" alt="{{$tit}}">
+                    <span class="tt">{{$tit}}</span>
+                </a>
+                <p>{{RandLib "wx_title"}}</p></div>
             <div class="box">
                 <ul class="cont_320">
-                    <li><a href="http://yuxu.yadut.com/">发体重数字的朋友圈</a> <span>2022-02-22</span></li>
-                    <li><a href="http://wangzi.yadut.com/">不要把脾气给最亲的人</a> <span>2022-02-22</span></li>
-                    <li><a href="http://perform.yadut.com/">好好上班努力赚钱说说</a> <span>2022-02-22</span></li>
-                    <li><a href="http://chunfeng.yadut.com/">晚安短句子简单致自己</a> <span>2022-02-22</span></li>
-                    <li><a href="http://quanbao.yadut.com/">孤独到没朋友的说说</a> <span>2022-02-21</span></li>
-                    <li><a href="http://wuman.yadut.com/">祝福宝贝成长的说说</a> <span>2022-02-21</span></li>
+                    {{- range $title := (GetLib "wx_title" 6) -}}
+                        <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
+                    {{- end -}}
                 </ul>
             </div>
         </div>
     </div>
     <div class="w386 fl ml20">
-        <div class="modbox"><h3><span class="tt">搞笑说说</span> <a href="http://gumo.yadut.com/" target="_blank"
-                                                                class="more">更多&gt;&gt;</a></h3>
-            <div class="info"><a href="http://yaoming.yadut.com/" title="怀孕胖了发朋友圈的说说"> <img
-                            src="http://www.hxqba.com/d/file/gxss/2021-05-20/4844504fb4352a369236a341e255d7e6.jpg"
-                            alt="怀孕胖了发朋友圈的说说"> <span class="tt">怀孕胖了发朋友圈的说说</span></a>
-                <p>猖狂不怕死的说说</p></div>
+        <div class="modbox">
+            <h3>
+                <span class="tt">搞笑说说</span>
+                <a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/" target="_blank" class="more">更多&gt;&gt;</a>
+            </h3>
+            <div class="info">
+                {{- $tit = RandLib "wx_title" -}}
+                <a href="http://keju.yadut.com/" title="{{$tit}}">
+                    <img src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}" alt="{{$tit}}">
+                    <span class="tt">{{$tit}}</span>
+                </a>
+                <p>{{RandLib "wx_title"}}</p></div>
             <div class="box">
                 <ul class="cont_320">
-                    <li><a href="http://tigong.yadut.com/">友情图片带字唯美图片</a> <span>2022-02-22</span></li>
-                    <li><a href="http://chuanyan.yadut.com/">一个人一辈子的说说</a> <span>2022-02-22</span></li>
-                    <li><a href="http://zongkuo.yadut.com/">做人的道理人生感悟</a> <span>2022-02-22</span></li>
-                    <li><a href="http://kuozhan.yadut.com/">我就是我的说说坏脾气</a> <span>2022-02-22</span></li>
-                    <li><a href="http://dipu.yadut.com/">对待感情顺其自然</a> <span>2022-02-22</span></li>
-                    <li><a href="http://pingxian.yadut.com/">晒照片发朋友圈的句子</a> <span>2022-02-22</span></li>
+                    {{- range $title := (GetLib "wx_title" 6) -}}
+                        <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
+                    {{- end -}}
                 </ul>
             </div>
         </div>
     </div>
     <div class="w386 fr">
-        <div class="modbox"><h3><span class="tt">心情随笔</span> <a href="http://shixiao.yadut.com/" target="_blank"
-                                                                class="more">更多&gt;&gt;</a></h3>
-            <div class="info"><a href="http://baohang.yadut.com/" title="伤感的说说心情一句话"> <img
-                            src="http://www.hxqba.com/d/file/xqsb/2021-04-18/1fc405f9bc2d1b6bc8655f43a8437166.jpg"
-                            alt="伤感的说说心情一句话"> <span class="tt">伤感的说说心情一句话</span></a>
-                <p>低血糖难受的说说</p></div>
+        <div class="modbox">
+            <h3>
+                <span class="tt">心情随笔</span>
+                <a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/" target="_blank" class="more">更多&gt;&gt;</a>
+            </h3>
+            <div class="info">
+                {{- $tit = RandLib "wx_title" -}}
+                <a href="http://keju.yadut.com/" title="{{$tit}}">
+                    <img src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}" alt="{{$tit}}">
+                    <span class="tt">{{$tit}}</span>
+                </a>
+                <p>{{RandLib "wx_title"}}</p></div>
             <div class="box">
                 <ul class="cont_320">
-                    <li><a href="http://shengeng.yadut.com/">一个路痴的感触说说</a> <span>2022-02-22</span></li>
-                    <li><a href="http://danti.yadut.com/">怎么批量删除qq说说</a> <span>2022-02-22</span></li>
-                    <li><a href="http://pangu.yadut.com/">余生不碰感情的网名</a> <span>2022-02-22</span></li>
-                    <li><a href="http://tanyu.yadut.com/">深夜朋友圈文案简单</a> <span>2022-02-22</span></li>
-                    <li><a href="http://daqi.yadut.com/">踏青赏花的优美句子</a> <span>2022-02-22</span></li>
-                    <li><a href="http://choukong.yadut.com/">有哲理的短句</a> <span>2022-02-22</span></li>
+                    {{- range $title := (GetLib "wx_title" 6) -}}
+                        <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">{{$title}}</a> <span>{{TimeFormat "2006-01-02"}}</span></li>
+                    {{- end -}}
                 </ul>
             </div>
         </div>
