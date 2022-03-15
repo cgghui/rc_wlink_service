@@ -5,10 +5,12 @@
 {{- end -}}
 {{- $content := "" -}}
 {{- range $title := (GetLib "ft_title" 100) -}}
-    {{- if ne $content "" -}}
-        {{$content = Join "" "," $content}}
+    {{- if eq $content "" -}}
+        {{- $content = $title -}}
+    {{- else -}}
+        {{- $content = Join "," $content $title -}}
     {{- end -}}
-    {{$content = Join "" $content $title}}
+
 {{- end -}}
 {{- $now := TimeNow -}}
 <!DOCTYPE html>
