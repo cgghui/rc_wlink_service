@@ -1,0 +1,196 @@
+{{- $title := .StoreGet "title" false -}}
+{{- if eq $title "" -}}
+    {{- $title = (RandLib "xx_title") -}}
+    {{- .StoreSet "title" $title false -}}
+{{- end -}}
+{{- $content := "" -}}
+{{- range $title := (GetLib "xx_title" 99) -}}
+    {{- if eq $content "" -}}
+        {{- $content = $title -}}
+    {{- else -}}
+        {{- $content = Join "," $content $title -}}
+    {{- end -}}
+{{- end -}}
+{{- $content = RandInsertWord $content $title -}}
+{{- $now := TimeNow -}}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="{{$content}}">
+    <meta name="description" content="{{$content}}">
+    <meta name="generator" content="DouPHP v1.6">
+    <title>{{$title}}</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/2/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="wrapper">
+    <div id="demoTool">
+    </div><header id="header">
+        <nav class="navbar navbar-expand-sm custom_nav scroll">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}" class="logo">{{$title}}</a>
+                </div>
+                <div class="navbar-action d-md-none">
+                    <button type="button" class="menu" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation"> <span class="fa fa-bars"></span> </button>
+                </div>
+                <div class="main-nav collapse navbar-collapse justify-content-md-end" id="main-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"> <a target="_blank" class="nav-link" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">首页</a></li>
+                        <li class="nav-item dropdown">
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}" class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">学校简介</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                <li> <a target="_blank" class="dropdown-item" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">企业荣誉</a>
+                                </li>
+                                <li> <a target="_blank" class="dropdown-item" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">发展历程</a>
+                                </li>
+                                <li> <a target="_blank" class="dropdown-item" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">联系我们</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}" class="nav-link dropdown-toggle active" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">校园新闻</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                                <li> <a target="_blank" class="dropdown-item" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">校园新闻</a>
+                                </li>
+                                <li> <a target="_blank" class="dropdown-item" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">最新公告</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}" class="nav-link">专业设置</a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}" class="nav-link">常见问题</a>
+                        </li>
+                        <li class="nav-item">
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}" class="nav-link">视频中心</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}" class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">校园风光</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown6">
+                                <li> <a target="_blank" class="dropdown-item" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">就业之星</a>
+                                </li>
+                                <li> <a target="_blank" class="dropdown-item" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">魅力校园</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"> <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}" class="nav-link">人才招聘</a>
+                        </li>
+                        <li class="nav-item"> <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}" class="nav-link">业务咨询</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="banner" style="background-image: url(images/banner_page.jpg);"></div>
+    <div class="tree-box">
+        <a target="_blank" class="cur" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">最新推荐</a>
+        <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">校园新闻</a>
+        <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">就业之星</a>
+    </div>
+    <div class="mainbox">
+        <div id="article-list">
+            <div class="container">
+                {{- range $tit := (GetLib "ft_title" 6) -}}
+                    <dl>
+                        <div class="num-date"> <i class="fa fa-clock-o"></i>
+                            <p>{{TimeFormat "01-02"}}</p>
+                        </div>
+                        <dt><a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">{{$tit}}</a></dt>
+                        <dd class="have-img">
+                            {{- $text := "" -}}
+                            {{- range $title := (GetLib "xx_title" 25) -}}
+                                {{- if eq $text "" -}}
+                                    {{- $text = $title -}}
+                                {{- else -}}
+                                    {{- $text = Join "," $text $title -}}
+                                {{- end -}}
+                            {{- end -}}
+                            {{- $text = RandInsertWord $text $title -}}
+                            {{- $text = Substr $text $title 200 "..." -}}
+                            <p class="img scale"><img src="picture/1.jpeg"></p>
+                            <p class="desc">{{$text}}...</p>
+                        </dd>
+                    </dl>
+                {{- end -}}
+            </div>
+        </div>
+        <div class="pager">
+            <ul>
+                <li class="active"><a target="_blank" href="">1</a></li>
+            </ul>
+        </div> </div>
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 cls-item">
+                    <div class="item"> <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}"><em>学校地址</em> </a> </div>
+                </div>
+                <div class="col-md-3 col-sm-6 cls-item">
+                    <div class="item"> <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}" ><em>在线咨询</em> </a> </div>
+                </div>
+                <div class="col-md-3 col-sm-6 cls-item">
+                    <div class="item"> <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}"><em>专业选择</em> </a> </div>
+                </div>
+                <div class="col-md-3 col-sm-6 cls-item">
+                    <div class="item last"> <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}"><em>联系电话</em> </a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="foot-nav">
+                        <div class="nav-parent">
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">学校简介</a>
+                        </div>
+                        <div class="nav-child">
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">企业荣誉</a>
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">发展历程</a>
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="foot-nav">
+                        <div class="nav-parent">
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">校园新闻</a>
+                        </div>
+                        <div class="nav-child">
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">校园新闻</a>
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">最新公告</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="foot-nav">
+                        <div class="nav-parent">
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">专业设置</a>
+                        </div>
+                        <div class="nav-child">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="foot-nav">
+                        <div class="nav-parent">
+                            <a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">常见问题</a>
+                        </div>
+                        <div class="nav-child">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right" style="text-align: center">Copyright ©2017-2020 All Rights Reserved. <a target="_blank" href='http://{{RandLib "xx_word"}}.{{$.HostRoot}}'>技术支持</a> </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
