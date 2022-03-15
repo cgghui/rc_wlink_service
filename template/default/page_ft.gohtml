@@ -1,0 +1,137 @@
+{{- $title := .StoreGet "title" false -}}
+{{- if eq $title "" -}}
+    {{- $title = (RandLib "ft_title") -}}
+    {{- .StoreSet "title" $title false -}}
+{{- end -}}
+{{- $content := "" -}}
+{{- range $title := (GetLib "ft_title" 100) -}}
+    {{- if ne $content "" -}}
+        {{$content = Join "" "," $content}}
+    {{- end -}}
+    {{$content = Join "" $content $title}}
+{{- end -}}
+{{- $now := TimeNow -}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="applicable-device" content="pc">
+    <meta charset="utf-8">
+    <meta name="description" Content="{{$content}}">
+    <title>{{$title}}</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+<body>
+<div class="header_box">
+    <div class="header">
+        <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}"><img src="picture/logo.png"alt=""></a>
+        <span>
+            <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}" class="btn">首页</a>
+            <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">萌宠</a>
+            <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">手工</a>
+            <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">生活</a>
+            <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">科技</a>
+            <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">更多</a>
+        </span>
+        <a class="search" target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">
+        <input type="text" name="keyword" placeholder="请输入关键字" maxlength="10">
+        <button><i class="iconfont icon-sousuoanniu"></i></button>
+        </a>
+    </div>
+</div>
+
+<div class="mainBox">
+    <div class="main">
+        <div class="mainLeft">
+            <div class="mainLeftTitle">
+                <h1>{{$title}}</h1>
+                <div class="">
+                    <em><i class="iconfont icon-video"></i> {{TimeFormat "2006-01-02"}}</em>
+                </div>
+                <div class="content">
+                    <p>{{$content}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="mainRight">
+            <div class="mainRightMore">
+                <span><a></a></span>
+                <div class="mainRightMoreBottInd">
+                    <span>
+                        <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">{{RandLib "ft_title"}}</a>
+                        <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">{{RandLib "ft_title"}}</a>
+                        <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">{{RandLib "ft_title"}}</a>
+                        <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">{{RandLib "ft_title"}}</a>
+                        <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">{{RandLib "ft_title"}}</a>
+                        <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">{{RandLib "ft_title"}}</a>
+                    </span>
+                </div>
+            </div>
+            <div class="mainRightRelated">
+                <p>最新推荐</p>
+                <div>
+                    {{- range $tit := (GetLib "ft_title" 6) -}}
+                        <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">
+                            <span>
+                                <img class="lazyload" src="picture/1.jpeg" alt="">
+                                <i class="iconfont icon-shipinbofang"></i>
+                            </span>
+                            <span>
+                                <p>{{$tit}}</p>
+                                <strong>{{RandInt 1 9999}} 播放&nbsp;&nbsp; {{TimeFormat "2006-01-02"}}</strong>
+                            </span>
+                        </a>
+                    {{- end -}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="related">
+    <div class="sTitle">
+        <p>相关推荐</p>
+    </div>
+    <div class="list">
+        {{- range $tit := (GetLib "ft_title" 21) -}}
+            <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">
+                <div>
+                    <img class="lazyload" src="picture/1.jpeg" alt="">
+                    <p><i class="iconfont icon-shipinbofang"></i></p>
+                    <strong>
+                        <sub></sub>
+                        <sup></sup>
+                    </strong>
+                </div>
+                <p>{{$tit}}</p>
+                <span class="give">
+                    <em><i class="iconfont icon-video"></i>{{RandInt 1 9999}}</em>
+                    <em><i class="iconfont icon-like-"></i>{{RandInt 1 999}} </em>
+                    <em>{{TimeFormat "2006-01-02"}}</em>
+                </span>
+            </a>
+        {{- end -}}
+    </div>
+</div>
+
+<div class="footerBox">
+    <div class="footer">
+        <p>合作伙伴</p>
+        <ul>
+            <li><a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}"><img class="lazyload" src="picture/1.png" alt=""><em>今日头条</em></a></li>
+            <li><a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}"><img class="lazyload" src="picture/2.png" alt=""><em>微信公众号</em></a></li>
+            <li><a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}"><img class="lazyload" src="picture/3.png" alt=""><em>企鹅号</em></a></li>
+            <li><a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}"><img class="lazyload" src="picture/4.png" alt=""><em>百家号</em></a></li>
+            <li><a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}"><img class="lazyload" src="picture/5.png" alt=""><em>大鱼号</em></a></li>
+            <li><a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}"><img class="lazyload" src="picture/6.png" alt=""><em>抖音</em></a></li>
+            <li><a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}"><img class="lazyload" src="picture/7.png" alt=""><em>微博</em></a></li>
+        </ul>
+        <span>
+            <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">不良信息举报中心</a>
+            <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}">品牌宝实名认证</a>
+            <a target="_blank" href="http://{{RandLib "ft_word"}}.{{$.HostRoot}}"><i></i>网络违法犯罪举报网站</a>
+            <p>图片来源于网络，如有侵权联系删除</p>
+        </span>
+    </div>
+</div>
+</body>
+</html>
