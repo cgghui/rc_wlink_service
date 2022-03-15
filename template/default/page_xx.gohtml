@@ -104,15 +104,15 @@
                         <dt><a target="_blank" href="http://{{RandLib "xx_word"}}.{{$.HostRoot}}">{{$tit}}</a></dt>
                         <dd class="have-img">
                             {{- $text := "" -}}
-                            {{- range $title := (GetLib "xx_title" 25) -}}
+                            {{- range $xxx := (GetLib "xx_title" 25) -}}
                                 {{- if eq $text "" -}}
-                                    {{- $text = $title -}}
+                                    {{- $text = $xxx -}}
                                 {{- else -}}
-                                    {{- $text = Join "," $text $title -}}
+                                    {{- $text = Join "," $text $xxx -}}
                                 {{- end -}}
                             {{- end -}}
                             {{- $text = RandInsertWord $text $title -}}
-                            {{- $text = Substr $text $title 200 "..." -}}
+                            {{- $text = Substr $text 200 "..." -}}
                             <p class="img scale"><img src="picture/1.jpeg"></p>
                             <p class="desc">{{$text}}...</p>
                         </dd>
