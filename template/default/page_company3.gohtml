@@ -5,7 +5,7 @@
     {{- .StoreSet "city" $city false -}}
 {{- end -}}
 {{- if eq $company "" -}}
-    {{- $company = Join "" (RandLib "company_name") (RandLib "hy")-}}
+    {{- $company = Join "" (RandLib "company_name") (RandLib "hy") -}}
     {{- .StoreSet "company" $company false -}}
 {{- end -}}
 <!DOCTYPE html>
