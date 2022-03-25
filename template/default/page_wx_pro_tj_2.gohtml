@@ -1,0 +1,5 @@
+{{- $tit := RandLib "wx_title" -}}
+<a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/" title="{{$tit}}" target="_blank">
+    <p>{{$tit}}</p>
+    <img src="http://{{.HostCurrent}}/upload/{{RandLib "wx_image"}}" alt="{{$tit}}" width="320" height="250" />
+</a>

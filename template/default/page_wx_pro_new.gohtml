@@ -1,0 +1,3 @@
+{{- range $title := (GetLib "wx_title" 9) -}}
+    <li><span>{{TimeFormat "2006-01-02"}}</span> <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{$title}}</a></li>
+{{- end -}}

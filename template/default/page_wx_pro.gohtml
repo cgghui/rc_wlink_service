@@ -1,0 +1,75 @@
+{{- $title := .StoreGet "title" false -}}
+{{- $tel := .StoreGet "tel" false -}}
+{{- if eq $title "" -}}
+    {{- $title = RandLib "wx_title" -}}
+    {{- .StoreSet "title" $title false -}}
+{{- end -}}
+{{- if eq $tel "" -}}
+    {{- $tel = RandNumber 8 8 -}}
+    {{- .StoreSet "tel" $tel false -}}
+{{- end -}}
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{$title}}</title>
+    <meta name="keywords" content="{{$title}}">
+    <meta name="description" content="{{$title}}">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="mobile-agent" content="format=html5; url=http://{{.HostRoot}}/">
+    <meta http-equiv="mobile-agent" content="format=xhtml; url=http://{{.HostRoot}}/">
+    <link rel="alternate" media="only screen and(max-width:640px)" href="http://{{.HostRoot}}/">
+    <link href="http://{{.HostRoot}}/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="http://{{.HostCurrent}}/css/css.css">
+</head>
+<body style="margin:0; padding:0;">
+<div class="nav">
+    <div class="menu">
+        <ul class="fl w1200">
+            <li class="active"><a href="http://{{.HostCurrent}}">首页</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">心情说说</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">搞笑说说</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">心情随笔</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">经典说说</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">心情短语</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">情绪管理</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">心情美文</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">伤感说说</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">心情语录</a></li>
+            <li><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">心情图片</a></li>
+        </ul>
+    </div>
+</div>
+<div class="p1">
+    <div class="left f_l">
+        <div class="fpic">
+            {{- .LoadTmplHTML "page_wx_pro_tj_2" "page_wx_pro_tj_1_002" 90000 true false -}}
+        </div>
+    </div>
+    <div class="center f_l">
+        {{- .LoadTmplHTML "page_wx_pro_tj_1" "page_wx_pro_tj_1_001" 86400 true false -}}
+        <ul class="cont_390">
+            <li class="line"></li>
+            {{- .LoadTmplHTML "page_wx_pro_top" "page_wx_pro_top_001" 129600 true false -}}
+        </ul>
+    </div>
+    <div class="right f_r">
+        <div id="txtMarqueeTop" class="sideBox">
+            <div class="hd"><h3><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">最新心情说说</a></h3></div>
+            <div class="bd">
+                <ul>
+                    {{- .LoadTmplHTML "page_wx_pro_new" "page_wx_pro_new_001" 115200 true false -}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{- .LoadTmplHTML "page_wx_pro_body" "page_wx_pro_body_001" 604800 true false -}}
+<div class="site_footer ">
+    <div class="copyright">
+        <p class="cr_c">Copyright©2021-2022 {{$title}} <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备{{$tel}}号</a></p>
+    </div>
+</div>
+</body>
+</html>
