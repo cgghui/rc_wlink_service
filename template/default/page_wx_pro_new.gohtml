@@ -1,3 +1,10 @@
-{{- range $title := (GetLib "wx_title" 9) -}}
-    <li><span>{{TimeFormat "2006-01-02"}}</span> <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{$title}}</a></li>
-{{- end -}}
+<div id="txtMarqueeTop" class="sideBox">
+    <div class="hd"><h3><a href="http://{{RandLib "wx_word"}}.{{.HostRoot}}/">最新心情说说</a></h3></div>
+    <div class="bd">
+        <ul>
+            {{- range $title := (GetLib "wx_title" 9) -}}
+                <li><span>{{TimeFormat "2006-01-02"}}</span> <a href="http://{{RandLib "wx_word"}}.{{$.HostRoot}}/">{{$title}}</a></li>
+            {{- end -}}
+        </ul>
+    </div>
+</div>
