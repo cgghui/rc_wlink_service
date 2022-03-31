@@ -1,12 +1,9 @@
-{{- $city := .StoreGet "city" false -}}
-{{- $company := .StoreGet "company" false -}}
-{{- if eq $city "" -}}
-    {{- $city = index (Split (RandKv "domain_all").val " ") 2 -}}
-    {{- .StoreSet "city" $city false -}}
-{{- end -}}
-{{- if eq $company "" -}}
-    {{- $company = Join "" (RandLib "company_name") -}}
-    {{- .StoreSet "company" $company false -}}
+{{- $title := .StoreGet "title" false -}}
+{{- if eq $title "" -}}
+    {{- $title = Join "" (index (Split (RandKv "domain_all").val " ") 2) (RandLib "company_name") -}}
+    {{- $word := RandWord "空调" "中央空调" "热水器" "燃气灶" "油烟机" "集成灶" "洗衣机" "冰箱" "电视" "壁挂炉" "空气能" "电热水器" "冰柜" "消毒柜" "蒸烤箱" -}}
+    {{- $title = RandInsertWord $title $word -}}
+    {{- .StoreSet "title" $title false -}}
 {{- end -}}
 <!DOCTYPE html><html>
 <head>
@@ -17,7 +14,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="renderer" content="webkit" />
-    <title>{{$city}}{{$company}}</title>
+    <title>{{$title}}</title>
     <meta name="Keywords" content="空调,中央空调,热水器,燃气灶,油烟机,集成灶,洗衣机,冰箱,电视,壁挂炉,空气能,电热水器,冰柜,消毒柜,蒸烤箱" />
     <meta name="description" />
     <link rel="stylesheet" href="/static/css/lipin.css" type="text/css" media="all" />
@@ -26,14 +23,14 @@
 <div class="top f-12 waphide">
     <div class="wide">
         <div class="fl">
-            {{$city}}{{$company}}，致力于打造优质的家电售后维修服务平台
+            {{$title}}，致力于打造优质的家电售后维修服务平台
         </div>
     </div>
 </div>
 <div class="header">
     <div class="wide">
         <div class="logo fl">
-            <h1><a href="http://domains.{{.HostRoot}}/" title="{{$city}}{{$company}}，致力于打造优质的家电售后维修服务平台"> {{$city}}{{$company}} </a></h1>
+            <h1><a href="http://{{RandLib "cp_word"}}.{{.HostRoot}}/" title="{{$title}}，致力于打造优质的家电售后维修服务平台"> {{$title}} </a></h1>
         </div>
     </div>
 </div>
@@ -343,7 +340,7 @@
 </div>
 <div class="footer tx-box ta-c f-12">
     <div class="wide">
-        &copy; 2019-2021 {{$city}}{{$company}} 版权所有
+        &copy; 2019-2021 {{$title}} 版权所有
         <br />ICP备200{{RandNumber 5 5}}号-1 京公网安备180407{{RandNumber 6 6}}
     </div>
 </div>
